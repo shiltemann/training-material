@@ -1,5 +1,5 @@
 [![Gitter](https://badges.gitter.im/Galaxy-Training-Network/training-material.svg)](https://gitter.im/Galaxy-Training-Network/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://travis-ci.org/galaxyproject/training-material.svg?branch=master)](https://travis-ci.org/galaxyproject/training-material)
-gh-pages: [![Build Status](https://travis-ci.org/galaxyproject/training-material.svg?branch=gh-pages)](https://travis-ci.org/galaxyproject/training-material)
+gh-pages: [![Build Status](https://travis-ci.org/shiltemann/training-material.svg?branch=gh-pages)](https://travis-ci.org/galaxyproject/training-material)
 
 Galaxy training material
 ========================
