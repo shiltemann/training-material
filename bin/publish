@@ -15,6 +15,10 @@ git checkout gh-pages
 git clean -fdx
 git rm -r .
 
+# restore travis.yml
+git reset HEAD .travis.yml
+git checkout .travis.yml
+
 cp -R /tmp/site/* .
 
 find * -type f -exec chmod 644 "{}" ";"
