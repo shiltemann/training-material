@@ -209,7 +209,7 @@ or changes to codons
 
 ## Manipulating variation data with GEMINI
 
-Now that we have an annotated VCF file it is time to peek inside our variation data. [Aaron Quinlan](https://quinlanlab.org/), creator of [GEMINI](http://gemini.readthedocs.org/en/latest/index.html), calls it *Detective work*.
+Now that we have an annotated VCF file it is time to peek inside our variation data. [Aaron Quinlan](http://quinlanlab.org/), creator of [GEMINI](http://gemini.readthedocs.org/en/latest/index.html), calls it *Detective work*.
 
 ### Loading data into GEMINI
 

@@ -171,7 +171,7 @@ The polymorphism we are interested in (and the one reported by [Schmitt:2015] (h
 
 SSCSs are generated when the **Output single-strand consensus sequences** option of **Du Novo: Make consensus reads** tool is set to `Yes` (see [here](#generating-duplex-consensus-sequences-dcs)). Analysis of SSCS data follows almost exactly the same trajectory. The only difference is that these **do not** come as forward and reverse. Instead _Du Novo_ generates a single dataset. With this dataset we go through all the same steps:
 
-* [Filtering consensi](#filtering-consensi)
+* [Filtering consensuses](#filtering-consensuses)
 * [Generating fastq](#generating-fastq)
 * [Calling variants](#calling-variants)
  	- [Aligning against genome](#align-against-genome-with-bwa-and-bwa-mem) (here the difference is that one needs to choose a single end option and use a single dataset as input)
