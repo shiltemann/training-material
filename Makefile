@@ -38,6 +38,10 @@ check-html-gh-pages:  ## validate HTML on gh-pages branch (for daily cron job)
 	timeout 120s bundle exec htmlproofer --http-status-ignore 405,999 --url-ignore "/.*localhost.*/","/.*vimeo\.com.*/" --file-ignore "/.*\/files\/.*/" .
 .PHONY: check-html-gh-pages
 
+check-slides: ## check the markdown-formatted links in slides
+	find . -path "**/slides*.html" | xargs -L 1 -I '{}' sh -c "echo {}; vl -d -t 15 -s 1000 --allow-codes 405 --whitelist localhost,127.0.0.1,fqdn,publish.twitter.com,linkedin.com,vimeo.com {}"
+.PHONY: check-slides
+
 check-yaml: ## lint yaml files
 	yamllint .
 .PHONY: check-yaml

@@ -23,6 +23,7 @@ matrix:
   include:
     - env: CHECK=yamllint
     - env: CHECK=htmlproofer
+    - env: CHECK=slides
     - env: CHECK=site-build
   allow_failures:
     - env: CHECK=htmlproofer
@@ -54,6 +55,9 @@ script:
       if [ "$CHECK" == "htmlproofer" ]
       then
         make check-html
+      elif [ "$CHECK" == "slides" ]
+      then
+        make check-slides
       elif [ "$CHECK" == "yamllint" ]
       then
         make check-yaml
