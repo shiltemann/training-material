@@ -33,6 +33,7 @@ install:
   - conda env create -f environment.yml
   - source activate galaxy_training_material
   - make install
+  - echo "$TRAVIS_BRANCH"
 
 script:
   # Check website
