@@ -30,9 +30,23 @@ build: ## build files but do not run a server
 	${JEKYLL} build
 .PHONY: build
 
-check: build ## validate HTML
+check-html: build ## validate HTML
+	bundle exec htmlproofer --http-status-ignore 405,999 --url_swap "github.com/galaxyproject/training-material/tree/master:github.com/${REPO}/tree/${BRANCH}" --url-ignore "/.*localhost.*/","/.*vimeo\.com.*/" --file-ignore "/.*\/files\/.*/" ./_site
+.PHONY: check-html
+
+check-html-gh-pages:  ## validate HTML on gh-pages branch (for daily cron job)
+	bundle exec htmlproofer --http-status-ignore 405,999 --url-ignore "/.*localhost.*/","/.*vimeo\.com.*/" --file-ignore "/.*\/files\/.*/" .
+.PHONY: check-html-gh-pages
+
+check-yaml: ## lint yaml files
 	yamllint .
-	timeout 120s bundle exec htmlproofer --http-status-ignore 405,999 --url-ignore "/.*localhost.*/","/.*vimeo\.com.*/" --file-ignore "/.*\/files\/.*/" ./_site
+.PHONY: check-yaml
+
+check-slides: build  ## check the markdown-formatted links in slides
+	find _site -path "**/slides*.html" | xargs -L 1 -I '{}' sh -c "echo {}; vl -d -t 15 -s 1000 --allow-codes 405 --whitelist localhost,127.0.0.1,fqdn,publish.twitter.com,linkedin.com,vimeo.com {}"
+.PHONY: check-slides
+
+check: check-yaml check-html check-slides  ## run all checks
 .PHONY: check
 
 clean: ## clean up junk files
