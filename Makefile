@@ -31,7 +31,7 @@ build: ## build files but do not run a server
 .PHONY: build
 
 check-html: build ## validate HTML
-	bundle exec htmlproofer --http-status-ignore 405,999 --url_swap "github.com/galaxyproject/training-material/tree/master:github.com/${TRAVIS_REPO_SLUG}/tree/${BRANCH}" --url-ignore "/.*localhost.*/","/.*vimeo\.com.*/" --file-ignore "/.*\/files\/.*/" ./_site
+	bundle exec htmlproofer --http-status-ignore 405,999 --url_swap "github.com/galaxyproject/training-material/tree/master:github.com/${REPO}/tree/${BRANCH}" --url-ignore "/.*localhost.*/","/.*vimeo\.com.*/" --file-ignore "/.*\/files\/.*/" ./_site
 .PHONY: check-html
 
 check-html-gh-pages:  ## validate HTML on gh-pages branch (for daily cron job)

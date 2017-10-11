@@ -42,8 +42,9 @@ install:
   - make install
   - pip install vl
   - vl --version
-  - if [[ "$TRAVIS_PULL_REQUEST" == "true" ]]; then export BRANCH=$TRAVIS_PULL_REQUEST_BRANCH; else export BRANCH=$TRAVIS_BRANCH; fi
-  - echo $TRAVIS_REPO_SLUG
+  - if [[ $TRAVIS_EVENT_TYPE == "pull_request" ]]; then export BRANCH=$TRAVIS_PULL_REQUEST_BRANCH; else export BRANCH=$TRAVIS_BRANCH; fi
+  - if [[ $TRAVIS_EVENT_TYPE == "pull_request" ]]; then export REPO=$TRAVIS_PULL_REQUEST_SLUG; else export REPO=$TRAVIS_REPO_SLUG; fi
+  - echo $REPO
   - echo $BRANCH
   - env
 
