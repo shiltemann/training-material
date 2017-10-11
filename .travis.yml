@@ -56,6 +56,8 @@ script:
         export BRANCH=$TRAVIS_BRANCH
     fi
 
+    echo $BRANCH
+    
     if [ "$TRAVIS_BRANCH" == "gh-pages" ]
     then
       make check-html-gh-pages
