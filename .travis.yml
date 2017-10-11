@@ -42,22 +42,16 @@ install:
   - make install
   - pip install vl
   - vl --version
-  - env
+  - if [[ "$TRAVIS_PULL_REQUEST" == "true" ]]; then export BRANCH=$TRAVIS_PULL_REQUEST_BRANCH; else export BRANCH=$TRAVIS_BRANCH; fi
   - echo $TRAVIS_REPO_SLUG
+  - echo $BRANCH
+  - env
 
 script:
   # Check website
   - |
     set -e
-    if [ "$TRAVIS_PULL_REQUEST" == "true" ]
-    then
-        export BRANCH=$TRAVIS_PULL_REQUEST_BRANCH
-    else
-        export BRANCH=$TRAVIS_BRANCH
-    fi
 
-    echo $BRANCH
-    
     if [ "$TRAVIS_BRANCH" == "gh-pages" ]
     then
       make check-html-gh-pages
