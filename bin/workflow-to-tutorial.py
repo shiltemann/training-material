@@ -12,17 +12,35 @@ import json
 import sys
 
 
+template_question = '''
+<-- Consider adding a question to test the learners understanding of the previous exercise -->
+> ### {% icon question %} Questions
+>
+> 1. Question1?
+> 2. Question2?
+>
+>    > ### {% icon solution %} Solution
+>    >
+>    > 1. Answer for question1
+>    > 2. Answer for question2
+>    >
+>    {: .solution}
+>
+{: .question}
+'''
+
+
 def nested_dict_iter(nested):
     for key, value in nested.items():
         try:
             value = json.loads(value)
             yield from nested_dict_iter(value)
-        except:
+        except Exception:
             pass
 
         if isinstance(value, dict):
             yield from nested_dict_iter(value)
-        #if isinstance(value, list):
+        # if isinstance(value, list):
 
         else:
             yield key, value
@@ -30,9 +48,10 @@ def nested_dict_iter(nested):
 
 def get_handson_box(step):
     ''' make the first hands-on box for data upload'''
-    #TODO: get data library name from yaml file
+    # TODO: get data library name from yaml file
+    global template_question
 
-    #print(json.dumps(step, indent=4))
+    # print(json.dumps(step, indent=4))
     tool_name = step[1]['name']
 
     if tool_name == 'Input dataset':
@@ -46,15 +65,20 @@ def get_handson_box(step):
 
     inputlist = ''
     for i in inputs:
-        print("inputA: ",i)
+        print("input: ", i, step[1]['input_connections'][i]['id'])
+        inputlist += '\n>   - {% icon param-file %} *"' + i + '"*: `' + \
+                     step[1]['input_connections'][i]['output_name'] + \
+                     ' output from step ' + \
+                     str(step[1]['input_connections'][i]['id']) + '`'
+
     g = nested_dict_iter(json.loads(parameters))
 
     paramlist = ''
 
     while True:
         try:
-            (k,v) = next(g)
-            print("param: ",k,v)
+            (k, v) = next(g)
+            print("param: ", k, v)
         except StopIteration:
             break
 
@@ -62,42 +86,31 @@ def get_handson_box(step):
             pass
         elif 'RuntimeValue' in str(v):
             pass
-            #print("myinputs:", v, inputs)
-            #print(inputs)
-        elif not '__' in k and k != 'chromInfo':
-            paramlist += '\n>   - "' + k + '" to `' + str(v).strip('"[]') + '`'
+            # print("myinputs:", v, inputs)
+            # print(inputs)
+        elif '__' not in k and k != 'chromInfo':
+            paramlist += '\n>   - *"' + k + '"*: `' + str(v).strip('"[]') + '`'
 
-    #print(paramlist)
+    # print(paramlist)
 
     template = '''
 > ### {{% icon hands_on %}} Hands-on: TODO: task description
 >
-> **{tool_name}** {{% icon tool %}} with the following parameters:{paramlist}
+> **{tool_name}** {{% icon tool %}} with the following parameters:{inputlist}{paramlist}
 >
->   TODO: consider removing parameters that just use the default values and check/update descriptions
->
->    > ### {{% icon question %}} Question
->    >
->    > TODO: Add a question here to check that the trainees
->    > have understood the important points of the exercise.
->    >
->    >    <details>
->    >        <summary>Click to view answer</summary>
->    >        TODO: Here you can give the answers to the question, this will be hidden by default.
->    >    </details>
->    >
->    {{: .question}}
+>   TODO: check parameter descriptions
+>   TODO: some of these parameters may be the default values and can be removed
+>         unless they have some didactic value.
 >
 {{: .hands_on}}
-
 '''
     context = {
         "tool_name": tool_name,
-        "paramlist": paramlist
+        "paramlist": paramlist,
+        "inputlist": inputlist
     }
-    print(context)
-    return template.format(**context)
-
+    # print(context)
+    return template.format(**context) + template_question
 
 
 def get_tutorial_header(topic, tutorial_name):
@@ -132,8 +145,8 @@ Often you may wish to combine several boxes into one or make other adjustments s
 as breaking the tutorial into sections, we encourage you to make such changes as you
 see fit, this is just a starting point :)
 
-Anywhere you find the word `TODO`, there is something that needs to be changed depending
-on the specifics of your tutorial.
+Anywhere you find the word `TODO`, there is something that needs to be changed
+depending on the specifics of your tutorial.
 
 have fun!
 
@@ -147,7 +160,7 @@ have fun!
 
 def get_data_upload_box():
     ''' make the first hands-on box for the data upload step '''
-    #TODO: get data library name from yaml file
+    # TODO: get data library name from yaml file
 
     template = '''
 > ### {% icon hands_on %} Hands-on: Data upload
@@ -197,14 +210,14 @@ pipeline used.
 
 
 def create_tutorial(workflowfile, outfile, topic, tutorial_name):
-    #print(workflowfile, outfile)
+    # print(workflowfile, outfile)
     with open(workflowfile, 'r') as wf:
         try:
             workflow = json.load(wf)
         except json.decoder.JSONDecodeError:
             print("workflow file looks invalid")
             sys.exit()
-    #print(json.dumps(workflow, indent=4))
+    # print(json.dumps(workflow, indent=4))
 
     # create the tutorial
     print(get_tutorial_header(topic, tutorial_name))
