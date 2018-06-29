@@ -125,7 +125,7 @@ tutorial_name: {tutorial_name}
 # Introduction
 {{:.no_toc}}
 
-write a (short) introduction here
+write a (short) introduction here. Present the research story, this can be recreating an analysis from a specific paper, or anwering a specific scientific question.
 
 > ### Agenda
 >
@@ -167,9 +167,12 @@ def get_data_upload_box():
 >
 > 1. Import the following files from [Zenodo](https://zenodo.org/record/<TODO>) or from a data
 >    library named `TODO` if available (ask your instructor)
->    - `file1.txt`
->    - `file2.vcf`
->    - `fileN.bam`
+>    ```
+>    TODO: add the links to all files in Zenodo here so that they can easily be copy-pasted into Galaxy's upload dialog
+>    file1.txt
+>    file2.vcf
+>    fileN.bam
+>    ```
 >
 >    > ### {% icon tip %} Tip: Importing data via links
 >    >
