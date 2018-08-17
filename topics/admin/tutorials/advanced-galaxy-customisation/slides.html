@@ -5,11 +5,12 @@
 
 
 
+
   <head>
     <meta charset="utf-8">
     <title>Advanced customisation of a Galaxy instance</title>
-    <link rel="stylesheet" href="https://galaxyproject.github.io/training-material//assets/css/slides.css">
-    <link rel="stylesheet" href="https://galaxyproject.github.io/training-material//assets/css/font-awesome.css" id="theme">
+    <link rel="stylesheet" href="/training-material/assets/css/slides.css">
+    <link rel="stylesheet" href="/training-material/assets/css/font-awesome.css" id="theme">
   </head>
   <body>
     <textarea id="source">
@@ -17,20 +18,15 @@ name: inverse
 layout: true
 class: center, middle, inverse
 
+<div class="my-header"><span>
+<a href="/training-material/topics/admin" title="Return to topic page" ><i class="fa fa-level-up" aria-hidden="true"></i></a>
+</span></div>
+
 <div class="my-footer"><span>
 
-<img src="https://galaxyproject.github.io/training-material//assets/images/GTN.png" style="height: 40px;"/>
+<img src="/training-material/assets/images/GTN-60px.png" alt="Galaxy Training Network" style="height: 40px;"/>
 
 </span></div>
----
-
-## Welcome!
-
-This material is the result of a collaborative work. Thanks the [Galaxy Training Network](https://wiki.galaxyproject.org/Teach/GTN) and all the contributors !
-
-
-<img src="https://galaxyproject.github.io/training-material//assets/images/GTN.png" style="height: 100px;"/>
-
 
 ---
 
@@ -47,7 +43,7 @@ We are going to use a prebuilt virtual machine image for this session.
 From the given USB stick, please:
 
 * Copy and install VirtualBox (or [download](https://www.virtualbox.org/wiki/Downloads)) if you do not have it already.
-* Copy the Planemo machine image - file `latest.ova` or [download](https://images.galaxyproject.org/planemo/latest.ova).
+* Copy the Planemo machine image - file `latest.ova` or [download](https://images.galaxyproject.org/planemo/).
 
 ---
 
@@ -122,11 +118,11 @@ var helpTab = {
 
 ## Configuration tweaks
 
-Plenty of customisation can be achieved using settings in the main configuration file [galaxy.ini](https://github.com/galaxyproject/galaxy/blob/dev/config/galaxy.ini.sample)
+Plenty of customisation can be achieved using settings in the main configuration file [galaxy.yml](https://github.com/galaxyproject/galaxy/blob/dev/config/galaxy.yml.sample)
 
 ---
 
-### Toolpanel configuration
+### Tool Panel configuration
 
 * How the toolpanel looks like is decided in a file called `integrated_tool_panel.xml`.
 * By default it resides in Galaxy's root folder.
@@ -143,7 +139,7 @@ You can add `&lt;tool labels=&quot;updated&quot; /&gt;` to achieve:
 
 ---
 
-### Toolpanel search configuration 1/2
+### Tool Panel search configuration 1/2
 
 The tool panel search uses a pre-built index that is compiled during Galaxy
 boot. You can tweak tool panel search by configuring boosts in `galaxy.ini`.
@@ -163,7 +159,7 @@ query.
 
 ---
 
-### Toolpanel search configuration 2/2
+### Tool Panel search configuration 2/2
 
 ```ini
 # Enable/ disable Ngram-search for tools. It makes tool
@@ -257,13 +253,13 @@ activation_grace_period = 6
 
 ### Galaxy Tours
 
-Have their own [tutorial](https://galaxyproject.github.io/training-material//topics/dev//tutorials/interactive-tours/slides.html#1).
+Have their own [tutorial](/training-material/topics/dev//tutorials/interactive-tours/slides.html#1).
 
 ---
 
 ### Galaxy Webhooks
 
-Have their own [slides](https://galaxyproject.github.io/training-material//topics/dev//tutorials/webhooks/slides.html#1) and [tutorial](https://galaxyproject.github.io/training-material//topics/dev//tutorials/webhooks/tutorial.html).
+Have their own [slides](/training-material/topics/dev//tutorials/webhooks/slides.html#1) and [tutorial](/training-material/topics/dev//tutorials/webhooks/tutorial.html).
 
 And also a [documentation](https://docs.galaxyproject.org/en/master/admin/special_topics/webhooks.html)
 
@@ -272,7 +268,7 @@ And also a [documentation](https://docs.galaxyproject.org/en/master/admin/specia
 
 ### Adjusting styles
 
-We use LESS to build our CSS. Amongst other features it allows defining [variables](https://github.com/galaxyproject/galaxy/blob/dev/client/galaxy/style/less/galaxy_bootstrap/variables.less).
+We use LESS to build our CSS. Among other features it allows defining [variables](https://github.com/galaxyproject/galaxy/blob/release_18.01/client/galaxy/style/less/galaxy_bootstrap/variables.less).
 
 ```diff
 --- a/client/galaxy/style/less/galaxy_bootstrap/variables.less
@@ -342,13 +338,13 @@ We use LESS to build our CSS. Amongst other features it allows defining [variabl
 
 ---
 
-## Biostar integration
+## Biostars integration
 
 It is possible to plug in Galaxy to an own [Biostar](https://github.com/ialbert/biostar-central) instance.
 
 ```
 biostar_key: &lt;safe_key&gt;
-biostar_url: &quot;https://biostar.usegalaxy.org&quot;
+biostar_url: https://biostar.usegalaxy.org
 biostar_key_name: biostar-login
 biostar_enable_bug_reports: &quot;False&quot;
 ```
@@ -388,10 +384,19 @@ or associated with Groups or Users
 * Create a quota that grants unlimited
 
 
-.footnote[Found a typo? Something is wrong in this tutorial? <br/>Edit it on [GitHub](https://github.com/galaxyproject/training-material/tree/master/admin/slides/slides.html)]
+---
+
+## Thank you!
+
+This material is the result of a collaborative work. Thanks the [Galaxy Training Network](https://wiki.galaxyproject.org/Teach/GTN) and all the contributors  (Björn Grüning, Helena Rasche, Martin Čech) !
+
+
+<img src="/training-material/assets/images/GTN.png" alt="Galaxy Training Network" style="height: 100px;"/>
+
+
 
     </textarea>
-    <script src="https://galaxyproject.github.io/training-material//assets/js/remark-latest.min.js" type="text/javascript">
+    <script src="/training-material/assets/js/remark-latest.min.js" type="text/javascript">
     </script>
     <script type="text/javascript">
       var slideshow = remark.create({navigation: {scroll: false,}});

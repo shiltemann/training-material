@@ -1,107 +1,191 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
     <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Galaxy Training!</title>
-        <link media="all" href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://galaxyproject.github.io/training-material//assets/css/landing_page.css">
-        <link rel="stylesheet" href="https://galaxyproject.github.io/training-material//assets/css/tutorial.css">
-        <link rel="stylesheet" href="https://galaxyproject.github.io/training-material//assets/css/font-awesome.css">
-        <link rel="stylesheet" href="https://galaxyproject.github.io/training-material//assets/css/syntax_highlighting.css">
-        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
+        <link rel="stylesheet" href="/training-material/assets/css/font-awesome.css">
+        <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
+        <link rel="stylesheet" href="/training-material/assets/css/syntax_highlighting.css">
+        <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
     </head>
     <body>
-        <div class="wrapper">
-            
+        
+
+
 
 
 <header>
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/training-material/">
+                <img src="/training-material/assets/images/GTN-60px.png" height="30" alt="Galaxy Training Network logo">
+                Galaxy Training!
+            </a>
+
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#top-navbar" aria-controls="top-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <a id="site-title" class="navbar-brand" href="https://wiki.galaxyproject.org/Teach/GTN">
-              <img class="pull-left img-responsive" src="https://galaxyproject.github.io/training-material///assets/images/GTN.png">
-            </a>
-            <a id="site-title" class="navbar-brand name-holder" href="https://galaxyproject.github.io/training-material//topics/dev/tutorials//tutorial.html">
-              
-            </a>
-          </div>
+            <div class="collapse navbar-collapse" id="top-navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/training-material/topics/dev" title="Go back to list of tutorials">
+                            <i class="fa fa-folder-o" aria-hidden="true"></i><span class="visually-hidden">topic</span> Development in Galaxy
+                        </a>
+                    </li>
 
-          <div class="collapse navbar-collapse" id="navbar">
+                    
+                        
+                        
+                        
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Introduction slides">
+                                    <i class="fa fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span> Introduction slides
+                                </a>
+                                <div class="dropdown-menu">
+                                    
+                                        
+                                            
+                                                <a class="dropdown-item" href="/training-material/topics/dev/slides/introduction.html">
+                                                    Galaxy from a developer point of view
+                                                </a>
+                                            
+                                        
+                                    
+                                        
+                                            
+                                        
+                                    
+                                        
+                                            
+                                        
+                                    
+                                        
+                                            
+                                        
+                                    
+                                        
+                                            
+                                        
+                                    
+                                        
+                                            
+                                        
+                                    
+                                        
+                                            
+                                        
+                                    
+                                        
+                                            
+                                        
+                                    
+                                        
+                                            
+                                        
+                                    
+                                        
+                                            
+                                        
+                                    
+                                        
+                                            
+                                        
+                                    
+                                        
+                                            
+                                        
+                                    
+                                        
+                                            
+                                        
+                                    
+                                        
+                                    
+                                </div>
+                            </li>
+                        
+                    
 
-            <ul id="main-menu" class="nav navbar-nav navbar-right">
-              <li><a href="https://galaxyproject.github.io/training-material/" title="Back to front page"><i class="fa fa-home"></i> Home</a></li>
-              <li><a href="https://galaxyproject.github.io/training-material//topics/dev" title="Go back to list of tutorials"><i class="fa fa-file-text-o"></i> Development in Galaxy</a></li>
+                    
 
-              
-                <li><a href="https://galaxyproject.github.io/training-material//topics/dev/slides" title="Slides for this tutorial"><i class="fa fa-graduation-cap"></i> Introduction slides</a></li>
-              
-              <!--<li><a href="https://galaxyproject.github.io/training-material//dev/slides//"><i class="fa fa-file-powerpoint-o"></i> Associated slides</a></li>-->
+                    
 
-              
-                <li><a href="https://github.com/galaxyproject/training-material/tree/master/topics/dev/docker" title="Docker image for this tutorial"><i class="fa fa-ship"></i> Docker image</a></li>
-              
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="" title="Links to data">
+                            <i class="fa fa-files-o" aria-hidden="true"></i><span class="visually-hidden">zenodo_link</span> Input Dataset
+                        </a>
+                    </li>
+                    
 
-              
+                    
 
-              
-                <li><a href="" title="Links to data"><i class="fa fa-folder-open"></i> Input Dataset</a></li>
-              
+                    <li class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Help">
+        <i class="fa fa-life-ring" aria-hidden="true"></i><span class="visually-hidden">help</span> Help
+    </a>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="/training-material/faq" title="Check our FAQ">
+            FAQ
+        </a>
+        <a class="dropdown-item" href="https://gitter.im/Galaxy-Training-Network/Lobby" title="Chat on Gitter">
+            Gitter
+        </a>
+        <a class="dropdown-item" href="https://biostar.usegalaxy.org/" title="Ask on Biostars">
+            Biostars
+        </a>
+    </div>
+</li>
 
-              
-                <li><a href="https://galaxyproject.github.io/training-material//topics/dev#references" title="References"><i class="fa fa-book"></i> Literature</a></li>
-              
 
-            </ul>
-          </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/master/topics/dev/tutorials/data-source-integration/tutorial.md">
+                            <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 </header>
 
-<section class="tutorial">
-    <h1></h1>
+<div class="container main-content">
+    <section class="tutorial">
+        <h1>Data source integration</h1>
 
-    <blockquote class="overview">
-        <h3>Overview</h3>
+        <blockquote class="overview">
+            <h3>Overview</h3>
 
-        <p class="bold"> <img class="emoji" title=":grey_question:" alt=":grey_question:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2754.png" height="20" width="20" align="absmiddle"> Questions</p>
-        <ul>
-        
-        </ul>
+            <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
+            <ul>
+            
+            </ul>
 
-        <p class="bold"> <img class="emoji" title=":dart:" alt=":dart:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f3af.png" height="20" width="20" align="absmiddle"> Objectives</p>
-        <ul>
-        
-        </ul>
+            <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
+            <ul>
+            
+            </ul>
 
-        
+            
 
-        <p><span class="bold"> <img class="emoji" title=":hourglass:" alt=":hourglass:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/231b.png" height="20" width="20" align="absmiddle"> Time estimation:</span> </p>
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 1h/1d</p>
+        </blockquote>
 
-    </blockquote>
-
-<h1 id="data-source-integration">Data Source Integration</h1>
+        <h1 id="data-source-integration">Data Source Integration</h1>
 
 <p>An important goal of Galaxy is scalability. A major bottleneck when it comes to analysis of big data sets is the time and space it takes of copying these data sets.</p>
 
-<figure id="figure-1"><img src="../../images/data_source_integration.png" alt="data_source_integration" title="data_source_integration"><figcaption><span class="figcaption-prefix">Figure 1:</span> data_source_integration</figcaption></figure>
+<p><img src="../../images/data_source_integration.png" alt="data_source_integration"></p>
 
-<p>Galaxy provides an interface such that it can communicate with other servers to get data directly into the Galaxy environment of a user without the need of “downloading” the data. We (have used/will use) the UCSC table browser in this course, and in this hands on, we will use the resource from <a href="https://dorina.mdc-berlin.de/">DoRiNA Server</a> <a href="http://www.ncbi.nlm.nih.gov/pubmed/25416797">(Blin et al. 2014, Nucleic Acids Research.)</a>,
+<p>Galaxy provides an interface such that it can communicate with other servers to get data directly into the Galaxy environment of a user without the need of “downloading” the data. We (have used/will use) the UCSC table browser in this course, and in this hands on, we will use the resource from <a href="http://dorina.mdc-berlin.de/">DoRiNA Server</a> <a href="http://www.ncbi.nlm.nih.gov/pubmed/25416797">(Blin et al. 2014, Nucleic Acids Research.)</a>,
 but the main point about this short section is:
 if you have a data source which you think is very important for your research with Galaxy let us know!</p>
 
-<p><img class="emoji" title=":pencil2:" alt=":pencil2:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/270f.png" height="20" width="20" align="absmiddle"> <strong><em>Hands on!</em></strong></p>
+<p><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> <strong><em>Hands on!</em></strong></p>
 
 <ol>
   <li>Create a new history called “doRiNA”</li>
@@ -114,7 +198,7 @@ if you have a data source which you think is very important for your research wi
 
 <p>That was very easy for all of you! If you want your database of choice to be accessible as easy as this <strong>let us know</strong>!</p>
 
-<p><img class="emoji" title=":grey_exclamation:" alt=":grey_exclamation:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2755.png" height="20" width="20" align="absmiddle"> <strong><em>Key Points</em></strong></p>
+<p><img class="emoji" title=":grey_exclamation:" alt=":grey_exclamation:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2755.png" height="20" width="20"> <strong><em>Key Points</em></strong></p>
 
 <ul>
   <li><em>Simple sentence to sum up the first key point of the tutorial (Take home message)</em></li>
@@ -124,32 +208,51 @@ if you have a data source which you think is very important for your research wi
 </ul>
 
 <h1 id="clap-thank-you">
-<img class="emoji" title=":clap:" alt=":clap:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f44f.png" height="20" width="20" align="absmiddle"> Thank you</h1>
+<img class="emoji" title=":clap:" alt=":clap:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f44f.png" height="20" width="20"> Thank you</h1>
 
 
-    
+        
 
-    
+        
 
-    <h3>
-<img class="emoji" title=":clap:" alt=":clap:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f44f.png" height="20" width="20" align="absmiddle"> Congratulations on successfully completing this tutorial!</h3>
+        
+
+        <h3>
+<i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+
+        <hr>
+
+        <blockquote class="feedback">
+            <h3>
+<i class="fa fa-comments-o" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Help us improve this content!</h3>
+            Please take a moment to fill in the Galaxy Training Network
+            <a href="https://tinyurl.com/GTNfeedback">Feedback Form</a>.
+            Your feedback helps us improve this tutorial and will be considered
+            in future revisions.
+        </blockquote>
+    </section>
+</div>
 
 
-    <hr>
-    <blockquote class="overview">
-        <h3> <img class="emoji" title=":speech_balloon:" alt=":speech_balloon:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f4ac.png" height="20" width="20" align="absmiddle"> Feedback</h3>
-        Please take a moment and provide your feedback on this tutorial. Your feedback will help guide and improve future revisions to this tutorial. <a href="https://tinyurl.com/GTNfeedback" target="_blank">Feedback Form</a>
-    </blockquote>
+<footer>
+    <div class="container">
+        <p>
+            This material is the result of a collaborative work. Thanks to the
+            <a href="https://wiki.galaxyproject.org/Teach/GTN">Galaxy Training Network</a>
+            and all the <a href="/training-material/hall-of-fame">contributors</a> ({"a-asai"=&gt;{"name"=&gt;"Atsushi Asai""email"=&gt;"tbudcm7zk@i.softbank.jp"}, "abretaud"=&gt;{"name"=&gt;"Anthony Bretaudeau", "email"=&gt;"anthony.bretaudeau@inra.fr", "twitter"=&gt;"abretau", "gitter"=&gt;"abretaud", "orcid"=&gt;"0000-0003-0914-2470"}, "afgane"=&gt;{"name"=&gt;"Enis Afgan"}, "aisanjiangw"=&gt;{"name"=&gt;"Aisanjiang Wubuli"}, "andreasrichter"=&gt;{"name"=&gt;"Andreas Richter", "github"=&gt;false}, "andrewjpage"=&gt;{"name"=&gt;"Andrew Page", "email"=&gt;"andrewjpage@gmail.com", "twitter"=&gt;"andrewjpage", "orcid"=&gt;"0000-0001-6919-6062"}, "annasyme"=&gt;{"name"=&gt;"Anna Syme"}, "baberlevi"=&gt;{"name"=&gt;"Levi Baber"}, "bagnacan"=&gt;{"name"=&gt;"Andrea Bagnacani", "email"=&gt;"andrea.bagnacani@gmail.com"}, "bebatut"=&gt;{"name"=&gt;"Bérénice Batut", "email"=&gt;"berenice.batut@gmail.com", "twitter"=&gt;"bebatut", "linkedin"=&gt;"berenicebatut", "gitter"=&gt;"bebatut", "orcid"=&gt;"0000-0001-9852-1987"}, "bernt-matthias"=&gt;{"name"=&gt;"Matthias Bernt"}, "bgruening"=&gt;{"name"=&gt;"Björn Grüning", "email"=&gt;"bjoern.gruening@gmail.com", "twitter"=&gt;"bjoerngruening", "gitter"=&gt;"bgruening", "orcid"=&gt;"0000-0002-3079-6586", "linkedin"=&gt;"bgruening"}, "blankclemens"=&gt;{"name"=&gt;"Clemens Blank", "email"=&gt;"blankclemens@gmail.com"}, "blankenberg"=&gt;{"name"=&gt;"Daniel Blankenberg", "twitter"=&gt;"dblankenberg", "orcid"=&gt;"0000-0002-6833-9049"}, "claresloggett"=&gt;{"name"=&gt;"Clare Sloggett"}, "cmonjeau"=&gt;{"name"=&gt;"Cyril Monjeaud"}, "cganote"=&gt;{"name"=&gt;"Carrie Ganote"}, "daltis20012009"=&gt;{"name"=&gt;"Krzys Poterlowicz", "github"=&gt;false}, "dannon"=&gt;{"name"=&gt;"Dannon Baker"}, "delphine-l"=&gt;{"name"=&gt;"Delphine Lariviere", "email"=&gt;"delphine.lariviere@galaxy.org"}, "dmaticzka"=&gt;{"name"=&gt;"Daniel Maticzka"}, "dpryan79"=&gt;{"name"=&gt;"Devon Ryan"}, "dsobral"=&gt;{"name"=&gt;"Daniel Sobral"}, "dyusuf"=&gt;{"name"=&gt;"Dilmurat Yusuf"}, "erasche"=&gt;{"name"=&gt;"Helena Rasche", "email"=&gt;"hxr@hx42.org", "orcid"=&gt;"0000-0001-9760-8992"}, "erxleben"=&gt;{"name"=&gt;"Anika Erxleben", "email"=&gt;"anikaerxleben@gmail.com", "orcid"=&gt;"0000-0002-7427-6478"}, "fabio-cumbo"=&gt;{"name"=&gt;"Fabio Cumbo", "email"=&gt;"fabio.cumbo@gmail.com", "twitter"=&gt;"cumbofabio", "linkedin"=&gt;"fabiocumbo", "gitter"=&gt;"fabio-cumbo", "orcid"=&gt;"0000-0003-2920-5838"}, "fidelram"=&gt;{"name"=&gt;"Fidel Ramirez"}, "Florian-H-Lab"=&gt;{"name"=&gt;"Florian Heyl"}, "fmareuil"=&gt;{"name"=&gt;"Fabien Mareuil"}, "frederikcoppens"=&gt;{"name"=&gt;"Frederik Coppens"}, "friedue"=&gt;{"name"=&gt;"Friederike Dündar"}, "guerler"=&gt;{"name"=&gt;"Aysam Guerler"}, "hmenager"=&gt;{"name"=&gt;"Hervé Ménager"}, "hrhotz"=&gt;{"name"=&gt;"Hans-Rudolf Hotz", "email"=&gt;"hrhotz@googlemail.com", "twitter"=&gt;"hrhotz", "gitter"=&gt;"hrhotz", "orcid"=&gt;"0000-0002-2799-424X", "linkedin"=&gt;"hans-rudolf-hotz-542b31"}, "jennaj"=&gt;{"name"=&gt;"Jennifer Hillman-Jackson", "maintainer_contact"=&gt;"https://biostar.usegalaxy.org", "email"=&gt;"jen@galaxyproject.org", "gitter"=&gt;"jennaj", "twitter"=&gt;"jenhjackson", "linkedin"=&gt;"jennifer.hillman.jackson", "orcid"=&gt;"0000-0003-4012-8116"}, "jennydg"=&gt;{"name"=&gt;"Jennifer Del Giudice"}, "jfallmann"=&gt;{"name"=&gt;"Joerg Fallmann"}, "jgoecks"=&gt;{"name"=&gt;"Jeremy Goecks"}, "jj-umn"=&gt;{"name"=&gt;"James Johnson", "email"=&gt;"jj@umn.edu"}, "jmchilton"=&gt;{"name"=&gt;"John Chilton", "email"=&gt;"jmchilton@gmail.com"}, "joachimwolff"=&gt;{"name"=&gt;"Joachim Wolff", "email"=&gt;"wolffj@informatik.uni-freiburg.de"}, "jpmaree"=&gt;nil, "jxtx"=&gt;{"name"=&gt;"James Taylor"}, "katrinleinweber"=&gt;{"name"=&gt;"Katrin Leinweber", "email"=&gt;"katrin.leinweber@tib.eu", "orcid"=&gt;"0000-0001-5135-5758"}, "lecorguille"=&gt;{"name"=&gt;"Gildas Le Corguillé"}, "loraine-gueguen"=&gt;{"name"=&gt;"Loraine Guéguen"}, "natefoo"=&gt;{"name"=&gt;"Nate Coraor", "gitter"=&gt;"natefoo", "twitter"=&gt;"natefoo", "email"=&gt;"nate@bx.psu.edu"}, "malloryfreeberg"=&gt;{"name"=&gt;"Mallory Freeberg"}, "manabuishii"=&gt;{"name"=&gt;"Manabu ISHII"}, "martenson"=&gt;{"name"=&gt;"Martin Čech", "email"=&gt;"marten@bx.psu.edu"}, "marziacremona"=&gt;{"name"=&gt;"Marzia A Cremona", "email"=&gt;"mac78@psu.edu"}, "mccalluc"=&gt;{"name"=&gt;"Chuck McCallum"}, "moffmade"=&gt;{"name"=&gt;"Cory Maughmer"}, "moheydarian"=&gt;{"name"=&gt;"Mo Heydarian", "email"=&gt;"mheydarian@gmail.com"}, "mvdbeek"=&gt;{"name"=&gt;"Marius van den Beek"}, "mwolfien"=&gt;{"name"=&gt;"Markus Wolfien"}, "nekrut"=&gt;{"name"=&gt;"Anton Nekrutenko", "email"=&gt;"anton@nekrut.org"}, "nicherndon"=&gt;{"name"=&gt;"Nic Herndon"}, "NickSto"=&gt;{"name"=&gt;"Nick Stoler", "twitter"=&gt;"NickStoler"}, "nsoranzo"=&gt;{"name"=&gt;"Nicola Soranzo"}, "nvk747"=&gt;{"name"=&gt;"Vijay"}, "odoppelt"=&gt;{"name"=&gt;"Olivia Doppelt-Azeroual"}, "kilpert"=&gt;{"name"=&gt;"Fabian Kilpert"}, "pajanne"=&gt;{"name"=&gt;"Anne Pajon"}, "polkhe"=&gt;{"name"=&gt;"Ekaterina Polkh"}, "pvanheus"=&gt;{"name"=&gt;"Peter van Heusden"}, "pratikdjagtap"=&gt;{"name"=&gt;"Pratik Jagtap", "email"=&gt;"pjagtap@umn.edu"}, "pavanvidem"=&gt;{"name"=&gt;"Pavankumar Videm"}, "reginaesinamabotsi"=&gt;{"name"=&gt;"Regina Esinam Abotsi"}, "shiltemann"=&gt;{"name"=&gt;"Saskia Hiltemann", "maintainer_contact"=&gt;"gitter", "email"=&gt;"saskia.hiltemann@gmail.com", "twitter"=&gt;"shiltemann", "linkedin"=&gt;"shiltemann", "gitter"=&gt;"shiltemann", "orcid"=&gt;"0000-0003-3803-468X"}, "slegras"=&gt;{"name"=&gt;"Stéphanie Legras"}, "slugger70"=&gt;{"name"=&gt;"Simon Gladman", "email"=&gt;"simon.gladman@unimelb.edu.au"}, "stortebecker"=&gt;{"name"=&gt;"Florian Christoph Sigloch", "email"=&gt;"sigloch+github@mailbox.org"}, "subinamehta"=&gt;{"name"=&gt;"Subina Mehta", "email"=&gt;"subinamehta@gmail.com"}, "tealiie"=&gt;nil, "thomasmanke"=&gt;{"name"=&gt;"Thomas Manke"}, "timothygriffin"=&gt;{"name"=&gt;"Timothy J. Griffin", "email"=&gt;"tgriffin@umn.edu", "github"=&gt;false}, "tizzir"=&gt;{"name"=&gt;"Matthew Spelchak"}, "tnabtaf"=&gt;{"name"=&gt;"Dave Clements"}, "torhou"=&gt;{"name"=&gt;"Torsten Houwaart"}, "tseemann"=&gt;{"name"=&gt;"Torsten Seemann"}, "valentinmarcon"=&gt;{"name"=&gt;"Valentin Marcon"}, "vdda"=&gt;{"name"=&gt;"Victoria Dominguez del Angel"}, "vivekbhr"=&gt;{"name"=&gt;"Vivek Bhardwaj"}, "willdurand"=&gt;{"name"=&gt;"William Durand"}, "wm75"=&gt;{"name"=&gt;"Wolfgang Maier"}, "yhoogstrate"=&gt;{"name"=&gt;"Youri Hoogstrate"}, "yvanlebras"=&gt;{"name"=&gt;"Yvan Le Bras", "email"=&gt;"yvan.le-bras@mnhn.fr"}})!
+        </p>
+        <p>
+            Found a typo? Something is wrong in this tutorial? Edit it on
+            <a href="https://github.com/galaxyproject/training-material/tree/master/topics/dev/tutorials/data-source-integration/tutorial.md">GitHub</a>.
+        </p>
+    </div>
+</footer>
 
-    <i>This material is the result of a collaborative work. Thanks the <a href="https://wiki.galaxyproject.org/Teach/GTN">Galaxy Training Network</a> and all the contributors
-    
-    !<br>
-    <br>
-    Found a typo? Something is wrong in this tutorial? Edit it on <a href="https://github.com/galaxyproject/training-material/tree/master/topics/dev/tutorials//tutorial.md">GitHub</a>.</i>
-</section>
-
-        </div>
     </body>
-    <script src="https://galaxyproject.github.io/training-material//assets/js/landing_page.js"></script>
+    <script type="text/javascript" src="/training-material/assets/js/jquery.slim.min.js"></script>
+    <script type="text/javascript" src="/training-material/assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
+    <script type="text/javascript" src="/training-material/assets/js/details-element-polyfill.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="/training-material/assets/js/main.js"></script>
 </html>

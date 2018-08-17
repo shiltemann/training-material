@@ -5,12 +5,12 @@
 
 
 
+
   <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>Galaxy Code Architecture</title>
-    <link rel="stylesheet" href="https://galaxyproject.github.io/training-material//assets/css/slides.css">
-    <link rel="stylesheet" href="https://galaxyproject.github.io/training-material//assets/css/font-awesome.css" id="theme">
+    <link rel="stylesheet" href="/training-material/assets/css/slides.css">
+    <link rel="stylesheet" href="/training-material/assets/css/font-awesome.css" id="theme">
   </head>
   <body>
     <textarea id="source">
@@ -18,20 +18,15 @@ name: inverse
 layout: true
 class: center, middle, inverse
 
+<div class="my-header"><span>
+<a href="/training-material/topics/dev" title="Return to topic page"><i class="fa fa-level-up" aria-hidden="true"></i></a>
+</span></div>
+
 <div class="my-footer"><span>
 
-<img src="https://galaxyproject.github.io/training-material//assets/images/GTN.png" style="height: 40px;">
+<img src="/training-material/assets/images/GTN-60px.png" alt="Galaxy Training Network" style="height: 40px;">
 
 </span></div>
----
-
-## Welcome!
-
-This material is the result of a collaborative work. Thanks the [Galaxy Training Network](https://wiki.galaxyproject.org/Teach/GTN) and all the contributors !
-
-
-<img src="https://galaxyproject.github.io/training-material//assets/images/GTN.png" style="height: 100px;">
-
 
 ---
 
@@ -45,7 +40,7 @@ This material is the result of a collaborative work. Thanks the [Galaxy Training
 
 
 
-### <img class="emoji" title=":grey_question:" alt=":grey_question:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2754.png" height="20" width="20" align="absmiddle"> Questions
+### <img class="emoji" title=":grey_question:" alt=":grey_question:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2754.png" height="20" width="20"> Questions
 
 
 - How is the Galaxy code structured?
@@ -57,7 +52,7 @@ This material is the result of a collaborative work. Thanks the [Galaxy Training
 
 ---
 
-### <img class="emoji" title=":dart:" alt=":dart:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f3af.png" height="20" width="20" align="absmiddle"> Objectives
+### <img class="emoji" title=":dart:" alt=":dart:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f3af.png" height="20" width="20"> Objectives
 
 
 - Explore various aspects of the Galaxy codebase.
@@ -168,7 +163,6 @@ Other repositories with high quality tools:
  * [ENCODE tools](https://github.com/modENCODE-DCC/Galaxy)
  * [Biopython repo](https://github.com/biopython/galaxy_packages)
  * [Galaxy Proteomics repo](https://github.com/galaxyproteomics/tools-galaxyp)
- * [Colibread Galaxy Tools](https://github.com/genouest/tools-colibread)
  * [Greg von Kuster's repo](https://github.com/gregvonkuster/galaxy-csg)
  * [TGAC repo](https://github.com/TGAC/tgac-galaxytools)
  * [AAFC-MBB Canada repo](https://github.com/AAFC-MBB/Galaxy/tree/master/wrappers)
@@ -187,7 +181,7 @@ Build Galaxy framework dependencies as Python wheels
 
 [galaxyproject/**planemo** ](https://github.com/galaxyproject/planemo)
 
-Commande line utilities to assist in the development of Galaxy tools.
+Command-line utilities to assist in the development of Galaxy tools.
 Linting, testing, deploying to ToolSheds...
 
 *The best practice approach for Galaxy tool development!*
@@ -301,7 +295,7 @@ can be adapted to many different technologies.
 
 ???
 
-If the chief architectual principle guiding the frontend is a fast and accessible
+If the chief architectural principle guiding the frontend is a fast and accessible
 experience for the bench scientist, perhaps for the backend it is allowing
 deployment on many different platforms and a different scales.
 
@@ -346,7 +340,7 @@ class: white
 
 ???
 
-Admin things, Reports and Tool Shed Webapp
+Admin things, Reports and Tool Shed Web app
 
 ---
 
@@ -359,8 +353,8 @@ Admin things, Reports and Tool Shed Webapp
 ### WSGI
 
 - Python interface for web servers defined by PEP 333 - https://www.python.org/dev/peps/pep-0333/.
-- Galaxy moving from Paster to uwsgi to host the application.
-  - http://pythonpaste.org/
+- Galaxy moving from Paster to uWSGI to host the application.
+  - https://bitbucket.org/ianb/paste
   - https://uwsgi-docs.readthedocs.io/
 
 ---
@@ -609,22 +603,22 @@ Adding new visualizations to a Galaxy instance
 class: reduce70
 
 ```xml
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;!DOCTYPE visualization SYSTEM "../../visualization.dtd"&gt;
-&lt;visualization name="Charts"&gt;
-    &lt;data_sources&gt;
-        &lt;data_source&gt;
-            &lt;model_class&gt;HistoryDatasetAssociation&lt;/model_class&gt;
-            &lt;test type="isinstance" test_attr="datatype" result_type="datatype"&gt;tabular.Tabular&lt;/test&gt;
-            &lt;test type="isinstance" test_attr="datatype" result_type="datatype"&gt;tabular.CSV&lt;/test&gt;
-            &lt;to_param param_attr="id"&gt;dataset_id&lt;/to_param&gt;
-        &lt;/data_source&gt;
-    &lt;/data_sources&gt;
-    &lt;params&gt;
-        &lt;param type="dataset" var_name_in_template="hda" required="true"&gt;dataset_id&lt;/param&gt;
-    &lt;/params&gt;
-    &lt;entry_point entry_point_type="mako"&gt;charts.mako&lt;/entry_point&gt;
-&lt;/visualization&gt;
+<?xml version="1.0" encoding="UTF-8"?>
+
+<visualization name="Charts">
+    <data_sources>
+        <data_source>
+            <model_class>HistoryDatasetAssociation</model_class>
+            <test type="isinstance" test_attr="datatype" result_type="datatype">tabular.Tabular</test>
+            <test type="isinstance" test_attr="datatype" result_type="datatype">tabular.CSV</test>
+            <to_param param_attr="id">dataset_id</to_param>
+        </data_source>
+    </data_sources>
+    <params>
+        <param type="dataset" var_name_in_template="hda" required="true">dataset_id
+    </params>
+    <entry_point entry_point_type="mako">charts.mako</entry_point>
+</visualization>
 ```
 
 ---
@@ -637,7 +631,7 @@ All in `config/plugins/visualizations`:
 
 - `csg` - Chemical structure viewer
 - `graphviz` - Visualize graph data using [cytoscape.js](http://www.cytoscape.org/)
-- `charts` - A more elobrate builds on more Galaxy abstractions.
+- `charts` - A more elaborate builds on more Galaxy abstractions.
 - `trackster` - Genome browser, deeply tied to Galaxy internals.
 
 ---
@@ -818,7 +812,7 @@ class: white
 ### Webhooks in Galaxy
 
 Webhooks is a system in Galaxy which can be used to write small JS and/or Python functions to change predefined locations in the Galaxy client.
-&lt;br&gt;&lt;br&gt;
+<br><br>
 In short: A plugin infrastructure for the Galaxy UI
 
 
@@ -837,7 +831,7 @@ At the header menu: Enabling the overlay search, link to communities ...
 ---
 
 ### Webhook tool/workflow example
-&lt;br&gt;&lt;br&gt;
+<br><br>
 ![](../../images/webhook_tool.png)
 
 Shown after tool or workflow execution. Comics, citations, support ...
@@ -1477,7 +1471,7 @@ This used to be an important detail - but uWSGI makes things a lot easier.
 
 ---
 
-### <img class="emoji" title=":grey_exclamation:" alt=":grey_exclamation:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2755.png" height="20" width="20" align="absmiddle"> Key points
+### <img class="emoji" title=":grey_exclamation:" alt=":grey_exclamation:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2755.png" height="20" width="20"> Key points
 
 
 - Galaxy runs out of the box and fetches all needed dependencies.
@@ -1489,15 +1483,22 @@ This used to be an important detail - but uWSGI makes things a lot easier.
 - Learn more about different Galaxy aspects in our [development section](/topics/dev/).
 
 
+
 ---
 
-## <img class="emoji" title=":clap:" alt=":clap:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f44f.png" height="20" width="20" align="absmiddle"> Congratulations &lt;br&gt;on successfully completing this tutorial!
+## Thank you!
+
+This material is the result of a collaborative work. Thanks the [Galaxy Training Network](https://wiki.galaxyproject.org/Teach/GTN) and all the contributors  (John Chilton, Björn Grüning) !
 
 
-.footnote[Found a typo? Something is wrong in this tutorial? <br>Edit it on [GitHub](https://github.com/galaxyproject/training-material/tree/master/dev/slides/slides.html)]
+<img src="/training-material/assets/images/GTN.png" alt="Galaxy Training Network" style="height: 100px;">
+
+
+
+.footnote[Found a typo? Something is wrong in this tutorial? <br>Edit it on [GitHub](https://github.com/galaxyproject/training-material/tree/master/topics/dev/tutorials/architecture/slides.html)]
 
     </textarea>
-    <script src="https://galaxyproject.github.io/training-material//assets/js/remark-latest.min.js" type="text/javascript">
+    <script src="/training-material/assets/js/remark-latest.min.js" type="text/javascript">
     </script>
     <script type="text/javascript">
       var slideshow = remark.create({navigation: {scroll: false,}});
