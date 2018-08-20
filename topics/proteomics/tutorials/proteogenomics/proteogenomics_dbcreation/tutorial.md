@@ -6,13 +6,12 @@ tutorial_name: Proteogenomics_RNAseq_db_creation
 
 # Introduction
 
-**Proteogenomics** is a combination of proteomics, genomics and transcriptomics data to identify peptides and to understand protein-level evidence of gene expression. In this tutorial, we will create a protein database (FASTA) using RNA-sequencing files (FASTQ) and then perform database searching of the resulting FASTA file with the MS/MS data to identify novel peptides. Then, we will assign the genomic coordinates and annotations for these novel peptides as well as perform visualization of the data. 
+**Proteogenomics** involves the use of mass spectrometry (MS) based proteomics data against genomics and transcriptomics data to identify peptides and to understand protein-level evidence of gene expression. In the first section of the tutorial, we will create a protein database (FASTA) using RNA-sequencing files (FASTQ) and then perform sequnce database searching using the resulting FASTA file with the MS data to identify peptides corresponding to novel proteoforms. Then, we will assign the genomic coordinates and annotations for these identified peptides and visualize the data for its spectral quanlity and genomic localization 
 
 
 <img src="../../../images/potential_novel_publication.png" width=100%>
 
-training-material/topics/proteomics/images/potential_novel_publication.png
-Proteogenomics most commonly integrates **RNA-Seq** data for generating customized protein sequence databases with mass spectrometry-based proteomics data, which are matched to these databases to identify novel protein sequence variants. (Cancer Res. (2017); 77(21):e43-e46. doi: <a target="_blank" href="https://doi.org/10.1158/0008-5472.CAN-17-0331">10.1158/0008-5472.CAN-17-0331</a>).
+Proteogenomics integrates **RNA-Seq** data for generating customized protein sequence databases with mass spectrometry-based proteomics data, which are matched to these databases to identify protein sequence variants. (Cancer Res. (2017); 77(21):e43-e46. doi: <a target="_blank" href="https://doi.org/10.1158/0008-5472.CAN-17-0331">10.1158/0008-5472.CAN-17-0331</a>).
 
 
 <img src="../../../images/workflow_objective1.png" width=100%>
@@ -21,7 +20,7 @@ Proteogenomics most commonly integrates **RNA-Seq** data for generating customiz
 ## Part I
 
 
-In this tutorial, the proteins and the total RNA were obtained from the early development of B-cells from mice. It was obtained at two developmental stages of B-cells: *Ebf1* -/- pre-pro-B and *Rag2* -/- pro-B. Please refer to the original study for details: [Heydarian, M. et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4276347/).
+In this tutorial, protein and the total RNA sample was obtained from the early development of B-cells from mice. It was obtained at two developmental stages of B-cells: *Ebf1* -/- pre-pro-B and *Rag2* -/- pro-B. Please refer to the original study  [Heydarian, M. et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4276347/)for details.
 
 
 ### Agenda
@@ -29,7 +28,7 @@ In this tutorial, the proteins and the total RNA were obtained from the early de
 > In this tutorial, we will deal with:
 >
 
-> - _Pretreatments / Data upload_ 
+> - _Data processing / Data upload_ 
 
 > - _Alignment of RNA-sequencing data with reference genome_
 
@@ -38,17 +37,17 @@ In this tutorial, the proteins and the total RNA were obtained from the early de
 > - _Merging databases_
 
 
-# Pretreatments
+# Data processing
 
 ## Data upload
 
-There are many ways to upload your data. Three among these are:
+Ways to upload your data. Three among these are:
 
 *   Uploading the files from your computer
-*   Using a direct link
-*   Importing from the data library if your instance provides the files
+*   Using a direct link (URL)
+*   Importing from the data library if your instance has pre-loaded files.
 
-In this tutorial, we will get the data from Zenodo: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1302055.svg)](https://doi.org/10.5281/zenodo.1302055)
+In this tutorial, we will upload the data from Zenodo: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1302055.svg)](https://doi.org/10.5281/zenodo.1302055)
 
 ### Hands-on data upload and organization(:thumbsup: hands-on training)
 >
@@ -67,7 +66,7 @@ In this tutorial, we will get the data from Zenodo: [![DOI](https://zenodo.org/b
 >
 # Analysis
 
-The first workflow focuses on creating a **FASTA** database created from RNA-seq data. There are two outputs from this workflow: (1) a **sequence database** consisting of variants and known reference sequences and (2) mapping files containing **genomic** and **variant** mapping data.
+The first workflow focuses on creating a **FASTA** database generated from RNA-seq data. There are two outputs from this workflow: (1) a **sequence database** consisting of variants and known reference sequences and (2) mapping files containing **genomic** and **variant** mapping data.
 
 
 <img src="../../../images/database_creation.png" width=100%>
@@ -76,7 +75,7 @@ The first part of the workflow deals with creating the FASTA file containing seq
 
 ### Aligning FASTQ files on the human genome
 
-The first tool in the workflow is the [**HISAT2**](http://ccb.jhu.edu/software/hisat) alignment tool. It maps next-generation sequence (NGS) reads to the reference genome. To run this tool, two input files are required: an RNA-seq file (.FASTQ) and a reference genome file in Gene transfer format (GTF). This .gtf file is obtained from the Ensembl database. When successful, this tool outputs a .bam file (binary version of a SAM: **S**equence **A**lignment/**M**ap).
+The first tool in the workflow is the [**HISAT2**](http://ccb.jhu.edu/software/hisat) alignment tool. It maps next-generation sequence (NGS) reads to the reference genome. This tool requires an RNA-seq file (.FASTQ) and a reference genome file in Gene transfer format (GTF). This .gtf file is obtained from the Ensembl database. When successful, this tool outputs a .bam file (binary version of a SAM: **S**equence **A**lignment/**M**ap).
 
 #### HISAT2
 
@@ -102,7 +101,7 @@ The first tool in the workflow is the [**HISAT2**](http://ccb.jhu.edu/software/h
 >>      **Comments**: 
 >>       Note that if your reads are from a stranded library, you need to choose the appropriate 
 >>       setting for "Specify strand information" mentioned above. For single-end reads, use 'F' or 'R'. 
->>       'F' means that a read corresponds to a transcript. 'R' means that a read corresponds to the reverse 
+>>       'F' means that a read corresponds to a forward transcript. 'R' means that a read corresponds to the reverse 
 >>       complemented counterpart of a transcript. For paired-end reads, use either 'FR' or 'RF'. With this 
 >>       option being used, every read alignment will have an XS attribute tag: '+' means a read 
 >>       belongs to a transcript on the positive '+' strand of the genome. '-' means a read belongs to a  
@@ -121,7 +120,7 @@ The first tool in the workflow is the [**HISAT2**](http://ccb.jhu.edu/software/h
 <img src="../../../images/variant_calling.png" width=100%>
 
 
->>     **Comments**: Provided some BAM dataset(s) and a reference sequence, FreeBayes will produce 
+>>     **Comments**: Provided with some BAM dataset(s) and a reference sequence, FreeBayes will generate 
 >>     a VCF dataset describing SNPs, indels, and complex variants in samples in the input 
 >>     alignments. By default, FreeBayes will consider variants supported by at least two observations  
 >>     in a single sample (-C) and also by at least 20% of the reads from a single sample (-F). These 
@@ -180,7 +179,7 @@ The first tool in the workflow is the [**HISAT2**](http://ccb.jhu.edu/software/h
 
 #### CustomProDB
 
-[CustomProDB]( http://dx.doi.org/10.1093/bioinformatics/btt543) generates custom protein FASTAs from exosome or transcriptome data. Once Freebayes creates the .vcf file, CustomProDB uses this file to generate a custom protein FASTA file from the transcriptome data. For this tool, we use Ensemble 89 mmusculus (GRm38.p5) (dbsnp142) as the genome annotation. We create three FASTA files from CustomProDB: (1) a variant FASTA file for short indels, (2) a Single Amino acid Variant (SAV) FASTA file, an SQLite database file (genome mapping and variant mapping) for mapping proteins to a genome and (3) an RData file for variant protein coding sequences.
+[CustomProDB]( http://dx.doi.org/10.1093/bioinformatics/btt543) generates custom protein FASTA sequences files from exosome or transcriptome data. Once Freebayes creates the .vcf file, CustomProDB uses this file to generate a custom protein FASTA file from the transcriptome data. For this tool, we use Ensembl 89 mmusculus (GRm38.p5) (dbsnp142) as the genome annotation. We create three FASTA files from CustomProDB: (1) a variant FASTA file for short indels, (2) a Single Amino acid Variant (SAV) FASTA file, an SQLite database file (genome mapping and variant mapping) for mapping proteins to a genome and (3) an RData file for variant protein coding sequences.
 The reference protein set can be filtered by transcript expression level (RPKM calculated from a BAM file), and variant protein forms can be predicted based on variant calls (SNPs and indels reported in a VCF file).
 
 >>      **Comments**: Annotations CustomProDB depends on a set of annotation files (in RData format) to 
@@ -205,10 +204,10 @@ The reference protein set can be filtered by transcript expression level (RPKM c
 
 >   2. Click **Execute** and inspect the resulting files after they turn green with the **View data** icon: <img src="../../../images/view_icon.png" height=30>
 >
->>       **Comments**: Three FASTA files are created through the CustomProDB tool: a variant FASTA  
+>>       **Comments**: Three FASTA files are generated through the CustomProDB tool: a variant FASTA  
 >>      file for short indels, a Single Amino acid Variant (SAV) FASTA file, an Sqlite file (genome   
 >>      mapping and variant mapping) for mapping proteins to genome and an RData file for variant protein 
->>      coding sequences. Similar to the genomic mapping, a variant mapping file is also created from  
+>>      coding sequences. Similar to the genomic mapping, a variant mapping file is also generated from  
 >>      CustomProDB. This SQLite file is also converted to tabular format and made SearchGUI-compatible. This 
 >>      variant annotation file will be used to visualize the variants in the Multi-omics Visualization 
 >>      Platform (in-house visualization platform developed by Galaxy-P senior developers).
@@ -216,7 +215,7 @@ The reference protein set can be filtered by transcript expression level (RPKM c
 
 #### StringTie
 
-[StringTie](http://ccb.jhu.edu/software/stringtie/) is a fast and highly efficient assembler of RNA-Seq alignments into potential transcripts. It uses a novel network flow algorithm as well as an optional *de novo* assembly step to assemble and quantitate full-length transcripts representing multiple splice variants for each gene locus. 
+[StringTie](http://ccb.jhu.edu/software/stringtie/) is a fast and highly efficient assembler of RNA-Seq alignments into potential transcripts. It uses a network flow algorithm as well as an optional *de novo* assembly step to assemble and quantitate full-length transcripts representing multiple splice variants for each gene locus. 
 
 Its input can include not only the alignments of raw reads used by other transcript assemblers, but also alignments of longer sequences that have been assembled from those reads. To identify differentially expressed genes between experiments, StringTie's output can be processed by specialized software like Ballgown, Cuffdiff or other programs (DESeq2, edgeR, etc.).
 
@@ -393,7 +392,7 @@ Convert a BED format file of the proteins from a proteomics search database into
 
 ### Creating FASTA Database:
 
-The Protein Database Downloader tool is used to download the FASTA database from UniProt and cRAP database containing known/reference mouse proteins.
+The Protein Database Downloader tool is used to download the FASTA database from UniProt and cRAP (**c**ommon **R**epository of **A**dventitious **P**roteins) database containing known/reference mouse proteins.
 
 #### FASTA Merge Files and Filter Unique Sequences Concatenate FASTA database files together
 
@@ -441,7 +440,7 @@ An SQLite database containing the genomic mapping SQLite, variant annotation and
 >      FROM genomic_mapping
 >      ORDER BY pro_name, cds_start, cds_end`
 
-We will subject the output to text manipulation so that the results are compatible with the Multiomics Visualization Platform.
+The output to is further processed by text manipulation so that the results are compatible with the Multiomics Visualization Platform.
 
 ### Column Regex Find And Replace (SearchGUI-compatible Protein Names Genomic Mapping)
 
