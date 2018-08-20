@@ -11,7 +11,7 @@ The data provided here are part of a Galaxy tutorial that analyzes RNA-seq data 
 
 # Analysis strategy
 
-The goal of this exercise is to identify what transcripts are present in the G1E and megakaryocyte cellualr states and which transcripts are differentially expressed between the two states. We will use a *de novo* transcript reconstruction strategy to infer transcript structures from the mapped reads in the absence of the actual annotated transcript structures. This will allow us to identify novel transcripts and novel isoforms of known transcripts, as well as identify differentially expressed transcripts.
+The goal of this exercise is to identify what transcripts are present in the G1E and megakaryocyte cellular states and which transcripts are differentially expressed between the two states. We will use a *de novo* transcript reconstruction strategy to infer transcript structures from the mapped reads in the absence of the actual annotated transcript structures. This will allow us to identify novel transcripts and novel isoforms of known transcripts, as well as identify differentially expressed transcripts.
 
 > ### Agenda
 >
@@ -73,10 +73,10 @@ For quality control, we use similar tools as described in [NGS-QC tutorial]({{si
 >    > 1. What is the read length?
 >    > 2. Is there anything interesting about the quality of the base calls based on the position in the reads?
 >    >
->    >    > ### {% icon solution %} Solution
->    >    > 1. The read length is 99 bp
->    >    > 2. The quality of base calls declines throughout a sequencing run. 
->    >    {: .solution }
+>    > > ### {% icon solution %} Solution
+>    > > 1. The read length is 99 bp
+>    > > 2. The quality of base calls declines throughout a sequencing run. 
+>    > {: .solution }
 >    {: .question}
 >
 > 2. **Trimmomatic** {% icon tool %}: Trim off the low quality bases from the ends of the reads to increase mapping efficiency. Run `Trimmomatic` on each pair of forward and reverse reads.
@@ -90,10 +90,10 @@ For quality control, we use similar tools as described in [NGS-QC tutorial]({{si
 >    > 1. What is the read length?
 >    > 2. Is there anything interesting about the quality of the base calls based on the position in the reads?
 >    >
->    >    > ### {% icon solution %} Solution
->    >    > 1. The read lengths range from 1 to 99 bp after trimming
->    >    > 2. The average quality of base calls does not drop off as sharply at the 3' ends of reads.
->    >    {: .solution }
+>    > > ### {% icon solution %} Solution
+>    > > 1. The read lengths range from 1 to 99 bp after trimming
+>    > > 2. The average quality of base calls does not drop off as sharply at the 3' ends of reads.
+>    > {: .solution }
 >    {: .question}
 > ![Before and after trimming comparison](../../images/BeforeAndAfterTrimming.png)
 {: .hands_on}
@@ -375,11 +375,12 @@ In this last section, we will convert our aligned read data from BAM format to b
 >
 >    > ### {% icon question %} Question
 >    > what do you see?
->    >    > ### {% icon solution %} Solution
->    >    > 1. There are two clusters of transcripts that are exclusively expressed in the G1E background
->    >    > 2. The left-most transcript is the Hoxb13 transcript
->    >    > 3. The center cluster of transcripts are not present in the RefSeq annotation and are determined by `GFFCompare` to be "u" and "x"
->    >    {: .solution }
+>    >
+>    > > ### {% icon solution %} Solution
+>    > > 1. There are two clusters of transcripts that are exclusively expressed in the G1E background
+>    > > 2. The left-most transcript is the Hoxb13 transcript
+>    > > 3. The center cluster of transcripts are not present in the RefSeq annotation and are determined by `GFFCompare` to be "u" and "x"
+>    > {: .solution }
 >    {: .question}
 >
 {: .hands_on}
@@ -387,7 +388,7 @@ In this last section, we will convert our aligned read data from BAM format to b
 # Conclusion
 {:.no_toc}
 
-In this tutorial, we have analyzed real RNA sequencing data to extract useful information, such as which genes are up- or down-regulated by depletion of the Pasilla gene and which genes are regulated by the Pasilla gene. To answer these questions, we analyzed RNA sequence datasets using a reference-based RNA-seq data analysis approach. This approach can be sum up with the following scheme:
+In this tutorial, we have analyzed RNA sequencing data to extract useful information, such as which genes are expressed in the G1E and megakaryocyte cellular states and which of these genes are differentially expressed between the two cellular states. In addition, we identified unannotated genes that are expressed in a cell-state dependent manner and at a locus with relevance to differentiation and development. To identify these transcripts, we analyzed RNA sequence datasets using a de novo transcriptome reconstruction RNA-seq data analysis approach. This approach can be summed up with the following scheme:
 
 ![RNAseq de novo tutorial workflow](../../images/schematic_for_RNAseq_de_novo_tutorial.png)
 
