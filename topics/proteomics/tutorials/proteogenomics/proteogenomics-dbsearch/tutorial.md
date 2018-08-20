@@ -56,7 +56,7 @@ In this tutorial, we perform proteogenomic database searching using the Mass Spe
 The search database labelled `Uniprot_cRAP_SAV_indel_translatedbed.FASTA` is the input database that
 will be used to match MS/MS to peptide sequences via a sequence database search. 
 
-For this, the sequence database-searching program called [SearchGUI](https://compomics.github.io/projects/searchgui.html) will be used.The created dataset collection of the three *MGF files* in the history is used as the MS/MS input. We will walk through a number of these settings in order to utilize SearchGUI on these example MGF files.
+For this, the sequence database-searching program called [SearchGUI](https://compomics.github.io/projects/searchgui.html) will be used.The generated dataset collection of the three *MGF files* in the history is used as the MS/MS input. We will walk through a number of these settings in order to utilize SearchGUI on these example MGF files.
 
 #### SearchGUI
 
@@ -146,7 +146,7 @@ outputs.
 >>      There are a number of choices for different data files that can be generated using
 >>      PeptideShaker. A compressed file can be made containing all information needed to 
 >>      view them results in the standalone PeptideShaker viewer. A `mzidentML` file can 
->>      be created that contains all peptide sequence matching information and can be 
+>>      be generated that contains all peptide sequence matching information and can be 
 >>      utilized by compatible downstream software. Other outputs are focused on the inferred 
 >>      proteins identified from the PSMs, as well as phosphorylation reports, relevant if 
 >>      a phosphoproteomics experiment has been undertaken. 
@@ -333,7 +333,7 @@ Now that we have the list of known peptides, the query tabular tool is used to m
 >        > ### {% icon tip %} Tip
 >        >
 >        > * **Query Tabular** can also use an existing SQLite database. Activating `Save the sqlite database in your history`
->        > will store the created database in the history, allowing to reuse it directly.
+>        > will store the generated database in the history, allowing to reuse it directly.
 >        >
 >        {: .tip}
 >
