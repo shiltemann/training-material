@@ -444,6 +444,6 @@ The short BlastP uses parameters for short peptide sequences (8-30 aas). Please 
 >
 >   **Compute locally optimal Smith-Waterman alignments**:`No`
 
-Once BlastP search is performed, it provides with a tabular output containing peptides corresponding to novel proteoforms termed as “Novel peptides”. Now this output is further processed by comparing the Novel Peptide output with the PSM report for selecting only distinct peptides which pass these criteria.
+Once BlastP search is performed, it provides with a tabular output containing peptides corresponding to novel proteoforms termed as “Novel peptides”. Now this output is further processed by comparing the novel peptide output with the PSM report for selecting only distinct peptides which pass these criteria.
 
 To continue processing this data, proceed to workflow 3 for **"Novel Peptide"** analysis.
