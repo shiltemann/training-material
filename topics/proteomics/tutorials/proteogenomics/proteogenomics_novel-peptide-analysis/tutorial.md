@@ -19,9 +19,9 @@ The third and the last workflow in the proteogenomics tutorial is to identifying
 >
 > - _Interactive visualization of the Peptides_
 >
-> - _Classification of Novel Peptides_
+> - _Classification of "Novel Peptides"_
 >
-> - _Summary of Identified Novel peptides_
+> - _Summary of Identified "Novel peptides"_
 >
 >>      The inputs for this workflow are:
 >>            - Tabular file â€“ â€œPeptides from BlastP analysisâ€
@@ -37,7 +37,7 @@ Once Blast-P search is performed, it provides with a tabular output containing â
 
 # Analysis
 
-### Query tabular (Extract novel peptides after BlastP)
+### Query tabular (Extract "Novel peptides" after BlastP)
 1. **Query Tabular** {% icon tool %}: Run **Query Tabular** with:
 >
 >    - (a)**Database Table**: Click on `+ Insert Database Table`:
@@ -91,7 +91,7 @@ Once Blast-P search is performed, it provides with a tabular output containing â
 > 2. Click **Execute** and inspect the query results file after it turned green. 
 >
 
-### Query tabular (Distinct Peptides from the list of Novel peptides)
+### Query tabular (Distinct Peptides from the list of "Novel peptides")
 1. **Query Tabular** {% icon tool %}: Run **Query Tabular** with:
 >
 >    - (a)**Database Table**: Click on `+ Insert Database Table`:
@@ -175,7 +175,7 @@ Once Blast-P search is performed, it provides with a tabular output containing â
 > MVP has many useful features beyond those covered in this workshop and is under active development.
 > <img src="../../../images/tracks_align.png" width=70%>
 
-The next tool in the workflow is the Peptide genomic coordinate tool which takes the novel peptides as the input along with the mztosqlite file and the genomic mapping sqlite file (obtained during creation of the database). This tool helps create a bed file with the genomic coordinate information of the peptides based on the sqlite files. 
+The next tool in the workflow is the Peptide genomic coordinate tool which takes the "novel peptides" as the input along with the mztosqlite file and the genomic mapping sqlite file (obtained during creation of the database). This tool helps create a bed file with the genomic coordinate information of the peptides based on the sqlite files. 
 
 ### Peptide genomic Coordinate
 Gets genomic coordinate of peptides based on the information in mzsqlite and genomic mapping sqlite files. This program 
