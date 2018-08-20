@@ -6,7 +6,7 @@ tutorial_name: Proteogenomics_RNAseq_db_search
 
 # Introduction
 
-In this tutorial, we perform proteogenomic database searching using the Mass Spectrometry data. The inputs for performing the proteogenomic database searching are the MGF files and the FASTA database file. The FASTA database is obtained by running the first workflow “Uniprot_cRAP_SAV_indel_translatedbed.FASTA”. The second workflow focuses on performing database search of the peak list files (MGFs).
+In this tutorial, we perform proteogenomic database searching using the Mass Spectrometry data. The inputs for performing the proteogenomic database searching are the peaklist MGF files and the FASTA database file. The FASTA database is obtained by running the first workflow “Uniprot_cRAP_SAV_indel_translatedbed.FASTA”. The second workflow focuses on performing database search of the peak list files (MGFs).
 <img src="../../../images/second_workflow.png" width=100%>
 > ### Agenda
 >
@@ -124,11 +124,10 @@ Once the database search is completed, the SearchGUI tool will output a file (ca
 SearchGUI archive file) that will serve as an input for the next section, PeptideShaker.
 
 >>    ### Comment
->>    Note that sequence databases used for metaproteomics are usually much larger than 
+>>    Note that sequence databases used for proteogenomics are usually much larger than 
 >>    the excerpt used in this tutorial. When using large databases, the peptide identification 
->>    step can take much more time for computation. In metaproteomics, choosing the optimal 
->>    database is a crucial step of your workflow, for further reading see 
->>    [Timmins-Schiffman et al (2017)](https://www.ncbi.nlm.nih.gov/pubmed/27824341).
+>>    step can take much more time for computation. In proteogenomics, choosing the optimal 
+>>    database is a crucial step of your workflow.
 >>
 
 
@@ -180,7 +179,7 @@ A number of new items will appear in your history, each corresponding to the out
 in the PeptideShaker parameters. Most relevant for this tutorial is the PSM report:
 
 Scrolling at the bottom to the left will show the sequence for the PSM that matched to these
-metapeptide entries. Column 3 is the sequence matched for each PSM entry. Every PSM is a
+peptide entries. Column 3 is the sequence matched for each PSM entry. Every PSM is a
 new row in the tabular output.
 
 A number of new items will appear in your History, each corresponding to the outputs selected in the PeptideShaker parameters. The Peptide Shaker’s PSM report is used as an input for the BlastP analysis. Before performing BlastP analysis. The Query Tabular tool and few test manipulation tools are used to remove spectra that belongs to the reference proteins. The output tabular file “Peptides_for_Blast-P_analysis” will contain only those spectra that did not belong to any known proteins.
@@ -202,7 +201,7 @@ The mzidentml output from the Peptide shaker is converted into an sqlite databas
 Click **Execute**
 <img src="../../../images/mz2sqlite.png" width=30%>
 
-The next step is to remove known peptides from the list of PSM's that we acquired from the Peptide shaker results. For that we need to perform some text manipulation steps to extract list of known peptides from the Uniprot and cRAP database.
+The next step is to remove known peptides from the list of PSM's that we acquired from the Peptide Shaker results. For that we need to perform some text manipulation steps to extract list of known peptides from the UniProt and cRAP database.
 
 ### Merged Uniprot and cRAP database
 The file named "Trimmed_ref_500_Uniprot_cRAP.fasta" is the trimmed version of Uniprot and cRAP database merged Fasta files.
@@ -445,6 +444,6 @@ The short BlastP uses parameters for short peptide sequences (8-30 aas). Please 
 >
 >   **Compute locally optimal Smith-Waterman alignments**:`No`
 
-Once BlastP search is performed, it provides with a tabular output containing “Novel peptides”. Now this output is further processed by comparing the Novel Peptide output with the PSM report for selecting only distinct peptides which pass these criteria.
+Once BlastP search is performed, it provides with a tabular output containing peptides corresponding to novel proteoforms termed as “Novel peptides”. Now this output is further processed by comparing the Novel Peptide output with the PSM report for selecting only distinct peptides which pass these criteria.
 
-To continue processing this data, proceed to workflow 3 for Novel Peptide analysis.
+To continue processing this data, proceed to workflow 3 for **"Novel Peptide"** analysis.
