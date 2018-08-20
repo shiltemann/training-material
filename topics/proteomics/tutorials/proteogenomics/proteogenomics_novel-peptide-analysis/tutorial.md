@@ -6,7 +6,7 @@ tutorial_name: Proteogenomics_NovelPeptide_Analysis
 
 # Introduction
 
-The third and the last proteogenomics workflow is for identifying the novel peptides using BlastP and to localize the peptides to its genomic coordinates. Inputs from both workflow 1 and 2 will be used in this workflow.
+The third and the last workflow in the proteogenomics tutorial is to identifying the "**Novel peptides**" using BlastP and to localize the peptides to its genomic coordinates. Inputs from both workflow 1 and 2 will be used in this workflow.
 
 <img src="../../../images/Third_workflow.png" width=100%>
 
@@ -29,11 +29,11 @@ The third and the last proteogenomics workflow is for identifying the novel pept
 >>            - Mz to sqlite
 >>            - Genomic mapping sqlite
 
-> All the files to run this workflow can be obtained from the second workflow output.Once the tabular output is created, 
+> All the files to run this workflow can be obtained from the second workflow output.Once the tabular output is generated, 
 > we convert this tabular report into a FASTA file. This can be achieved by using the Tabular to FASTA convertion tool.
 
 
-Once Blast-P search is performed, it provides with a tabular output containing “Novel peptides”. Now this output is further processed by comparing the Novel Peptide output with the PSM report for selecting only distinct peptides which pass these steps.
+Once Blast-P search is performed, it provides with a tabular output containing “Novel peptides”. Now this output is further processed by comparing the Novel Peptide output with the PSM report for selecting only distinct peptides which meet the criteria.
 
 # Analysis
 
@@ -119,8 +119,8 @@ Once Blast-P search is performed, it provides with a tabular output containing �
 
 ### MVP
 
-> The spectra belonging to these novel peptides can be viewed using MVP,this can be achieved by selecting the output from the mz to sqlite tool. 
-> Here is a step by step proteogenomic view of the novel peptides obtained from running this workflow:
+> The spectra belonging to these "Novel peptides" can be viewed using MVP,this can be achieved by selecting the output from the mz to sqlite tool. 
+> Here is a step by step proteogenomic view of the "Novel peptides" obtained from running this workflow:
 
 > 1) Click on the “Visualize in MVP application”, it will open up a new window for MVP.
 > <img src="../../../images/mz2sqlite.png" width=20%>
@@ -134,8 +134,8 @@ Once Blast-P search is performed, it provides with a tabular output containing �
 > 4) Select any peptide, For eg: ESSREALVEPTSESPRPALAR, and then click on “Selected Peptide PSMs”.
 > <img src="../../../images/select_pep_PSM.png" width=50%>
 >
-> 5) If you scroll down, the PSM associated with the peptide will be displayed. By clicking on the PSM, the lorikeet 
-> values will be shown. The lorikeet visualization is interactive, i.e the user can change the values or select any 
+> 5) If you scroll down, the PSM associated with the peptide will be displayed. By clicking on the PSM, the Lorikeet 
+> values will be shown. The Lorikeet visualization is interactive, i.e the user can change the values or select any 
 > parameter and click on Update button to view these changes.
 >
 > <img src="../../../images/Psm.png" width=40%>
@@ -171,7 +171,7 @@ Once Blast-P search is performed, it provides with a tabular output containing �
 > <img src="../../../images/IGV_viewer.png" width=40%>
 >
 > 10) The IGV is inbuilt in the MVP viewer and is very interactive, you could also load more tracks such as the aligned 
-> Bam file (from HISAT) or the identified pro bam file (one of the input file).
+> proBAM file (from HISAT) or the identified probam file (one of the input file).
 > MVP has many useful features beyond those covered in this workshop and is under active development.
 > <img src="../../../images/tracks_align.png" width=70%>
 
@@ -207,7 +207,7 @@ Given chromosomal locations of peptides in a BED file, PepPointer classifies the
 > <img src="../../../images/Output_PP.png" width=50%>
 > 2. Click **Execute** and inspect the query results file after it turned green. 
 
-The final tool for this workflow is creating a tabular output that includes all the information that you get after running these workflows. The final summary output consists of the Peptide sequence, the spectra associated with the peptides, the protein accession number, chromosome number, Start and Stop of the genomic coordinate, the annotation, the genomic coordinate entry for viewing in Integrative Genomics Viewer (IGV), MVP or UCSC genome browser and the URL for viewing it on UCSC genome browser. This summary is created with the help of the query tabular tool.
+The final tool for this workflow generates a tabular output that summarizes the information after running these workflows. The final summary output consists of the Peptide sequence, the spectra associated with the peptides, the protein accession number, chromosome number, Start and Stop of the genomic coordinate, the annotation, the genomic coordinate entry for viewing in Integrative Genomics Viewer (IGV), MVP or UCSC genome browser and the URL for viewing it on UCSC genome browser. This summary is created with the help of the query tabular tool.
 
 
 ### Query tabular( Final Summary)
@@ -249,9 +249,9 @@ GROUP BY psm.Sequence
 >
 <img src="../../../images/final_summary.png" width=80%>
 
-This completes the proteogenomics workflow analysis. This training workflow uses mouse data but for any other organism the data and the workflow has to be modified accordingly.
+This completes the proteogenomics workflow analysis. This training workflow uses mouse data. For any other organism the data, tool paramters and the workflow will need to be modified accordingly.
 
-This workflow is also available at z.umn.edu/proteogenomicsgateway.
+This workflow is also available at [Proteogenomics gateway](z.umn.edu/proteogenomicsgateway).
 
 This workflow was developed by the Galaxy-P team at the University of Minnesota.
 For more information about Galaxy-P or our ongoing work, please visit us at www.galaxyp.org
