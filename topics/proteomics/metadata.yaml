@@ -66,6 +66,33 @@ material:
       - jj-umn
       - blankclemens
   -
+    title: "Proteogenomics tutorial"
+    type: "tutorial"
+    edam_ontology: "topic_0121"
+    name: "Proteogenomics"
+    galaxy_tour: no
+    hands_on: yes
+    slides: no
+    workflows: yes
+    zenodo_link: "https://doi.org/10.5281/zenodo.1302055"
+    questions:
+      - "How to generate a customized Protein Fasta Database using RNA-seq data?"
+      - "How to perform sequence database searching using the FASTA file with the MS data to identify peptides corresponding to novel proteoforms?"
+      - "How to assign and visualize the genomic localization of these identified novel proteoforms?
+    objectives:
+      - "A proteogenomic data analysis of mass spectrometry data to identify and visualize variant peptides."
+    time_estimation: "3h"
+    key_points:
+      - "Generating customized protein sequence database"
+      - "With SearchGUI and PeptideShaker you can gain access to multiple search engines"
+      - "Learning how to visualize proteomic data and to perform its genomic allocation"
+    contributors:
+      - subinamehta
+      - timothygriffin
+      - pratikdjagtap
+      - jj-umn
+  
+  -
     title: "Label-free versus Labelled - How to Choose Your Quantitation Method"
     type: "tutorial"
     name: "labelfree-vs-labelled"
