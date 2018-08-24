@@ -158,6 +158,7 @@ Once Blast-P search is performed, it provides with a tabular output containing �
 >
 > <img src="../../images/lorikeet.png" width=70%>
 >
+>
 > 6) For a Protein centric view, click on “View in Protein” , it will open up all the proteins associate with the
 > peptides. For eg: Select the “ESSREALVEPTSESPRPALAR” peptide and click on the first protein. The chromosome location
 > of the peptide will be displayed.
@@ -168,14 +169,18 @@ Once Blast-P search is performed, it provides with a tabular output containing �
 >
 > <img src="../../images/select_protein.png" width=60%>
 >
+>
 > Once you select the protein that you want to visualize you can click on the protein view.
 >
+>
 > <img src="../../images/PRoteinview.png" width=50%>
+>
 >
 > 7) Clicking on the arrow marks will open up the IGV(js) visualization tool, where-in the genomic localization of the
 > peptide will be displayed.
 >
 > <img src="../../images/select_IGV.png" width=80%>
+>
 >
 > 8) To add tracks to your IGV viewer, click on “Add Track”. This will open up a list of tracks that are compatible
 > to view in your IGV viewer. For eg. Select the “Pep_gen_coordinate.bed” file and then click on “Load Track”.
@@ -186,11 +191,14 @@ Once Blast-P search is performed, it provides with a tabular output containing �
 > region of your sequence.
 > <img src="../../images/IGV_viewer.png" width=40%>
 >
+>
 > 10) The IGV is inbuilt in the MVP viewer and is very interactive, you could also load more tracks such as the aligned
 > proBAM file (from HISAT) or the identified probam file (one of the input file).
 > MVP has many useful features beyond those covered in this workshop and is under active development.
+>
 > <img src="../../images/tracks_align.png" width=70%>
-
+>
+>
 The next tool in the workflow is the Peptide genomic coordinate tool which takes the "novel peptides" as the input along with the mztosqlite file and the genomic mapping sqlite file (obtained during creation of the database). This tool helps create a bed file with the genomic coordinate information of the peptides based on the sqlite files.
 
 ### Peptide genomic Coordinate
