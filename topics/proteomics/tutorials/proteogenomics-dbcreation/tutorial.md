@@ -11,9 +11,9 @@ objectives:
   - "A proteogenomic data analysis of mass spectrometry data to identify and visualize variant peptides."
 time_estimation: "3h"
 key_points:
-  - "Generating customized protein sequence database"
-  - "With SearchGUI and PeptideShaker you can gain access to multiple search engines"
-  - "Learning how to visualize proteomic data and to perform its genomic allocation"
+  - "Generating customized protein sequence database using RNA-seq data"
+  - "Generating genomic and variant mapping files to view the data in the Multi-omics Visualization Platform "
+  
 contributors:
   - subinamehta
   - timothygriffin
