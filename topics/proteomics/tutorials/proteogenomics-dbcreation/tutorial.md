@@ -217,7 +217,7 @@ The reference protein set can be filtered by transcript expression level (RPKM c
 >   - **Create RData file of variant protein coding sequences**: `Yes`
 
 
->   2. Click **Execute** and inspect the resulting files after they turn green with the **View data** icon: ![View data](../../images/view_icon.png)
+> Click **Execute** and inspect the resulting files after they turn green with the **View data** icon: <img src="../../images/view_icon.png" height=40>
 >
 >>       **Comments**: Three FASTA files are generated through the CustomProDB tool: a variant FASTA
 >>      file for short indels, a Single Amino acid Variant (SAV) FASTA file, an Sqlite file (genome
@@ -248,7 +248,7 @@ Its input can include not only the alignments of raw reads used by other transcr
 >   - **Advanced Options**: `Default Parameters`
 
 
->   2. Click **Execute** and inspect the resulting files after they turn green with the **View data** icon: ![View data](../../images/view_icon.png)
+> Click **Execute** and inspect the resulting files after they turn green with the **View data** icon: <img src="../../images/view_icon.png" height=40>
 >
 
 >>     **Comments**:
@@ -305,7 +305,7 @@ The original form of this program is also distributed as part of the Cufflinks s
 >   - **Max distance for transcript grouping**: `100`
 >   - **discard intron-redundant transfrags sharing 5'**: `No`
 
->   2. Click **Execute** and inspect the resulting files after they turn green with the **View data** icon: ![View data](../../images/view_icon.png)
+> Click **Execute** and inspect the resulting files after they turn green with the **View data** icon: <img src="../../images/view_icon.png" height=40>
 >
 
 >>      **Comments**:
@@ -340,7 +340,7 @@ Convert a GffCompare annotated GTF file to BED format.
 >  - `p : Possible polymerase run-on fragment (within 2Kbases of a reference transcript)`
 >  - `u : Unknown, intergenic transcript`
 >
->   2. Click **Execute** and inspect the resulting files after they turn green with the **View data** icon:![View data](../../images/view_icon.png)
+> Click **Execute** and inspect the resulting files after they turn green with the **View data** icon: <img src="../../images/view_icon.png" height=40>
 >
 
 #### Translate BED transcripts cDNA in 3frames or CDS
@@ -359,7 +359,7 @@ Translate transcripts from the input BED file into protein sequences.
 **Translation Options ** `default`
 **FASTA ID Options** `default`
 
->   2. Click **Execute** and inspect the resulting files after they turn green with the **View data** icon: ![View data](../../images/view_icon.png)
+> Click **Execute** and inspect the resulting files after they turn green with the **View data** icon: <img src="../../images/view_icon.png" height=40>
 >
 
 >>       **Comments**:
@@ -395,7 +395,7 @@ Convert a BED format file of the proteins from a proteomics search database into
 
 >   1. **A BED file with 12 columns, thickStart and thickEnd define protein coding region**: `Translate cDNA_minus_CDS`
 
->   2. Click **Execute** and inspect the resulting files after they turn green with the **View data** icon:![View data](../../images/view_icon.png)
+> Click **Execute** and inspect the resulting files after they turn green with the **View data** icon: <img src="../../images/view_icon.png" height=40>
 >
 >>       **Comments**:
 >>      - The tabular output can be converted to a sqlite database using the Query_Tabular tool.
@@ -426,7 +426,7 @@ The Protein Database Downloader tool is used to download the FASTA database from
 >
 >  **Accession Parsing Regular Expression**: `^>([^ |]+).*$`
 
->   2. Click **Execute** and inspect the resulting files after they turn green with the **View data** icon: ![View data](../../images/view_icon.png)
+> Click **Execute** and inspect the resulting files after they turn green with the **View data** icon: <img src="../../images/view_icon.png" height=40>
 >
 
 >>     **Comments**:
