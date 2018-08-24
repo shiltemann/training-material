@@ -5,16 +5,14 @@ title: "Proteogenomics tutorial"
 edam_ontology: "topic_0121"
 zenodo_link: "https://doi.org/10.5281/zenodo.1302055"
 questions:
-  - "How to generate a customized Protein Fasta Database using RNA-seq data?"
   - "How to perform sequence database searching using the FASTA file with the MS data to identify peptides corresponding to novel proteoforms?"
-  - "How to assign and visualize the genomic localization of these identified novel proteoforms?"
+  
 objectives:
   - "A proteogenomic data analysis of mass spectrometry data to identify and visualize variant peptides."
-time_estimation: "3h"
+time_estimation: "15 mins"
 key_points:
-  - "Generating customized protein sequence database"
   - "With SearchGUI and PeptideShaker you can gain access to multiple search engines"
-  - "Learning how to visualize proteomic data and to perform its genomic allocation"
+
 contributors:
   - subinamehta
   - timothygriffin
@@ -60,7 +58,7 @@ In this tutorial, we perform proteogenomic database searching using the Mass Spe
 >
 > 3. Build a **Dataset list** for the three MGF files
 >    - Click the **Operations on multiple datasets** check box at the top of the history panel
->       ![Operations on multiple datasets button]<img src="../../../images/dataset_list.png" width=10%>
+>       ![Operations on multiple datasets button]<img src="../../images/dataset_list.png" width=10%>
 >    - Check the three boxes next to the MGF files
 >    - Click **For all selected...** and choose **Build dataset list**
 >    - Ensure the three control samples are the only ones selected, and enter a name for the new collection (e.g. *MGF files*)
@@ -218,7 +216,7 @@ The mzidentml output from the Peptide shaker is converted into an sqlite databas
 >    - **Proteomics Search Database Fasta**: `Uniprot_cRAP_SAV_indel_translatedbed.FASTA`
 >
 Click **Execute**
-<img src="../../../images/mz2sqlite.png" width=30%>
+<img src="../../images/mz2sqlite.png" width=30%>
 
 The next step is to remove known peptides from the list of PSM's that we acquired from the Peptide Shaker results. For that we need to perform some text manipulation steps to extract list of known peptides from the UniProt and cRAP database.
 
