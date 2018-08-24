@@ -135,9 +135,7 @@ The first tool in the workflow is the [**HISAT2**](http://ccb.jhu.edu/software/h
 
 [FreeBayes]( https://github.com/ekg/freebayes) is a Bayesian genetic variant detector designed to find small polymorphisms, specifically SNPs (single-nucleotide polymorphisms), indels (insertions and deletions), MNPs (multi-nucleotide polymorphisms), and complex events (composite insertion and substitution events) smaller than the length of a short-read sequencing alignment.
 
-
-![Variant calling](../../../images/variant_calling.png)
-
+![Variant calling](../../images/variant_calling.png)
 
 >>     **Comments**: Provided with some BAM dataset(s) and a reference sequence, FreeBayes will generate
 >>     a VCF dataset describing SNPs, indels, and complex variants in samples in the input
