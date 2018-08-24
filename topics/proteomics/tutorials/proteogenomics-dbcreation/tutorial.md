@@ -3,14 +3,12 @@ layout: tutorial_hands_on
 
 title: "Proteogenomics tutorial"
 zenodo_link: "https://doi.org/10.5281/zenodo.1302055"
-questions:
-  - "How to generate a customized Protein Fasta Database using RNA-seq data?"
 objectives:
-  - "A proteogenomic data analysis of mass spectrometry data to identify and visualize variant peptides."
+  - "Generating a customized Protein sequence database with variants, indels, splice junctions and known sequences."
 time_estimation: "30 mins"
 key_points:
   - "Generating customized protein sequence database using RNA-seq data"
-  - "Generating genomic and variant mapping files to view the data in the Multi-omics Visualization Platform "
+  - "Generating genomic and variant mapping files for visualization"
   
 contributors:
   - subinamehta
