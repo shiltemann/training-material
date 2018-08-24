@@ -200,7 +200,7 @@ The reference protein set can be filtered by transcript expression level (RPKM c
 >>      **Comments**: Annotations CustomProDB depends on a set of annotation files (in RData format) to
 >>      create reference and variant protein sequences. Galaxy administrators can use the CustomProDB
 >>      data manager to create these annotations to make them available for users.
-<img src="../../../images/CustomProDB.png" width=100%>
+![customproDB](../../images/CustomProDB.png)
 
 ### Hands-on: Using CustomProDB to generate protein FASTAs from exosome or transcriptome data
 >
