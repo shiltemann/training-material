@@ -26,13 +26,13 @@ contributors:
 
 **Proteogenomics** involves the use of mass spectrometry (MS) based proteomics data against genomics and transcriptomics data to identify peptides and to understand protein-level evidence of gene expression. In the first section of the tutorial, we will create a protein database (FASTA) using RNA-sequencing files (FASTQ) and then perform sequence database searching using the resulting FASTA file with the MS data to identify peptides corresponding to novel proteoforms. Then, we will assign the genomic coordinates and annotations for these identified peptides and visualize the data for its spectral quality and genomic localization
 
-![Nove Peptides](../../images/potential_novel_publication.png)
-<img src="../../../images/potential_novel_publication.png" width=100%>
+![Novel Peptides](../../images/potential_novel_publication.png)
+
 
 Proteogenomics integrates **RNA-Seq** data for generating customized protein sequence databases with mass spectrometry-based proteomics data, which are matched to these databases to identify protein sequence variants. (Cancer Res. (2017); 77(21):e43-e46. doi: <a target="_blank" href="https://doi.org/10.1158/0008-5472.CAN-17-0331">10.1158/0008-5472.CAN-17-0331</a>).
 
+![Database creation](../../images/workflow_objective1.png)
 
-<img src="../../proteomics/images/database_creation.png" width=100%>
 
 
 ## Part I
@@ -86,8 +86,9 @@ In this tutorial, we will upload the data from Zenodo: [![DOI](https://zenodo.or
 
 The first workflow focuses on creating a **FASTA** database generated from RNA-seq data. There are two outputs from this workflow: (1) a **sequence database** consisting of variants and known reference sequences and (2) mapping files containing **genomic** and **variant** mapping data.
 
+![Database creation](../../images/database_creation.png)
 
-<img src="../../../images/database_creation.png" width=100%>
+
 
 The first part of the workflow deals with creating the FASTA file containing sequences with single amino acid variants (SAVs), insertions and deletions (indels). The second part of the workflow helps in creating a FASTA file with transcript assemblies (splicing variants).
 
@@ -135,7 +136,7 @@ The first tool in the workflow is the [**HISAT2**](http://ccb.jhu.edu/software/h
 [FreeBayes]( https://github.com/ekg/freebayes) is a Bayesian genetic variant detector designed to find small polymorphisms, specifically SNPs (single-nucleotide polymorphisms), indels (insertions and deletions), MNPs (multi-nucleotide polymorphisms), and complex events (composite insertion and substitution events) smaller than the length of a short-read sequencing alignment.
 
 
-<img src="../../../images/variant_calling.png" width=100%>
+![Variant calling](../../../images/variant_calling.png)
 
 
 >>     **Comments**: Provided with some BAM dataset(s) and a reference sequence, FreeBayes will generate
