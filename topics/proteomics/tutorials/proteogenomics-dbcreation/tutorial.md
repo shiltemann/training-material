@@ -27,7 +27,7 @@ contributors:
 
 Proteogenomics integrates **RNA-Seq** data for generating customized protein sequence databases with mass spectrometry-based proteomics data, which are matched to these databases to identify protein sequence variants. (Cancer Res. (2017); 77(21):e43-e46. doi: <a target="_blank" href="https://doi.org/10.1158/0008-5472.CAN-17-0331">10.1158/0008-5472.CAN-17-0331</a>).
 
-![Database creation](../../images/workflow_objective1.png)
+![Database creation](../../images/workflow_objective1.png 200x)
 
 
 
