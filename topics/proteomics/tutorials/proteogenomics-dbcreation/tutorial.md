@@ -6,7 +6,7 @@ zenodo_link: "https://doi.org/10.5281/zenodo.1302055"
 questions:
   - "How to generate a customized Protein Fasta Database using RNA-seq data?"
   - "How to perform sequence database searching using the FASTA file with the MS data to identify peptides corresponding to novel proteoforms?"
-  - "How to assign and visualize the genomic localization of these identified novel proteoforms?
+  - "How to assign and visualize the genomic localization of these identified novel proteoforms?"
 objectives:
   - "A proteogenomic data analysis of mass spectrometry data to identify and visualize variant peptides."
 time_estimation: "3h"
