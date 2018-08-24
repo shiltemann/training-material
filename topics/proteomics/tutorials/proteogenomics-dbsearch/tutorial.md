@@ -1,7 +1,26 @@
 ---
 layout: tutorial_hands_on
-topic_name: proteomics
-tutorial_name: Proteogenomics_RNAseq_db_search
+
+title: "Proteogenomics tutorial"
+edam_ontology: "topic_0121"
+zenodo_link: "https://doi.org/10.5281/zenodo.1302055"
+questions:
+  - "How to generate a customized Protein Fasta Database using RNA-seq data?"
+  - "How to perform sequence database searching using the FASTA file with the MS data to identify peptides corresponding to novel proteoforms?"
+  - "How to assign and visualize the genomic localization of these identified novel proteoforms?
+objectives:
+  - "A proteogenomic data analysis of mass spectrometry data to identify and visualize variant peptides."
+time_estimation: "3h"
+key_points:
+  - "Generating customized protein sequence database"
+  - "With SearchGUI and PeptideShaker you can gain access to multiple search engines"
+  - "Learning how to visualize proteomic data and to perform its genomic allocation"
+contributors:
+  - subinamehta
+  - timothygriffin
+  - pratikdjagtap
+  - jraysajulga
+  - jj-umn
 ---
 
 # Introduction
@@ -13,7 +32,7 @@ In this tutorial, we perform proteogenomic database searching using the Mass Spe
 > In this tutorial, we will deal with:
 >
 > 1. TOC
-> - _Pretreatments / Data upload_ 
+> - _Pretreatments / Data upload_
 
 > - _Database searching using SearchGUI and Peptide Shaker_
 
@@ -30,14 +49,14 @@ In this tutorial, we perform proteogenomic database searching using the Mass Spe
 > 2. Import the three MGF MS/MS files and the FASTA sequence file from Zenodo.[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1302055.svg)](https://doi.org/10.5281/zenodo.1302055)
 >
 >>       Tip: Importing data via links
->>          * Copy the link location 
+>>          * Copy the link location
 >>          * Open the Galaxy Upload Manager
 >>          * Select "Paste/Fetch Data"
 >>          * Paste the link into the text field. You can add multiple links, each on a separate line.
 >>          * Press Start. As default, Galaxy takes the link as name.
 >>
 >>       **Comments**:Rename the datasets to a more descriptive name
->    
+>
 >
 > 3. Build a **Dataset list** for the three MGF files
 >    - Click the **Operations on multiple datasets** check box at the top of the history panel
@@ -54,7 +73,7 @@ In this tutorial, we perform proteogenomic database searching using the Mass Spe
 ## Match peptide sequences
 
 The search database labelled `Uniprot_cRAP_SAV_indel_translatedbed.FASTA` is the input database that
-will be used to match MS/MS to peptide sequences via a sequence database search. 
+will be used to match MS/MS to peptide sequences via a sequence database search.
 
 For this, the sequence database-searching program called [SearchGUI](https://compomics.github.io/projects/searchgui.html) will be used.The generated dataset collection of the three *MGF files* in the history is used as the MS/MS input. We will walk through a number of these settings in order to utilize SearchGUI on these example MGF files.
 
@@ -81,16 +100,16 @@ For this, the sequence database-searching program called [SearchGUI](https://com
 >>      **Comments**:
 >>    The section **Search Engine Options** contains a selection of sequence database searching
 >>    programs that are available in SearchGUI. Any combination of these programs can be used for
->>    generating PSMs from MS/MS data. For the purpose of this tutorial, **X!Tandem** we will be 
->>    used.    
+>>    generating PSMs from MS/MS data. For the purpose of this tutorial, **X!Tandem** we will be
+>>    used.
 >
 >    Section **Precursor Options**:
->   
+>
 >    **Enzyme**: `Trypsin`
 >    **Maximum Missed Cleavages**: `2`
 >    **Precursor Ion Tolerance Units**: `Parts per million (ppm)`
 >    **Precursor Ion Tolerance**:` 10`
->    **Fragment Tolerance (Daltons)**: `0.05` (this is high resolution MS/MS data) 
+>    **Fragment Tolerance (Daltons)**: `0.05` (this is high resolution MS/MS data)
 >    **Minimum charge**:`2`
 >    **Maximum charge**:`6`
 >    **Forward Ion**: `b`
@@ -105,7 +124,7 @@ For this, the sequence database-searching program called [SearchGUI](https://com
 >
 >>       ### Tip: Search for options
 >>       * For selection lists, typing the first few letters in the window will filter the
->>         available options.  
+>>         available options.
 >
 >    Section **Advanced Options**:
 >    - **X!Tandem Options**: `Advanced`
@@ -124,9 +143,9 @@ Once the database search is completed, the SearchGUI tool will output a file (ca
 SearchGUI archive file) that will serve as an input for the next section, PeptideShaker.
 
 >>    ### Comment
->>    Note that sequence databases used for proteogenomics are usually much larger than 
->>    the excerpt used in this tutorial. When using large databases, the peptide identification 
->>    step can take much more time for computation. In proteogenomics, choosing the optimal 
+>>    Note that sequence databases used for proteogenomics are usually much larger than
+>>    the excerpt used in this tutorial. When using large databases, the peptide identification
+>>    step can take much more time for computation. In proteogenomics, choosing the optimal
 >>    database is a crucial step of your workflow.
 >>
 
@@ -144,12 +163,12 @@ outputs.
 
 >>     ### Comment
 >>      There are a number of choices for different data files that can be generated using
->>      PeptideShaker. A compressed file can be made containing all information needed to 
->>      view them results in the standalone PeptideShaker viewer. A `mzidentML` file can 
->>      be generated that contains all peptide sequence matching information and can be 
->>      utilized by compatible downstream software. Other outputs are focused on the inferred 
->>      proteins identified from the PSMs, as well as phosphorylation reports, relevant if 
->>      a phosphoproteomics experiment has been undertaken. 
+>>      PeptideShaker. A compressed file can be made containing all information needed to
+>>      view them results in the standalone PeptideShaker viewer. A `mzidentML` file can
+>>      be generated that contains all peptide sequence matching information and can be
+>>      utilized by compatible downstream software. Other outputs are focused on the inferred
+>>      proteins identified from the PSMs, as well as phosphorylation reports, relevant if
+>>      a phosphoproteomics experiment has been undertaken.
 >>
 
 
@@ -167,7 +186,7 @@ outputs.
 >>     The **Certificate of Analysis** provides details on all the parameters
 >>     used by both SearchGUI and PeptideShaker in the analysis. This can be downloaded from the
 >>     Galaxy instance to your local computer in a text file if desired.
->      
+>
 >
 > 2. Click **Execute** and inspect the resulting files after they turned green with the **View data** icon:
 >     ![View data button]<img src="../../../images/view_icon.png" width=15%>
@@ -218,14 +237,14 @@ Convert these sequences:
 The resultant tabular file will go through a series of text manipulation steps.
 
 
-### Text Manipulation steps 
+### Text Manipulation steps
 
 > 1. **Cut**
 >    - **Cut Columns**: `c1`
 >    - **Delimited by**: `Tab`
- 
+
  Upon completion of this step you will have extracted C1 (column 1) from the input tabular file
- 
+
 > 2. **Convert**
 >   - **Convert all**: `Whitespaces`
 >   - **in Dataset** : `Data input 'input' (txt)`
@@ -282,15 +301,15 @@ Now that we have the list of known peptides, the query tabular tool is used to m
 >
 >    Section **Table Options**:
 >
->    - **Specify Name for Table**: `psms`    
+>    - **Specify Name for Table**: `psms`
 >    - **Use first line as column names** : `No`
 >    - **Specify Column Names (comma-separated list)**:`id,Proteins,Sequence`
->    - **Only load the columns you have named into database**: `Yes` 
+>    - **Only load the columns you have named into database**: `Yes`
 >
 >    Section **Table Index**:
 >    - **Table Index**: `No`
 >    - **Index on Columns**: `id`
->  
+>
 >     - (c) **Database Table**: Click on `+ Insert Database Table`:
 >    Section **Filter Dataset Input**
 >      - **Filter Tabular input lines**
@@ -310,10 +329,10 @@ Now that we have the list of known peptides, the query tabular tool is used to m
 >
 >    Section **Table Options**:
 >
->    - **Specify Name for Table**: `prots`    
+>    - **Specify Name for Table**: `prots`
 >    - **Use first line as column names** : `No`
 >    - **Specify Column Names (comma-separated list)**:`id,prot`
->    - **Only load the columns you have named into database**: `Yes` 
+>    - **Only load the columns you have named into database**: `Yes`
 >
 > _**Table Index**_:
 >    -**Table Index**: `No`
@@ -339,11 +358,11 @@ Now that we have the list of known peptides, the query tabular tool is used to m
 >
 >    - **SQL Query to generate tabular output**:
 >
->>       SELECT psms.* 
->>       FROM psms 
->>       WHERE psms.id NOT IN 
->>       (SELECT distinct prots.id 
->>       FROM prots JOIN uniprot ON prots.prot = uniprot.prot) 
+>>       SELECT psms.*
+>>       FROM psms
+>>       WHERE psms.id NOT IN
+>>       (SELECT distinct prots.id
+>>       FROM prots JOIN uniprot ON prots.prot = uniprot.prot)
 >>       ORDER BY psms.id
 >
 >
@@ -366,24 +385,24 @@ Now that we have the list of known peptides, the query tabular tool is used to m
 >
 >    Section **Table Options**:
 >
->    - **Specify Name for Table**: `psm`    
+>    - **Specify Name for Table**: `psm`
 >    - **Use first line as column names** : `No`
 >    - **Specify Column Names (comma-separated list)**:`id,Proteins,Sequence`
->    - **Only load the columns you have named into database**: `Yes` 
+>    - **Only load the columns you have named into database**: `Yes`
 >
 >    - **SQL Query to generate tabular output**:
 >
->>       SELECT Sequence || ' PSM=' || group_concat(id,',') || ' length=' 
+>>       SELECT Sequence || ' PSM=' || group_concat(id,',') || ' length='
 >>       || length(Sequence) as "ID",Sequence
 >>       FROM  psm
->>       WHERE length(Sequence) >6  
+>>       WHERE length(Sequence) >6
 >>       AND length(Sequence) <= 30
->>       GROUP BY Sequence 
+>>       GROUP BY Sequence
 >>       ORDER BY length(Sequence),Sequence
 >
 >    - **include query result column headers**: `Yes`
 >
-> 2. Click **Execute** and inspect the query results file after it turned green.<img src="../../../QT_output.png" width=60%> 
+> 2. Click **Execute** and inspect the query results file after it turned green.<img src="../../../QT_output.png" width=60%>
 
 ### Tabular to FASTA
 
@@ -435,9 +454,9 @@ The short BlastP uses parameters for short peptide sequences (8-30 aas). Please 
 >
 >   **Restrict search of database to a given set of ID's**:`No restriction`
 >
->>       This feature provides a means to exclude ID's from a BLAST database search. 
->>       The expectation values in the BLAST results are based upon the sequences actually 
->>       searched, and not on the underlying database. Note this cannot be used when 
+>>       This feature provides a means to exclude ID's from a BLAST database search.
+>>       The expectation values in the BLAST results are based upon the sequences actually
+>>       searched, and not on the underlying database. Note this cannot be used when
 >>       comparing against a FASTA file.
 >
 >   **Minimum query coverage per hsp (percentage, 0 to 100)**: `0`
