@@ -78,5 +78,6 @@ after_success:
   - |
     if [ "$TRAVIS_PULL_REQUEST" == "false" -a "$TRAVIS_BRANCH" == "master" -a "$CHECK" == "site-build" ]
     then
+      make build-deploy
       bin/publish
     fi

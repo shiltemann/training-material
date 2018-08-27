@@ -65,6 +65,10 @@ build: clean ## build files but do not run a server
 	)
 .PHONY: build
 
+build-deploy: clean annotate
+	${JEKYLL} build --strict_front_matter -d _site/training-material
+.PHONY: build-deploy
+
 check-frontmatter: build ## Validate the frontmatter
 	( $(ACTIVATE_ENV) && \
 	  find topics/ -name tutorial.md -or -name slides.html -or -name metadata.yaml | \
