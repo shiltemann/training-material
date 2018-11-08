@@ -5,12 +5,32 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Galaxy Training!</title>
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', '0xdeadbeef' , 'auto');
+            ga('send', 'pageview');
+        </script>
+        
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
         <link rel="stylesheet" href="/training-material/assets/css/font-awesome.css">
         <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
         <link rel="stylesheet" href="/training-material/assets/css/syntax_highlighting.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+        
+        
+        
+        
+        
+        <meta name="description" content="Analyses of sequences" />
+        <meta property="og:title" content="Galaxy Training: Sequence analysis" />
+        <meta property="og:description" content="Analyses of sequences" />
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
     </head>
     <body>
         <header>
@@ -27,7 +47,7 @@
             <div class="collapse navbar-collapse" id="top-navbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/shiltemann/training-material" title="View on GitHub">
+                        <a class="nav-link" href="https://github.com/galaxyproject/training-material" title="View on GitHub">
                             <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> View on GitHub
                         </a>
                     </li>
@@ -40,10 +60,10 @@
             FAQ
         </a>
         <a class="dropdown-item" href="https://gitter.im/Galaxy-Training-Network/Lobby" title="Chat on Gitter">
-            Gitter
+            Chat on Gitter
         </a>
         <a class="dropdown-item" href="https://biostar.usegalaxy.org/" title="Ask on Biostars">
-            Biostars
+            Ask questions on Biostars
         </a>
     </div>
 </li>
@@ -53,6 +73,7 @@
         </div>
     </nav>
 </header>
+
 
 
 
@@ -72,7 +93,7 @@
             
                 <li>
                     
-                    <a href="/training-material/topics//introduction/">Galaxy introduction</a>
+                    <a href="/training-material/topics/introduction/">Galaxy introduction</a>
                     
                 </li>
             
@@ -102,71 +123,293 @@
                         <script type="application/ld+json">
                             
 {
-    "@context": "http://schema.org",
-    "@type": "CreativeWork",
-    "name": "Quality Control",
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "name": "Mapping",
+  "accessModeSufficient": "visual",
+  "accessibilityControl": "fullMouseControl",
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
+  "learningResourceType": "tutorial",
+  "url": "",
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "https://doi.org/10.5281/zenodo.1324070",
+      "name": "Training data for Mapping tutorial"
+    },
+    {
+      "@type": "Thing",
+      "url": "https://github.com/galaxyproject/training-material/tree/master/topics/sequence-analysis/tutorials/mapping/workflows/",
+      "name": "Workflow for Mapping tutorial"
+    }
+  ],
+  "timeRequired": "PT1H",
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "joachimwolff"
+    },
+    {
+      "@type": "Person",
+      "name": "bebatut"
+    }
+  ],
+  "description": "The questions this tutorial addresses are:\n - What is mapping?\n - What two things are crucial for a correct mapping?\n - What is BAM?\n\n\\nThe objectives are:\n - You will learn what mapping is\n - A genome browser is shown that helps you to understand your data\n\n",
+  "hasPart": [
+    {
+      "@type": "CreativeWork",
+      "url": "https://github.com/galaxyproject/training-material/tree/master/topics/sequence-analysis/tutorials/mapping/tours/",
+      "name": "Slides for Mapping",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive"
+    }
+  ]
+}
 
-    
-        "mentions": [
-            
-                {
-                    "@type": "Thing",
-                    "url": "https://doi.org/10.5281/zenodo.61771",
-                    "name": "Training data for Quality Control tutorial"
-                }
-                
-                 ,
-                
-            
-            
-                {
-                    "@type": "Thing",
-                    "url": "https://github.com/shiltemann/training-material/tree/master/topics/sequence-analysis/tutorials/quality-control/workflows/",
-                    "name": "Workflow for Quality Control tutorial"
-                }
-            
-        ],
-    
-    "contributor": [
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "bebatut"
-                }
-            
-        
-    ],
-
-    
-        
-            
-                "url": "/training-material/topics/sequence-analysis/tutorials/quality-control/tutorial.html",
-            
-            
-                "hasPart": [
-                    
-                         {
-                            "@type": "CreativeWork",
-                            "url": "/training-material/topics/sequence-analysis/slides/quality-control.html",
-                            "name": "Slides for Quality Control"
-                          }            
+                        </script>
+                    <tr>
+                        <td>
+                            Mapping
+                            
+                        </td>
                         
-                        ,
-                                                  
-                    
-                    
-                         {
-                            "@type": "CreativeWork",
-                            "url": "https://github.com/shiltemann/training-material/tree/master/topics/sequence-analysis/tutorials/quality-control/tours/",
-                            "name": "Galaxy Tour for Quality Control"
-                          }              
-                    
-                ],
+                            <td>
+                                
+                                <a href="/training-material/topics/sequence-analysis/tutorials/mapping/slides.html">
+                                  <i class="fa fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
+                                </a>
+                                
+                            </td>
+
+
+                            <td>
+                                
+                                <a href="/training-material/topics/sequence-analysis/tutorials/mapping/tutorial.html">
+                                  <i class="fa fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+                                </a>
+                                
+                            </td>
+
+                            
+                                <td>
+                                    
+                                    <a href="https://doi.org/10.5281/zenodo.1324070">
+                                      <i class="fa fa-files-o" aria-hidden="true"></i><span class="visually-hidden">zenodo_link</span>
+                                    </a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                        <a href="https://github.com/galaxyproject/training-material/tree/master/topics/sequence-analysis/tutorials/mapping/workflows/" title="" alt="Mapping workflows">
+                                            <i class="fa fa-share-alt" aria-hidden="true"></i><span class="visually-hidden">workflow</span>
+                                        </a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="https://github.com/galaxyproject/training-material/tree/master/topics/sequence-analysis/tutorials/mapping/tours/">
+                                        <i class="fa fa-magic" aria-hidden="true"></i><span class="visually-hidden">interactive_tour</span>
+                                    </a>
+                                    
+                                </td>
+                            
+                            
+                                <td>
+                                
+                                    <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Where to run the tutorial">
+                                        <i class="fa fa-cog" aria-hidden="true"></i><span class="visually-hidden">instances</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                        <a class="dropdown-item" href="https://bioinf-galaxian.erasmusmc.nl/galaxy/" title="Erasmus MC">
+                                            Erasmus MC
+                                        </a>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                        <a class="dropdown-item" href="https://usegalaxy.eu" title="Galaxy Europe">
+                                            Galaxy Europe
+                                        </a>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                        <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
+                                            Galaxy@GenOuest
+                                        </a>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                        <a class="dropdown-item" href="https://usegalaxy.org" title="Main">
+                                            Main
+                                        </a>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                        <a class="dropdown-item" href="http://galaxy.nbic.nl/" title="NBIC">
+                                            NBIC
+                                        </a>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                        <a class="dropdown-item" href="http://galaxy.bio.ku.dk/" title="Vinther Lab">
+                                            Vinther Lab
+                                        </a>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                    </ul>
+                                
+                                </td>
+                            
+                        
+                    </tr>
+                
             
-        
-    
-    "learningResourceType": "tutorial"
+                
+                        <script type="application/ld+json">
+                            
+{
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "name": "Quality Control",
+  "accessModeSufficient": "visual",
+  "accessibilityControl": "fullMouseControl",
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
+  "learningResourceType": "tutorial",
+  "url": "",
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "https://doi.org/10.5281/zenodo.61771",
+      "name": "Training data for Quality Control tutorial"
+    },
+    {
+      "@type": "Thing",
+      "url": "https://github.com/galaxyproject/training-material/tree/master/topics/sequence-analysis/tutorials/quality-control/workflows/",
+      "name": "Workflow for Quality Control tutorial"
+    }
+  ],
+  "timeRequired": "PT1H",
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "bebatut"
+    }
+  ],
+  "description": "The questions this tutorial addresses are:\n - How to perform quality control of NGS raw data (FASTQ)?\n - What are the quality parameters to check for a dataset?\n - How to improve the quality of a dataset?\n\n\\nThe objectives are:\n - Manipulate FASTQ files\n - Assess quality from a FASTQ file\n - Use FastQC tool\n - Understand FastQC output\n - Use tools for quality correction\n - Use a tool to aggregate FastQC output\n - Process single-end and paired-end data\n\n",
+  "hasPart": [
+    {
+      "@type": "CreativeWork",
+      "url": "https://github.com/galaxyproject/training-material/tree/master/topics/sequence-analysis/tutorials/quality-control/tours/",
+      "name": "Slides for Quality Control",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive"
+    }
+  ]
 }
 
                         </script>
@@ -183,6 +426,7 @@
                                 </a>
                                 
                             </td>
+
 
                             <td>
                                 
@@ -202,14 +446,14 @@
                                 </td>
                                 <td>
                                     
-                                        <a href="https://github.com/shiltemann/training-material/tree/master/topics/sequence-analysis/tutorials/quality-control/workflows/" title="" alt="Quality Control workflows">
+                                        <a href="https://github.com/galaxyproject/training-material/tree/master/topics/sequence-analysis/tutorials/quality-control/workflows/" title="" alt="Quality Control workflows">
                                             <i class="fa fa-share-alt" aria-hidden="true"></i><span class="visually-hidden">workflow</span>
                                         </a>
                                     
                                 </td>
                                 <td>
                                     
-                                    <a href="https://github.com/shiltemann/training-material/tree/master/topics/sequence-analysis/tutorials/quality-control/tours/">
+                                    <a href="https://github.com/galaxyproject/training-material/tree/master/topics/sequence-analysis/tutorials/quality-control/tours/">
                                         <i class="fa fa-magic" aria-hidden="true"></i><span class="visually-hidden">interactive_tour</span>
                                     </a>
                                     
@@ -248,8 +492,6 @@
                                         
                                     
                                         
-                                    
-                                        
                                         <a class="dropdown-item" href="https://bioinf-galaxian.erasmusmc.nl/galaxy/" title="Erasmus MC">
                                             Erasmus MC
                                         </a>
@@ -258,21 +500,13 @@
                                         
                                     
                                         
-                                        <a class="dropdown-item" href="http://galaxy-mel.genome.edu.au/galaxy/" title="GVL Melbourne">
-                                            GVL Melbourne
+                                    
+                                        
+                                    
+                                        
+                                        <a class="dropdown-item" href="https://usegalaxy.eu" title="Galaxy Europe">
+                                            Galaxy Europe
                                         </a>
-                                        
-                                    
-                                        
-                                        <a class="dropdown-item" href="https://galaxy-qld.genome.edu.au/" title="GVL Queensland">
-                                            GVL Queensland
-                                        </a>
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
                                         
                                     
                                         
@@ -281,6 +515,8 @@
                                         <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
                                             Galaxy@GenOuest
                                         </a>
+                                        
+                                    
                                         
                                     
                                         
@@ -353,313 +589,58 @@
                         <script type="application/ld+json">
                             
 {
-    "@context": "http://schema.org",
-    "@type": "CreativeWork",
-    "name": "Mapping",
-
-    
-        "mentions": [
-            
-                {
-                    "@type": "Thing",
-                    "url": "https://doi.org/10.5281/zenodo.61771",
-                    "name": "Training data for Mapping tutorial"
-                }
-                
-                 ,
-                
-            
-            
-                {
-                    "@type": "Thing",
-                    "url": "https://github.com/shiltemann/training-material/tree/master/topics/sequence-analysis/tutorials/mapping/workflows/",
-                    "name": "Workflow for Mapping tutorial"
-                }
-            
-        ],
-    
-    "contributor": [
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "joachimwolff"
-                }
-            
-        
-    ],
-
-    
-        
-            
-                "url": "/training-material/topics/sequence-analysis/tutorials/mapping/tutorial.html",
-            
-            
-                "hasPart": [
-                    
-                         {
-                            "@type": "CreativeWork",
-                            "url": "/training-material/topics/sequence-analysis/slides/mapping.html",
-                            "name": "Slides for Mapping"
-                          }            
-                        
-                        ,
-                                                  
-                    
-                    
-                         {
-                            "@type": "CreativeWork",
-                            "url": "https://github.com/shiltemann/training-material/tree/master/topics/sequence-analysis/tutorials/mapping/tours/",
-                            "name": "Galaxy Tour for Mapping"
-                          }              
-                    
-                ],
-            
-        
-    
-    "learningResourceType": "tutorial"
-}
-
-                        </script>
-                    <tr>
-                        <td>
-                            Mapping
-                            
-                        </td>
-                        
-                            <td>
-                                
-                                <a href="/training-material/topics/sequence-analysis/tutorials/mapping/slides.html">
-                                  <i class="fa fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
-                                </a>
-                                
-                            </td>
-
-                            <td>
-                                
-                                <a href="/training-material/topics/sequence-analysis/tutorials/mapping/tutorial.html">
-                                  <i class="fa fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
-                                </a>
-                                
-                            </td>
-
-                            
-                                <td>
-                                    
-                                    <a href="https://doi.org/10.5281/zenodo.61771">
-                                      <i class="fa fa-files-o" aria-hidden="true"></i><span class="visually-hidden">zenodo_link</span>
-                                    </a>
-                                    
-                                </td>
-                                <td>
-                                    
-                                        <a href="https://github.com/shiltemann/training-material/tree/master/topics/sequence-analysis/tutorials/mapping/workflows/" title="" alt="Mapping workflows">
-                                            <i class="fa fa-share-alt" aria-hidden="true"></i><span class="visually-hidden">workflow</span>
-                                        </a>
-                                    
-                                </td>
-                                <td>
-                                    
-                                    <a href="https://github.com/shiltemann/training-material/tree/master/topics/sequence-analysis/tutorials/mapping/tours/">
-                                        <i class="fa fa-magic" aria-hidden="true"></i><span class="visually-hidden">interactive_tour</span>
-                                    </a>
-                                    
-                                </td>
-                            
-                            
-                                <td>
-                                
-                                    <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Where to run the tutorial">
-                                        <i class="fa fa-cog" aria-hidden="true"></i><span class="visually-hidden">instances</span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                        <a class="dropdown-item" href="https://bioinf-galaxian.erasmusmc.nl/galaxy/" title="Erasmus MC">
-                                            Erasmus MC
-                                        </a>
-                                        
-                                    
-                                        
-                                    
-                                        
-                                        <a class="dropdown-item" href="http://galaxy-mel.genome.edu.au/galaxy/" title="GVL Melbourne">
-                                            GVL Melbourne
-                                        </a>
-                                        
-                                    
-                                        
-                                        <a class="dropdown-item" href="https://galaxy-qld.genome.edu.au/" title="GVL Queensland">
-                                            GVL Queensland
-                                        </a>
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                        <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
-                                            Galaxy@GenOuest
-                                        </a>
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                        <a class="dropdown-item" href="https://usegalaxy.org" title="Main">
-                                            Main
-                                        </a>
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                        <a class="dropdown-item" href="http://galaxy.nbic.nl/" title="NBIC">
-                                            NBIC
-                                        </a>
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                        <a class="dropdown-item" href="http://galaxy.bio.ku.dk/" title="Vinther Lab">
-                                            Vinther Lab
-                                        </a>
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                    </ul>
-                                
-                                </td>
-                            
-                        
-                    </tr>
-                
-            
-                
-                        <script type="application/ld+json">
-                            
-{
-    "@context": "http://schema.org",
-    "@type": "CreativeWork",
-    "name": "RAD-Seq Reference-based data analysis",
-
-    
-        "mentions": [
-            
-                {
-                    "@type": "Thing",
-                    "url": "https://doi.org/10.5281/zenodo.1134547",
-                    "name": "Training data for RAD-Seq Reference-based data analysis tutorial"
-                }
-                
-                 ,
-                
-            
-            
-                {
-                    "@type": "Thing",
-                    "url": "https://github.com/shiltemann/training-material/tree/master/topics/sequence-analysis/tutorials/ref-based-rad-seq/workflows/",
-                    "name": "Workflow for RAD-Seq Reference-based data analysis tutorial"
-                }
-            
-        ],
-    
-    "contributor": [
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "yvanlebras"
-                }
-            
-        
-    ],
-
-    
-        
-            
-                "url": "/training-material/topics/sequence-analysis/tutorials/ref-based-rad-seq/tutorial.html",
-            
-            
-                "hasPart": [
-                    
-                    
-                         {
-                            "@type": "CreativeWork",
-                            "url": "https://github.com/shiltemann/training-material/tree/master/topics/sequence-analysis/tutorials/ref-based-rad-seq/tours/",
-                            "name": "Galaxy Tour for RAD-Seq Reference-based data analysis"
-                          }              
-                    
-                ],
-            
-        
-    
-    "learningResourceType": "tutorial"
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "name": "RAD-Seq Reference-based data analysis",
+  "accessModeSufficient": "visual",
+  "accessibilityControl": "fullMouseControl",
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
+  "learningResourceType": "tutorial",
+  "url": "",
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "https://doi.org/10.5281/zenodo.1134547",
+      "name": "Training data for RAD-Seq Reference-based data analysis tutorial"
+    },
+    {
+      "@type": "Thing",
+      "url": "https://github.com/galaxyproject/training-material/tree/master/topics/sequence-analysis/tutorials/ref-based-rad-seq/workflows/",
+      "name": "Workflow for RAD-Seq Reference-based data analysis tutorial"
+    }
+  ],
+  "timeRequired": "PT8H",
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "yvanlebras"
+    }
+  ],
+  "description": "The questions this tutorial addresses are:\n - How to analyze RAD sequencing data using a reference genome for a population genomics study?\n\n\\nThe objectives are:\n - Analysis of RAD sequencing data using a reference genome\n - SNP calling from RAD sequencing data\n - Calculate population genomics statistics from RAD sequencing data\n\n",
+  "hasPart": [
+    {
+      "@type": "CreativeWork",
+      "url": "https://github.com/galaxyproject/training-material/tree/master/topics/sequence-analysis/tutorials/ref-based-rad-seq/tours/",
+      "name": "Slides for RAD-Seq Reference-based data analysis",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive"
+    }
+  ]
 }
 
                         </script>
@@ -672,6 +653,7 @@
                             <td>
                                 
                             </td>
+
 
                             <td>
                                 
@@ -691,14 +673,14 @@
                                 </td>
                                 <td>
                                     
-                                        <a href="https://github.com/shiltemann/training-material/tree/master/topics/sequence-analysis/tutorials/ref-based-rad-seq/workflows/" title="" alt="RAD-Seq Reference-based data analysis workflows">
+                                        <a href="https://github.com/galaxyproject/training-material/tree/master/topics/sequence-analysis/tutorials/ref-based-rad-seq/workflows/" title="" alt="RAD-Seq Reference-based data analysis workflows">
                                             <i class="fa fa-share-alt" aria-hidden="true"></i><span class="visually-hidden">workflow</span>
                                         </a>
                                     
                                 </td>
                                 <td>
                                     
-                                    <a href="https://github.com/shiltemann/training-material/tree/master/topics/sequence-analysis/tutorials/ref-based-rad-seq/tours/">
+                                    <a href="https://github.com/galaxyproject/training-material/tree/master/topics/sequence-analysis/tutorials/ref-based-rad-seq/tours/">
                                         <i class="fa fa-magic" aria-hidden="true"></i><span class="visually-hidden">interactive_tour</span>
                                     </a>
                                     
@@ -717,51 +699,58 @@
                         <script type="application/ld+json">
                             
 {
-    "@context": "http://schema.org",
-    "@type": "CreativeWork",
-    "name": "RAD-Seq de-novo data analysis",
-
-    
-        "mentions": [
-            
-                {
-                    "@type": "Thing",
-                    "url": "https://doi.org/10.5281/zenodo.1134547",
-                    "name": "Training data for RAD-Seq de-novo data analysis tutorial"
-                }
-                
-                 ,
-                
-            
-            
-                {
-                    "@type": "Thing",
-                    "url": "https://github.com/shiltemann/training-material/tree/master/topics/sequence-analysis/tutorials/de-novo-rad-seq/workflows/",
-                    "name": "Workflow for RAD-Seq de-novo data analysis tutorial"
-                }
-            
-        ],
-    
-    "contributor": [
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "yvanlebras"
-                }
-            
-        
-    ],
-
-    
-        
-            
-                "url": "/training-material/topics/sequence-analysis/tutorials/de-novo-rad-seq/tutorial.html",
-            
-            
-        
-    
-    "learningResourceType": "tutorial"
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "name": "RAD-Seq de-novo data analysis",
+  "accessModeSufficient": "visual",
+  "accessibilityControl": "fullMouseControl",
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
+  "learningResourceType": "tutorial",
+  "url": "",
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "https://doi.org/10.5281/zenodo.1134547",
+      "name": "Training data for RAD-Seq de-novo data analysis tutorial"
+    },
+    {
+      "@type": "Thing",
+      "url": "https://github.com/galaxyproject/training-material/tree/master/topics/sequence-analysis/tutorials/de-novo-rad-seq/workflows/",
+      "name": "Workflow for RAD-Seq de-novo data analysis tutorial"
+    }
+  ],
+  "timeRequired": "PT8H",
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "yvanlebras"
+    }
+  ],
+  "description": "The questions this tutorial addresses are:\n - How to analyze RAD sequencing data without a reference genome for a population genomics study?\n\n\\nThe objectives are:\n - Analysis of RAD sequencing data without a reference genome\n - SNP calling from RAD sequencing data\n - Calculate population genomics statistics from RAD sequencing data\n\n",
+  "hasPart": [
+    {
+      "@type": "CreativeWork",
+      "url": "https://github.com/galaxyproject/training-material/tree/master/topics/sequence-analysis/tutorials/de-novo-rad-seq/tours/",
+      "name": "Slides for RAD-Seq de-novo data analysis",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive"
+    }
+  ]
 }
 
                         </script>
@@ -774,6 +763,7 @@
                             <td>
                                 
                             </td>
+
 
                             <td>
                                 
@@ -793,12 +783,16 @@
                                 </td>
                                 <td>
                                     
-                                        <a href="https://github.com/shiltemann/training-material/tree/master/topics/sequence-analysis/tutorials/de-novo-rad-seq/workflows/" title="" alt="RAD-Seq de-novo data analysis workflows">
+                                        <a href="https://github.com/galaxyproject/training-material/tree/master/topics/sequence-analysis/tutorials/de-novo-rad-seq/workflows/" title="" alt="RAD-Seq de-novo data analysis workflows">
                                             <i class="fa fa-share-alt" aria-hidden="true"></i><span class="visually-hidden">workflow</span>
                                         </a>
                                     
                                 </td>
                                 <td>
+                                    
+                                    <a href="https://github.com/galaxyproject/training-material/tree/master/topics/sequence-analysis/tutorials/de-novo-rad-seq/tours/">
+                                        <i class="fa fa-magic" aria-hidden="true"></i><span class="visually-hidden">interactive_tour</span>
+                                    </a>
                                     
                                 </td>
                             
@@ -815,62 +809,58 @@
                         <script type="application/ld+json">
                             
 {
-    "@context": "http://schema.org",
-    "@type": "CreativeWork",
-    "name": "RAD-Seq to construct genetic maps",
-
-    
-        "mentions": [
-            
-                {
-                    "@type": "Thing",
-                    "url": "https://doi.org/10.5281/zenodo.1219888",
-                    "name": "Training data for RAD-Seq to construct genetic maps tutorial"
-                }
-                
-                 ,
-                
-            
-            
-                {
-                    "@type": "Thing",
-                    "url": "https://github.com/shiltemann/training-material/tree/master/topics/sequence-analysis/tutorials/genetic-map-rad-seq/workflows/",
-                    "name": "Workflow for RAD-Seq to construct genetic maps tutorial"
-                }
-            
-        ],
-    
-    "contributor": [
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "yvanlebras"
-                }
-            
-        
-    ],
-
-    
-        
-            
-                "url": "/training-material/topics/sequence-analysis/tutorials/genetic-map-rad-seq/tutorial.html",
-            
-            
-                "hasPart": [
-                    
-                    
-                         {
-                            "@type": "CreativeWork",
-                            "url": "https://github.com/shiltemann/training-material/tree/master/topics/sequence-analysis/tutorials/genetic-map-rad-seq/tours/",
-                            "name": "Galaxy Tour for RAD-Seq to construct genetic maps"
-                          }              
-                    
-                ],
-            
-        
-    
-    "learningResourceType": "tutorial"
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "name": "RAD-Seq to construct genetic maps",
+  "accessModeSufficient": "visual",
+  "accessibilityControl": "fullMouseControl",
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
+  "learningResourceType": "tutorial",
+  "url": "",
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "https://doi.org/10.5281/zenodo.1219888",
+      "name": "Training data for RAD-Seq to construct genetic maps tutorial"
+    },
+    {
+      "@type": "Thing",
+      "url": "https://github.com/galaxyproject/training-material/tree/master/topics/sequence-analysis/tutorials/genetic-map-rad-seq/workflows/",
+      "name": "Workflow for RAD-Seq to construct genetic maps tutorial"
+    }
+  ],
+  "timeRequired": "PT8H",
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "yvanlebras"
+    }
+  ],
+  "description": "The questions this tutorial addresses are:\n - How to analyze RAD sequencing data for a genetic map study?\n\n\\nThe objectives are:\n - SNP calling from RAD sequencing data\n - Find and correct haplotypes\n - Create input files for genetic map building software\n\n",
+  "hasPart": [
+    {
+      "@type": "CreativeWork",
+      "url": "https://github.com/galaxyproject/training-material/tree/master/topics/sequence-analysis/tutorials/genetic-map-rad-seq/tours/",
+      "name": "Slides for RAD-Seq to construct genetic maps",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive"
+    }
+  ]
 }
 
                         </script>
@@ -883,6 +873,7 @@
                             <td>
                                 
                             </td>
+
 
                             <td>
                                 
@@ -902,14 +893,14 @@
                                 </td>
                                 <td>
                                     
-                                        <a href="https://github.com/shiltemann/training-material/tree/master/topics/sequence-analysis/tutorials/genetic-map-rad-seq/workflows/" title="" alt="RAD-Seq to construct genetic maps workflows">
+                                        <a href="https://github.com/galaxyproject/training-material/tree/master/topics/sequence-analysis/tutorials/genetic-map-rad-seq/workflows/" title="" alt="RAD-Seq to construct genetic maps workflows">
                                             <i class="fa fa-share-alt" aria-hidden="true"></i><span class="visually-hidden">workflow</span>
                                         </a>
                                     
                                 </td>
                                 <td>
                                     
-                                    <a href="https://github.com/shiltemann/training-material/tree/master/topics/sequence-analysis/tutorials/genetic-map-rad-seq/tours/">
+                                    <a href="https://github.com/galaxyproject/training-material/tree/master/topics/sequence-analysis/tutorials/genetic-map-rad-seq/tours/">
                                         <i class="fa fa-magic" aria-hidden="true"></i><span class="visually-hidden">interactive_tour</span>
                                     </a>
                                     
@@ -927,6 +918,8 @@
                                         <a class="dropdown-item" href="http://galaxy3.sb-roscoff.fr/" title="ABiMS">
                                             ABiMS
                                         </a>
+                                        
+                                    
                                         
                                     
                                         
@@ -962,17 +955,9 @@
                                         
                                     
                                         
-                                        <a class="dropdown-item" href="http://galaxy-mel.genome.edu.au/galaxy/" title="GVL Melbourne">
-                                            GVL Melbourne
+                                        <a class="dropdown-item" href="https://usegalaxy.eu" title="Galaxy Europe">
+                                            Galaxy Europe
                                         </a>
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
                                         
                                     
                                         
@@ -981,6 +966,8 @@
                                         <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
                                             Galaxy@GenOuest
                                         </a>
+                                        
+                                    
                                         
                                     
                                         
@@ -1039,17 +1026,20 @@
             
         </table>
 
-        <h2 id="docker_image">Galaxy instances</h2>
-        <p>You can use a public Galaxy instance which has been tested for the availability of the used tools. They are listed along with the tutorials above.</p>
         
-            <p>You can also use the following Docker image for these tutorials:</p>
-            <pre><code>docker run -d -p 8080:80 quay.io/galaxy/sequence-analysis-training</code></pre>
-            <p>It will launch a flavored Galaxy instance available on <a href="http://localhost:8080">http://localhost:8080</a>.</p>
+            <h2 id="docker_image">Galaxy instances</h2>
+            <p>You can use a public Galaxy instance which has been tested for the availability of the used tools. They are listed along with the tutorials above.</p>
+            
+                <p>You can also use the following Docker image for these tutorials:</p>
+                <pre><code>docker run -d -p 8080:80 quay.io/galaxy/sequence-analysis-training</code></pre>
+                <p>It will launch a flavored Galaxy instance available on <a href="http://localhost:8080">http://localhost:8080</a>.</p>
+            
         
 
         <h2 id="maintainers">Maintainers</h2>
         <p>This material is maintained by:</p>
         <ul>
+        
         
             <li>
                 <a href="/training-material/hall-of-fame#yvanlebras">Yvan Le Bras</a>
@@ -1081,14 +1071,15 @@
 
         <ul>
         
-            
-            <li>
-                <a href="/training-material/hall-of-fame#bebatut">Bérénice Batut</a>
-            </li>
         
             
             <li>
                 <a href="/training-material/hall-of-fame#joachimwolff">Joachim Wolff</a>
+            </li>
+        
+            
+            <li>
+                <a href="/training-material/hall-of-fame#bebatut">Bérénice Batut</a>
             </li>
         
             

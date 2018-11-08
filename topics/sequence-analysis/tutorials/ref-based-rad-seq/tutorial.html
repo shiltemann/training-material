@@ -4,13 +4,33 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Galaxy Training!</title>
+        <title>RAD-Seq Reference-based data analysis</title>
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', '0xdeadbeef' , 'auto');
+            ga('send', 'pageview');
+        </script>
+        
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
         <link rel="stylesheet" href="/training-material/assets/css/font-awesome.css">
         <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
         <link rel="stylesheet" href="/training-material/assets/css/syntax_highlighting.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+        
+        
+        
+        
+        
+        <meta name="description" content="Analyses of sequences" />
+        <meta property="og:title" content="Galaxy Training: RAD-Seq Reference-based data analysis" />
+        <meta property="og:description" content="Analyses of sequences" />
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
     </head>
     <body>
         
@@ -38,8 +58,10 @@
                     </li>
 
                     
-                        
-                        
+                    
+                    
+
+                    
                         
                     
 
@@ -50,7 +72,7 @@
                             </a>
                             <div class="dropdown-menu">
                                 
-                                    <a class="dropdown-item" href="https://github.com/shiltemann/training-material/tree/master/topics/sequence-analysis/docker" title="Docker image for this tutorial">
+                                    <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/tree/master/topics/sequence-analysis/docker" title="Docker image for this tutorial">
                                         <i class="fa fa-ship" aria-hidden="true"></i><span class="visually-hidden">docker_image</span> Docker image
                                     </a>
                                 
@@ -73,7 +95,7 @@
                     
                     <li class="nav-item">
                         <a class="nav-link" href="/training-material/topics/sequence-analysis#references" title="References">
-                            <i class="fa fa-book" aria-hidden="true"></i><span class="visually-hidden">references</span> Literature
+                            <i class="fa fa-bookmark" aria-hidden="true"></i><span class="visually-hidden">references</span> Literature
                         </a>
                     </li>
                     
@@ -87,17 +109,17 @@
             FAQ
         </a>
         <a class="dropdown-item" href="https://gitter.im/Galaxy-Training-Network/Lobby" title="Chat on Gitter">
-            Gitter
+            Chat on Gitter
         </a>
         <a class="dropdown-item" href="https://biostar.usegalaxy.org/" title="Ask on Biostars">
-            Biostars
+            Ask questions on Biostars
         </a>
     </div>
 </li>
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/shiltemann/training-material/edit/master/topics/sequence-analysis/tutorials/ref-based-rad-seq/tutorial.md">
+                        <a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/master/topics/sequence-analysis/tutorials/ref-based-rad-seq/tutorial.md">
                             <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit
                         </a>
                     </li>
@@ -108,6 +130,50 @@
 </header>
 
 <div class="container main-content">
+    <script type="application/ld+json">
+   
+{
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "name": "RAD-Seq Reference-based data analysis",
+  "accessModeSufficient": "visual",
+  "accessibilityControl": "fullMouseControl",
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
+  "learningResourceType": "",
+  "url": "/topics/sequence-analysis/tutorials/ref-based-rad-seq/tutorial.html",
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "https://doi.org/10.5281/zenodo.1134547",
+      "name": "Training data for RAD-Seq Reference-based data analysis tutorial"
+    }
+  ],
+  "timeRequired": "PT8H",
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "yvanlebras"
+    }
+  ],
+  "description": "The questions this  addresses are:\n - How to analyze RAD sequencing data using a reference genome for a population genomics study?\n\n\\nThe objectives are:\n - Analysis of RAD sequencing data using a reference genome\n - SNP calling from RAD sequencing data\n - Calculate population genomics statistics from RAD sequencing data\n\n"
+}
+
+    </script>
     <section class="tutorial">
         <h1>RAD-Seq Reference-based data analysis</h1>
 
@@ -138,7 +204,7 @@
             
                 <li>
                     
-                    <a href="/training-material/topics//introduction/">Galaxy introduction</a>
+                    <a href="/training-material/topics/introduction/">Galaxy introduction</a>
                     
                 </li>
             
@@ -146,7 +212,9 @@
             </ul>
             
 
-            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 1/2d</p>
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 8 hours</p>
+            
         </blockquote>
 
         <h1 class="no_toc" id="introduction">Introduction</h1>
@@ -253,7 +321,7 @@ https://zenodo.org/record/1134547/files/Reference_genome_11_chromosomes.fasta
       <ul>
         <li>Single-end or paired-end reads files: Single-end files</li>
         <li>singles-end reads infile(s): SRR034310.fastq(.gz)</li>
-        <li>Barcode file: Barcode fileBarcodes_SRR034310.tabular</li>
+        <li>Barcode file: Barcodes_SRR034310.tabular</li>
         <li>Number of enzymes: One</li>
         <li>Enzyme: sbfI</li>
         <li>Capture discarded reads to a file: Yes</li>
@@ -324,10 +392,9 @@ nolimit	8139531		0		626265		129493		8895289
 
 <p><img src="../../images/RAD4_Population_Genomics/Process_radtags_charts_end.PNG" alt="The bar diagram" /></p>
 
-<p>Using a filter like <code class="highlighter-rouge">clean data, remove any read with an uncalled base</code> has only little impact:</p>
+<p>Based on the dataset with score quality of 10, using a filter like <code class="highlighter-rouge">clean data, remove any read with an uncalled base</code> has only little impact:</p>
 
-<p>TODO with which parameter combination the results have been determined?
-<img src="../../images/RAD4_Population_Genomics/Process_radtags_out_parameter2.png" alt="The output of clean tool" /></p>
+<p><img src="../../images/RAD4_Population_Genomics/Process_radtags_out_parameter2.png" alt="The output of clean tool" /></p>
 
 <p>The demultiplexed sequences are raw sequences from the sequencing machine, without any pretreatments. They need to be controlled for their quality.</p>
 
@@ -463,19 +530,21 @@ TODO: Would be nice to have some specific informations to look for in the files.
     <h3 id="question-question"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
     <ol>
-      <li>What is the maximum value of FST at any SNP?</li>
-      <li>How many SNPs reach this FST value?</li>
+      <li>What is the maximum value of FST’ at any SNP? Don’t hesitate to look at the <a href="http://catchenlab.life.illinois.edu/stacks/manual/#files">STACKS manual</a></li>
+      <li>What is the meaning of this FST’ value compared a a classical FST one?</li>
+      <li>How many SNPs reach this FST’ value?</li>
     </ol>
 
     <blockquote class="solution">
       <h3 id="solution-solution-2"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
-      <ul>
-        <li>0.75</li>
-        <li>3500</li>
-      </ul>
+      <ol>
+        <li>1</li>
+        <li>FST’ is a haplotype measure of FST that is scaled to the theoretical maximum FST value at this locus. Depending on how many haplotypes there are, it may not be possible to reach an FST of 1, so this method will scale the value to 1</li>
+        <li>78</li>
+      </ol>
     </blockquote>
   </blockquote>
-  <p>TODO: There is no column named <code class="highlighter-rouge">FST</code>, but one named <code class="highlighter-rouge">Fst'</code> (column 30). I find larger values than 0.75 in my results (e.g. 1.00.</p>
+  <p>You can now for example filter this dataset to only keep FST’=1 loci for further analysis…</p>
 </blockquote>
 
 <h1 class="no_toc" id="conclusion">Conclusion</h1>
@@ -495,15 +564,15 @@ TODO: Would be nice to have some specific informations to look for in the files.
         
 
         <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
-
         <hr>
+        <br>
+
+        <iframe class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=RAD-Seq Reference-based data analysis (Sequence analysis)">Loading...
+        </iframe>
 
         <blockquote class="feedback">
-            <h3><i class="fa fa-comments-o" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Help us improve this content!</h3>
-            Please take a moment to fill in the Galaxy Training Network
-            <a href="https://tinyurl.com/GTNfeedback">Feedback Form</a>.
-            Your feedback helps us improve this tutorial and will be considered
-            in future revisions.
+            <h3><i class="fa fa-comments-o" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
+            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=RAD-Seq Reference-based data analysis (Sequence analysis)">Feedback Form</a>.</p>
         </blockquote>
     </section>
 </div>
@@ -518,7 +587,7 @@ TODO: Would be nice to have some specific informations to look for in the files.
         </p>
         <p>
             Found a typo? Something is wrong in this tutorial? Edit it on
-            <a href="https://github.com/shiltemann/training-material/tree/master/topics/sequence-analysis/tutorials/ref-based-rad-seq/tutorial.md">GitHub</a>.
+            <a href="https://github.com/galaxyproject/training-material/tree/master/topics/sequence-analysis/tutorials/ref-based-rad-seq/tutorial.md">GitHub</a>.
         </p>
     </div>
 </footer>

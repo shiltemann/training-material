@@ -4,13 +4,33 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Galaxy Training!</title>
+        <title>Visualizations: generic plugins</title>
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', '0xdeadbeef' , 'auto');
+            ga('send', 'pageview');
+        </script>
+        
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
         <link rel="stylesheet" href="/training-material/assets/css/font-awesome.css">
         <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
         <link rel="stylesheet" href="/training-material/assets/css/syntax_highlighting.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+        
+        
+        
+        
+        
+        <meta name="description" content="Galaxy is an open-source project. Everyone can contribute..." />
+        <meta property="og:title" content="Galaxy Training: Visualizations: generic plugins" />
+        <meta property="og:description" content="Galaxy is an open-source project. Everyone can contribute..." />
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
     </head>
     <body>
         
@@ -36,6 +56,10 @@
                             <i class="fa fa-folder-o" aria-hidden="true"></i><span class="visually-hidden">topic</span> Development in Galaxy
                         </a>
                     </li>
+
+                    
+                    
+                    
 
                     
                     <li class="nav-item">
@@ -68,17 +92,17 @@
             FAQ
         </a>
         <a class="dropdown-item" href="https://gitter.im/Galaxy-Training-Network/Lobby" title="Chat on Gitter">
-            Gitter
+            Chat on Gitter
         </a>
         <a class="dropdown-item" href="https://biostar.usegalaxy.org/" title="Ask on Biostars">
-            Biostars
+            Ask questions on Biostars
         </a>
     </div>
 </li>
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/shiltemann/training-material/edit/master/topics/dev/tutorials/visualization-generic/tutorial.md">
+                        <a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/master/topics/dev/tutorials/visualization-generic/tutorial.md">
                             <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit
                         </a>
                     </li>
@@ -89,6 +113,50 @@
 </header>
 
 <div class="container main-content">
+    <script type="application/ld+json">
+   
+{
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "name": "Visualizations: generic plugins",
+  "accessModeSufficient": "visual",
+  "accessibilityControl": "fullMouseControl",
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
+  "learningResourceType": "",
+  "url": "/topics/dev/tutorials/visualization-generic/tutorial.html",
+  "mentions": [
+
+  ],
+  "timeRequired": "PT90M",
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "shiltemann"
+    },
+    {
+      "@type": "Person",
+      "name": "yhoogstrate"
+    }
+  ],
+  "description": "The questions this  addresses are:\n - How can visualization plugins benefit science?\n\n\\nThe objectives are:\n - Implement a first Galaxy visualization\n - Understand the client side vs. server side principle\n\n"
+}
+
+    </script>
     <section class="tutorial">
         <h1>Visualizations: generic plugins</h1>
 
@@ -125,7 +193,9 @@
             </ul>
             
 
-            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 1.5h</p>
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 90 minutes</p>
+            
         </blockquote>
 
         <h1 class="no_toc" id="introduction">Introduction</h1>
@@ -320,8 +390,8 @@ bam file and its index share the same prefix, as expected by samtools and pysam.
 
 <p>We can create this symlink as follows in our mako template:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">## Ensure BAI index is symlinked</span>
-<span class="n">bai_target</span> <span class="o">=</span> <span class="n">hda</span><span class="o">.</span><span class="n">file_name</span><span class="o">+</span><span class="s">'.bai'</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Ensure BAI index is symlinked
+</span><span class="n">bai_target</span> <span class="o">=</span> <span class="n">hda</span><span class="o">.</span><span class="n">file_name</span><span class="o">+</span><span class="s">'.bai'</span>
 <span class="kn">import</span> <span class="nn">os</span>
 
 <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">bai_target</span><span class="p">):</span>
@@ -331,8 +401,8 @@ bam file and its index share the same prefix, as expected by samtools and pysam.
 <p>Now the BAM file has a <code class="highlighter-rouge">.bai</code> file with the same prefix, and we can run the <code class="highlighter-rouge">idxstats</code>
 as follows:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">## Extract idxstats</span>
-<span class="kn">import</span> <span class="nn">pysam</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Extract idxstats
+</span><span class="kn">import</span> <span class="nn">pysam</span>
 <span class="n">bam_idxstats_data</span> <span class="o">=</span> <span class="n">pysam</span><span class="o">.</span><span class="n">idxstats</span><span class="p">(</span><span class="n">hda</span><span class="o">.</span><span class="n">file_name</span><span class="p">)</span>
 </code></pre></div></div>
 
@@ -548,7 +618,7 @@ chromosome.</p>
 
 <p><img src="../../images/vis_plugins_example.png" alt="Example visualization" /></p>
 
-<p>The full contents of this plugin are provided in the <a href="https://github.com/shiltemann/training-material/tree/master/topics/dev/files/hands_on-visualizations/alignment_rname_boxplot">GitHub repository related to this material in <code class="highlighter-rouge">tree/master/topics/dev/files/hands_on-visualizations/alignment_rname_boxplot</code></a>.
+<p>The full contents of this plugin are provided in the <a href="https://github.com/galaxyproject/training-material/tree/master/topics/dev/files/hands_on-visualizations/alignment_rname_boxplot">GitHub repository related to this material in <code class="highlighter-rouge">tree/master/topics/dev/files/hands_on-visualizations/alignment_rname_boxplot</code></a>.
 To try out this example, simply copy this folder to the <code class="highlighter-rouge">$GALAXY_ROOT/config/plugins/visualizations/</code> folder
 on your (local) Galaxy and restart Galaxy.</p>
 
@@ -742,15 +812,15 @@ per <code class="highlighter-rouge">RNAME</code> (chromosome) in a BAM file.</p>
         
 
         <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
-
         <hr>
+        <br>
+
+        <iframe class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Visualizations: generic plugins (Development in Galaxy)">Loading...
+        </iframe>
 
         <blockquote class="feedback">
-            <h3><i class="fa fa-comments-o" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Help us improve this content!</h3>
-            Please take a moment to fill in the Galaxy Training Network
-            <a href="https://tinyurl.com/GTNfeedback">Feedback Form</a>.
-            Your feedback helps us improve this tutorial and will be considered
-            in future revisions.
+            <h3><i class="fa fa-comments-o" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
+            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=Visualizations: generic plugins (Development in Galaxy)">Feedback Form</a>.</p>
         </blockquote>
     </section>
 </div>
@@ -765,7 +835,7 @@ per <code class="highlighter-rouge">RNAME</code> (chromosome) in a BAM file.</p>
         </p>
         <p>
             Found a typo? Something is wrong in this tutorial? Edit it on
-            <a href="https://github.com/shiltemann/training-material/tree/master/topics/dev/tutorials/visualization-generic/tutorial.md">GitHub</a>.
+            <a href="https://github.com/galaxyproject/training-material/tree/master/topics/dev/tutorials/visualization-generic/tutorial.md">GitHub</a>.
         </p>
     </div>
 </footer>

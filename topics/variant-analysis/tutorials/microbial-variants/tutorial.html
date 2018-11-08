@@ -4,13 +4,33 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Galaxy Training!</title>
+        <title>Microbial Variant Calling</title>
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', '0xdeadbeef' , 'auto');
+            ga('send', 'pageview');
+        </script>
+        
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
         <link rel="stylesheet" href="/training-material/assets/css/font-awesome.css">
         <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
         <link rel="stylesheet" href="/training-material/assets/css/syntax_highlighting.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+        
+        
+        
+        
+        
+        <meta name="description" content="Exome sequencing means that all protein-coding genes in a..." />
+        <meta property="og:title" content="Galaxy Training: Microbial Variant Calling" />
+        <meta property="og:description" content="Exome sequencing means that all protein-coding genes in a..." />
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
     </head>
     <body>
         
@@ -38,8 +58,10 @@
                     </li>
 
                     
-                        
-                        
+                    
+                    
+
+                    
                         
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Introduction slides">
@@ -53,8 +75,6 @@
                                                     Introduction to Variant analysis
                                                 </a>
                                             
-                                        
-                                    
                                         
                                     
                                         
@@ -127,15 +147,11 @@
                                         
                                     
                                         
-                                        <a class="dropdown-item" href="http://galaxy-mel.genome.edu.au/galaxy/" title="GVL Melbourne">
-                                            GVL Melbourne
+                                    
+                                        
+                                        <a class="dropdown-item" href="https://usegalaxy.eu" title="Galaxy Europe">
+                                            Galaxy Europe
                                         </a>
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
                                         
                                     
                                         
@@ -208,7 +224,7 @@
                     
                     <li class="nav-item">
                         <a class="nav-link" href="/training-material/topics/variant-analysis#references" title="References">
-                            <i class="fa fa-book" aria-hidden="true"></i><span class="visually-hidden">references</span> Literature
+                            <i class="fa fa-bookmark" aria-hidden="true"></i><span class="visually-hidden">references</span> Literature
                         </a>
                     </li>
                     
@@ -222,17 +238,17 @@
             FAQ
         </a>
         <a class="dropdown-item" href="https://gitter.im/Galaxy-Training-Network/Lobby" title="Chat on Gitter">
-            Gitter
+            Chat on Gitter
         </a>
         <a class="dropdown-item" href="https://biostar.usegalaxy.org/" title="Ask on Biostars">
-            Biostars
+            Ask questions on Biostars
         </a>
     </div>
 </li>
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/shiltemann/training-material/edit/master/topics/variant-analysis/tutorials/microbial-variants/tutorial.md">
+                        <a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/master/topics/variant-analysis/tutorials/microbial-variants/tutorial.md">
                             <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit
                         </a>
                     </li>
@@ -243,6 +259,59 @@
 </header>
 
 <div class="container main-content">
+    <script type="application/ld+json">
+   
+{
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "name": "Microbial Variant Calling",
+  "accessModeSufficient": "visual",
+  "accessibilityControl": "fullMouseControl",
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
+  "learningResourceType": "",
+  "url": "/topics/variant-analysis/tutorials/microbial-variants/tutorial.html",
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "https://doi.org/10.5281/zenodo.582600",
+      "name": "Training data for Microbial Variant Calling tutorial"
+    }
+  ],
+  "timeRequired": "PT45M",
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "annasyme"
+    },
+    {
+      "@type": "Person",
+      "name": "slugger70"
+    },
+    {
+      "@type": "Person",
+      "name": "tseemann"
+    }
+  ],
+  "keywords": "prokaryote",
+  "description": "The questions this  addresses are:\n - How do we detect differences between a set of reads from a microorganism and a reference genome\n\n\\nThe objectives are:\n - Find variants between a reference genome and a set of reads\n - Visualise the SNP in context of the reads aligned to the genome\n - Determine the effect of those variants on genomic features\n - Understand if the SNP is potentially affecting the phenotype\n\n"
+}
+
+    </script>
     <section class="tutorial">
         <h1>Microbial Variant Calling</h1>
 
@@ -275,19 +344,19 @@
             
                 <li>
                     
-                    <a href="/training-material/topics//introduction/">Galaxy introduction</a>
+                    <a href="/training-material/topics/introduction/">Galaxy introduction</a>
                     
                 </li>
             
                 <li>
                     
-                    <a href="/training-material/topics//sequence-analysis/">Quality control</a>
+                    <a href="/training-material/topics/sequence-analysis/">Quality control</a>
                     
                 </li>
             
                 <li>
                     
-                    <a href="/training-material/topics//sequence-analysis/">Mapping</a>
+                    <a href="/training-material/topics/sequence-analysis/">Mapping</a>
                     
                 </li>
             
@@ -295,7 +364,9 @@
             </ul>
             
 
-            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 45 min</p>
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 45 minutes</p>
+            
         </blockquote>
 
         <h1 class="no_toc" id="introduction">Introduction</h1>
@@ -584,7 +655,7 @@ Wildtype    190866  del GTT GT  GT:18 GTT:0 CDS -   28/1356 10/451  frameshift_v
   </ol>
 </blockquote>
 
-<p>A new file will be created in your history, this contains the JBrowse interactive visualisation. We will now view its contents and play with it by inspecting the <code class="highlighter-rouge">JBrowse on data XX and data XX - Complete</code> file (eye icon). The JBrowse window will appear in the centre Galaxy panel.</p>
+<p>A new dataset will be created in your history, containing the JBrowse interactive visualisation. We will now view its contents and play with it by clicking the <i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> (eye) icon of the <code class="highlighter-rouge">JBrowse on data XX and data XX - Complete</code> dataset. The JBrowse window will appear in the centre Galaxy panel.</p>
 
 <blockquote class="hands_on">
   <h3 id="hands_on-hands-on-inspecting-the-snps-using-jbrowse"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Inspecting the SNPs using JBrowse</h3>
@@ -661,15 +732,15 @@ Wildtype    190866  del GTT GT  GT:18 GTT:0 CDS -   28/1356 10/451  frameshift_v
         
 
         <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
-
         <hr>
+        <br>
+
+        <iframe class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Microbial Variant Calling (Variant Analysis)">Loading...
+        </iframe>
 
         <blockquote class="feedback">
-            <h3><i class="fa fa-comments-o" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Help us improve this content!</h3>
-            Please take a moment to fill in the Galaxy Training Network
-            <a href="https://tinyurl.com/GTNfeedback">Feedback Form</a>.
-            Your feedback helps us improve this tutorial and will be considered
-            in future revisions.
+            <h3><i class="fa fa-comments-o" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
+            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=Microbial Variant Calling (Variant Analysis)">Feedback Form</a>.</p>
         </blockquote>
     </section>
 </div>
@@ -684,7 +755,7 @@ Wildtype    190866  del GTT GT  GT:18 GTT:0 CDS -   28/1356 10/451  frameshift_v
         </p>
         <p>
             Found a typo? Something is wrong in this tutorial? Edit it on
-            <a href="https://github.com/shiltemann/training-material/tree/master/topics/variant-analysis/tutorials/microbial-variants/tutorial.md">GitHub</a>.
+            <a href="https://github.com/galaxyproject/training-material/tree/master/topics/variant-analysis/tutorials/microbial-variants/tutorial.md">GitHub</a>.
         </p>
     </div>
 </footer>

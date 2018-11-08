@@ -4,13 +4,33 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Galaxy Training!</title>
+        <title>Exome sequencing data analysis</title>
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', '0xdeadbeef' , 'auto');
+            ga('send', 'pageview');
+        </script>
+        
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
         <link rel="stylesheet" href="/training-material/assets/css/font-awesome.css">
         <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
         <link rel="stylesheet" href="/training-material/assets/css/syntax_highlighting.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+        
+        
+        
+        
+        
+        <meta name="description" content="Exome sequencing means that all protein-coding genes in a..." />
+        <meta property="og:title" content="Galaxy Training: Exome sequencing data analysis" />
+        <meta property="og:description" content="Exome sequencing means that all protein-coding genes in a..." />
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
     </head>
     <body>
         
@@ -38,8 +58,10 @@
                     </li>
 
                     
-                        
-                        
+                    
+                    
+
+                    
                         
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Introduction slides">
@@ -53,8 +75,6 @@
                                                     Introduction to Variant analysis
                                                 </a>
                                             
-                                        
-                                    
                                         
                                     
                                         
@@ -87,6 +107,109 @@
                     
 
                     
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Where to run the tutorial">
+                                <i class="fa fa-cog" aria-hidden="true"></i><span class="visually-hidden">instances</span> Galaxy Instances
+                            </a>
+                            <div class="dropdown-menu">
+                                
+                                
+                                
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                        <a class="dropdown-item" href="https://usegalaxy.eu" title="Galaxy Europe">
+                                            Galaxy Europe
+                                        </a>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                
+                            </div>
+                        </li>
+                    
 
                     
 
@@ -101,7 +224,7 @@
                     
                     <li class="nav-item">
                         <a class="nav-link" href="/training-material/topics/variant-analysis#references" title="References">
-                            <i class="fa fa-book" aria-hidden="true"></i><span class="visually-hidden">references</span> Literature
+                            <i class="fa fa-bookmark" aria-hidden="true"></i><span class="visually-hidden">references</span> Literature
                         </a>
                     </li>
                     
@@ -115,17 +238,17 @@
             FAQ
         </a>
         <a class="dropdown-item" href="https://gitter.im/Galaxy-Training-Network/Lobby" title="Chat on Gitter">
-            Gitter
+            Chat on Gitter
         </a>
         <a class="dropdown-item" href="https://biostar.usegalaxy.org/" title="Ask on Biostars">
-            Biostars
+            Ask questions on Biostars
         </a>
     </div>
 </li>
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/shiltemann/training-material/edit/master/topics/variant-analysis/tutorials/exome-seq/tutorial.md">
+                        <a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/master/topics/variant-analysis/tutorials/exome-seq/tutorial.md">
                             <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit
                         </a>
                     </li>
@@ -136,6 +259,62 @@
 </header>
 
 <div class="container main-content">
+    <script type="application/ld+json">
+   
+{
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "name": "Exome sequencing data analysis",
+  "accessModeSufficient": "visual",
+  "accessibilityControl": "fullMouseControl",
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
+  "learningResourceType": "",
+  "url": "/topics/variant-analysis/tutorials/exome-seq/tutorial.html",
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "https://doi.org/10.5281/zenodo.60520",
+      "name": "Training data for Exome sequencing data analysis tutorial"
+    }
+  ],
+  "timeRequired": "PT2H",
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "bebatut"
+    },
+    {
+      "@type": "Person",
+      "name": "torhou"
+    },
+    {
+      "@type": "Person",
+      "name": "erxleben"
+    },
+    {
+      "@type": "Person",
+      "name": "bgruening"
+    }
+  ],
+  "description": "The questions this  addresses are:\n - How to identify the genetic variation with the use of exome sequencing?\n - What is the pipeline of the process of finding genetic variation which caused the disease?\n\n\\nThe objectives are:\n - Identification of the genetic variation using the exome sequencing\n - Using FreeBayes calls for variants generating\n - Variant analysis and GEMINI queries\n\n"
+}
+
+    </script>
     <section class="tutorial">
         <h1>Exome sequencing data analysis</h1>
 
@@ -168,19 +347,19 @@
             
                 <li>
                     
-                    <a href="/training-material/topics//introduction/">Galaxy introduction</a>
+                    <a href="/training-material/topics/introduction/">Galaxy introduction</a>
                     
                 </li>
             
                 <li>
                     
-                    <a href="/training-material/topics//sequence-analysis/">Quality control</a>
+                    <a href="/training-material/topics/sequence-analysis/">Quality control</a>
                     
                 </li>
             
                 <li>
                     
-                    <a href="/training-material/topics//sequence-analysis/">Mapping</a>
+                    <a href="/training-material/topics/sequence-analysis/">Mapping</a>
                     
                 </li>
             
@@ -188,7 +367,9 @@
             </ul>
             
 
-            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 1d/3h/6h</p>
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 2 hours</p>
+            
         </blockquote>
 
         <h1 id="introduction">Introduction</h1>
@@ -219,11 +400,9 @@ is cheaper also than whole-genome sequencing. With a high coverage rate of
 
 <ul>
   <li>The handful of <em>genes that reside in mitochondria</em>, rather than in the nucleus</li>
-  <li>
-<em>“Structural variants”</em> such as translocations and inversions, that move or
+  <li><em>“Structural variants”</em> such as translocations and inversions, that move or
 flip DNA but don’t alter the base sequence.</li>
-  <li>
-<em>Triplet repeat disorders</em>, such as Huntington’s disease and fragile X syndrome
+  <li><em>Triplet repeat disorders</em>, such as Huntington’s disease and fragile X syndrome
 can’t be detected.</li>
   <li>Other <em>copy number variants</em> will remain beneath the radar, for they too don’t
 change the sequence, but can increase disease risk.</li>
@@ -290,11 +469,10 @@ change the sequence, but can increase disease risk.</li>
 
 <p>We will follow the pipeline:</p>
 
-<p><img src="../../images/genVAST.png" alt="Exome sequencing pipeline in Galaxy"></p>
+<p><img src="../../images/genVAST.png" alt="Exome sequencing pipeline in Galaxy" /></p>
 
 <blockquote class="tip">
-  <h3 id="tip-tip">
-<i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip:</h3>
+  <h3 id="tip-tip"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip:</h3>
 
   <p>For a more detailed tutorial, have a look at the <a href="https://github.com/nekrut/galaxy/wiki/Diploid-variant-calling">tutorial on diploid variant calling</a>. It
 follows a similar pipeline using genome in the bottle data, but with more details
@@ -325,8 +503,7 @@ The raw exome sequences were mapped on <code class="highlighter-rouge">hg19</cod
 for each family member, we will start with one BAM file with mapping results.</p>
 
 <blockquote class="hands_on">
-  <h3 id="hands_on-hands-on-data-pre-processing">
-<i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Data pre-processing</h3>
+  <h3 id="hands_on-hands-on-data-pre-processing"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Data pre-processing</h3>
 
   <ol>
     <li>Import all 3 BAM’s into a new history:
@@ -339,22 +516,18 @@ for each family member, we will start with one BAM file with mapping results.</p
     <li>Specify the used genome for mapping (for each dataset)
       <ol>
         <li>Click on <strong>Edit attributes</strong> (pencil icon on right panel)</li>
-        <li>Select <code class="highlighter-rouge">Human Feb 2009</code> on <strong>Database/Build</strong>
-</li>
+        <li>Select <code class="highlighter-rouge">Human Feb 2009</code> on <strong>Database/Build</strong></li>
         <li>Save it</li>
       </ol>
     </li>
     <li>Import the reference genome <i class="fa fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>:
       <ol>
         <li>Go on <strong>Data Libraries</strong> in <strong>Shared data</strong> (top panel on Galaxy’s interface)</li>
-        <li>Click on <strong>Training Data</strong>
-</li>
-        <li>Select <code class="highlighter-rouge">hg19</code>
-</li>
+        <li>Click on <strong>Training Data</strong></li>
+        <li>Select <code class="highlighter-rouge">hg19</code></li>
         <li>Click on <strong>Import selected datasets into history</strong> (just below the top panel)</li>
         <li>Import it</li>
-        <li>Convert it from 2bit to fasta with <strong>twoBitToFa</strong> from <strong>Convert Formats</strong>
-</li>
+        <li>Convert it from 2bit to fasta with <strong>twoBitToFa</strong> from <strong>Convert Formats</strong></li>
       </ol>
     </li>
     <li>Follow the next steps for father data and then apply the generated workflow on other datasets</li>
@@ -373,8 +546,7 @@ variant detector designed to find small polymorphisms, specifically SNPs
 substitution events) smaller than the length of a short-read sequencing alignment.</p>
 
 <blockquote class="hands_on">
-  <h3 id="hands_on-hands-on-generating-freebayes-calls">
-<i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Generating FreeBayes calls</h3>
+  <h3 id="hands_on-hands-on-generating-freebayes-calls"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Generating FreeBayes calls</h3>
 
   <ol>
     <li>Select <strong>FreeBayes</strong> in the tool menu (left panel of Galaxy’s interface)</li>
@@ -391,7 +563,7 @@ substitution events) smaller than the length of a short-read sequencing alignmen
 
 </blockquote>
 
-<p><img class="emoji" title=":+1:" alt=":+1:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"><img class="emoji" title=":tada:" alt=":tada:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f389.png" height="20" width="20"> <strong>Congratulations!</strong> <img class="emoji" title=":tada:" alt=":tada:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f389.png" height="20" width="20"><img class="emoji" title=":+1:" alt=":+1:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">
+<p><i class="fa fa-trophy" aria-hidden="true"></i><span class="visually-hidden">trophy</span> <strong>Congratulations!</strong>
 You have created you first VCF file, one of most complicated
 file formats in bioinformatics. In such a file your called variants are stored
 with one variant per line (+header lines).</p>
@@ -403,8 +575,7 @@ compound variants into multiple independent variants and filter the VCF file
 to simplify the variant representation.</p>
 
 <blockquote class="hands_on">
-  <h3 id="hands_on-hands-on-post-processing-freebayes-calls">
-<i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Post-processing FreeBayes calls</h3>
+  <h3 id="hands_on-hands-on-post-processing-freebayes-calls"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Post-processing FreeBayes calls</h3>
 
   <ol>
     <li>Split your allelic primitives (gaps or mismatches) into multiple VCF lines
@@ -412,8 +583,7 @@ with <strong>VcfAllelicPrimitives</strong> from <strong>VCF Tools</strong> <i cl
       <ol>
         <li>Select the FreeBayes output file as VCF dataset</li>
         <li>Make sure <strong>Maintain site and allele-level annotations when decomposing</strong> and
-<strong>Maintain genotype-level annotations when decomposing</strong> are set to <code class="highlighter-rouge">Yes</code>
-</li>
+<strong>Maintain genotype-level annotations when decomposing</strong> are set to <code class="highlighter-rouge">Yes</code></li>
       </ol>
     </li>
     <li>Filter your VCF file with <strong>SnpSift Filter</strong> from <strong>Annotation</strong> to
@@ -423,8 +593,7 @@ only conserve SNPs with a quality &gt;= 30 and a coverage &gt;= 10</li>
 </blockquote>
 
 <blockquote class="tip">
-  <h3 id="tip-tip-1">
-<i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip:</h3>
+  <h3 id="tip-tip-1"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip:</h3>
 
   <p>Have a look at the examples that can help you construct the correct expression for the Filter criteria.</p>
 </blockquote>
@@ -435,19 +604,16 @@ only conserve SNPs with a quality &gt;= 30 and a coverage &gt;= 10</li>
 the NCBI database of genetic variation and then <code class="highlighter-rouge">hg19</code> database with <strong>SnpEff</strong>.</p>
 
 <blockquote class="hands_on">
-  <h3 id="hands_on-hands-on-annotating-variants">
-<i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Annotating variants</h3>
+  <h3 id="hands_on-hands-on-annotating-variants"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Annotating variants</h3>
 
   <ol>
     <li>Import the <a href="https://zenodo.org/record/60520/files/dbSNP_138.hg19.vcf">dbSNP_138.hg19.vcf</a>
 in your history (Build 138 data, available on the human assembly (GRCh37/hg19))</li>
     <li>Assign the known variant ID from dbSNP to your variants, using
-<strong>SnpSift Annotate</strong> from <strong>Annotation</strong>
-</li>
+<strong>SnpSift Annotate</strong> from <strong>Annotation</strong></li>
     <li>Annotate your variants with some functional information
       <ol>
-        <li>Download <code class="highlighter-rouge">hg19</code> database with <strong>SnpEff Download</strong> from <strong>Annotation</strong>
-</li>
+        <li>Download <code class="highlighter-rouge">hg19</code> database with <strong>SnpEff Download</strong> from <strong>Annotation</strong></li>
         <li>Launch annotation of your variants with <strong>SnpEff</strong> from
 <strong>Annotation</strong>, using the downloaded database (reference genome from your
 history)</li>
@@ -460,8 +626,7 @@ history)</li>
 <p>Look at your <strong>“INFO”</strong> column again in the generated VCF file. You will get some gene names for your variants, but also a predicted impact and if your variant is located inside of a known gene.</p>
 
 <blockquote class="tip">
-  <h3 id="tip-tip-2">
-<i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip:</h3>
+  <h3 id="tip-tip-2"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip:</h3>
 
   <p>You can also have a look at the HTML report. It contains a number of useful
 metrics such as distribution of variants across gene features.</p>
@@ -473,25 +638,21 @@ metrics such as distribution of variants across gene features.</p>
 you need for your further studies is included in your VCF file.</p>
 
 <blockquote class="hands_on">
-  <h3 id="hands_on-hands-on-getting-vcf-file">
-<i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Getting VCF file</h3>
+  <h3 id="hands_on-hands-on-getting-vcf-file"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Getting VCF file</h3>
 
   <ol>
-    <li>Extract your history to a workflow <i class="fa fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>
-</li>
+    <li>Extract your history to a workflow <i class="fa fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
     <li>
       <p>Apply this workflow to the other BAM files <i class="fa fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></p>
 
       <blockquote class="comment">
-        <h3 id="comment-comments">
-<i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comments</h3>
+        <h3 id="comment-comments"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comments</h3>
         <p>You should now have 3 annotated variant files, from mother, father and the
 patient. It might be a good idea to rename them accordingly.</p>
       </blockquote>
     </li>
     <li>Combine all 3 files into one with the tool <strong>VCFcombine</strong> from
-<strong>VCF Tools</strong> <i class="fa fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>
-</li>
+<strong>VCF Tools</strong> <i class="fa fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
   </ol>
 
 </blockquote>
@@ -501,15 +662,13 @@ patient. It might be a good idea to rename them accordingly.</p>
 <h1 id="post-processing">Post-processing</h1>
 
 <blockquote class="hands_on">
-  <h3 id="hands_on-hands-on-post-processing">
-<i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Post-processing</h3>
+  <h3 id="hands_on-hands-on-post-processing"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Post-processing</h3>
 
   <ol>
     <li>Create a pedigree file (PED) like this</li>
   </ol>
 
-  <div class="highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code>#family_id	sample_id	paternal_id	maternal_id	sex	phenotype	ethnicity
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#family_id	sample_id	paternal_id	maternal_id	sex	phenotype	ethnicity
 family1	RS024M-MOTHER	-9	-9	2	1	CEU
 family1	RS024V-FATHER	-9	-9	1	1	CEU
 family1	RS024P-PATIENT	RS024V-FATHER	RS024M-MOTHER	1	2	CEU
@@ -521,8 +680,7 @@ family1	RS024P-PATIENT	RS024V-FATHER	RS024M-MOTHER	1	2	CEU
 combined VCF file and the PED file.</p>
 
       <blockquote class="comment">
-        <h3 id="comment-comments-1">
-<i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comments</h3>
+        <h3 id="comment-comments-1"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comments</h3>
 
         <p>This creates a sqlite database. To see the content of the database use
 <strong>GEMINI_db_info</strong></p>
@@ -535,8 +693,7 @@ combined VCF file and the PED file.</p>
 <p>Either way you have now a database with all your variants, with pedigree
 relations, additional annotations and most importantly its fast to search.</p>
 <blockquote class="tip">
-  <h3 id="tip-tip-3">
-<i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip:</h3>
+  <h3 id="tip-tip-3"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip:</h3>
 
   <p>Have a look at all different <strong>Gemini</strong> tools and run as many tools as possible on
 your GEMINI databases. Try to get a feeling of what is possible with a variant
@@ -548,34 +705,27 @@ database in GEMINI.</p>
 <p><strong>GEMINI query</strong> is the most versatile of all the GEMINI tools. You can use it to
 ask ‘interesting’ questions in simple SQL (see the GEMINI <a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003153">handbook</a> on its usage).</p>
 
-<h3 id="gemini-query-examples">
-<strong>GEMINI query</strong> examples:</h3>
+<h3 id="gemini-query-examples"><strong>GEMINI query</strong> examples:</h3>
 <ul>
-  <li>
-<code class="highlighter-rouge">select chrom, start, end from variants</code> will show you some information on all
+  <li><code class="highlighter-rouge">select chrom, start, end from variants</code> will show you some information on all
 variants that were found in any of the three samples</li>
-  <li>
-<code class="highlighter-rouge">select chrom, start, end, (gts).(*) from variants</code> will also show you the
+  <li><code class="highlighter-rouge">select chrom, start, end, (gts).(*) from variants</code> will also show you the
 genotype of each sample also with the help wildcards</li>
-  <li>
-<code class="highlighter-rouge">select chrom, start, end, gene, impact, (gts).(*) from variants v where v.impact_severity='HIGH'</code>
+  <li><code class="highlighter-rouge">select chrom, start, end, gene, impact, (gts).(*) from variants v where v.impact_severity='HIGH'</code>
 will show you some more information and filter out only those variants that
 have a high impact</li>
-  <li>
-<code class="highlighter-rouge">select chrom, vcf_if, start, end, ref, alt, gene, impact, (gts).(*) from variants v where v.impact_severity='HIGH'</code>
+  <li><code class="highlighter-rouge">select chrom, vcf_if, start, end, ref, alt, gene, impact, (gts).(*) from variants v where v.impact_severity='HIGH'</code>
 also shows you the reference allele and the alternative allele and the RSID for
 the SNP if it exists</li>
 </ul>
 
 <blockquote class="tip">
-  <h3 id="tip-tip-4">
-<i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip:</h3>
+  <h3 id="tip-tip-4"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip:</h3>
 
   <p>Switch on the <code class="highlighter-rouge">--header</code> parameter**</p>
 
   <blockquote class="tip">
-    <h3 id="tip-tip-5">
-<i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip:</h3>
+    <h3 id="tip-tip-5"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip:</h3>
 
     <p>To go further on <strong>Gemini</strong>, you can have a look at the following tutorials:</p>
 
@@ -593,8 +743,7 @@ look at the <a href="https://github.com/nekrut/galaxy/wiki/Diploid-variant-calli
 
         
         <blockquote class="key_points">
-            <h3>
-<i class="fa fa-key" aria-hidden="true"></i><span class="visually-hidden">keypoints</span> Key points</h3>
+            <h3><i class="fa fa-key" aria-hidden="true"></i><span class="visually-hidden">keypoints</span> Key points</h3>
 
             <ul>
                 
@@ -617,18 +766,16 @@ look at the <a href="https://github.com/nekrut/galaxy/wiki/Diploid-variant-calli
 
         
 
-        <h3>
-<i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
-
+        <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
         <hr>
+        <br>
+
+        <iframe class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Exome sequencing data analysis (Variant Analysis)">Loading...
+        </iframe>
 
         <blockquote class="feedback">
-            <h3>
-<i class="fa fa-comments-o" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Help us improve this content!</h3>
-            Please take a moment to fill in the Galaxy Training Network
-            <a href="https://tinyurl.com/GTNfeedback">Feedback Form</a>.
-            Your feedback helps us improve this tutorial and will be considered
-            in future revisions.
+            <h3><i class="fa fa-comments-o" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
+            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=Exome sequencing data analysis (Variant Analysis)">Feedback Form</a>.</p>
         </blockquote>
     </section>
 </div>
@@ -639,11 +786,11 @@ look at the <a href="https://github.com/nekrut/galaxy/wiki/Diploid-variant-calli
         <p>
             This material is the result of a collaborative work. Thanks to the
             <a href="https://wiki.galaxyproject.org/Teach/GTN">Galaxy Training Network</a>
-            and all the <a href="/training-material/hall-of-fame">contributors</a> (Bérénice Batut, Torsten Houwaart, Anika Erxleben, Björn Grüning)!
+            and all the <a href="/training-material/hall-of-fame">contributors</a> (Bérénice Batut, Björn Grüning, Anika Erxleben, Torsten Houwaart)!
         </p>
         <p>
             Found a typo? Something is wrong in this tutorial? Edit it on
-            <a href="https://github.com/shiltemann/training-material/tree/master/topics/variant-analysis/tutorials/exome-seq/tutorial.md">GitHub</a>.
+            <a href="https://github.com/galaxyproject/training-material/tree/master/topics/variant-analysis/tutorials/exome-seq/tutorial.md">GitHub</a>.
         </p>
     </div>
 </footer>

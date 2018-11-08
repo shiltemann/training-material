@@ -4,13 +4,33 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Galaxy Training!</title>
+        <title>Creating a new tutorial - Writing content in Markdown</title>
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', '0xdeadbeef' , 'auto');
+            ga('send', 'pageview');
+        </script>
+        
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
         <link rel="stylesheet" href="/training-material/assets/css/font-awesome.css">
         <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
         <link rel="stylesheet" href="/training-material/assets/css/syntax_highlighting.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+        
+        
+        
+        
+        
+        <meta name="description" content="Galaxy is a great solution to train the bioinformatics co..." />
+        <meta property="og:title" content="Galaxy Training: Creating a new tutorial - Writing content in Markdown" />
+        <meta property="og:description" content="Galaxy is a great solution to train the bioinformatics co..." />
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
     </head>
     <body>
         
@@ -38,8 +58,10 @@
                     </li>
 
                     
-                        
-                        
+                    
+                    
+
+                    
                         
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Introduction slides">
@@ -52,10 +74,6 @@
                                                 <a class="dropdown-item" href="/training-material/topics/contributing/slides/introduction.html">
                                                     Overview of the Galaxy Training Material
                                                 </a>
-                                            
-                                        
-                                    
-                                        
                                             
                                         
                                     
@@ -135,17 +153,17 @@
             FAQ
         </a>
         <a class="dropdown-item" href="https://gitter.im/Galaxy-Training-Network/Lobby" title="Chat on Gitter">
-            Gitter
+            Chat on Gitter
         </a>
         <a class="dropdown-item" href="https://biostar.usegalaxy.org/" title="Ask on Biostars">
-            Biostars
+            Ask questions on Biostars
         </a>
     </div>
 </li>
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/shiltemann/training-material/edit/master/topics/contributing/tutorials/create-new-tutorial-content/tutorial.md">
+                        <a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/master/topics/contributing/tutorials/create-new-tutorial-content/tutorial.md">
                             <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit
                         </a>
                     </li>
@@ -156,6 +174,54 @@
 </header>
 
 <div class="container main-content">
+    <script type="application/ld+json">
+   
+{
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "name": "Creating a new tutorial - Writing content in Markdown",
+  "accessModeSufficient": "visual",
+  "accessibilityControl": "fullMouseControl",
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
+  "learningResourceType": "",
+  "url": "/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html",
+  "mentions": [
+
+  ],
+  "timeRequired": "PT15M",
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "bebatut"
+    },
+    {
+      "@type": "Person",
+      "name": "bgruening"
+    },
+    {
+      "@type": "Person",
+      "name": "shiltemann"
+    }
+  ],
+  "description": "The questions this  addresses are:\n - How to write a tutorial with hands-on?\n - What are the different boxes?\n - How can I add a caption to an image?\n\n\\nThe objectives are:\n - Create hands-on\n - Use the different boxes\n\n"
+}
+
+    </script>
     <section class="tutorial">
         <h1>Creating a new tutorial - Writing content in Markdown</h1>
 
@@ -184,7 +250,9 @@
 
             
 
-            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 15min</p>
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 15 minutes</p>
+            
         </blockquote>
 
         <h1 class="no_toc" id="introduction">Introduction</h1>
@@ -198,11 +266,7 @@
 
 <ol id="markdown-toc">
   <li><a href="#metadata" id="markdown-toc-metadata">Metadata</a></li>
-  <li><a href="#content" id="markdown-toc-content">Content</a>    <ol>
-      <li><a href="#adding-images-with-caption" id="markdown-toc-adding-images-with-caption">Adding images with caption</a></li>
-      <li><a href="#writing-mathematical-expressions" id="markdown-toc-writing-mathematical-expressions">Writing mathematical expressions</a></li>
-    </ol>
-  </li>
+  <li><a href="#content" id="markdown-toc-content">Content</a></li>
   <li><a href="#improving-the-learning-experience" id="markdown-toc-improving-the-learning-experience">Improving the learning experience</a>    <ol>
       <li><a href="#overview-box" id="markdown-toc-overview-box"><strong>Overview</strong> box</a></li>
       <li><a href="#agenda-box" id="markdown-toc-agenda-box"><strong>Agenda</strong> box</a></li>
@@ -223,8 +287,26 @@
 
 <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
 <span class="na">layout</span><span class="pi">:</span> <span class="s">tutorial_hands_on</span>
-<span class="na">topic_name</span><span class="pi">:</span> <span class="s">training</span>
-<span class="na">tutorial_name</span><span class="pi">:</span> <span class="s">create-new-tutorial</span>
+
+<span class="na">title</span><span class="pi">:</span> <span class="s">Title of the tutorial</span>
+<span class="na">zenodo_link</span><span class="pi">:</span> <span class="s1">'</span><span class="s">'</span>
+<span class="na">questions</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">Which biological questions are addressed by the tutorial?</span>
+<span class="pi">-</span> <span class="s">Which bioinformatics techniques are important to know for this type of data?</span>
+<span class="na">objectives</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">The learning objectives are the goals of the tutorial</span>
+<span class="pi">-</span> <span class="s">They will be informed by your audience and will communicate to them and to yourself</span>
+  <span class="s">what you should focus on during the course</span>
+<span class="pi">-</span> <span class="s">They are single sentences describing what a learner should be able to do once they</span>
+  <span class="s">have done completed tutorial</span>
+<span class="pi">-</span> <span class="s">You can use Bloom's Taxonomy to write effective learning objectives</span>
+<span class="na">time_estimation</span><span class="pi">:</span> <span class="s1">'</span><span class="s">'</span>
+<span class="na">key_points</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">The take-home messages</span>
+<span class="pi">-</span> <span class="s">They will appear at the end of the tutorial</span>
+<span class="na">contributors</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">contributor1</span>
+<span class="pi">-</span> <span class="s">contributor2</span>
 <span class="nn">---</span>
 <span class="gh"># Introduction</span>
 {:.no_toc}
@@ -259,25 +341,75 @@ blabla
 
 <ul>
   <li><code class="highlighter-rouge">layout: tutorial_hands_on</code>: keep the default</li>
-  <li><code class="highlighter-rouge">topic_name: training</code>: replace ‘training’ the name of the topic</li>
-  <li><code class="highlighter-rouge">tutorial_name: create-new-tutorial</code>: replace ‘create-new-tutorial’ with the <code class="highlighter-rouge">name</code> of tutorial that you used in the topic level metadata</li>
+  <li><code class="highlighter-rouge">title</code>: title of the tutorial (it will appear on the tutorial page and the topic page)</li>
+  <li><code class="highlighter-rouge">enable</code>: <code class="highlighter-rouge">false</code> to hide your tutorial from the topic page (optional)</li>
+  <li><code class="highlighter-rouge">zenodo_link</code>: link on Zenodo to the input data for the tutorial</li>
 </ul>
 
-<p>These metadata are there to help the templating system linking between the tutorial’s file and the global <a href="/training-material/topics/contributing/tutorials/create-new-tutorial-metadata/tutorial.html">metadata</a>.
-If this is not correctly defined, the tutorial will not be shown on the website.</p>
-
 <blockquote class="hands_on">
-  <h3 id="hands_on-hands-on-fix-the-top-metadata"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Fix the top metadata</h3>
+  <h3 id="hands_on-hands-on-fill-the-basic-metadata"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Fill the basic metadata</h3>
 
   <ol>
-    <li>Change the <code class="highlighter-rouge">tutorial_name</code> and the <code class="highlighter-rouge">topic_name</code> to fit to the ones defined in the metadata</li>
-    <li>(Optional) Build the website locally by following the <a href="/training-material/topics/contributing/tutorials/running-jekyll/tutorial.html">Jekyll tutorial</a> and check that the tutorial is reachable</li>
+    <li>
+      <p>Update the tutorial information in the header section of your tutorial:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> title: "Similarity search with BLAST"
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <p>(Optional) Add the Zenodo link (if created)</p>
+    </li>
   </ol>
+
+</blockquote>
+
+<p>This information is used to display the data from the topic and tutorial page. They are also used to check which information are missing for the tutorials.</p>
+
+<p>We also define metadata related to the pedagogical content of the tutorial, which will appear in the top (“Overview” box) and bottom of the online tutorial:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">requirements</code>: list of resources that the reader of the material should be familiar with before starting this training:
+    <ul>
+      <li><code class="highlighter-rouge">title</code></li>
+      <li><code class="highlighter-rouge">link</code>: relative for internal (inside training material) requirement or full for external requirement)</li>
+      <li><code class="highlighter-rouge">type</code>: the type of link (<code class="highlighter-rouge">internal</code> or <code class="highlighter-rouge">external</code>)</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">time_estimation</code>: an estimation of the time needed to complete the hands-on</li>
+  <li><code class="highlighter-rouge">questions</code>: list of questions that will be addressed in the tutorial</li>
+  <li>
+    <p><code class="highlighter-rouge">objectives</code>: list of learning objectives for the tutorial</p>
+
+    <p>A learning objective is a single sentence describing what a learner will be able to do once they have done the tutorial</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">key_points</code>: list of take-home messages</p>
+
+    <p>This information will appear at the end of the tutorial</p>
+  </li>
+</ul>
+
+<p>For this category of metadata, we have taken inspiration from what Software Carpentry has done and particularly what they described in their <a href="https://swcarpentry.github.io/instructor-training/">Instructor training</a>.</p>
+
+<blockquote class="hands_on">
+  <h3 id="hands_on-hands-on-fill-out-the-pedagogical-metadata"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Fill out the pedagogical metadata</h3>
+
+  <ol>
+    <li>Define 2 questions that will be addressed during the tutorial and add them to the metadata</li>
+    <li>Define 2 learning objectives for the tutorial and add them to the metadata</li>
+  </ol>
+</blockquote>
+
+<blockquote class="comment">
+  <h3 id="comment-when-filling-the-pedagogical-metadata"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> When filling the pedagogical metadata</h3>
+  <p>We recommend that you fill out the <em>questions</em> and the <em>learning objectives</em> before starting writing the tutorial content. You can still refine them afterwards, but it will help to guide you in developing your tutorial, and gives you some time to think beforehand on what topics are worth being covered.</p>
+
+  <p>For the take-home messages, it is easier to define them once the tutorial is written and you identified the issues.</p>
 </blockquote>
 
 <h1 id="content">Content</h1>
 
-<p>The tutorial’s content is written directly after the short section of metadata. This is written in Markdown, a simple markup language.</p>
+<p>The tutorial’s content is written directly after the section of metadata. This is written in Markdown, a simple markup language.</p>
 
 <blockquote class="tip">
   <h3 id="tip-tip-markdown"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Markdown</h3>
@@ -285,60 +417,112 @@ If this is not correctly defined, the tutorial will not be shown on the website.
   <p>Check <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">this cheatsheet</a> to learn more how to use Markdown.</p>
 </blockquote>
 
-<p>The Markdown content is then transformed into a user friendly webpage throughout a templating system. With this approach, there is no need to add the name of every tutorial each time, since they are automatically added based on the tutorial’s metadata.</p>
+<p>The Markdown content is then transformed into a user friendly webpage through a templating system. With this approach, there is no need to add the name of every tutorial each time, since they are automatically added based on the tutorial’s metadata.</p>
 
-<p>We recommend to structure the tutorials as follows:</p>
+<p>To help developing the tutorial, we recommend to create a workflow of the different steps of the tutorial inside Galaxy first, and then you can create the structure of the tutorial automatically from that:</p>
+
+<blockquote class="hands_on">
+  <h3 id="hands_on-hands-on-create-the-structure-of-the-tutorial-from-a-workflow"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Create the structure of the tutorial from a workflow</h3>
+
+  <ol>
+    <li>Create a small workflow with one or two steps on a running Galaxy instance</li>
+    <li>Get the workflow id
+      <ol>
+        <li>Go the “Share” page of the workflow</li>
+        <li>Copy the information after <code class="highlighter-rouge">id=</code> in the URL of the page</li>
+      </ol>
+    </li>
+    <li>Get your API key for this Galaxy instance
+      <ol>
+        <li>Click on <strong>User</strong> –&gt; <strong>Preferences</strong></li>
+        <li>Click on <strong>Manage API key</strong></li>
+        <li>Click on <strong>Create a new key</strong> (if none is available)</li>
+        <li>Copy the API key</li>
+      </ol>
+    </li>
+    <li>
+      <p>Generate the skeleton of the tutorial locally</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ planemo training_generate_from_wf \
+         --topic_name "my-topic" \
+         --tutorial_name "my-new-tutorial" \
+         --galaxy_url "URL to Galaxy instance in which you created the workflow" \
+         --galaxy_api_key "Your API key on the Galaxy instance" \
+         --workflow_id "ID of the workflow on the Galaxy instance" \
+         --zenodo_link "URL to the Zenodo record (Optional)"
+</code></pre></div>      </div>
+
+      <blockquote class="comment">
+        <h3 id="comment-using-a-local-worklfow"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> Using a local worklfow</h3>
+        <p>It is also possible to download the workflow locally (with the <code class="highlighter-rouge">.ga</code> extension), and then run a slightly different command:</p>
+
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ planemo training_generate_from_wf \
+         --topic_name "my-topic" \
+         --tutorial_name "my-new-tutorial" \
+         -- workflow PATH/to/the/file.ga \
+         --zenodo_link "URL to the Zenodo record (Optional)"
+</code></pre></div>        </div>
+      </blockquote>
+    </li>
+    <li>Inspect the generated <code class="highlighter-rouge">tutorial.md</code></li>
+  </ol>
+</blockquote>
+
+<p>The generated tutorial is structured with:</p>
 
 <ul>
-  <li>An introduction, to bring an overview of the tutorial with its use cases, data, and methods</li>
-  <li>Multiple sections, representing the steps of the analysis, complete with their hands-on parts (practicing is an important part of the learning process)</li>
+  <li>An introduction, to give an overview of the tutorial with its use cases, data, and methods</li>
+  <li>Multiple sections representing the steps of the analysis, complete with automatically generated hands-on blocks, as practicing is a vital part of the learning process</li>
   <li>A conclusion to summarize what has been done in the tutorial (with a graphic)</li>
 </ul>
 
 <blockquote class="hands_on">
-  <h3 id="hands_on-hands-on-structuring-the-tutorial"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Structuring the tutorial</h3>
+  <h3 id="hands_on-hands-on-filling-out-the-structure-of-the-tutorial"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Filling out the structure of the tutorial</h3>
 
   <ol>
-    <li>Add a small description of the dataset</li>
-    <li>Add one or two sections with ideas for the tutorial</li>
-    <li>Add a small conclusion</li>
+    <li>Fill out the “Introduction” with a general introduction of the tutorial and a small description of the dataset (goals)</li>
+    <li>Rename/restructure the sections with several levels and more explication</li>
+    <li>Add some theory about the tool used to introduce each section</li>
+    <li>Add a small conclusion and relate the results to the original question</li>
   </ol>
+
 </blockquote>
 
-<h2 id="adding-images-with-caption">Adding images with caption</h2>
+<blockquote class="comment">
+  <h3 id="comment-adding-images-with-captions"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> Adding images with captions</h3>
+  <p>To add an image in Markdown file, we need to use the markdown syntax for this: <code class="highlighter-rouge">![](../../images/image.png)</code>.</p>
 
-<p>To add an image in Markdown file, we need to use the markdown syntax for this: <code class="highlighter-rouge">![](../../images/image.png)</code>.</p>
+  <p>We have also added a small plugin to handle captions for each image:</p>
 
-<p>We have also added a small plugin to add a caption for each image:</p>
+  <figure id="figure-1"><img src="../../images/image_caption_screenshot.png" alt="A textual description of the image" title="Example of an image with a caption " /><figcaption><span class="figcaption-prefix">Figure 1:</span> Example of an image with a caption </figcaption></figure>
+  <!-- Adding a space to the caption to not trigger figurigy skip_titles -->
 
-<figure id="figure-1"><img src="../../images/image_caption_screenshot.png" alt="This figure shows an example of an image with a caption" title="Example of an image with a caption" /><figcaption><span class="figcaption-prefix">Figure 1:</span> Example of an image with a caption</figcaption></figure>
+  <p>The prefix “Figure 1.” is automatically added before its caption. This is done with the following Markdown syntax:</p>
 
-<p>The prefix “Figure 1.” is automatically added before its caption. This is done with the following Markdown syntax:</p>
+  <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![</span><span class="nv">A textual description of the image</span><span class="p">](</span><span class="sx">../images/image.png</span> <span class="nn">"Example of an image with a caption"</span><span class="p">)</span>
+</code></pre></div>  </div>
 
-<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![</span><span class="nv">A textual description of the image</span><span class="p">](</span><span class="sx">../images/image.png</span> <span class="nn">"This is my super caption"</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>We can also cross-reference images inside our Markdown with an anchor. For example, we can link to <a href="#figure-1">the previous figure</a> using <code class="highlighter-rouge">[the display text](#figure-nb)</code> (changing <code class="highlighter-rouge">nb</code> with the image’s number).</p>
-
-<h2 id="writing-mathematical-expressions">Writing mathematical expressions</h2>
-
-<p>Mathematical expressions can be written in LaTeX, and are automtaically rendered with <a href="https://www.mathjax.org/">MathJax</a>.</p>
-
-<p>Surround your math expression with two <code class="highlighter-rouge">$</code> signs (like in LaTeX math blocks):</p>
-
-<ul>
-  <li>inline expressions, <em>e.g.</em> <code class="highlighter-rouge">$$ 5 + 5 $$</code> will be rendered as <script type="math/tex">5 + 5</script></li>
-  <li>
-    <p>block expressions, <em>e.g.</em> <code class="highlighter-rouge">$$ 5 + 5 $$</code> will be rendered in its own line block as</p>
-
-    <script type="math/tex; mode=display">5 + 5</script>
-  </li>
-</ul>
-
-<p>Dollar signs are therefore <em>reserved characters</em> for instructing the templating system to open/close LaTeX math blocks. If you want to use a <code class="highlighter-rouge">$</code> within your expression, you will need to <em>escape</em> it: <code class="highlighter-rouge">$$ a + 3\$ = 5\$ $$</code> will be rendered as: <script type="math/tex">a + 3\$ = 5\$</script></p>
+  <p>We can also cross-reference images inside our Markdown with an anchor. For example, we can link to <a href="#figure-1">the previous figure</a> using <code class="highlighter-rouge">[the display text](#figure-nb)</code> (changing <code class="highlighter-rouge">nb</code> with the image’s number).</p>
+</blockquote>
 
 <blockquote class="comment">
-  <h3 id="comment-comments"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comments</h3>
+  <h3 id="comment-writing-mathematical-expressions"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> Writing mathematical expressions</h3>
+
+  <p>Mathematical expressions can be written in LaTeX, and are automatically rendered with <a href="https://www.mathjax.org/">MathJax</a>.</p>
+
+  <p>Surround your math expression with two <code class="highlighter-rouge">$</code> signs on each side (like in LaTeX math blocks):</p>
+
+  <ul>
+    <li>inline expressions, <em>e.g.</em> <code class="highlighter-rouge">$$ 5 + 5 $$</code> will be rendered as <script type="math/tex">5 + 5</script></li>
+    <li>
+      <p>block expressions, <em>e.g.</em> <code class="highlighter-rouge">$$ 5 + 5 $$</code> will be rendered in its own line block as</p>
+
+      <script type="math/tex; mode=display">5 + 5</script>
+    </li>
+  </ul>
+
+  <p>Dollar signs are therefore <em>reserved characters</em> for instructing the templating system to open/close LaTeX math blocks. If you want to use a <code class="highlighter-rouge">$</code> within your expression, you will need to <em>escape</em> it: <code class="highlighter-rouge">$$ a + 3\$ = 5\$ $$</code> will be rendered as: <script type="math/tex">a + 3\$ = 5\$</script></p>
+
   <p>LaTeX code that uses the pipe symbol <code class="highlighter-rouge">|</code> in inline math statements may lead to a line being recognized as a table line by the templating system.
 This can be avoided by using the <code class="highlighter-rouge">\vert</code> command instead of <code class="highlighter-rouge">|</code></p>
 </blockquote>
@@ -358,7 +542,33 @@ This can be avoided by using the <code class="highlighter-rouge">\vert</code> co
 
 <h2 id="overview-box"><strong>Overview</strong> box</h2>
 
-<p>This box at the top of each tutorial is automatically generated using the metadata we defined in the topic’s metadata file</p>
+<p>This box at the top of each tutorial is automatically generated using the metadata we defined in the topic’s metadata file:</p>
+
+<blockquote class="overview">
+  <h3 id="overview">Overview</h3>
+
+  <p><strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong></p>
+  <ul>
+    <li>Which biological questions are addressed by the tutorial?</li>
+    <li>Which bioinformatics techniques are important to know for this type of data?</li>
+  </ul>
+
+  <p><strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong></p>
+  <ul>
+    <li>The learning objectives are the goals of the tutorial</li>
+    <li>They will be informed by your audience and will communicate to them and to yourself what you should focus on during the course</li>
+    <li>They are single sentences describing what a learner should be able to do once they have done completed tutorial</li>
+    <li>You can use Bloom’s Taxonomy to write effective learning objectives</li>
+  </ul>
+
+  <p><i class="fa fa-check-circle" aria-hidden="true"></i><span class="visually-hidden">requirements</span> Requirements</p>
+  <ul>
+    <li><a href="/training-material/topics/introduction/">Galaxy introduction</a></li>
+  </ul>
+
+  <p><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation: ‘1H’</p>
+
+</blockquote>
 
 <blockquote class="hands_on">
   <h3 id="hands_on-hands-on-checking-the-metadata"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Checking the metadata</h3>
@@ -380,6 +590,7 @@ This can be avoided by using the <code class="highlighter-rouge">\vert</code> co
       </blockquote>
     </li>
   </ol>
+
 </blockquote>
 
 <h2 id="agenda-box"><strong>Agenda</strong> box</h2>
@@ -439,9 +650,9 @@ This can be avoided by using the <code class="highlighter-rouge">\vert</code> co
 <p>For consistency please use:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">{% icon hands_on %}</code> emoji to define that is an hands-on</li>
+  <li><code class="highlighter-rouge">{% icon hands_on %}</code> icon to define that is an hands-on</li>
   <li>Short imperative sentences to make it easy to identify the tasks</li>
-  <li>Name of the tool in bold with the <code class="highlighter-rouge">{% icon tool %}</code> emoji to make it easy to identify a Galaxy tool</li>
+  <li>Name of the tool in bold followed by <code class="highlighter-rouge">{% icon tool %}</code> icon to make it easy to identify a Galaxy tool</li>
   <li>Parameters for the tool as a sublist</li>
 </ul>
 
@@ -485,11 +696,13 @@ but may be helpful in some cases (for example to distinguish between single file
 <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; ### {% icon hands_on %} Hands-on: My Step</span>
 <span class="gt">&gt;</span>
 <span class="gt">&gt; 1. **My Tool** {% icon tool %} with the following parameters</span>
-<span class="gt">&gt;  - {% icon param-text %} *"My text parameter"*: `my value`</span>
-<span class="gt">&gt;  - {% icon param-file %} *"My input file"*: `my file`</span>
-<span class="gt">&gt;  - {% icon param-files %} *"My multiple file input or collection"*: `my collection`</span>
-<span class="gt">&gt;  - {% icon param-select %} *"My select menu"*: `my choice`</span>
-<span class="gt">&gt;  - {% icon param-check %} *"My check box"*: `yes`</span>
+<span class="gt">&gt;    - {% icon param-text %} *"My text parameter"*: `my value`</span>
+<span class="gt">&gt;    - {% icon param-file %} *"My input file"*: `my file`</span>
+<span class="gt">&gt;    - {% icon param-files %} *"My multiple file input or collection"*: `my collection`</span>
+<span class="gt">&gt;    - {% icon param-select %} *"My select menu"*: `my choice`</span>
+<span class="gt">&gt;    - {% icon param-check %} *"My check box"*: `yes`</span>
+<span class="gt">&gt;    - {% icon param-repeat %} **My repeat parameter**</span>
+<span class="gt">&gt;      - *"param1"*: `42`</span>
 {: .hands_on}
 </code></pre></div></div>
 
@@ -506,6 +719,11 @@ but may be helpful in some cases (for example to distinguish between single file
         <li><i class="fa fa-files-o" aria-hidden="true"></i><span class="visually-hidden">param-files</span> <em>“My multiple file input or collection”</em>: <code class="highlighter-rouge">my collection</code></li>
         <li><i class="fa fa-filter" aria-hidden="true"></i><span class="visually-hidden">param-select</span> <em>“My select menu”</em>: <code class="highlighter-rouge">my choice</code></li>
         <li><i class="fa fa-check-square-o" aria-hidden="true"></i><span class="visually-hidden">param-check</span> <em>“My check box”</em>: <code class="highlighter-rouge">yes</code></li>
+        <li><i class="fa fa-plus-square-o" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> <strong>My repeat parameter</strong>
+          <ul>
+            <li><em>“param1”</em>: <code class="highlighter-rouge">42</code></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ol>
@@ -593,7 +811,7 @@ With well chosen wrong answers, MCQs can do much more than just measure how much
 <p>Rendered:</p>
 
 <blockquote class="comment">
-  <h3 id="comment-comments-1"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comments</h3>
+  <h3 id="comment-comments"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comments</h3>
   <ul>
     <li>Edit the “Database/Build” to select “dm3”</li>
     <li>Rename the datasets according to the samples</li>
@@ -683,14 +901,6 @@ With well chosen wrong answers, MCQs can do much more than just measure how much
              
               
               
-            <li><a href="/training-material/topics/contributing/tutorials/github-interface-contribution/tutorial.html">Contributing with GitHub via its interface</a></li>
-              
-              
-             
-            
-             
-              
-              
             <li><a href="/training-material/topics/contributing/tutorials/github-command-line-contribution/tutorial.html">Contributing with GitHub via command-line</a></li>
               
               
@@ -699,17 +909,15 @@ With well chosen wrong answers, MCQs can do much more than just measure how much
              
               
               
+            <li><a href="/training-material/topics/contributing/tutorials/github-interface-contribution/tutorial.html">Contributing with GitHub via its interface</a></li>
+              
+              
+             
+            
+             
+              
+              
             <li><a href="/training-material/topics/contributing/tutorials/create-new-tutorial/tutorial.html">Creating a new tutorial</a></li>
-              
-              
-             
-            
-             
-            
-             
-              
-              
-            <li><a href="/training-material/topics/contributing/tutorials/create-new-tutorial-metadata/tutorial.html">Creating a new tutorial - Defining metadata</a></li>
               
               
              
@@ -741,15 +949,7 @@ With well chosen wrong answers, MCQs can do much more than just measure how much
              
               
               
-            <li><a href="/training-material/topics/contributing/tutorials/create-new-topic/tutorial.html">Including a new topic</a></li>
-              
-              
-             
-            
-             
-              
-              
-            <li><a href="/training-material/topics/contributing/tutorials/running-jekyll/tutorial.html">Running the Galaxy Training material website locally</a></li>
+            <li><a href="/training-material/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html">Creating a new tutorial - Writing content in Markdown</a></li>
               
               
              
@@ -773,6 +973,22 @@ With well chosen wrong answers, MCQs can do much more than just measure how much
              
               
               
+            <li><a href="/training-material/topics/contributing/tutorials/create-new-topic/tutorial.html">Including a new topic</a></li>
+              
+              
+             
+            
+             
+              
+              
+            <li><a href="/training-material/topics/contributing/tutorials/running-jekyll/tutorial.html">Running the Galaxy Training material website locally</a></li>
+              
+              
+             
+            
+             
+              
+              
             <li><a href="/training-material/topics/contributing/tutorials/setup-galaxy-for-training/tutorial.html">Set up a Galaxy for Training</a></li>
               
               
@@ -783,15 +999,15 @@ With well chosen wrong answers, MCQs can do much more than just measure how much
         
 
         <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
-
         <hr>
+        <br>
+
+        <iframe class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Creating a new tutorial - Writing content in Markdown (Contributing to the Galaxy Training Material)">Loading...
+        </iframe>
 
         <blockquote class="feedback">
-            <h3><i class="fa fa-comments-o" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Help us improve this content!</h3>
-            Please take a moment to fill in the Galaxy Training Network
-            <a href="https://tinyurl.com/GTNfeedback">Feedback Form</a>.
-            Your feedback helps us improve this tutorial and will be considered
-            in future revisions.
+            <h3><i class="fa fa-comments-o" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
+            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=Creating a new tutorial - Writing content in Markdown (Contributing to the Galaxy Training Material)">Feedback Form</a>.</p>
         </blockquote>
     </section>
 </div>
@@ -806,7 +1022,7 @@ With well chosen wrong answers, MCQs can do much more than just measure how much
         </p>
         <p>
             Found a typo? Something is wrong in this tutorial? Edit it on
-            <a href="https://github.com/shiltemann/training-material/tree/master/topics/contributing/tutorials/create-new-tutorial-content/tutorial.md">GitHub</a>.
+            <a href="https://github.com/galaxyproject/training-material/tree/master/topics/contributing/tutorials/create-new-tutorial-content/tutorial.md">GitHub</a>.
         </p>
     </div>
 </footer>

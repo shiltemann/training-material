@@ -6,11 +6,35 @@
 
 
 
+
+
+
   <head>
     <meta charset="utf-8">
     <title>Introduction to Transcriptomics</title>
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', '0xdeadbeef' , 'auto');
+        ga('send', 'pageview');
+    </script>
+    
     <link rel="stylesheet" href="/training-material/assets/css/slides.css">
     <link rel="stylesheet" href="/training-material/assets/css/font-awesome.css" id="theme">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+    
+    
+    
+    
+    <meta name="description" content="Training material for all kinds of transcriptomics analysis." />
+    <meta property="og:title" content="Galaxy Training: Introduction to Transcriptomics" />
+    <meta property="og:description" content="Training material for all kinds of transcriptomics analysis." />
+    <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
   </head>
   <body>
     <textarea id="source">
@@ -41,16 +65,14 @@ class: center, middle, inverse
 
   
     
-  - [Galaxy introduction](/training-material/topics//introduction/)
+  - [Galaxy introduction](/training-material/topics/introduction/)
     
   
     
-  - [Quality control](/training-material/topics//sequence-analysis/)
+  - [Quality control](/training-material/topics/sequence-analysis/)
     
   
 
-  
-    
   
 
 
@@ -258,15 +280,13 @@ Account for variability of expression across biological replicates&lt;br&gt;with
     - [*TMM*](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2010-11-3-r25) (edgeR)
     - [*DESeq2*](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0550-8) (DESeq2)
 
-        Normalize counts *k&lt;sub&gt;ij&lt;/sub&gt;* for gene *i* in library *j* by size factor *s&lt;sub&gt;j&lt;/sub&gt;*
-
 .footnote[*&quot;Only the DESeq and TMM normalization methods are robust to the presence of different library sizes and widely different library compositions...&quot;* - Dillies et al., Brief Bioinf, 2013]
 
 ---
 
 ### Impact of sequencing depth and number of replicates
 
-.image-50[![](../images/RNA_seq_numreplicates.png)]
+.image-75[![](../images/RNA_seq_numreplicates.png)]
 
 .footnote[[*Conesa et al, Genome Biol, 2016*](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0881-8)]
 
@@ -299,9 +319,26 @@ Account for variability of expression across biological replicates&lt;br&gt;with
 
 
 
+
 ## Related tutorials
 
 
+    
+
+    
+        
+    
+
+    
+        
+    
+
+    
+        
+    
+
+    
+        
     
 
     
@@ -336,8 +373,6 @@ This material is the result of a collaborative work. Thanks the [Galaxy Training
 <img src="/training-material/assets/images/GTN.png" alt="Galaxy Training Network" style="height: 100px;"/>
 
 
-
-.footnote[Found a typo? Something is wrong in this tutorial? <br/>Edit it on [GitHub](https://github.com/shiltemann/training-material/tree/master/topics/transcriptomics/slides/introduction.html)]
 
     </textarea>
     <script src="/training-material/assets/js/remark-latest.min.js" type="text/javascript">

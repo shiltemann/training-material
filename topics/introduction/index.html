@@ -5,12 +5,32 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Galaxy Training!</title>
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', '0xdeadbeef' , 'auto');
+            ga('send', 'pageview');
+        </script>
+        
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
         <link rel="stylesheet" href="/training-material/assets/css/font-awesome.css">
         <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
         <link rel="stylesheet" href="/training-material/assets/css/syntax_highlighting.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+        
+        
+        
+        
+        
+        <meta name="description" content="Galaxy is a scientific workflow, data integration, and da..." />
+        <meta property="og:title" content="Galaxy Training: Introduction to Galaxy Analyses" />
+        <meta property="og:description" content="Galaxy is a scientific workflow, data integration, and da..." />
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
     </head>
     <body>
         <header>
@@ -27,7 +47,7 @@
             <div class="collapse navbar-collapse" id="top-navbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/shiltemann/training-material" title="View on GitHub">
+                        <a class="nav-link" href="https://github.com/galaxyproject/training-material" title="View on GitHub">
                             <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> View on GitHub
                         </a>
                     </li>
@@ -40,10 +60,10 @@
             FAQ
         </a>
         <a class="dropdown-item" href="https://gitter.im/Galaxy-Training-Network/Lobby" title="Chat on Gitter">
-            Gitter
+            Chat on Gitter
         </a>
         <a class="dropdown-item" href="https://biostar.usegalaxy.org/" title="Ask on Biostars">
-            Biostars
+            Ask questions on Biostars
         </a>
     </div>
 </li>
@@ -53,6 +73,7 @@
         </div>
     </nav>
 </header>
+
 
 
 
@@ -89,54 +110,54 @@
                         <script type="application/ld+json">
                             
 {
-    "@context": "http://schema.org",
-    "@type": "CreativeWork",
-    "name": "Introduction to Galaxy",
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "name": "Introduction to Galaxy",
+  "accessModeSufficient": "visual",
+  "accessibilityControl": "fullMouseControl",
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
+  "learningResourceType": "introduction",
+  "url": "",
+  "mentions": [
 
-    
-    "contributor": [
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "bagnacan"
-                },                
-            
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "bebatut"
-                },                
-            
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "shiltemann"
-                },                
-            
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "pajanne"
-                },                
-            
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "nsoranzo"
-                }
-            
-        
-    ],
-
-    
-            "url": "/training-material/topics/introduction/slides/introduction.html",
-    
-    "learningResourceType": "introduction"
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "bagnacan"
+    },
+    {
+      "@type": "Person",
+      "name": "bebatut"
+    },
+    {
+      "@type": "Person",
+      "name": "shiltemann"
+    },
+    {
+      "@type": "Person",
+      "name": "pajanne"
+    },
+    {
+      "@type": "Person",
+      "name": "nsoranzo"
+    }
+  ]
 }
 
                         </script>
@@ -169,71 +190,543 @@
                         <script type="application/ld+json">
                             
 {
-    "@context": "http://schema.org",
-    "@type": "CreativeWork",
-    "name": "Galaxy 101",
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "name": "A short introduction to Galaxy",
+  "accessModeSufficient": "visual",
+  "accessibilityControl": "fullMouseControl",
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
+  "learningResourceType": "tutorial",
+  "url": "",
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "https://github.com/galaxyproject/training-material/tree/master/topics/introduction/tutorials/galaxy-intro-short/workflows/",
+      "name": "Workflow for A short introduction to Galaxy tutorial"
+    }
+  ],
+  "timeRequired": "PT30M",
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "annasyme"
+    }
+  ],
+  "description": "The questions this tutorial addresses are:\n - How to get started in Galaxy\n\n\\nThe objectives are:\n - Learn how to upload a file\n - Learn how to use a tool\n - Learn how to view results\n - Learn how to view histories\n\n",
+  "hasPart": [
+    {
+      "@type": "CreativeWork",
+      "url": "https://github.com/galaxyproject/training-material/tree/master/topics/introduction/tutorials/galaxy-intro-short/tours/",
+      "name": "Slides for A short introduction to Galaxy",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive"
+    }
+  ]
+}
 
-    
-        "mentions": [
-            
-            
-        ],
-    
-    "contributor": [
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "shiltemann"
-                },                
-            
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "nsoranzo"
-                },                
-            
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "blankclemens"
-                },                
-            
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "nekrut"
-                },                
-            
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "bgruening"
-                },                
-            
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "pajanne"
-                }
-            
-        
-    ],
+                        </script>
+                    <tr>
+                        <td>
+                            A short introduction to Galaxy
+                            
+                        </td>
+                        
+                            <td>
+                                
+                            </td>
 
-    
-        
+
+                            <td>
+                                
+                                <a href="/training-material/topics/introduction/tutorials/galaxy-intro-short/tutorial.html">
+                                  <i class="fa fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+                                </a>
+                                
+                            </td>
+
+                            
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                        <a href="https://github.com/galaxyproject/training-material/tree/master/topics/introduction/tutorials/galaxy-intro-short/workflows/" title="" alt="A short introduction to Galaxy workflows">
+                                            <i class="fa fa-share-alt" aria-hidden="true"></i><span class="visually-hidden">workflow</span>
+                                        </a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                            
+                            
+                                <td>
+                                
+                                    <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Where to run the tutorial">
+                                        <i class="fa fa-cog" aria-hidden="true"></i><span class="visually-hidden">instances</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                    
+                                        
+                                        <a class="dropdown-item" href="http://galaxy3.sb-roscoff.fr/" title="ABiMS">
+                                            ABiMS
+                                        </a>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                        <a class="dropdown-item" href="https://bipaa-galaxy.genouest.org" title="BIPAA">
+                                            BIPAA
+                                        </a>
+                                        
+                                    
+                                        
+                                        <a class="dropdown-item" href="http://biominavm-galaxy.biomina.be/galaxy/" title="Biomina">
+                                            Biomina
+                                        </a>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                        <a class="dropdown-item" href="http://galaxy-tut.genome.edu.au/galaxy/" title="GVL-Tutorial">
+                                            GVL-Tutorial
+                                        </a>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                        <a class="dropdown-item" href="https://usegalaxy.eu" title="Galaxy Europe">
+                                            Galaxy Europe
+                                        </a>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                        <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
+                                            Galaxy@GenOuest
+                                        </a>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                        <a class="dropdown-item" href="http://mississippi.fr/" title="MISSISSIPPI">
+                                            MISSISSIPPI
+                                        </a>
+                                        
+                                    
+                                        
+                                        <a class="dropdown-item" href="https://usegalaxy.org" title="Main">
+                                            Main
+                                        </a>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                        <a class="dropdown-item" href="http://galaxy.bio.ku.dk/" title="Vinther Lab">
+                                            Vinther Lab
+                                        </a>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                    </ul>
+                                
+                                </td>
+                            
+                        
+                    </tr>
+                
             
-                "url": "/training-material/topics/introduction/tutorials/galaxy-intro-101/tutorial.html",
+                
+                        <script type="application/ld+json">
+                            
+{
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "name": "From peaks to genes",
+  "accessModeSufficient": "visual",
+  "accessibilityControl": "fullMouseControl",
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
+  "learningResourceType": "tutorial",
+  "url": "",
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "https://doi.org/10.5281/zenodo.1025585",
+      "name": "Training data for From peaks to genes tutorial"
+    },
+    {
+      "@type": "Thing",
+      "url": "https://github.com/galaxyproject/training-material/tree/master/topics/introduction/tutorials/galaxy-intro-peaks2genes/workflows/",
+      "name": "Workflow for From peaks to genes tutorial"
+    }
+  ],
+  "timeRequired": "PT3H",
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "pajanne"
+    },
+    {
+      "@type": "Person",
+      "name": "blankclemens"
+    },
+    {
+      "@type": "Person",
+      "name": "bebatut"
+    },
+    {
+      "@type": "Person",
+      "name": "bgruening"
+    },
+    {
+      "@type": "Person",
+      "name": "nsoranzo"
+    },
+    {
+      "@type": "Person",
+      "name": "dyusuf"
+    },
+    {
+      "@type": "Person",
+      "name": "sarah-peter"
+    }
+  ],
+  "description": "The questions this tutorial addresses are:\n - How to use Galaxy?\n - How to get from peak regions to a list of gene names?\n\n\\nThe objectives are:\n - Familiarize yourself with the basics of Galaxy\n - Learn how to obtain data from external sources\n - Learn how to run tools\n - Learn how histories work\n - Learn how to create a workflow\n - Learn how to share your work\n\n",
+  "hasPart": [
+    {
+      "@type": "CreativeWork",
+      "url": "https://github.com/galaxyproject/training-material/tree/master/topics/introduction/tutorials/galaxy-intro-peaks2genes/tours/",
+      "name": "Slides for From peaks to genes",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive"
+    }
+  ]
+}
+
+                        </script>
+                    <tr>
+                        <td>
+                            From peaks to genes
+                            
+                        </td>
+                        
+                            <td>
+                                
+                            </td>
+
+
+                            <td>
+                                
+                                <a href="/training-material/topics/introduction/tutorials/galaxy-intro-peaks2genes/tutorial.html">
+                                  <i class="fa fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+                                </a>
+                                
+                            </td>
+
+                            
+                                <td>
+                                    
+                                    <a href="https://doi.org/10.5281/zenodo.1025585">
+                                      <i class="fa fa-files-o" aria-hidden="true"></i><span class="visually-hidden">zenodo_link</span>
+                                    </a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                            
+                            
+                                <td>
+                                
+                                    <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Where to run the tutorial">
+                                        <i class="fa fa-cog" aria-hidden="true"></i><span class="visually-hidden">instances</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                        <a class="dropdown-item" href="https://bipaa-galaxy.genouest.org" title="BIPAA">
+                                            BIPAA
+                                        </a>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                        <a class="dropdown-item" href="https://usegalaxy.eu" title="Galaxy Europe">
+                                            Galaxy Europe
+                                        </a>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                        <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
+                                            Galaxy@GenOuest
+                                        </a>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                        <a class="dropdown-item" href="http://mississippi.fr/" title="MISSISSIPPI">
+                                            MISSISSIPPI
+                                        </a>
+                                        
+                                    
+                                        
+                                        <a class="dropdown-item" href="https://usegalaxy.org" title="Main">
+                                            Main
+                                        </a>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                    </ul>
+                                
+                                </td>
+                            
+                        
+                    </tr>
+                
             
-            
-        
-    
-    "learningResourceType": "tutorial"
+                
+                        <script type="application/ld+json">
+                            
+{
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "name": "Galaxy 101",
+  "accessModeSufficient": "visual",
+  "accessibilityControl": "fullMouseControl",
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
+  "learningResourceType": "tutorial",
+  "url": "",
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "",
+      "name": "Training data for Galaxy 101 tutorial"
+    },
+    {
+      "@type": "Thing",
+      "url": "https://github.com/galaxyproject/training-material/tree/master/topics/introduction/tutorials/galaxy-intro-101/workflows/",
+      "name": "Workflow for Galaxy 101 tutorial"
+    }
+  ],
+  "timeRequired": "PT1H30M",
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "shiltemann"
+    },
+    {
+      "@type": "Person",
+      "name": "nsoranzo"
+    },
+    {
+      "@type": "Person",
+      "name": "blankclemens"
+    },
+    {
+      "@type": "Person",
+      "name": "nekrut"
+    },
+    {
+      "@type": "Person",
+      "name": "bgruening"
+    },
+    {
+      "@type": "Person",
+      "name": "pajanne"
+    }
+  ],
+  "description": "The questions this tutorial addresses are:\n - Which coding exon has the highest number of single nucleotide polymorphisms (SNPs) on human chromosome 22?\n\n\\nThe objectives are:\n - Familiarize yourself with the basics of Galaxy\n - Learn how to obtain data from external sources\n - Learn how to run tools\n - Learn how histories work\n - Learn how to create a workflow\n - Learn how to share your work\n\n",
+  "hasPart": [
+    {
+      "@type": "CreativeWork",
+      "url": "https://github.com/galaxyproject/training-material/tree/master/topics/introduction/tutorials/galaxy-intro-101/tours/",
+      "name": "Slides for Galaxy 101",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive"
+    }
+  ]
 }
 
                         </script>
@@ -246,6 +739,7 @@
                             <td>
                                 
                             </td>
+
 
                             <td>
                                 
@@ -289,13 +783,11 @@
                                         
                                     
                                         
+                                    
+                                        
                                         <a class="dropdown-item" href="https://bipaa-galaxy.genouest.org" title="BIPAA">
                                             BIPAA
                                         </a>
-                                        
-                                    
-                                        
-                                    
                                         
                                     
                                         
@@ -317,18 +809,6 @@
                                         
                                     
                                         
-                                        <a class="dropdown-item" href="http://galaxy-mel.genome.edu.au/galaxy/" title="GVL Melbourne">
-                                            GVL Melbourne
-                                        </a>
-                                        
-                                    
-                                        
-                                        <a class="dropdown-item" href="https://galaxy-qld.genome.edu.au/" title="GVL Queensland">
-                                            GVL Queensland
-                                        </a>
-                                        
-                                    
-                                        
                                         <a class="dropdown-item" href="http://galaxy-tut.genome.edu.au/galaxy/" title="GVL-Tutorial">
                                             GVL-Tutorial
                                         </a>
@@ -341,17 +821,19 @@
                                         
                                     
                                         
-                                    
-                                        
-                                        <a class="dropdown-item" href="http://cefap.icb.usp.br/galaxy" title="Galaxy-CEFAP">
-                                            Galaxy-CEFAP
+                                        <a class="dropdown-item" href="https://usegalaxy.eu" title="Galaxy Europe">
+                                            Galaxy Europe
                                         </a>
+                                        
+                                    
                                         
                                     
                                         
                                         <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
                                             Galaxy@GenOuest
                                         </a>
+                                        
+                                    
                                         
                                     
                                         
@@ -436,558 +918,65 @@
                         <script type="application/ld+json">
                             
 {
-    "@context": "http://schema.org",
-    "@type": "CreativeWork",
-    "name": "From peaks to genes",
-
-    
-        "mentions": [
-            
-                {
-                    "@type": "Thing",
-                    "url": "https://doi.org/10.5281/zenodo.1025585",
-                    "name": "Training data for From peaks to genes tutorial"
-                }
-                
-            
-            
-        ],
-    
-    "contributor": [
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "pajanne"
-                },                
-            
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "blankclemens"
-                },                
-            
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "bebatut"
-                },                
-            
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "bgruening"
-                },                
-            
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "nsoranzo"
-                },                
-            
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "dyusuf"
-                }
-            
-        
-    ],
-
-    
-        
-            
-                "url": "/training-material/topics/introduction/tutorials/galaxy-intro-peaks2genes/tutorial.html",
-            
-            
-        
-    
-    "learningResourceType": "tutorial"
-}
-
-                        </script>
-                    <tr>
-                        <td>
-                            From peaks to genes
-                            
-                        </td>
-                        
-                            <td>
-                                
-                            </td>
-
-                            <td>
-                                
-                                <a href="/training-material/topics/introduction/tutorials/galaxy-intro-peaks2genes/tutorial.html">
-                                  <i class="fa fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
-                                </a>
-                                
-                            </td>
-
-                            
-                                <td>
-                                    
-                                    <a href="https://doi.org/10.5281/zenodo.1025585">
-                                      <i class="fa fa-files-o" aria-hidden="true"></i><span class="visually-hidden">zenodo_link</span>
-                                    </a>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                            
-                            
-                                <td>
-                                
-                                    <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Where to run the tutorial">
-                                        <i class="fa fa-cog" aria-hidden="true"></i><span class="visually-hidden">instances</span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                        <a class="dropdown-item" href="https://bipaa-galaxy.genouest.org" title="BIPAA">
-                                            BIPAA
-                                        </a>
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                        <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
-                                            Galaxy@GenOuest
-                                        </a>
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                        <a class="dropdown-item" href="http://mississippi.fr/" title="MISSISSIPPI">
-                                            MISSISSIPPI
-                                        </a>
-                                        
-                                    
-                                        
-                                        <a class="dropdown-item" href="https://usegalaxy.org" title="Main">
-                                            Main
-                                        </a>
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                    </ul>
-                                
-                                </td>
-                            
-                        
-                    </tr>
-                
-            
-                
-                        <script type="application/ld+json">
-                            
-{
-    "@context": "http://schema.org",
-    "@type": "CreativeWork",
-    "name": "Introduction to Genomics and Galaxy",
-
-    
-        "mentions": [
-            
-            
-        ],
-    
-    "contributor": [
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "tnabtaf"
-                }
-            
-        
-    ],
-
-    
-        
-            
-                "url": "/training-material/topics/introduction/tutorials/galaxy-intro-strands/tutorial.html",
-            
-            
-        
-    
-    "learningResourceType": "tutorial"
-}
-
-                        </script>
-                    <tr>
-                        <td>
-                            Introduction to Genomics and Galaxy
-                            
-                        </td>
-                        
-                            <td>
-                                
-                            </td>
-
-                            <td>
-                                
-                                <a href="/training-material/topics/introduction/tutorials/galaxy-intro-strands/tutorial.html">
-                                  <i class="fa fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
-                                </a>
-                                
-                            </td>
-
-                            
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                            
-                            
-                                <td>
-                                
-                                </td>
-                            
-                        
-                    </tr>
-                
-            
-                
-                        <script type="application/ld+json">
-                            
-{
-    "@context": "http://schema.org",
-    "@type": "CreativeWork",
-    "name": "Options for using Galaxy",
-
-    
-        "mentions": [
-            
-            
-        ],
-    
-    "contributor": [
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "tnabtaf"
-                },                
-            
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "abretaud"
-                },                
-            
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "pajanne"
-                },                
-            
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "nsoranzo"
-                }
-            
-        
-    ],
-
-    
-        
-                "url": "/training-material/topics/introduction/slides/options-for-using-galaxy.html",
-                                
-        
-    
-    "learningResourceType": "tutorial"
-}
-
-                        </script>
-                    <tr>
-                        <td>
-                            Options for using Galaxy
-                            
-                        </td>
-                        
-                            <td>
-                                
-                                <a href="/training-material/topics/introduction/tutorials/options-for-using-galaxy/slides.html">
-                                  <i class="fa fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
-                                </a>
-                                
-                            </td>
-
-                            <td>
-                                
-                            </td>
-
-                            
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                            
-                            
-                                <td>
-                                
-                                    <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Where to run the tutorial">
-                                        <i class="fa fa-cog" aria-hidden="true"></i><span class="visually-hidden">instances</span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                        <a class="dropdown-item" href="http://mississippi.fr/" title="MISSISSIPPI">
-                                            MISSISSIPPI
-                                        </a>
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                        <a class="dropdown-item" href="http://galaxy.workflow4metabolomics.org" title="workflow4metabolomics">
-                                            workflow4metabolomics
-                                        </a>
-                                        
-                                    
-                                    </ul>
-                                
-                                </td>
-                            
-                        
-                    </tr>
-                
-            
-                
-                        <script type="application/ld+json">
-                            
-{
-    "@context": "http://schema.org",
-    "@type": "CreativeWork",
-    "name": "IGV Introduction",
-
-    
-        "mentions": [
-            
-            
-        ],
-    
-    "contributor": [
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "nekrut"
-                },                
-            
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "joachimwolff"
-                },                
-            
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "pajanne"
-                }
-            
-        
-    ],
-
-    
-        
-            
-                "url": "/training-material/topics/introduction/tutorials/igv-introduction/tutorial.html",
-            
-            
-        
-    
-    "learningResourceType": "tutorial"
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "name": "IGV Introduction",
+  "accessModeSufficient": "visual",
+  "accessibilityControl": "fullMouseControl",
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
+  "learningResourceType": "tutorial",
+  "url": "",
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "",
+      "name": "Training data for IGV Introduction tutorial"
+    },
+    {
+      "@type": "Thing",
+      "url": "https://github.com/galaxyproject/training-material/tree/master/topics/introduction/tutorials/igv-introduction/workflows/",
+      "name": "Workflow for IGV Introduction tutorial"
+    }
+  ],
+  "timeRequired": "PT2H",
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "nekrut"
+    },
+    {
+      "@type": "Person",
+      "name": "joachimwolff"
+    },
+    {
+      "@type": "Person",
+      "name": "pajanne"
+    }
+  ],
+  "hasPart": [
+    {
+      "@type": "CreativeWork",
+      "url": "https://github.com/galaxyproject/training-material/tree/master/topics/introduction/tutorials/igv-introduction/tours/",
+      "name": "Slides for IGV Introduction",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive"
+    }
+  ]
 }
 
                         </script>
@@ -1000,6 +989,7 @@
                             <td>
                                 
                             </td>
+
 
                             <td>
                                 
@@ -1061,9 +1051,9 @@
                                         
                                     
                                         
-                                    
-                                        
-                                    
+                                        <a class="dropdown-item" href="https://usegalaxy.eu" title="Galaxy Europe">
+                                            Galaxy Europe
+                                        </a>
                                         
                                     
                                         
@@ -1135,41 +1125,159 @@
                 
             
                 
+                        <script type="application/ld+json">
+                            
+{
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "name": "Introduction to Genomics and Galaxy",
+  "accessModeSufficient": "visual",
+  "accessibilityControl": "fullMouseControl",
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
+  "learningResourceType": "tutorial",
+  "url": "",
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "",
+      "name": "Training data for Introduction to Genomics and Galaxy tutorial"
+    },
+    {
+      "@type": "Thing",
+      "url": "https://github.com/galaxyproject/training-material/tree/master/topics/introduction/tutorials/galaxy-intro-strands/workflows/",
+      "name": "Workflow for Introduction to Genomics and Galaxy tutorial"
+    }
+  ],
+  "timeRequired": "PT2H30M",
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "tnabtaf"
+    }
+  ],
+  "description": "The questions this tutorial addresses are:\n - Do genes on opposite strands ever overlap?  If so, how often?\n\n\\nThe objectives are:\n - Learn some of the basic concepts of genomics and bioinformatics\n - Familiarize yourself with the basics of Galaxy\n\n",
+  "hasPart": [
+    {
+      "@type": "CreativeWork",
+      "url": "https://github.com/galaxyproject/training-material/tree/master/topics/introduction/tutorials/galaxy-intro-strands/tours/",
+      "name": "Slides for Introduction to Genomics and Galaxy",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive"
+    }
+  ]
+}
+
+                        </script>
+                    <tr>
+                        <td>
+                            Introduction to Genomics and Galaxy
+                            
+                        </td>
+                        
+                            <td>
+                                
+                            </td>
+
+
+                            <td>
+                                
+                                <a href="/training-material/topics/introduction/tutorials/galaxy-intro-strands/tutorial.html">
+                                  <i class="fa fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+                                </a>
+                                
+                            </td>
+
+                            
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                            
+                            
+                                <td>
+                                
+                                </td>
+                            
+                        
+                    </tr>
+                
             
                 
                         <script type="application/ld+json">
                             
 {
-    "@context": "http://schema.org",
-    "@type": "CreativeWork",
-    "name": "NGS data logistics",
-
-    
-        "mentions": [
-            
-            
-        ],
-    
-    "contributor": [
-        
-            
-                {
-                    "@type": "Person",
-                    "name": "nekrut"
-                }
-            
-        
-    ],
-
-    
-        
-            
-                "url": "/training-material/topics/introduction/tutorials/galaxy-intro-ngs-data-managment/tutorial.html",
-            
-            
-        
-    
-    "learningResourceType": "tutorial"
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "name": "NGS data logistics",
+  "accessModeSufficient": "visual",
+  "accessibilityControl": "fullMouseControl",
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
+  "learningResourceType": "tutorial",
+  "url": "",
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "",
+      "name": "Training data for NGS data logistics tutorial"
+    },
+    {
+      "@type": "Thing",
+      "url": "https://github.com/galaxyproject/training-material/tree/master/topics/introduction/tutorials/galaxy-intro-ngs-data-managment/workflows/",
+      "name": "Workflow for NGS data logistics tutorial"
+    }
+  ],
+  "timeRequired": "PT30M",
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "nekrut"
+    }
+  ],
+  "description": "The questions this tutorial addresses are:\n - How to manipulate and process NGS data\n\n\\nThe objectives are:\n - Learn about Fastq, SAM, and BAM.\n\n",
+  "hasPart": [
+    {
+      "@type": "CreativeWork",
+      "url": "https://github.com/galaxyproject/training-material/tree/master/topics/introduction/tutorials/galaxy-intro-ngs-data-managment/tours/",
+      "name": "Slides for NGS data logistics",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive"
+    }
+  ]
 }
 
                         </script>
@@ -1182,6 +1290,7 @@
                             <td>
                                 
                             </td>
+
 
                             <td>
                                 
@@ -1211,19 +1320,236 @@
                     </tr>
                 
             
+                
+                        <script type="application/ld+json">
+                            
+{
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "name": "Options for using Galaxy",
+  "accessModeSufficient": "visual",
+  "accessibilityControl": "fullMouseControl",
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
+  "learningResourceType": "tutorial",
+  "url": "",
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "",
+      "name": "Training data for Options for using Galaxy tutorial"
+    },
+    {
+      "@type": "Thing",
+      "url": "https://github.com/galaxyproject/training-material/tree/master/topics/introduction/tutorials/options-for-using-galaxy/workflows/",
+      "name": "Workflow for Options for using Galaxy tutorial"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "tnabtaf"
+    },
+    {
+      "@type": "Person",
+      "name": "abretaud"
+    },
+    {
+      "@type": "Person",
+      "name": "pajanne"
+    },
+    {
+      "@type": "Person",
+      "name": "nsoranzo"
+    }
+  ],
+  "description": "The questions this tutorial addresses are:\n - Which Galaxy instance should I use?\n\n",
+  "hasPart": [
+    {
+      "@type": "CreativeWork",
+      "url": "https://github.com/galaxyproject/training-material/tree/master/topics/introduction/tutorials/options-for-using-galaxy/tours/",
+      "name": "Slides for Options for using Galaxy",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive"
+    }
+  ]
+}
+
+                        </script>
+                    <tr>
+                        <td>
+                            Options for using Galaxy
+                            
+                        </td>
+                        
+                            <td>
+                                
+                                <a href="/training-material/topics/introduction/tutorials/options-for-using-galaxy/slides.html">
+                                  <i class="fa fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
+                                </a>
+                                
+                            </td>
+
+
+                            <td>
+                                
+                            </td>
+
+                            
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                            
+                            
+                                <td>
+                                
+                                    <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Where to run the tutorial">
+                                        <i class="fa fa-cog" aria-hidden="true"></i><span class="visually-hidden">instances</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                        <a class="dropdown-item" href="https://usegalaxy.eu" title="Galaxy Europe">
+                                            Galaxy Europe
+                                        </a>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                        <a class="dropdown-item" href="http://mississippi.fr/" title="MISSISSIPPI">
+                                            MISSISSIPPI
+                                        </a>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                        <a class="dropdown-item" href="http://galaxy.workflow4metabolomics.org" title="workflow4metabolomics">
+                                            workflow4metabolomics
+                                        </a>
+                                        
+                                    
+                                    </ul>
+                                
+                                </td>
+                            
+                        
+                    </tr>
+                
+            
         </table>
 
-        <h2 id="docker_image">Galaxy instances</h2>
-        <p>You can use a public Galaxy instance which has been tested for the availability of the used tools. They are listed along with the tutorials above.</p>
         
-            <p>You can also use the following Docker image for these tutorials:</p>
-            <pre><code>docker run -d -p 8080:80 quay.io/galaxy/introduction-training</code></pre>
-            <p>It will launch a flavored Galaxy instance available on <a href="http://localhost:8080">http://localhost:8080</a>.</p>
+            <h2 id="docker_image">Galaxy instances</h2>
+            <p>You can use a public Galaxy instance which has been tested for the availability of the used tools. They are listed along with the tutorials above.</p>
+            
+                <p>You can also use the following Docker image for these tutorials:</p>
+                <pre><code>docker run -d -p 8080:80 quay.io/galaxy/introduction-training</code></pre>
+                <p>It will launch a flavored Galaxy instance available on <a href="http://localhost:8080">http://localhost:8080</a>.</p>
+            
         
 
         <h2 id="maintainers">Maintainers</h2>
         <p>This material is maintained by:</p>
         <ul>
+        
         
             <li>
                 <a href="/training-material/hall-of-fame#jennaj">Jennifer Hillman-Jackson</a>
@@ -1255,6 +1581,7 @@
 
         <ul>
         
+        
             
             <li>
                 <a href="/training-material/hall-of-fame#bagnacan">Andrea Bagnacani</a>
@@ -1282,12 +1609,12 @@
         
             
             <li>
-                <a href="/training-material/hall-of-fame#blankclemens">Clemens Blank</a>
+                <a href="/training-material/hall-of-fame#annasyme">Anna Syme</a>
             </li>
         
             
             <li>
-                <a href="/training-material/hall-of-fame#nekrut">Anton Nekrutenko</a>
+                <a href="/training-material/hall-of-fame#blankclemens">Clemens Blank</a>
             </li>
         
             
@@ -1302,17 +1629,27 @@
         
             
             <li>
+                <a href="/training-material/hall-of-fame#sarah-peter">Sarah Peter</a>
+            </li>
+        
+            
+            <li>
+                <a href="/training-material/hall-of-fame#nekrut">Anton Nekrutenko</a>
+            </li>
+        
+            
+            <li>
+                <a href="/training-material/hall-of-fame#joachimwolff">Joachim Wolff</a>
+            </li>
+        
+            
+            <li>
                 <a href="/training-material/hall-of-fame#tnabtaf">Dave Clements</a>
             </li>
         
             
             <li>
                 <a href="/training-material/hall-of-fame#abretaud">Anthony Bretaudeau</a>
-            </li>
-        
-            
-            <li>
-                <a href="/training-material/hall-of-fame#joachimwolff">Joachim Wolff</a>
             </li>
         
         </ul>

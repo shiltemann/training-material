@@ -4,13 +4,33 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Galaxy Training!</title>
+        <title>NGS data logistics</title>
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', '0xdeadbeef' , 'auto');
+            ga('send', 'pageview');
+        </script>
+        
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
         <link rel="stylesheet" href="/training-material/assets/css/font-awesome.css">
         <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
         <link rel="stylesheet" href="/training-material/assets/css/syntax_highlighting.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+        
+        
+        
+        
+        
+        <meta name="description" content="Galaxy is a scientific workflow, data integration, and da..." />
+        <meta property="og:title" content="Galaxy Training: NGS data logistics" />
+        <meta property="og:description" content="Galaxy is a scientific workflow, data integration, and da..." />
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
     </head>
     <body>
         
@@ -38,8 +58,10 @@
                     </li>
 
                     
-                        
-                        
+                    
+                    
+
+                    
                         
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Introduction slides">
@@ -76,6 +98,8 @@
                                         
                                     
                                         
+                                            
+                                        
                                     
                                         
                                             
@@ -93,7 +117,7 @@
                             </a>
                             <div class="dropdown-menu">
                                 
-                                    <a class="dropdown-item" href="https://github.com/shiltemann/training-material/tree/master/topics/introduction/docker" title="Docker image for this tutorial">
+                                    <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/tree/master/topics/introduction/docker" title="Docker image for this tutorial">
                                         <i class="fa fa-ship" aria-hidden="true"></i><span class="visually-hidden">docker_image</span> Docker image
                                     </a>
                                 
@@ -118,17 +142,17 @@
             FAQ
         </a>
         <a class="dropdown-item" href="https://gitter.im/Galaxy-Training-Network/Lobby" title="Chat on Gitter">
-            Gitter
+            Chat on Gitter
         </a>
         <a class="dropdown-item" href="https://biostar.usegalaxy.org/" title="Ask on Biostars">
-            Biostars
+            Ask questions on Biostars
         </a>
     </div>
 </li>
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/shiltemann/training-material/edit/master/topics/introduction/tutorials/galaxy-intro-ngs-data-managment/tutorial.md">
+                        <a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/master/topics/introduction/tutorials/galaxy-intro-ngs-data-managment/tutorial.md">
                             <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit
                         </a>
                     </li>
@@ -139,6 +163,50 @@
 </header>
 
 <div class="container main-content">
+    <script type="application/ld+json">
+   
+{
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "name": "NGS data logistics",
+  "accessModeSufficient": "visual",
+  "accessibilityControl": "fullMouseControl",
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
+  "learningResourceType": "",
+  "url": "/topics/introduction/tutorials/galaxy-intro-ngs-data-managment/tutorial.html",
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "",
+      "name": "Training data for NGS data logistics tutorial"
+    }
+  ],
+  "timeRequired": "PT30M",
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "nekrut"
+    }
+  ],
+  "description": "The questions this  addresses are:\n - How to manipulate and process NGS data\n\n\\nThe objectives are:\n - Learn about Fastq, SAM, and BAM.\n\n"
+}
+
+    </script>
     <section class="tutorial">
         <h1>NGS data logistics</h1>
 
@@ -161,14 +229,16 @@
 
             
 
-            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 30 min</p>
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 30 minutes</p>
+            
         </blockquote>
 
         <p>In this section we will look at practical aspects of manipulation of next-generation sequencing data. We will start with Fastq format produced by most sequencing machines and will finish with SAM/BAM format representing mapped reads. The cover image above shows a screen dump of a SAM dataset.</p>
 
 <h1 id="getting-ngs-data-in">Getting NGS data in</h1>
 
-<p>You can data in Galaxy using one of five ways:</p>
+<p>You can upload data in Galaxy using one of five ways:</p>
 
 <h2 id="from-your-computer">From your computer</h2>
 
@@ -295,11 +365,10 @@ CACTACCGGGGTATCTAATCCTGTTCGCTCCCCACGCTTTCGTCCATC
 -6AC,EE@::CF7CFF&lt;&lt;FFGGDFFF,@FGGGG?F7FEGGGDEFF&gt;FF
 </code></pre></div></div>
 
-<div class="alert alert-info" role="alert">
-
-**Note** that read IDs are **identical** in two files and they are listed in **the same** order. In some cases read IDs in the first and second file may be appended with `/1` and `/2` tags, respectively.
-
-</div>
+<blockquote class="comment">
+  <h3 id="comment-read-order-is-important"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> Read order is important</h3>
+  <p>Note that read IDs are <strong>identical</strong> in two files and they are listed in <strong>the same</strong> order. In some cases read IDs in the first and second file may be appended with <code class="highlighter-rouge">/1</code> and <code class="highlighter-rouge">/2</code> tags, respectively.</p>
+</blockquote>
 
 <h4 id="interleaved-file">Interleaved file</h4>
 
@@ -323,11 +392,10 @@ HHHHHHHHHHHHHGHHHHHHGHHHHHHHHHHHFHHHFHHHHHHHHHHH
 
 <p>Here the first and the second reads are identified with <code class="highlighter-rouge">/1</code> and <code class="highlighter-rouge">/2</code> tags.</p>
 
-<div class="alert alert-warning" role="alert">
-
-**Note**: Fastq format is not strictly defined and its variations will always cause headache for you. See [this page](https://www.ncbi.nlm.nih.gov/books/NBK242622/) for more information.
-
-</div>
+<blockquote class="comment">
+  <h3 id="comment-fastq-format-is-a-loose-standard"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> Fastq format is a loose standard</h3>
+  <p>Fastq format is not strictly defined and its variations will always cause headache for you. See <a href="https://www.ncbi.nlm.nih.gov/books/NBK242622/">this page</a> for more information.</p>
+</blockquote>
 
 <h2 id="what-are-base-qualities">What are base qualities?</h2>
 
@@ -340,13 +408,18 @@ HHHHHHHHHHHHHGHHHHHHGHHHHHHHHHHHFHHHFHHHHHHHHHHH
 
 <p>The base qualities allow us to judge how trustworthy each base in a sequencing read is. The following excerpt from an excellent <a href="http://chagall.med.cornell.edu/RNASEQcourse/Intro2RNAseq.pdf">tutorial</a> by Friederike Dündar, Luce Skrabanek, Paul Zumbo explains what base qualities are:</p>
 
-<div class="well well-lg">
+<blockquote class="comment">
+  <h3 id="comment-from-introduction-to-differential-gene-expression-analysis-using-rna-seq"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> From “Introduction to differential gene expression analysis using RNA-seq”</h3>
+  <p>Illumina sequencing is based on identifying the individual nucleotides by the fluorescence signal emitted upon their incorporation into the growing sequencing read. Once the fluorescence intensities are extracted and translated into the four letter code. The deduction of nucleotide sequences from the images acquired during sequencing is commonly referred to as base calling.</p>
 
-Illumina sequencing is based on identifying the individual nucleotides by the fluorescence signal emitted upon their incorporation into the growing sequencing read. Once the fluorescence intensities are extracted and translated into the four letter code. The deduction of nucleotide sequences from the images acquired during sequencing is commonly referred to as base calling. Due to the imperfect nature of the sequencing process and limitations of the optical instruments, base calling will always have inherent uncertainty. This is the reason why FASTQ files store the DNA sequence of each read together with a position-specific quality score that represents the error probability, i.e., how likely it is that an individual base call may be incorrect. The score is called [Phred score](http://www.phrap.com/phred/), $Q$, which is proportional to the probability $p$ that a base call is incorrect, where $Q = −10lg(p)$. For example, a Phred score of 10 corresponds to one error in every ten base calls ($Q = −10lg(0.1)$), or 90% accuracy; a Phred score of 20 corresponds to one error in every 100 base calls, or 99% accuracy. A higher Phred score thus reflects higher confidence in the reported base. To assign each base a unique score identifier (instead of numbers of varying character length), Phred scores are typically represented as ASCII characters. At http://ascii-code.com/ you can see which characters are assigned to what number. For raw reads, the range of scores will depend on the sequencing technology and the base caller used (Illumina, for example, used a tool called Bustard, or, more recently, RTA). Unfortunately, Illumina has been anything but consistent in how they calculated and ASCII-encoded the Phred score (see below)! In addition, Illumina now allows Phred scores for base calls with as high as 45, while 41 used to be the maximum score until the HiSeq X. This may cause issues with downstream sapplications that expect an upper limit of 41.
+  <p>Due to the imperfect nature of the sequencing process and limitations of the optical instruments, base calling will always have inherent uncertainty. This is the reason why FASTQ files store the DNA sequence of each read together with a position-specific quality score that represents the error probability, i.e., how likely it is that an individual base call may be incorrect. The score is called <a href="http://www.phrap.com/phred/">Phred score</a>, <script type="math/tex">Q</script>, which is proportional to the probability <script type="math/tex">p</script> that a base call is incorrect, where <script type="math/tex">Q = −10lg(p)</script>. For example, a Phred score of 10 corresponds to one error in every ten base calls (<script type="math/tex">Q = −10lg(0.1)</script>), or 90% accuracy; a Phred score of 20 corresponds to one error in every 100 base calls, or 99% accuracy. A higher Phred score thus reflects higher confidence in the reported base.</p>
 
-![Illumina quality score](../../images/illumina_qs.png)
+  <p>To assign each base a unique score identifier (instead of numbers of varying character length), Phred scores are typically represented as ASCII characters. At http://ascii-code.com/ you can see which characters are assigned to what number.</p>
 
-</div>
+  <p>For raw reads, the range of scores will depend on the sequencing technology and the base caller used (Illumina, for example, used a tool called Bustard, or, more recently, RTA). Unfortunately, Illumina has been anything but consistent in how they calculated and ASCII-encoded the Phred score (see below)! In addition, Illumina now allows Phred scores for base calls with as high as 45, while 41 used to be the maximum score until the HiSeq X. This may cause issues with downstream sapplications that expect an upper limit of 41.</p>
+</blockquote>
+
+<p><img src="../../images/illumina_qs.png" alt="Illumina quality score" /></p>
 
 <p>Base call quality scores are represented with the Phred range. Different Illumina (formerly Solexa) versions
 used different scores and ASCII offsets. Starting with Illumina format 1.8, the score now represents the standard
@@ -747,21 +820,41 @@ Duplicates are identified as read pairs having identical 5' positions (coordinat
 
 
         
+        <blockquote class="key_points">
+            <h3><i class="fa fa-key" aria-hidden="true"></i><span class="visually-hidden">keypoints</span> Key points</h3>
+
+            <ul>
+                
+                <li>Data can be uploaded directly from a computer, from EBI SRA and from NCBI SRA, also using FTP or URL.</li>
+                
+                <li>Fastq Sanger version of the format is considered to be the standard form of fastq.</li>
+                
+                <li>Paired end data can be provided as two files or as an interleaved one.</li>
+                
+                <li>FastqQC is a tool allowing to check the quality of fastq datasets.</li>
+                
+                <li>The most common tools for mapping are Bowtie, BWA, BWA-MEM. You can use in-built genome to map against or upload one if it is missing.</li>
+                
+                <li>The standard format for storing aligned reads is SAM/BAM. The major toolsets to process these datasets are DeepTools, SAMtools, BAMtools and Picard.</li>
+                
+            </ul>
+        </blockquote>
+        
 
         
 
         
 
         <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
-
         <hr>
+        <br>
+
+        <iframe class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=NGS data logistics (Introduction to Galaxy Analyses)">Loading...
+        </iframe>
 
         <blockquote class="feedback">
-            <h3><i class="fa fa-comments-o" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Help us improve this content!</h3>
-            Please take a moment to fill in the Galaxy Training Network
-            <a href="https://tinyurl.com/GTNfeedback">Feedback Form</a>.
-            Your feedback helps us improve this tutorial and will be considered
-            in future revisions.
+            <h3><i class="fa fa-comments-o" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
+            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=NGS data logistics (Introduction to Galaxy Analyses)">Feedback Form</a>.</p>
         </blockquote>
     </section>
 </div>
@@ -776,7 +869,7 @@ Duplicates are identified as read pairs having identical 5' positions (coordinat
         </p>
         <p>
             Found a typo? Something is wrong in this tutorial? Edit it on
-            <a href="https://github.com/shiltemann/training-material/tree/master/topics/introduction/tutorials/galaxy-intro-ngs-data-managment/tutorial.md">GitHub</a>.
+            <a href="https://github.com/galaxyproject/training-material/tree/master/topics/introduction/tutorials/galaxy-intro-ngs-data-managment/tutorial.md">GitHub</a>.
         </p>
     </div>
 </footer>

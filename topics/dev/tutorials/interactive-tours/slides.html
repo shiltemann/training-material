@@ -6,11 +6,35 @@
 
 
 
+
+
+
   <head>
     <meta charset="utf-8">
     <title>Galaxy Interactive Tours</title>
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', '0xdeadbeef' , 'auto');
+        ga('send', 'pageview');
+    </script>
+    
     <link rel="stylesheet" href="/training-material/assets/css/slides.css">
     <link rel="stylesheet" href="/training-material/assets/css/font-awesome.css" id="theme">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+    
+    
+    
+    
+    <meta name="description" content="Galaxy is an open-source project. Everyone can contribute..." />
+    <meta property="og:title" content="Galaxy Training: Galaxy Interactive Tours" />
+    <meta property="og:description" content="Galaxy is an open-source project. Everyone can contribute..." />
+    <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
   </head>
   <body>
     <textarea id="source">
@@ -19,12 +43,12 @@ layout: true
 class: center, middle, inverse
 
 <div class="my-header"><span>
-<a href="/training-material/topics/dev" title="Return to topic page"><i class="fa fa-level-up" aria-hidden="true"></i></a>
+<a href="/training-material/topics/dev" title="Return to topic page" ><i class="fa fa-level-up" aria-hidden="true"></i></a>
 </span></div>
 
 <div class="my-footer"><span>
 
-<img src="/training-material/assets/images/GTN-60px.png" alt="Galaxy Training Network" style="height: 40px;">
+<img src="/training-material/assets/images/GTN-60px.png" alt="Galaxy Training Network" style="height: 40px;"/>
 
 </span></div>
 
@@ -40,7 +64,8 @@ class: center, middle, inverse
 
 
 
-### <img class="emoji" title=":grey_question:" alt=":grey_question:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2754.png" height="20" width="20"> Questions
+
+### &lt;i class=&quot;fa fa-question-circle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;question&lt;/span&gt; Questions
 
 
 - What is a Galaxy Interactive Tour?
@@ -50,7 +75,8 @@ class: center, middle, inverse
 
 ---
 
-### <img class="emoji" title=":dart:" alt=":dart:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f3af.png" height="20" width="20"> Objectives
+
+### &lt;i class=&quot;fa fa-bullseye&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;objectives&lt;/span&gt; Objectives
 
 
 - Discover what is a Galaxy Interactive Tour
@@ -61,6 +87,7 @@ class: center, middle, inverse
 
 
 ---
+
 
 ### What are Galaxy Interactive Tours?
 
@@ -78,35 +105,35 @@ A single YAML file: [core.galaxy_ui.yaml](https://raw.githubusercontent.com/gala
 
 ---
 
-### At the top of the YAML:<br>Metadata related to the Tour
+### At the top of the YAML:&lt;br&gt;Metadata related to the Tour
 
 ```
 id: galaxy_ui
 name: Galaxy UI
 description: A gentle introduction to the Galaxy User Interface
-title_default: "Welcome to Galaxy"
+title_default: &quot;Welcome to Galaxy&quot;
 ```
 
 ---
 
-### Content of the YAML:<br>Steps of the Tour
+### Content of the YAML:&lt;br&gt;Steps of the Tour
 
 ```
 # A tour is made of several steps, each of them beginning with a dash '-'
 steps:
-    - title: "Welcome to Galaxy"
-      content: "This short tour will guide you through Galaxy's user interface.<br>
+    - title: &quot;Welcome to Galaxy&quot;
+      content: &quot;This short tour will guide you through Galaxy's user interface.&lt;br&gt;
                 You can navigate with your arrow keys and leave the tour at any
-                time point with 'Escape' or the 'End tour' button."
+                time point with 'Escape' or the 'End tour' button.&quot;
       backdrop: true
 
-    - title: "Upload your data"
-      element: ".upload-button"
-      content: "Galaxy supports many ways to get in your data.<br>
-               Use this button to upload your data."
-      placement: "right"
+    - title: &quot;Upload your data&quot;
+      element: &quot;.upload-button&quot;
+      content: &quot;Galaxy supports many ways to get in your data.&lt;br&gt;
+               Use this button to upload your data.&quot;
+      placement: &quot;right&quot;
       postclick:
-        - ".upload-button"
+        - &quot;.upload-button&quot;
 ```
 
 ---
@@ -150,7 +177,7 @@ Argument | Description
 
 - Create Tours and share them with the world!
   - on the [community collection of Interactive Tours](https://github.com/galaxyproject/galaxy-tours) or
-  - add them to the [Galaxy Training Network](https://shiltemann.github.io//training-material)
+  - add them to the [Galaxy Training Network](https://galaxyproject.github.io//training-material)
 - Improve the Tours implementation
 - Improve creating of Tours
   - by enhancing the [Galaxy Tour Builder](https://github.com/dannon/tourbuilder) web extension
@@ -168,14 +195,15 @@ Argument | Description
 
 ---
 
-### <i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on
+### &lt;i class=&quot;fa fa-pencil&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;hands_on&lt;/span&gt; Hands-on
 
 ![](../../images/exercise.png)
 
 
 ---
 
-### <img class="emoji" title=":grey_exclamation:" alt=":grey_exclamation:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2755.png" height="20" width="20"> Key points
+
+### &lt;i class=&quot;fa fa-key&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;keypoints&lt;/span&gt; Key points
 
 
 - An Interactive Tour is easy to create: just a yaml file to fill
@@ -186,6 +214,7 @@ Argument | Description
 
 
 
+
 ---
 
 ## Thank you!
@@ -193,11 +222,9 @@ Argument | Description
 This material is the result of a collaborative work. Thanks the [Galaxy Training Network](https://wiki.galaxyproject.org/Teach/GTN) and all the contributors  (Bérénice Batut, Björn Grüning) !
 
 
-<img src="/training-material/assets/images/GTN.png" alt="Galaxy Training Network" style="height: 100px;">
+<img src="/training-material/assets/images/GTN.png" alt="Galaxy Training Network" style="height: 100px;"/>
 
 
-
-.footnote[Found a typo? Something is wrong in this tutorial? <br>Edit it on [GitHub](https://github.com/shiltemann/training-material/tree/master/topics/dev/tutorials/interactive-tours/slides.html)]
 
     </textarea>
     <script src="/training-material/assets/js/remark-latest.min.js" type="text/javascript">

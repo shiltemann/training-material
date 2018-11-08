@@ -4,13 +4,33 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Galaxy Training!</title>
+        <title>Metaproteomics tutorial</title>
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', '0xdeadbeef' , 'auto');
+            ga('send', 'pageview');
+        </script>
+        
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
         <link rel="stylesheet" href="/training-material/assets/css/font-awesome.css">
         <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
         <link rel="stylesheet" href="/training-material/assets/css/syntax_highlighting.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+        
+        
+        
+        
+        
+        <meta name="description" content="Training material for proteomics workflows in Galaxy" />
+        <meta property="og:title" content="Galaxy Training: Metaproteomics tutorial" />
+        <meta property="og:description" content="Training material for proteomics workflows in Galaxy" />
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
     </head>
     <body>
         
@@ -38,8 +58,10 @@
                     </li>
 
                     
-                        
-                        
+                    
+                    
+
+                    
                         
                     
 
@@ -50,7 +72,7 @@
                             </a>
                             <div class="dropdown-menu">
                                 
-                                    <a class="dropdown-item" href="https://github.com/shiltemann/training-material/tree/master/topics/proteomics/docker" title="Docker image for this tutorial">
+                                    <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/tree/master/topics/proteomics/docker" title="Docker image for this tutorial">
                                         <i class="fa fa-ship" aria-hidden="true"></i><span class="visually-hidden">docker_image</span> Docker image
                                     </a>
                                 
@@ -73,7 +95,7 @@
                     
                     <li class="nav-item">
                         <a class="nav-link" href="/training-material/topics/proteomics#references" title="References">
-                            <i class="fa fa-book" aria-hidden="true"></i><span class="visually-hidden">references</span> Literature
+                            <i class="fa fa-bookmark" aria-hidden="true"></i><span class="visually-hidden">references</span> Literature
                         </a>
                     </li>
                     
@@ -87,17 +109,17 @@
             FAQ
         </a>
         <a class="dropdown-item" href="https://gitter.im/Galaxy-Training-Network/Lobby" title="Chat on Gitter">
-            Gitter
+            Chat on Gitter
         </a>
         <a class="dropdown-item" href="https://biostar.usegalaxy.org/" title="Ask on Biostars">
-            Biostars
+            Ask questions on Biostars
         </a>
     </div>
 </li>
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/shiltemann/training-material/edit/master/topics/proteomics/tutorials/metaproteomics/tutorial.md">
+                        <a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/master/topics/proteomics/tutorials/metaproteomics/tutorial.md">
                             <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit
                         </a>
                     </li>
@@ -108,6 +130,62 @@
 </header>
 
 <div class="container main-content">
+    <script type="application/ld+json">
+   
+{
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "name": "Metaproteomics tutorial",
+  "accessModeSufficient": "visual",
+  "accessibilityControl": "fullMouseControl",
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
+  "learningResourceType": "",
+  "url": "/topics/proteomics/tutorials/metaproteomics/tutorial.html",
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "https://doi.org/10.5281/zenodo.839701",
+      "name": "Training data for Metaproteomics tutorial tutorial"
+    }
+  ],
+  "timeRequired": "PT2H",
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "timothygriffin"
+    },
+    {
+      "@type": "Person",
+      "name": "pratikdjagtap"
+    },
+    {
+      "@type": "Person",
+      "name": "jj-umn"
+    },
+    {
+      "@type": "Person",
+      "name": "blankclemens"
+    }
+  ],
+  "description": "The questions this  addresses are:\n - How can I match metaproteomic mass spectrometry data to peptide sequences derived from shotgun metagenomic data?\n - How can I perform taxonomy analysis and visualize metaproteomics data?\n - How can I perform functional analysis on this metaproteomics data?\n\n\\nThe objectives are:\n - A taxonomy and functional analysis of metaproteomic mass spectrometry data.\n\n"
+}
+
+    </script>
     <section class="tutorial">
         <h1>Metaproteomics tutorial</h1>
 
@@ -138,7 +216,7 @@
             
                 <li>
                     
-                    <a href="/training-material/topics//introduction/">Galaxy introduction</a>
+                    <a href="/training-material/topics/introduction/">Galaxy introduction</a>
                     
                 </li>
             
@@ -146,7 +224,9 @@
             </ul>
             
 
-            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 2h</p>
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 2 hours</p>
+            
         </blockquote>
 
         <h1 class="no_toc" id="introduction">Introduction</h1>
@@ -1112,10 +1192,10 @@ ORDER BY  bering_peptides desc,bering_psms desc
       <p><a href="https://www.ncbi.nlm.nih.gov/pubmed/28552653">Unipept</a></p>
     </li>
     <li>
-      <p>[Galaxy-P Metaproteomics instance] (z.umn.edu/metaproteomicsgateway)</p>
+      <p><a href="http://z.umn.edu/metaproteomicsgateway">Galaxy-P Metaproteomics instance</a></p>
     </li>
     <li>
-      <p><a href="z.umn.edu/mpvideo2018">Metaproteomics video</a></p>
+      <p><a href="http://z.umn.edu/mpvideo2018">Metaproteomics video</a></p>
     </li>
   </ul>
 </blockquote>
@@ -1146,15 +1226,15 @@ ORDER BY  bering_peptides desc,bering_psms desc
         
 
         <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
-
         <hr>
+        <br>
+
+        <iframe class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Metaproteomics tutorial (Proteomics)">Loading...
+        </iframe>
 
         <blockquote class="feedback">
-            <h3><i class="fa fa-comments-o" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Help us improve this content!</h3>
-            Please take a moment to fill in the Galaxy Training Network
-            <a href="https://tinyurl.com/GTNfeedback">Feedback Form</a>.
-            Your feedback helps us improve this tutorial and will be considered
-            in future revisions.
+            <h3><i class="fa fa-comments-o" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
+            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=Metaproteomics tutorial (Proteomics)">Feedback Form</a>.</p>
         </blockquote>
     </section>
 </div>
@@ -1165,11 +1245,11 @@ ORDER BY  bering_peptides desc,bering_psms desc
         <p>
             This material is the result of a collaborative work. Thanks to the
             <a href="https://wiki.galaxyproject.org/Teach/GTN">Galaxy Training Network</a>
-            and all the <a href="/training-material/hall-of-fame">contributors</a> (Timothy J. Griffin, Pratik Jagtap, James Johnson, Clemens Blank)!
+            and all the <a href="/training-material/hall-of-fame">contributors</a> (Clemens Blank, James Johnson, Pratik Jagtap, Timothy J. Griffin)!
         </p>
         <p>
             Found a typo? Something is wrong in this tutorial? Edit it on
-            <a href="https://github.com/shiltemann/training-material/tree/master/topics/proteomics/tutorials/metaproteomics/tutorial.md">GitHub</a>.
+            <a href="https://github.com/galaxyproject/training-material/tree/master/topics/proteomics/tutorials/metaproteomics/tutorial.md">GitHub</a>.
         </p>
     </div>
 </footer>

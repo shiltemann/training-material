@@ -4,13 +4,33 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Galaxy Training!</title>
+        <title>Creating a new tutorial</title>
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', '0xdeadbeef' , 'auto');
+            ga('send', 'pageview');
+        </script>
+        
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
         <link rel="stylesheet" href="/training-material/assets/css/font-awesome.css">
         <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
         <link rel="stylesheet" href="/training-material/assets/css/syntax_highlighting.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+        
+        
+        
+        
+        
+        <meta name="description" content="Galaxy is a great solution to train the bioinformatics co..." />
+        <meta property="og:title" content="Galaxy Training: Creating a new tutorial" />
+        <meta property="og:description" content="Galaxy is a great solution to train the bioinformatics co..." />
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
     </head>
     <body>
         
@@ -38,8 +58,10 @@
                     </li>
 
                     
-                        
-                        
+                    
+                    
+
+                    
                         
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Introduction slides">
@@ -52,10 +74,6 @@
                                                 <a class="dropdown-item" href="/training-material/topics/contributing/slides/introduction.html">
                                                     Overview of the Galaxy Training Material
                                                 </a>
-                                            
-                                        
-                                    
-                                        
                                             
                                         
                                     
@@ -135,17 +153,17 @@
             FAQ
         </a>
         <a class="dropdown-item" href="https://gitter.im/Galaxy-Training-Network/Lobby" title="Chat on Gitter">
-            Gitter
+            Chat on Gitter
         </a>
         <a class="dropdown-item" href="https://biostar.usegalaxy.org/" title="Ask on Biostars">
-            Biostars
+            Ask questions on Biostars
         </a>
     </div>
 </li>
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/shiltemann/training-material/edit/master/topics/contributing/tutorials/create-new-tutorial/tutorial.md">
+                        <a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/master/topics/contributing/tutorials/create-new-tutorial/tutorial.md">
                             <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit
                         </a>
                     </li>
@@ -156,6 +174,46 @@
 </header>
 
 <div class="container main-content">
+    <script type="application/ld+json">
+   
+{
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "name": "Creating a new tutorial",
+  "accessModeSufficient": "visual",
+  "accessibilityControl": "fullMouseControl",
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
+  "learningResourceType": "",
+  "url": "/topics/contributing/tutorials/create-new-tutorial/tutorial.html",
+  "mentions": [
+
+  ],
+  "timeRequired": "PT15M",
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "bebatut"
+    }
+  ],
+  "description": "The questions this  addresses are:\n - How to integrate a new tutorial?\n - How to make a tutorial robust and reproducible?\n\n\\nThe objectives are:\n - Create a tutorial from scratch\n - Link a tutorial to a topic\n - Create hands-on\n - Add technical support for a tutorial\n\n"
+}
+
+    </script>
     <section class="tutorial">
         <h1>Creating a new tutorial</h1>
 
@@ -186,7 +244,9 @@
 
             
 
-            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 15min</p>
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 15 minutes</p>
+            
         </blockquote>
 
         <h1 class="no_toc" id="introduction">Introduction</h1>
@@ -216,7 +276,6 @@ We decided on a structure focusing on tutorials with hands-on activities; fittin
   <li><a href="#define-the-topic" id="markdown-toc-define-the-topic">Define the topic</a></li>
   <li><a href="#keep-track-of-the-changes" id="markdown-toc-keep-track-of-the-changes">Keep track of the changes</a></li>
   <li><a href="#create-the-directory-for-the-tutorial" id="markdown-toc-create-the-directory-for-the-tutorial">Create the directory for the tutorial</a></li>
-  <li><a href="#add-metadata" id="markdown-toc-add-metadata">Add metadata</a></li>
   <li><a href="#a-toy-dataset" id="markdown-toc-a-toy-dataset">A toy dataset</a></li>
   <li><a href="#write-the-tutorial" id="markdown-toc-write-the-tutorial">Write the tutorial</a></li>
   <li><a href="#add-some-technical-support-recommended" id="markdown-toc-add-some-technical-support-recommended">Add some technical support (recommended)</a></li>
@@ -228,7 +287,7 @@ We decided on a structure focusing on tutorials with hands-on activities; fittin
 <blockquote class="comment">
   <h3 id="comment-comment"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
   <p>This tutorial explains the different steps to create a tutorial for the Galaxy Training Material.
-It may require some knowledge that you may not have or do not have the time to learn. If this is the case, you can create a skeleton of a tutorial with whatever existing materials you have, using your prefered text editor, and then share it with us by opening <a href="https://github.com/shiltemann/training-material/issues/new">issue on GitHub</a>, writing us on <a href="https://gitter.im/Galaxy-Training-Network/Lobby">Gitter</a>, or sending us an <a href="mailto:galaxytrainingnetwork@gmail.com">email</a>.</p>
+It may require some knowledge that you may not have or do not have the time to learn. If this is the case, you can create a skeleton of a tutorial with whatever existing materials you have, using your prefered text editor, and then share it with us by opening <a href="https://github.com/galaxyproject/training-material/issues/new">issue on GitHub</a>, writing us on <a href="https://gitter.im/Galaxy-Training-Network/Lobby">Gitter</a>, or sending us an <a href="mailto:galaxytrainingnetwork@gmail.com">email</a>.</p>
 </blockquote>
 
 <h1 id="define-the-topic">Define the topic</h1>
@@ -265,7 +324,7 @@ It may require some knowledge that you may not have or do not have the time to l
 
 <h1 id="keep-track-of-the-changes">Keep track of the changes</h1>
 
-<p>The material is stored in a <a href="https://github.com/shiltemann/training-material">GitHub repository</a>, a code hosting platform for version control and collaboration. So to develop training material, we are following the <a href="https://guides.github.com/introduction/flow/">GitHub flow</a>, which is based on fork, branches, and pull requests.</p>
+<p>The material is stored in a <a href="https://github.com/galaxyproject/training-material">GitHub repository</a>, a code hosting platform for version control and collaboration. So to develop training material, we are following the <a href="https://guides.github.com/introduction/flow/">GitHub flow</a>, which is based on fork, branches, and pull requests.</p>
 
 <p>This can be done online via the GitHub interface or locally on your computer via command-line.</p>
 
@@ -320,7 +379,7 @@ It may require some knowledge that you may not have or do not have the time to l
     <li>
       <p>Run (by adapting the information between the quotes)</p>
 
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python bin/setup_training_content.py \
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ planemo training_init \
          --topic_name "my-topic" \
          --tutorial_name "my-new-tutorial" \
          --tutorial_title "Title of the tutorial" \
@@ -336,18 +395,6 @@ It may require some knowledge that you may not have or do not have the time to l
       </blockquote>
     </li>
     <li>Check if the tutorial has been correctly added at <a href="http://localhost:4000/training-material/">http://localhost:4000/training-material/</a></li>
-  </ol>
-</blockquote>
-
-<h1 id="add-metadata">Add metadata</h1>
-
-<p>To make the topic aware of this new tutorial, some metadata about the tutorial has been added in the topic’s <code class="highlighter-rouge">metadata.yaml</code> file. This metadata includes some technological and pedagogical support for the training. Once this is filled out, you can run the Galaxy Training Material website locally to check that the new tutorial is accessible.</p>
-
-<blockquote class="hands_on">
-  <h3 id="hands_on-hands-on-add-metadata"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Add metadata</h3>
-
-  <ol>
-    <li>Check out and run our <a href="/training-material/topics/contributing/tutorials/create-new-tutorial-metadata/tutorial.html">metadata tutorial</a></li>
   </ol>
 </blockquote>
 
@@ -404,7 +451,7 @@ So be careful when you start your upload that all your needed files are ready.</
     <li>Fill out any remaining information</li>
     <li>Click on <strong>Publish</strong></li>
     <li>Copy the DOI link in the new page</li>
-    <li>Paste the link in <code class="highlighter-rouge">zenodo_link</code> in the tutorial section of the <code class="highlighter-rouge">metadata.yaml</code> file</li>
+    <li>Paste the link in <code class="highlighter-rouge">zenodo_link</code> in the tutorial header</li>
   </ol>
 </blockquote>
 
@@ -444,12 +491,10 @@ So be careful when you start your upload that all your needed files are ready.</
     <li>Add some technical support for the tutorial following the <a href="/training-material/topics/contributing/tutorials/create-new-tutorial-technical/tutorial.html">tutorial</a>
       <ul>
         <li>Add the workflow</li>
-        <li>(Recommended) Generate the <code class="highlighter-rouge">tools.yaml</code></li>
         <li>(Recommended) Generate the <code class="highlighter-rouge">data-library.yaml</code></li>
         <li>(Optional) Create an interactive tour</li>
       </ul>
     </li>
-    <li>Update the <code class="highlighter-rouge">metadata.yaml</code> file given the technical support added</li>
   </ol>
 </blockquote>
 
@@ -462,7 +507,6 @@ So be careful when you start your upload that all your needed files are ready.</
 
   <ol>
     <li>Create a slide deck in <code class="highlighter-rouge">slides.html</code> following the <a href="/training-material/topics/contributing/tutorials/create-new-tutorial-slides/slides.html">Slide tutorial</a></li>
-    <li>Update the <code class="highlighter-rouge">metadata.yaml</code> file by putting <code class="highlighter-rouge">yes</code> in <code class="highlighter-rouge">slides</code></li>
   </ol>
 </blockquote>
 
@@ -479,6 +523,49 @@ So be careful when you start your upload that all your needed files are ready.</
   <li>Add some technical support (recommended)</li>
   <li>Add slides (optional)</li>
 </ol>
+
+<p>For the next times, you can make it quicker.</p>
+
+<blockquote class="hands_on">
+  <h3 id="hands_on-hands-on-generation-of-a-tutorial"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Generation of a tutorial</h3>
+
+  <ol>
+    <li>Determine the topic</li>
+    <li>Create your workflow on a running Galaxy instance</li>
+    <li>Create a Zenodo record with the input data</li>
+    <li>Generate the skeleton of your tutorial
+      <ul>
+        <li>option 1: from a workflow located on a Galaxy
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ planemo training_init \
+       --topic_name "my-topic" \
+       --tutorial_name "my-new-tutorial" \
+       --tutorial_title "Title of the tutorial" \
+       --galaxy_url "URL to Galaxy instance in which you created the workflow" \
+       --galaxy_api_key "Your API key on the Galaxy instance" \
+       --workflow_id "ID of the workflow on the Galaxy instance" \
+       --zenodo_link "URL to the Zenodo record"
+</code></pre></div>          </div>
+        </li>
+        <li>
+          <p>option 2: from a local workflow file (<code class="highlighter-rouge">.ga</code>)</p>
+
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ planemo training_init \
+       --topic_name "my-topic" \
+       --tutorial_name "my-new-tutorial" \
+       --tutorial_title "Title of the tutorial" \
+       --workflow "path/to/workflow" \
+       --zenodo_link "URL to the Zenodo record"
+</code></pre></div>          </div>
+          <p>You can use the example workflow file located in <code class="highlighter-rouge">topics/contributing/tutorials/create-new-tutorial/workflows/example-workflow.ga</code> if
+you do not have a workflow of your own. This is the workflow belonging to the <em>Galaxy 101</em> introduction tutorial.</p>
+        </li>
+      </ul>
+    </li>
+    <li>Fill the remaining metadata in the <code class="highlighter-rouge">tutorial.md</code></li>
+    <li>Fill the content of the <code class="highlighter-rouge">tutorial.md</code></li>
+    <li>Check it using Jekyll</li>
+  </ol>
+</blockquote>
 
 
         
@@ -513,6 +600,14 @@ So be careful when you start your upload that all your needed files are ready.</
              
               
               
+            <li><a href="/training-material/topics/contributing/tutorials/github-command-line-contribution/tutorial.html">Contributing with GitHub via command-line</a></li>
+              
+              
+             
+            
+             
+              
+              
             <li><a href="/training-material/topics/contributing/tutorials/github-interface-contribution/tutorial.html">Contributing with GitHub via its interface</a></li>
               
               
@@ -521,25 +616,7 @@ So be careful when you start your upload that all your needed files are ready.</
              
               
               
-            <li><a href="/training-material/topics/contributing/tutorials/github-command-line-contribution/tutorial.html">Contributing with GitHub via command-line</a></li>
-              
-              
-             
-            
-             
-            
-             
-              
-              
-            <li><a href="/training-material/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html">Creating a new tutorial - Writing content in Markdown</a></li>
-              
-              
-             
-            
-             
-              
-              
-            <li><a href="/training-material/topics/contributing/tutorials/create-new-tutorial-metadata/tutorial.html">Creating a new tutorial - Defining metadata</a></li>
+            <li><a href="/training-material/topics/contributing/tutorials/create-new-tutorial/tutorial.html">Creating a new tutorial</a></li>
               
               
              
@@ -571,15 +648,7 @@ So be careful when you start your upload that all your needed files are ready.</
              
               
               
-            <li><a href="/training-material/topics/contributing/tutorials/create-new-topic/tutorial.html">Including a new topic</a></li>
-              
-              
-             
-            
-             
-              
-              
-            <li><a href="/training-material/topics/contributing/tutorials/running-jekyll/tutorial.html">Running the Galaxy Training material website locally</a></li>
+            <li><a href="/training-material/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html">Creating a new tutorial - Writing content in Markdown</a></li>
               
               
              
@@ -603,6 +672,22 @@ So be careful when you start your upload that all your needed files are ready.</
              
               
               
+            <li><a href="/training-material/topics/contributing/tutorials/create-new-topic/tutorial.html">Including a new topic</a></li>
+              
+              
+             
+            
+             
+              
+              
+            <li><a href="/training-material/topics/contributing/tutorials/running-jekyll/tutorial.html">Running the Galaxy Training material website locally</a></li>
+              
+              
+             
+            
+             
+              
+              
             <li><a href="/training-material/topics/contributing/tutorials/setup-galaxy-for-training/tutorial.html">Set up a Galaxy for Training</a></li>
               
               
@@ -613,15 +698,15 @@ So be careful when you start your upload that all your needed files are ready.</
         
 
         <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
-
         <hr>
+        <br>
+
+        <iframe class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Creating a new tutorial (Contributing to the Galaxy Training Material)">Loading...
+        </iframe>
 
         <blockquote class="feedback">
-            <h3><i class="fa fa-comments-o" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Help us improve this content!</h3>
-            Please take a moment to fill in the Galaxy Training Network
-            <a href="https://tinyurl.com/GTNfeedback">Feedback Form</a>.
-            Your feedback helps us improve this tutorial and will be considered
-            in future revisions.
+            <h3><i class="fa fa-comments-o" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
+            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=Creating a new tutorial (Contributing to the Galaxy Training Material)">Feedback Form</a>.</p>
         </blockquote>
     </section>
 </div>
@@ -636,7 +721,7 @@ So be careful when you start your upload that all your needed files are ready.</
         </p>
         <p>
             Found a typo? Something is wrong in this tutorial? Edit it on
-            <a href="https://github.com/shiltemann/training-material/tree/master/topics/contributing/tutorials/create-new-tutorial/tutorial.md">GitHub</a>.
+            <a href="https://github.com/galaxyproject/training-material/tree/master/topics/contributing/tutorials/create-new-tutorial/tutorial.md">GitHub</a>.
         </p>
     </div>
 </footer>

@@ -4,13 +4,33 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Galaxy Training!</title>
+        <title>Data source integration</title>
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', '0xdeadbeef' , 'auto');
+            ga('send', 'pageview');
+        </script>
+        
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
         <link rel="stylesheet" href="/training-material/assets/css/font-awesome.css">
         <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
         <link rel="stylesheet" href="/training-material/assets/css/syntax_highlighting.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+        
+        
+        
+        
+        
+        <meta name="description" content="Galaxy is an open-source project. Everyone can contribute..." />
+        <meta property="og:title" content="Galaxy Training: Data source integration" />
+        <meta property="og:description" content="Galaxy is an open-source project. Everyone can contribute..." />
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
     </head>
     <body>
         
@@ -38,8 +58,10 @@
                     </li>
 
                     
-                        
-                        
+                    
+                    
+
+                    
                         
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Introduction slides">
@@ -60,8 +82,6 @@
                                         
                                     
                                         
-                                            
-                                        
                                     
                                         
                                             
@@ -103,6 +123,8 @@
                                             
                                         
                                     
+                                        
+                                            
                                         
                                     
                                 </div>
@@ -133,17 +155,17 @@
             FAQ
         </a>
         <a class="dropdown-item" href="https://gitter.im/Galaxy-Training-Network/Lobby" title="Chat on Gitter">
-            Gitter
+            Chat on Gitter
         </a>
         <a class="dropdown-item" href="https://biostar.usegalaxy.org/" title="Ask on Biostars">
-            Biostars
+            Ask questions on Biostars
         </a>
     </div>
 </li>
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/shiltemann/training-material/edit/master/topics/dev/tutorials/data-source-integration/tutorial.md">
+                        <a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/master/topics/dev/tutorials/data-source-integration/tutorial.md">
                             <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit
                         </a>
                     </li>
@@ -154,6 +176,49 @@
 </header>
 
 <div class="container main-content">
+    <script type="application/ld+json">
+   
+{
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "name": "Data source integration",
+  "accessModeSufficient": "visual",
+  "accessibilityControl": "fullMouseControl",
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
+  "learningResourceType": "",
+  "url": "/topics/dev/tutorials/data-source-integration/tutorial.html",
+  "mentions": [
+
+  ],
+  "timeRequired": "PT10M",
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "bebatut"
+    },
+    {
+      "@type": "Person",
+      "name": "shiltemann"
+    }
+  ]
+}
+
+    </script>
     <section class="tutorial">
         <h1>Data source integration</h1>
 
@@ -172,14 +237,16 @@
 
             
 
-            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 1h/1d</p>
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 10 minutes</p>
+            
         </blockquote>
 
         <h1 id="data-source-integration">Data Source Integration</h1>
 
 <p>An important goal of Galaxy is scalability. A major bottleneck when it comes to analysis of big data sets is the time and space it takes of copying these data sets.</p>
 
-<p><img src="../../images/data_source_integration.png" alt="data_source_integration"></p>
+<p><img src="../../images/data_source_integration.png" alt="data_source_integration" /></p>
 
 <p>Galaxy provides an interface such that it can communicate with other servers to get data directly into the Galaxy environment of a user without the need of “downloading” the data. We (have used/will use) the UCSC table browser in this course, and in this hands on, we will use the resource from <a href="http://dorina.mdc-berlin.de/">DoRiNA Server</a> <a href="http://www.ncbi.nlm.nih.gov/pubmed/25416797">(Blin et al. 2014, Nucleic Acids Research.)</a>,
 but the main point about this short section is:
@@ -198,18 +265,6 @@ if you have a data source which you think is very important for your research wi
 
 <p>That was very easy for all of you! If you want your database of choice to be accessible as easy as this <strong>let us know</strong>!</p>
 
-<p><img class="emoji" title=":grey_exclamation:" alt=":grey_exclamation:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2755.png" height="20" width="20"> <strong><em>Key Points</em></strong></p>
-
-<ul>
-  <li><em>Simple sentence to sum up the first key point of the tutorial (Take home message)</em></li>
-  <li><em>Second key point</em></li>
-  <li><em>Third key point</em></li>
-  <li><em>…</em></li>
-</ul>
-
-<h1 id="clap-thank-you">
-<img class="emoji" title=":clap:" alt=":clap:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f44f.png" height="20" width="20"> Thank you</h1>
-
 
         
 
@@ -217,18 +272,16 @@ if you have a data source which you think is very important for your research wi
 
         
 
-        <h3>
-<i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
-
+        <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
         <hr>
+        <br>
+
+        <iframe class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Data source integration (Development in Galaxy)">Loading...
+        </iframe>
 
         <blockquote class="feedback">
-            <h3>
-<i class="fa fa-comments-o" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Help us improve this content!</h3>
-            Please take a moment to fill in the Galaxy Training Network
-            <a href="https://tinyurl.com/GTNfeedback">Feedback Form</a>.
-            Your feedback helps us improve this tutorial and will be considered
-            in future revisions.
+            <h3><i class="fa fa-comments-o" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
+            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=Data source integration (Development in Galaxy)">Feedback Form</a>.</p>
         </blockquote>
     </section>
 </div>
@@ -239,11 +292,11 @@ if you have a data source which you think is very important for your research wi
         <p>
             This material is the result of a collaborative work. Thanks to the
             <a href="https://wiki.galaxyproject.org/Teach/GTN">Galaxy Training Network</a>
-            and all the <a href="/training-material/hall-of-fame">contributors</a> ({"a-asai"=&gt;{"name"=&gt;"Atsushi Asai""email"=&gt;"tbudcm7zk@i.softbank.jp"}, "abretaud"=&gt;{"name"=&gt;"Anthony Bretaudeau", "email"=&gt;"anthony.bretaudeau@inra.fr", "twitter"=&gt;"abretau", "gitter"=&gt;"abretaud", "orcid"=&gt;"0000-0003-0914-2470"}, "afgane"=&gt;{"name"=&gt;"Enis Afgan"}, "aisanjiangw"=&gt;{"name"=&gt;"Aisanjiang Wubuli"}, "andreasrichter"=&gt;{"name"=&gt;"Andreas Richter", "github"=&gt;false}, "andrewjpage"=&gt;{"name"=&gt;"Andrew Page", "email"=&gt;"andrewjpage@gmail.com", "twitter"=&gt;"andrewjpage", "orcid"=&gt;"0000-0001-6919-6062"}, "annasyme"=&gt;{"name"=&gt;"Anna Syme"}, "baberlevi"=&gt;{"name"=&gt;"Levi Baber"}, "bagnacan"=&gt;{"name"=&gt;"Andrea Bagnacani", "email"=&gt;"andrea.bagnacani@gmail.com"}, "bebatut"=&gt;{"name"=&gt;"Bérénice Batut", "email"=&gt;"berenice.batut@gmail.com", "twitter"=&gt;"bebatut", "linkedin"=&gt;"berenicebatut", "gitter"=&gt;"bebatut", "orcid"=&gt;"0000-0001-9852-1987"}, "bernt-matthias"=&gt;{"name"=&gt;"Matthias Bernt"}, "bgruening"=&gt;{"name"=&gt;"Björn Grüning", "email"=&gt;"bjoern.gruening@gmail.com", "twitter"=&gt;"bjoerngruening", "gitter"=&gt;"bgruening", "orcid"=&gt;"0000-0002-3079-6586", "linkedin"=&gt;"bgruening"}, "blankclemens"=&gt;{"name"=&gt;"Clemens Blank", "email"=&gt;"blankclemens@gmail.com"}, "blankenberg"=&gt;{"name"=&gt;"Daniel Blankenberg", "twitter"=&gt;"dblankenberg", "orcid"=&gt;"0000-0002-6833-9049"}, "claresloggett"=&gt;{"name"=&gt;"Clare Sloggett"}, "cmonjeau"=&gt;{"name"=&gt;"Cyril Monjeaud"}, "cganote"=&gt;{"name"=&gt;"Carrie Ganote"}, "daltis20012009"=&gt;{"name"=&gt;"Krzys Poterlowicz", "github"=&gt;false}, "dannon"=&gt;{"name"=&gt;"Dannon Baker"}, "delphine-l"=&gt;{"name"=&gt;"Delphine Lariviere", "email"=&gt;"delphine.lariviere@galaxy.org"}, "dmaticzka"=&gt;{"name"=&gt;"Daniel Maticzka"}, "dpryan79"=&gt;{"name"=&gt;"Devon Ryan"}, "dsobral"=&gt;{"name"=&gt;"Daniel Sobral"}, "dyusuf"=&gt;{"name"=&gt;"Dilmurat Yusuf"}, "erasche"=&gt;{"name"=&gt;"Helena Rasche", "email"=&gt;"hxr@hx42.org", "orcid"=&gt;"0000-0001-9760-8992"}, "erxleben"=&gt;{"name"=&gt;"Anika Erxleben", "email"=&gt;"anikaerxleben@gmail.com", "orcid"=&gt;"0000-0002-7427-6478"}, "fabio-cumbo"=&gt;{"name"=&gt;"Fabio Cumbo", "email"=&gt;"fabio.cumbo@gmail.com", "twitter"=&gt;"cumbofabio", "linkedin"=&gt;"fabiocumbo", "gitter"=&gt;"fabio-cumbo", "orcid"=&gt;"0000-0003-2920-5838"}, "fidelram"=&gt;{"name"=&gt;"Fidel Ramirez"}, "Florian-H-Lab"=&gt;{"name"=&gt;"Florian Heyl"}, "fmareuil"=&gt;{"name"=&gt;"Fabien Mareuil"}, "frederikcoppens"=&gt;{"name"=&gt;"Frederik Coppens"}, "friedue"=&gt;{"name"=&gt;"Friederike Dündar"}, "guerler"=&gt;{"name"=&gt;"Aysam Guerler"}, "hmenager"=&gt;{"name"=&gt;"Hervé Ménager"}, "hrhotz"=&gt;{"name"=&gt;"Hans-Rudolf Hotz", "email"=&gt;"hrhotz@googlemail.com", "twitter"=&gt;"hrhotz", "gitter"=&gt;"hrhotz", "orcid"=&gt;"0000-0002-2799-424X", "linkedin"=&gt;"hans-rudolf-hotz-542b31"}, "jennaj"=&gt;{"name"=&gt;"Jennifer Hillman-Jackson", "maintainer_contact"=&gt;"https://biostar.usegalaxy.org", "email"=&gt;"jen@galaxyproject.org", "gitter"=&gt;"jennaj", "twitter"=&gt;"jenhjackson", "linkedin"=&gt;"jennifer.hillman.jackson", "orcid"=&gt;"0000-0003-4012-8116"}, "jennydg"=&gt;{"name"=&gt;"Jennifer Del Giudice"}, "jfallmann"=&gt;{"name"=&gt;"Joerg Fallmann"}, "jgoecks"=&gt;{"name"=&gt;"Jeremy Goecks"}, "jj-umn"=&gt;{"name"=&gt;"James Johnson", "email"=&gt;"jj@umn.edu"}, "jmchilton"=&gt;{"name"=&gt;"John Chilton", "email"=&gt;"jmchilton@gmail.com"}, "joachimwolff"=&gt;{"name"=&gt;"Joachim Wolff", "email"=&gt;"wolffj@informatik.uni-freiburg.de"}, "jpmaree"=&gt;nil, "jxtx"=&gt;{"name"=&gt;"James Taylor"}, "katrinleinweber"=&gt;{"name"=&gt;"Katrin Leinweber", "email"=&gt;"katrin.leinweber@tib.eu", "orcid"=&gt;"0000-0001-5135-5758"}, "lecorguille"=&gt;{"name"=&gt;"Gildas Le Corguillé"}, "loraine-gueguen"=&gt;{"name"=&gt;"Loraine Guéguen"}, "natefoo"=&gt;{"name"=&gt;"Nate Coraor", "gitter"=&gt;"natefoo", "twitter"=&gt;"natefoo", "email"=&gt;"nate@bx.psu.edu"}, "malloryfreeberg"=&gt;{"name"=&gt;"Mallory Freeberg"}, "manabuishii"=&gt;{"name"=&gt;"Manabu ISHII"}, "martenson"=&gt;{"name"=&gt;"Martin Čech", "email"=&gt;"marten@bx.psu.edu"}, "marziacremona"=&gt;{"name"=&gt;"Marzia A Cremona", "email"=&gt;"mac78@psu.edu"}, "mccalluc"=&gt;{"name"=&gt;"Chuck McCallum"}, "moffmade"=&gt;{"name"=&gt;"Cory Maughmer"}, "moheydarian"=&gt;{"name"=&gt;"Mo Heydarian", "email"=&gt;"mheydarian@gmail.com"}, "mvdbeek"=&gt;{"name"=&gt;"Marius van den Beek"}, "mwolfien"=&gt;{"name"=&gt;"Markus Wolfien"}, "nekrut"=&gt;{"name"=&gt;"Anton Nekrutenko", "email"=&gt;"anton@nekrut.org"}, "nicherndon"=&gt;{"name"=&gt;"Nic Herndon"}, "NickSto"=&gt;{"name"=&gt;"Nick Stoler", "twitter"=&gt;"NickStoler"}, "nsoranzo"=&gt;{"name"=&gt;"Nicola Soranzo"}, "nvk747"=&gt;{"name"=&gt;"Vijay"}, "odoppelt"=&gt;{"name"=&gt;"Olivia Doppelt-Azeroual"}, "kilpert"=&gt;{"name"=&gt;"Fabian Kilpert"}, "pajanne"=&gt;{"name"=&gt;"Anne Pajon"}, "polkhe"=&gt;{"name"=&gt;"Ekaterina Polkh"}, "pvanheus"=&gt;{"name"=&gt;"Peter van Heusden"}, "pratikdjagtap"=&gt;{"name"=&gt;"Pratik Jagtap", "email"=&gt;"pjagtap@umn.edu"}, "pavanvidem"=&gt;{"name"=&gt;"Pavankumar Videm"}, "reginaesinamabotsi"=&gt;{"name"=&gt;"Regina Esinam Abotsi"}, "shiltemann"=&gt;{"name"=&gt;"Saskia Hiltemann", "maintainer_contact"=&gt;"gitter", "email"=&gt;"saskia.hiltemann@gmail.com", "twitter"=&gt;"shiltemann", "linkedin"=&gt;"shiltemann", "gitter"=&gt;"shiltemann", "orcid"=&gt;"0000-0003-3803-468X"}, "slegras"=&gt;{"name"=&gt;"Stéphanie Legras"}, "slugger70"=&gt;{"name"=&gt;"Simon Gladman", "email"=&gt;"simon.gladman@unimelb.edu.au"}, "stortebecker"=&gt;{"name"=&gt;"Florian Christoph Sigloch", "email"=&gt;"sigloch+github@mailbox.org"}, "subinamehta"=&gt;{"name"=&gt;"Subina Mehta", "email"=&gt;"subinamehta@gmail.com"}, "tealiie"=&gt;nil, "thomasmanke"=&gt;{"name"=&gt;"Thomas Manke"}, "timothygriffin"=&gt;{"name"=&gt;"Timothy J. Griffin", "email"=&gt;"tgriffin@umn.edu", "github"=&gt;false}, "tizzir"=&gt;{"name"=&gt;"Matthew Spelchak"}, "tnabtaf"=&gt;{"name"=&gt;"Dave Clements"}, "torhou"=&gt;{"name"=&gt;"Torsten Houwaart"}, "tseemann"=&gt;{"name"=&gt;"Torsten Seemann"}, "valentinmarcon"=&gt;{"name"=&gt;"Valentin Marcon"}, "vdda"=&gt;{"name"=&gt;"Victoria Dominguez del Angel"}, "vivekbhr"=&gt;{"name"=&gt;"Vivek Bhardwaj"}, "willdurand"=&gt;{"name"=&gt;"William Durand"}, "wm75"=&gt;{"name"=&gt;"Wolfgang Maier"}, "yhoogstrate"=&gt;{"name"=&gt;"Youri Hoogstrate"}, "yvanlebras"=&gt;{"name"=&gt;"Yvan Le Bras", "email"=&gt;"yvan.le-bras@mnhn.fr"}})!
+            and all the <a href="/training-material/hall-of-fame">contributors</a> (Bérénice Batut, Saskia Hiltemann)!
         </p>
         <p>
             Found a typo? Something is wrong in this tutorial? Edit it on
-            <a href="https://github.com/shiltemann/training-material/tree/master/topics/dev/tutorials/data-source-integration/tutorial.md">GitHub</a>.
+            <a href="https://github.com/galaxyproject/training-material/tree/master/topics/dev/tutorials/data-source-integration/tutorial.md">GitHub</a>.
         </p>
     </div>
 </footer>

@@ -4,13 +4,33 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Galaxy Training!</title>
+        <title>Peptide and Protein ID using OpenMS tools</title>
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', '0xdeadbeef' , 'auto');
+            ga('send', 'pageview');
+        </script>
+        
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
         <link rel="stylesheet" href="/training-material/assets/css/font-awesome.css">
         <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
         <link rel="stylesheet" href="/training-material/assets/css/syntax_highlighting.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+        
+        
+        
+        
+        
+        <meta name="description" content="Training material for proteomics workflows in Galaxy" />
+        <meta property="og:title" content="Galaxy Training: Peptide and Protein ID using OpenMS tools" />
+        <meta property="og:description" content="Training material for proteomics workflows in Galaxy" />
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
     </head>
     <body>
         
@@ -38,8 +58,10 @@
                     </li>
 
                     
-                        
-                        
+                    
+                    
+
+                    
                         
                     
 
@@ -50,11 +72,105 @@
                             </a>
                             <div class="dropdown-menu">
                                 
-                                    <a class="dropdown-item" href="https://github.com/shiltemann/training-material/tree/master/topics/proteomics/docker" title="Docker image for this tutorial">
+                                    <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/tree/master/topics/proteomics/docker" title="Docker image for this tutorial">
                                         <i class="fa fa-ship" aria-hidden="true"></i><span class="visually-hidden">docker_image</span> Docker image
                                     </a>
                                 
                                 
+                                    <div class="dropdown-divider"></div>
+                                
+                                
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                        <a class="dropdown-item" href="https://usegalaxy.eu" title="Galaxy Europe">
+                                            Galaxy Europe
+                                        </a>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
                                 
                             </div>
                         </li>
@@ -73,7 +189,7 @@
                     
                     <li class="nav-item">
                         <a class="nav-link" href="/training-material/topics/proteomics#references" title="References">
-                            <i class="fa fa-book" aria-hidden="true"></i><span class="visually-hidden">references</span> Literature
+                            <i class="fa fa-bookmark" aria-hidden="true"></i><span class="visually-hidden">references</span> Literature
                         </a>
                     </li>
                     
@@ -87,17 +203,17 @@
             FAQ
         </a>
         <a class="dropdown-item" href="https://gitter.im/Galaxy-Training-Network/Lobby" title="Chat on Gitter">
-            Gitter
+            Chat on Gitter
         </a>
         <a class="dropdown-item" href="https://biostar.usegalaxy.org/" title="Ask on Biostars">
-            Biostars
+            Ask questions on Biostars
         </a>
     </div>
 </li>
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/shiltemann/training-material/edit/master/topics/proteomics/tutorials/protein-id-oms/tutorial.md">
+                        <a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/master/topics/proteomics/tutorials/protein-id-oms/tutorial.md">
                             <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit
                         </a>
                     </li>
@@ -108,6 +224,54 @@
 </header>
 
 <div class="container main-content">
+    <script type="application/ld+json">
+   
+{
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "name": "Peptide and Protein ID using OpenMS tools",
+  "accessModeSufficient": "visual",
+  "accessibilityControl": "fullMouseControl",
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
+  "learningResourceType": "",
+  "url": "/topics/proteomics/tutorials/protein-id-oms/tutorial.html",
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "https://zenodo.org/record/546301",
+      "name": "Training data for Peptide and Protein ID using OpenMS tools tutorial"
+    }
+  ],
+  "timeRequired": "PT45M",
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "stortebecker"
+    },
+    {
+      "@type": "Person",
+      "name": "bgruening"
+    }
+  ],
+  "description": "The questions this  addresses are:\n - How to convert LC-MS/MS raw files?\n - How to identify peptides?\n - How to identify proteins?\n - How to evaluate the results?\n\n\\nThe objectives are:\n - Protein identification from LC-MS/MS raw files.\n\n"
+}
+
+    </script>
     <section class="tutorial">
         <h1>Peptide and Protein ID using OpenMS tools</h1>
 
@@ -140,7 +304,7 @@
             
                 <li>
                     
-                    <a href="/training-material/topics//introduction/">Galaxy introduction</a>
+                    <a href="/training-material/topics/introduction/">Galaxy introduction</a>
                     
                 </li>
             
@@ -148,7 +312,9 @@
             </ul>
             
 
-            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 45min</p>
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 45 minutes</p>
+            
         </blockquote>
 
         <h1 class="no_toc" id="introduction">Introduction</h1>
@@ -216,7 +382,7 @@ If your data were generated on a low resolution mass spectrometer, use <strong><
     <li>Create a new history for this Peptide and Protein ID exercise.</li>
     <li>Load the example dataset into your history from Zenodo: <a href="https://zenodo.org/record/892005/files/qExactive01819.raw">raw</a> <a href="https://zenodo.org/record/892005/files/qExactive01819_profile.mzml">mzML</a></li>
     <li>Rename the dataset to something meaningful.</li>
-    <li>(<em>optional</em>) Run <strong><em>msconvert</em></strong> <i class="fa fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> on the test data to convert to the <code class="highlighter-rouge">mzML</code> format.</li>
+    <li>(<em>only for raw files</em>) Run <strong><em>msconvert</em></strong> <i class="fa fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> on the test data to convert to the <code class="highlighter-rouge">mzML</code> format.</li>
     <li>Run <strong><em>PeakPickerHiRes</em></strong> <i class="fa fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> on the resulting file. Click <code class="highlighter-rouge">+ Insert param.algorithm_ms_levels</code> and change the entry to “2”. Thus, peak picking will only be performed on MS2 level.</li>
   </ol>
 
@@ -245,7 +411,7 @@ To find out the peptide sequences, the MS2 spectrum is compared to a theoretical
     <li>Run the tool <strong><em>XTandemAdapter</em></strong> <i class="fa fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with:
       <ul>
         <li>the MS2-centroided mzML as <strong>Input file containing MS2 spectra</strong> and</li>
-        <li>the FASTA protein database as <strong>FASTA file or pro file</strong>.</li>
+        <li>the FASTA protein database as <strong>FASTA file</strong>.</li>
         <li>Click <code class="highlighter-rouge">+ Insert param_fixed_modifications</code> and choose <code class="highlighter-rouge">Carbamidomethyl (C)</code>.</li>
         <li>Click <code class="highlighter-rouge">+ Insert param_variable_modifications</code> and choose <code class="highlighter-rouge">Oxidation (M)</code>.</li>
       </ul>
@@ -265,7 +431,7 @@ To find out the peptide sequences, the MS2 spectrum is compared to a theoretical
 <p>The next step of peptide identification is to decide which PSMs will be used for protein inference. Measured MS2 spectra never perfectly fit the theoretical spectra. Therefore, peptide search engines calculate a score which indicates how well the measured MS2 spectrum was fitting the theoretical spectrum. How do we decide which PSMs are likely true and which are false?</p>
 
 <p>In proteomics, this decision is typically done by calculating false discovery rates (FDRs). Remember that the database we were using for peptide-to-spectrum matching consisted not only of true proteins, but also the same number of “fake entries”, the so-called decoys. Those decoys can now be used to estimate the number of false identifications in the list of PSMs.
-The calculation is based on a simple assumption: for every decoy protein identified with a given score, we expect one false positive with at least the same score.
+The calculation is based on a simple assumption: for every decoy peptide identified with a given score, we expect one false positive with at least the same score.
 The false discovery rate is therefore defined as the number of false discoveries (decoy hits) divided by the number of false and correct discoveries (both target and decoy hits) at a given score threshold.</p>
 
 <p>To calculate FDRs, we first have to annotate the identified peptides to determine which of them are decoys. This is done with the tool <strong><em>PeptideIndexer</em></strong> <i class="fa fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>. Additionally, we will calculate peptide posterior error probabilities (PEPs), because they are needed for the protein inference algorithm used by OpenMS. We will then filter for 1 % FDR and set the score back to PEP.</p>
@@ -295,7 +461,7 @@ The false discovery rate is therefore defined as the number of false discoveries
     <li>Run <strong><em>IDScoreSwitcher</em></strong> <i class="fa fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with
       <ul>
         <li><strong>Name of the meta value to use as the new score</strong> set to “Posterior Probability_score”, and</li>
-        <li>**Orientation of the new score<code class="highlighter-rouge">** set to </code>higher_better`.</li>
+        <li><strong>Orientation of the new score</strong> set to <code class="highlighter-rouge">higher_better</code>.</li>
       </ul>
     </li>
     <li>Run <strong><em>FileInfo</em></strong> <i class="fa fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> to get basic information about the identified peptides.</li>
@@ -349,9 +515,8 @@ It also enables you to check for contaminations in your samples.</p>
 
   <ol>
     <li>Run <strong><em>TextExporter</em></strong> <i class="fa fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> to convert the idXML output to a human-readable tabular file.</li>
-    <li>Run <strong><em>Select</em></strong> <i class="fa fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> to select all lines <strong>Matching</strong> the pattern “CONTAMINANT”.</li>
-    <li>Run <strong><em>Select</em></strong> <i class="fa fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> to select all lines that <strong>NOT Matching</strong> the pattern “HUMAN”.</li>
-    <li>Remove all bovine and mycoplasma proteins from your list by running <strong><em>Select</em></strong> <i class="fa fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>. Select only those lines <strong>NOT Matching</strong> match the pattern “HUMAN”.</li>
+    <li>Run <strong><em>Select lines that match an expression</em></strong> <i class="fa fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> on the TextExporter output to select all lines <strong>Matching</strong> the pattern “CONTAMINANT”.</li>
+    <li>Remove all non human proteins (e.g. bovine) from your TextExporter list by running <strong><em>Select lines that match an expression</em></strong> <i class="fa fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> only those lines <strong>Matching</strong> the pattern “HUMAN”.</li>
   </ol>
 
   <blockquote class="question">
@@ -406,6 +571,7 @@ By comparing results of multiple search engines, you may improve the <em>sensiti
       <ul>
         <li>the output of <strong>IDScoreSwitcher</strong> based on <strong>XTandemAdapter</strong></li>
         <li>the output of <strong>IDScoreSwitcher</strong> based on <strong>MSGFPlusAdapter</strong></li>
+        <li><strong>Reduce collections</strong> set to <code class="highlighter-rouge">reduce collections by aggregating single files of multiple collections</code></li>
       </ul>
     </li>
     <li>Run <strong><em>ConsensusID</em></strong> <i class="fa fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>.</li>
@@ -489,15 +655,15 @@ By comparing results of multiple search engines, you may improve the <em>sensiti
         
 
         <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
-
         <hr>
+        <br>
+
+        <iframe class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Peptide and Protein ID using OpenMS tools (Proteomics)">Loading...
+        </iframe>
 
         <blockquote class="feedback">
-            <h3><i class="fa fa-comments-o" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Help us improve this content!</h3>
-            Please take a moment to fill in the Galaxy Training Network
-            <a href="https://tinyurl.com/GTNfeedback">Feedback Form</a>.
-            Your feedback helps us improve this tutorial and will be considered
-            in future revisions.
+            <h3><i class="fa fa-comments-o" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
+            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=Peptide and Protein ID using OpenMS tools (Proteomics)">Feedback Form</a>.</p>
         </blockquote>
     </section>
 </div>
@@ -508,11 +674,11 @@ By comparing results of multiple search engines, you may improve the <em>sensiti
         <p>
             This material is the result of a collaborative work. Thanks to the
             <a href="https://wiki.galaxyproject.org/Teach/GTN">Galaxy Training Network</a>
-            and all the <a href="/training-material/hall-of-fame">contributors</a> (Florian Christoph Sigloch, Björn Grüning)!
+            and all the <a href="/training-material/hall-of-fame">contributors</a> (Björn Grüning, Florian Christoph Sigloch)!
         </p>
         <p>
             Found a typo? Something is wrong in this tutorial? Edit it on
-            <a href="https://github.com/shiltemann/training-material/tree/master/topics/proteomics/tutorials/protein-id-oms/tutorial.md">GitHub</a>.
+            <a href="https://github.com/galaxyproject/training-material/tree/master/topics/proteomics/tutorials/protein-id-oms/tutorial.md">GitHub</a>.
         </p>
     </div>
 </footer>

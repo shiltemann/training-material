@@ -6,11 +6,35 @@
 
 
 
+
+
+
   <head>
     <meta charset="utf-8">
     <title>Overview of the Galaxy Training Material</title>
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', '0xdeadbeef' , 'auto');
+        ga('send', 'pageview');
+    </script>
+    
     <link rel="stylesheet" href="/training-material/assets/css/slides.css">
     <link rel="stylesheet" href="/training-material/assets/css/font-awesome.css" id="theme">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+    
+    
+    
+    
+    <meta name="description" content="Galaxy is a great solution to train the bioinformatics co..." />
+    <meta property="og:title" content="Galaxy Training: Overview of the Galaxy Training Material" />
+    <meta property="og:description" content="Galaxy is a great solution to train the bioinformatics co..." />
+    <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
   </head>
   <body>
     <textarea id="source">
@@ -65,7 +89,7 @@ One website, aggregating training material covering many current research topics
 ![Screenshot with 2 web-browsers open side-by-side: one pointed at the current tutorial and the other at a Galaxy instance](../images/interactive_hands_on.png)
 
 &lt;small&gt;
-Usable for individual users &amp; instructors
+Usable by individual users &amp; instructors
 &lt;/small&gt;
 
 ---
@@ -118,7 +142,7 @@ Tutorials:
 ### Run the website locally
 
 1. Install the requirements
-2. Check the website locally on http://127.0.0.1:4000
+2. Check the website locally on http://127.0.0.1:4000/training-material/
 3. Stop the server
 
 Tutorial: [Running the Galaxy Training material website locally](../tutorials/running-jekyll/tutorial.html)
@@ -135,9 +159,9 @@ Tutorial: [Including a new topic](../tutorials/create-new-topic/tutorial.html)
 ---
 ### Creating a new tutorial
 
-1. Define the topic
-2. Create the directory for the tutorial
-3. Add metadata ([tutorial](../tutorials/create-new-tutorial-metadata/tutorial.html))
+1. Define the topic ([tutorial](../tutorials/create-new-topic/tutorial.html))
+2. Create the directory for the tutorial ([tutorial](../tutorials/create-new-tutorial/tutorial.html))
+3. Add metadata
 4. Creata a toy dataset
 5. Write the tutorial ([tutorial](../tutorials/create-new-tutorial-content/tutorial.html))
 6. Add some technical support ([tutorial](../tutorials/create-new-tutorial-technical/tutorial.html))
@@ -157,13 +181,10 @@ Tutorial: [Creating a new tutorial](../tutorials/create-new-tutorial/tutorial.ht
 
 
 
+
 ## Related tutorials
 
 
-    
-
-    
-        
     
 
     
@@ -226,8 +247,6 @@ This material is the result of a collaborative work. Thanks the [Galaxy Training
 <img src="/training-material/assets/images/GTN.png" alt="Galaxy Training Network" style="height: 100px;"/>
 
 
-
-.footnote[Found a typo? Something is wrong in this tutorial? <br/>Edit it on [GitHub](https://github.com/shiltemann/training-material/tree/master/topics/contributing/slides/introduction.html)]
 
     </textarea>
     <script src="/training-material/assets/js/remark-latest.min.js" type="text/javascript">

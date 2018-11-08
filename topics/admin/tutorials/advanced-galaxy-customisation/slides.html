@@ -6,11 +6,35 @@
 
 
 
+
+
+
   <head>
     <meta charset="utf-8">
     <title>Advanced customisation of a Galaxy instance</title>
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', '0xdeadbeef' , 'auto');
+        ga('send', 'pageview');
+    </script>
+    
     <link rel="stylesheet" href="/training-material/assets/css/slides.css">
     <link rel="stylesheet" href="/training-material/assets/css/font-awesome.css" id="theme">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+    
+    
+    
+    
+    <meta name="description" content="Resources related to configuration and maintenance of Gal..." />
+    <meta property="og:title" content="Galaxy Training: Advanced customisation of a Galaxy instance" />
+    <meta property="og:description" content="Resources related to configuration and maintenance of Gal..." />
+    <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
   </head>
   <body>
     <textarea id="source">
@@ -124,7 +148,7 @@ Plenty of customisation can be achieved using settings in the main configuration
 
 ### Tool Panel configuration
 
-* How the toolpanel looks like is decided in a file called `integrated_tool_panel.xml`.
+* How the tool panel looks like is decided in a file called `integrated_tool_panel.xml`.
 * By default it resides in Galaxy's root folder.
 * If missing it is generated from all other tool config files during startup.
 * Modify it if you want to reorder tools or move sections.
@@ -394,6 +418,8 @@ This material is the result of a collaborative work. Thanks the [Galaxy Training
 <img src="/training-material/assets/images/GTN.png" alt="Galaxy Training Network" style="height: 100px;"/>
 
 
+
+.footnote[Found a typo? Something is wrong in this tutorial? <br/>Edit it on [GitHub](https://github.com/galaxyproject/training-material/tree/master/topics/admin/tutorials/advanced-galaxy-customisation/slides.html)]
 
     </textarea>
     <script src="/training-material/assets/js/remark-latest.min.js" type="text/javascript">

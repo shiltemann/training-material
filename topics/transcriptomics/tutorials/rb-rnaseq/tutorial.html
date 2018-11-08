@@ -4,13 +4,33 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Galaxy Training!</title>
+        <title>Reference-based RNAseq data analysis (long)</title>
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', '0xdeadbeef' , 'auto');
+            ga('send', 'pageview');
+        </script>
+        
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
         <link rel="stylesheet" href="/training-material/assets/css/font-awesome.css">
         <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
         <link rel="stylesheet" href="/training-material/assets/css/syntax_highlighting.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+        
+        
+        
+        
+        
+        <meta name="description" content="Training material for all kinds of transcriptomics analysis." />
+        <meta property="og:title" content="Galaxy Training: Reference-based RNAseq data analysis (long)" />
+        <meta property="og:description" content="Training material for all kinds of transcriptomics analysis." />
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
     </head>
     <body>
         
@@ -38,8 +58,10 @@
                     </li>
 
                     
-                        
-                        
+                    
+                    
+
+                    
                         
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Introduction slides">
@@ -72,6 +94,18 @@
                                         
                                     
                                         
+                                    
+                                        
+                                    
+                                        
+                                            
+                                        
+                                    
+                                        
+                                            
+                                        
+                                    
+                                        
                                             
                                         
                                     
@@ -89,7 +123,7 @@
                     
                     <li class="nav-item">
                         <a class="nav-link" href="/training-material/topics/transcriptomics#references" title="References">
-                            <i class="fa fa-book" aria-hidden="true"></i><span class="visually-hidden">references</span> Literature
+                            <i class="fa fa-bookmark" aria-hidden="true"></i><span class="visually-hidden">references</span> Literature
                         </a>
                     </li>
                     
@@ -103,17 +137,17 @@
             FAQ
         </a>
         <a class="dropdown-item" href="https://gitter.im/Galaxy-Training-Network/Lobby" title="Chat on Gitter">
-            Gitter
+            Chat on Gitter
         </a>
         <a class="dropdown-item" href="https://biostar.usegalaxy.org/" title="Ask on Biostars">
-            Biostars
+            Ask questions on Biostars
         </a>
     </div>
 </li>
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/shiltemann/training-material/edit/master/topics/transcriptomics/tutorials/rb-rnaseq/tutorial.md">
+                        <a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/master/topics/transcriptomics/tutorials/rb-rnaseq/tutorial.md">
                             <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit
                         </a>
                     </li>
@@ -124,6 +158,50 @@
 </header>
 
 <div class="container main-content">
+    <script type="application/ld+json">
+   
+{
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "name": "Reference-based RNAseq data analysis (long)",
+  "accessModeSufficient": "visual",
+  "accessibilityControl": "fullMouseControl",
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
+  "learningResourceType": "",
+  "url": "/topics/transcriptomics/tutorials/rb-rnaseq/tutorial.html",
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "",
+      "name": "Training data for Reference-based RNAseq data analysis (long) tutorial"
+    }
+  ],
+  "timeRequired": "PT1H",
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "nekrut"
+    }
+  ],
+  "description": "The questions this  addresses are:\n - How to perform analysis of RNAseq data when reference genome is available?\n\n\\nThe objectives are:\n - Learns basic concepts of RNAseq analysis\n\n"
+}
+
+    </script>
     <section class="tutorial">
         <h1>Reference-based RNAseq data analysis (long)</h1>
 
@@ -150,13 +228,13 @@
             
                 <li>
                     
-                    <a href="/training-material/topics//introduction/">Galaxy introduction</a>
+                    <a href="/training-material/topics/introduction/">Galaxy introduction</a>
                     
                 </li>
             
                 <li>
                     
-                    <a href="/training-material/topics//sequence-analysis/">Quality control</a>
+                    <a href="/training-material/topics/sequence-analysis/">Quality control</a>
                     
                 </li>
             
@@ -164,7 +242,9 @@
             </ul>
             
 
-            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 1h</p>
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 1 hour</p>
+            
         </blockquote>
 
         <h1 id="rnaseq-reference-based">RNAseq: Reference-based</h1>
@@ -539,7 +619,7 @@ to test for differential gene expression.</p>
 <h4 id="loading-the-data-and-create-dataset-collections">Loading the data and create dataset collections</h4>
 
 <blockquote>
-  <p>Go to the <a href="https://usegalaxy.org/library/list#folders/Ff4ce53393dae30ee">data library</a> and select all fastq files. Then Click <code class="highlighter-rouge">to History</code> button:</p>
+  <p>Go to the data library (ask your instructor) and select all fastq files. Then Click <code class="highlighter-rouge">to History</code> button:</p>
 
   <p><img src="../../images/rnaseq_library.png" alt="Data libraries" /></p>
 
@@ -633,7 +713,7 @@ The <code class="highlighter-rouge">htseq-count</code> script of the HTSeq suite
   <table>
     <tbody>
       <tr>
-        <td>Select <strong>htseq-count</strong> from <strong>NGS: RNA analysis</strong> section on the left side of the menu. Set parameters as shown below. The red arrow points that to enable <code class="highlighter-rouge">htseq-count</code> to see collections, you need to select the ‘folder’ button. In the case of this particular Galaxy <a href="https://usegalaxy.org/u/aun1/h/rna-seq-tutorial">history</a> we will need to run <code class="highlighter-rouge">htseq-count</code> twice. Once on TopHat alignemnts for collection <strong>c1</strong> (dataset #37; shown below) and then on alignments for collection <strong>c2</strong> (dataset # 57).</td>
+        <td>Select <strong>htseq-count</strong> from <strong>NGS: RNA analysis</strong> section on the left side of the menu. Set parameters as shown below. The red arrow points that to enable <code class="highlighter-rouge">htseq-count</code> to see collections, you need to select the ‘folder’ button. In the case of this particular Galaxy history we will need to run <code class="highlighter-rouge">htseq-count</code> twice. Once on TopHat alignemnts for collection <strong>c1</strong> (dataset #37; shown below) and then on alignments for collection <strong>c2</strong> (dataset # 57).</td>
         <td> </td>
       </tr>
       <tr>
@@ -643,7 +723,7 @@ The <code class="highlighter-rouge">htseq-count</code> script of the HTSeq suite
     </tbody>
   </table>
 
-  <p>This will generate <a href="https://usegalaxy.org/datasets/bbd44e69cb8906b5d1e80eae6d363142/display/?preview=True">read counts per gene</a>.</p>
+  <p>This will generate read counts per gene.</p>
 </blockquote>
 
 <h4 id="normalizing-read-counts-and-computing-differential-expression-with-deseq2">Normalizing read counts and computing differential expression with <code class="highlighter-rouge">DESeq2</code></h4>
@@ -666,11 +746,11 @@ The <code class="highlighter-rouge">htseq-count</code> script of the HTSeq suite
 
   <p><img src="../../images/deseq2_interface.png" alt="DESeq2 parameters" /></p>
 
-  <p>This will produce <a href="https://usegalaxy.org/datasets/bbd44e69cb8906b5d648fe21c36ac662/display/?preview=True">output</a> as shown below. The columns are: (<strong>1</strong>) gene identifier, (<strong>2</strong>) mean normalised counts, averaged over all samples from both conditions, (<strong>3</strong>) logarithm (base 2) of the fold change, (<strong>4</strong>) the standard error estimate for the log2 fold change estimate, (<strong>5</strong>) <a href="https://en.wikipedia.org/wiki/Wald_test">Wald test</a> statistic, (<strong>6</strong>) p value for the statistical significance of this change, and (<strong>7</strong>) <em>p</em>-value adjusted for multiple testing with the Benjamini-Hochberg procedure which controls false discovery rate (<a href="https://en.wikipedia.org/wiki/False_discovery_rate">FDR</a>). There is only one gene with significant change in gene expression between conditions: <code class="highlighter-rouge">CG1803-RC</code> with <em>p</em>-value = 1.6x10<sup>-05</sup></p>
+  <p>This will produce output as shown below. The columns are: (<strong>1</strong>) gene identifier, (<strong>2</strong>) mean normalised counts, averaged over all samples from both conditions, (<strong>3</strong>) logarithm (base 2) of the fold change, (<strong>4</strong>) the standard error estimate for the log2 fold change estimate, (<strong>5</strong>) <a href="https://en.wikipedia.org/wiki/Wald_test">Wald test</a> statistic, (<strong>6</strong>) p value for the statistical significance of this change, and (<strong>7</strong>) <em>p</em>-value adjusted for multiple testing with the Benjamini-Hochberg procedure which controls false discovery rate (<a href="https://en.wikipedia.org/wiki/False_discovery_rate">FDR</a>). There is only one gene with significant change in gene expression between conditions: <code class="highlighter-rouge">CG1803-RC</code> with <em>p</em>-value = 1.6x10<sup>-05</sup></p>
 
   <p><img src="../../images/deseq2_output.png" alt="DESeq2 output" /></p>
 
-  <p>In addition to the <a href="https://usegalaxy.org/datasets/bbd44e69cb8906b5d648fe21c36ac662/display/?preview=True">list of genes</a> DESeq2 outputs a graphical summary of the result. It includes a number of plots that should be used to evaluate the quality of the experiment. The histogram of <em>p</em>-values below shows that in our sample there is in fact just one instance of a significant <em>p</em>-value:</p>
+  <p>In addition to the list of genes DESeq2 outputs a graphical summary of the result. It includes a number of plots that should be used to evaluate the quality of the experiment. The histogram of <em>p</em>-values below shows that in our sample there is in fact just one instance of a significant <em>p</em>-value:</p>
 
   <p><img src="../../images/p_val_hist.png" alt="p values histogram" /></p>
 
@@ -698,15 +778,15 @@ The <code class="highlighter-rouge">htseq-count</code> script of the HTSeq suite
         
 
         <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
-
         <hr>
+        <br>
+
+        <iframe class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Reference-based RNAseq data analysis (long) (Transcriptomics)">Loading...
+        </iframe>
 
         <blockquote class="feedback">
-            <h3><i class="fa fa-comments-o" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Help us improve this content!</h3>
-            Please take a moment to fill in the Galaxy Training Network
-            <a href="https://tinyurl.com/GTNfeedback">Feedback Form</a>.
-            Your feedback helps us improve this tutorial and will be considered
-            in future revisions.
+            <h3><i class="fa fa-comments-o" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
+            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=Reference-based RNAseq data analysis (long) (Transcriptomics)">Feedback Form</a>.</p>
         </blockquote>
     </section>
 </div>
@@ -721,7 +801,7 @@ The <code class="highlighter-rouge">htseq-count</code> script of the HTSeq suite
         </p>
         <p>
             Found a typo? Something is wrong in this tutorial? Edit it on
-            <a href="https://github.com/shiltemann/training-material/tree/master/topics/transcriptomics/tutorials/rb-rnaseq/tutorial.md">GitHub</a>.
+            <a href="https://github.com/galaxyproject/training-material/tree/master/topics/transcriptomics/tutorials/rb-rnaseq/tutorial.md">GitHub</a>.
         </p>
     </div>
 </footer>

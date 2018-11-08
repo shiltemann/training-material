@@ -4,13 +4,33 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Galaxy Training!</title>
+        <title>Introduction to Genome Assembly</title>
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', '0xdeadbeef' , 'auto');
+            ga('send', 'pageview');
+        </script>
+        
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
         <link rel="stylesheet" href="/training-material/assets/css/font-awesome.css">
         <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
         <link rel="stylesheet" href="/training-material/assets/css/syntax_highlighting.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+        
+        
+        
+        
+        
+        <meta name="description" content="DNA sequence data has become an indispensable tool for Mo..." />
+        <meta property="og:title" content="Galaxy Training: Introduction to Genome Assembly" />
+        <meta property="og:description" content="DNA sequence data has become an indispensable tool for Mo..." />
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
     </head>
     <body>
         
@@ -36,6 +56,10 @@
                             <i class="fa fa-folder-o" aria-hidden="true"></i><span class="visually-hidden">topic</span> Assembly
                         </a>
                     </li>
+
+                    
+                    
+                    
 
                     
                     <li class="nav-item">
@@ -66,17 +90,11 @@
                                         
                                     
                                         
+                                    
+                                        
                                         <a class="dropdown-item" href="https://bipaa-galaxy.genouest.org" title="BIPAA">
                                             BIPAA
                                         </a>
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
-                                        
-                                    
                                         
                                     
                                         
@@ -153,6 +171,8 @@
                                     
                                         
                                     
+                                        
+                                    
                                 
                             </div>
                         </li>
@@ -171,7 +191,7 @@
                     
                     <li class="nav-item">
                         <a class="nav-link" href="/training-material/topics/assembly#references" title="References">
-                            <i class="fa fa-book" aria-hidden="true"></i><span class="visually-hidden">references</span> Literature
+                            <i class="fa fa-bookmark" aria-hidden="true"></i><span class="visually-hidden">references</span> Literature
                         </a>
                     </li>
                     
@@ -185,17 +205,17 @@
             FAQ
         </a>
         <a class="dropdown-item" href="https://gitter.im/Galaxy-Training-Network/Lobby" title="Chat on Gitter">
-            Gitter
+            Chat on Gitter
         </a>
         <a class="dropdown-item" href="https://biostar.usegalaxy.org/" title="Ask on Biostars">
-            Biostars
+            Ask questions on Biostars
         </a>
     </div>
 </li>
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/shiltemann/training-material/edit/master/topics/assembly/tutorials/general-introduction/tutorial.md">
+                        <a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/master/topics/assembly/tutorials/general-introduction/tutorial.md">
                             <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit
                         </a>
                     </li>
@@ -206,6 +226,50 @@
 </header>
 
 <div class="container main-content">
+    <script type="application/ld+json">
+   
+{
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "name": "Introduction to Genome Assembly",
+  "accessModeSufficient": "visual",
+  "accessibilityControl": "fullMouseControl",
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
+  "learningResourceType": "",
+  "url": "/topics/assembly/tutorials/general-introduction/tutorial.html",
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "https://doi.org/10.5281/zenodo.582600",
+      "name": "Training data for Introduction to Genome Assembly tutorial"
+    }
+  ],
+  "timeRequired": "PT30M",
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "slugger70"
+    }
+  ],
+  "description": "The questions this  addresses are:\n - How do we perform a very basic genome assembly from short read data?\n\n\\nThe objectives are:\n - assemble some paired end reads using Velvet\n - examine the output of the assembly.\n\n"
+}
+
+    </script>
     <section class="tutorial">
         <h1>Introduction to Genome Assembly</h1>
 
@@ -234,13 +298,13 @@
             
                 <li>
                     
-                    <a href="/training-material/topics//introduction/">Galaxy introduction</a>
+                    <a href="/training-material/topics/introduction/">Galaxy introduction</a>
                     
                 </li>
             
                 <li>
                     
-                    <a href="/training-material/topics//sequence-analysis/">Quality Control</a>
+                    <a href="/training-material/topics/sequence-analysis/">Quality Control</a>
                     
                 </li>
             
@@ -248,7 +312,9 @@
             </ul>
             
 
+            
             <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 30 minutes</p>
+            
         </blockquote>
 
         <h1 class="no_toc" id="genome-assembly-with-velvet-background">Genome assembly with Velvet: Background</h1>
@@ -312,15 +378,14 @@
       <p>As a default, Galaxy uses the link as the name of the new dataset. It also does not link the dataset to a database or a reference genome.</p>
 
       <blockquote class="tip">
-        <h3 id="tip-tip-changing-the-name-of-a-dataset"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Changing the name of a dataset</h3>
 
+        <h3 id="tip-tip-rename-a-dataset"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Rename a dataset</h3>
         <ul>
-          <li>Click on <strong>Edit attributes</strong> <img src="../../images/edit_file.png" alt="Pencil icon" /> icon next to the relevant history entry</li>
-          <li>Change the <strong>Name</strong> in <code class="highlighter-rouge">Attributes</code> panel</li>
+          <li>Click on the <i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">galaxy-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>
+          <li>In the central panel, change the <strong>Name</strong> field</li>
+          <li>Click the <strong>Save</strong> button</li>
         </ul>
       </blockquote>
-
-      <figure id="figure-1"><img src="../../images/starting_history.png" alt="Imported datasets will appear in the history panel" title="Imported datasets in the history panel" /><figcaption><span class="figcaption-prefix">Figure 1:</span> Imported datasets in the history panel</figcaption></figure>
     </li>
     <li>
       <p>Inspect the content of a file.</p>
@@ -329,8 +394,8 @@
         <h3 id="tip-tip-inspecting-the-content-of-a-dataset"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Inspecting the content of a dataset</h3>
 
         <ul>
-          <li>Click on <strong>View Data</strong> (the <img src="../../images/eye.png" alt="Eye icon" />) icon next to the relevant history entry</li>
-          <li>View the content of the file in the middle panel</li>
+          <li>Click on the <i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> (eye) icon next to the relevant history entry</li>
+          <li>View the content of the file in the central panel</li>
         </ul>
       </blockquote>
 
@@ -442,7 +507,7 @@
 
     <p>Dips in quality near the beginning, middle or end of the reads may determine the trimming/cleanup methods and parameters to be used, or may indicate technical problems with the sequencing process/machine run.</p>
 
-    <figure id="figure-2"><img src="../../images/fastqc_per_base_sequence_quality_plot.png" alt="Sequence Quality Histograms with the mean quality value across each base position in the read" title="The mean quality value across each base position in the read" /><figcaption><span class="figcaption-prefix">Figure 2:</span> The mean quality value across each base position in the read</figcaption></figure>
+    <figure id="figure-1"><img src="../../images/fastqc_per_base_sequence_quality_plot.png" alt="Sequence Quality Histograms with the mean quality value across each base position in the read" title="The mean quality value across each base position in the read" /><figcaption><span class="figcaption-prefix">Figure 1:</span> The mean quality value across each base position in the read</figcaption></figure>
 
     <blockquote class="question">
       <h3 id="question-questions-2"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</h3>
@@ -667,13 +732,13 @@
 
 <p>We have completed an assembly on this data set for a number of k values ranging from 29 to 101. A few of the assembly metrics appear below.</p>
 
-<figure id="figure-3"><img src="../../images/number_of_contigs.png" alt="contigs" title="Number of contigs in the assembly for various k-mer sizes" /><figcaption><span class="figcaption-prefix">Figure 3:</span> Number of contigs in the assembly for various k-mer sizes</figcaption></figure>
+<figure id="figure-2"><img src="../../images/number_of_contigs.png" alt="contigs" title="Number of contigs in the assembly for various k-mer sizes" /><figcaption><span class="figcaption-prefix">Figure 2:</span> Number of contigs in the assembly for various k-mer sizes</figcaption></figure>
 
-<figure id="figure-4"><img src="../../images/largest_contig.png" alt="largest_contig" title="Largest contig in each of the assemblies by k-mer size" /><figcaption><span class="figcaption-prefix">Figure 4:</span> Largest contig in each of the assemblies by k-mer size</figcaption></figure>
+<figure id="figure-3"><img src="../../images/largest_contig.png" alt="largest_contig" title="Largest contig in each of the assemblies by k-mer size" /><figcaption><span class="figcaption-prefix">Figure 3:</span> Largest contig in each of the assemblies by k-mer size</figcaption></figure>
 
-<figure id="figure-5"><img src="../../images/total_bp.png" alt="total_bp" title="Total number of base pairs in all the contigs for each assembly by k-mer size" /><figcaption><span class="figcaption-prefix">Figure 5:</span> Total number of base pairs in all the contigs for each assembly by k-mer size</figcaption></figure>
+<figure id="figure-4"><img src="../../images/total_bp.png" alt="total_bp" title="Total number of base pairs in all the contigs for each assembly by k-mer size" /><figcaption><span class="figcaption-prefix">Figure 4:</span> Total number of base pairs in all the contigs for each assembly by k-mer size</figcaption></figure>
 
-<figure id="figure-6"><img src="../../images/n50.png" alt="n50" title="N50 metric for each of the assemblies by k-mer size" /><figcaption><span class="figcaption-prefix">Figure 6:</span> N50 metric for each of the assemblies by k-mer size</figcaption></figure>
+<figure id="figure-5"><img src="../../images/n50.png" alt="n50" title="N50 metric for each of the assemblies by k-mer size" /><figcaption><span class="figcaption-prefix">Figure 5:</span> N50 metric for each of the assemblies by k-mer size</figcaption></figure>
 
 <blockquote class="question">
   <h3 id="question-questions-3"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</h3>
@@ -712,15 +777,15 @@
         
 
         <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
-
         <hr>
+        <br>
+
+        <iframe class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Introduction to Genome Assembly (Assembly)">Loading...
+        </iframe>
 
         <blockquote class="feedback">
-            <h3><i class="fa fa-comments-o" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Help us improve this content!</h3>
-            Please take a moment to fill in the Galaxy Training Network
-            <a href="https://tinyurl.com/GTNfeedback">Feedback Form</a>.
-            Your feedback helps us improve this tutorial and will be considered
-            in future revisions.
+            <h3><i class="fa fa-comments-o" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
+            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=Introduction to Genome Assembly (Assembly)">Feedback Form</a>.</p>
         </blockquote>
     </section>
 </div>
@@ -735,7 +800,7 @@
         </p>
         <p>
             Found a typo? Something is wrong in this tutorial? Edit it on
-            <a href="https://github.com/shiltemann/training-material/tree/master/topics/assembly/tutorials/general-introduction/tutorial.md">GitHub</a>.
+            <a href="https://github.com/galaxyproject/training-material/tree/master/topics/assembly/tutorials/general-introduction/tutorial.md">GitHub</a>.
         </p>
     </div>
 </footer>
