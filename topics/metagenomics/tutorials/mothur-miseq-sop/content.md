@@ -10,12 +10,12 @@ In this tutorial we will perform an analysis based on the
 >
 > {% if include.short %}
 > This is the **shortened version**. Instead of running each tool individually, we will employ
-> workflows to run groups of analysis steps at once (e.g. data cleaning). If you would like
+> workflows to run groups of analysis steps (e.g. data cleaning) at once. If you would like
 > more in-depth discussion of each step, please see the [longer version of tutorial]({{ site.baseurl }}{% link topics/metagenomics/tutorials/mothur-miseq-sop/tutorial.md %})
 > {% else %}
 > This is the **extended version**. We will run every tool manually and discuss the results in detail.
 > If you would like to run through the tutorial a bit quicker and use workflows to run groups of
-> analysis steps at once (e.g. data cleaning), please see the [shorter version of this tutorial]({{ site.baseurl }}{% link topics/metagenomics/tutorials/mothur-miseq-sop-short/tutorial.md %})
+> analysis steps (e.g. data cleaning) at once, please see the [shorter version of this tutorial]({{ site.baseurl }}{% link topics/metagenomics/tutorials/mothur-miseq-sop-short/tutorial.md %})
 > {% endif %}
 {: .comment}
 
@@ -412,7 +412,7 @@ M00967_43_000000000-A3JHG_1_1101_13234_1983  10522   425    281   340     205
 The first column contains the read names of the representative sequences, and the subsequent columns contain
 the number of duplicates of this sequence observed in each sample.
 
-## Sequence Alignment
+# Sequence Alignment
 
 For more information on the topic of alignment, please see our training materials
 [here]({{site.baseurl}}{% link topics/sequence-analysis/index.md %})
@@ -462,7 +462,7 @@ long stretches are likely the result of PCR errors and we would be wise to remov
 Next we will clean our data further by removing poorly aligned sequences and any sequences with long
 homopolymer stretches.
 
-### More Data Cleaning
+# More Data Cleaning
 
 To ensure that all our reads overlap our region of interest, we will remove any reads not overlapping the region
 from position 1968 to 11550 using the **Screen.seqs** tool. To make sure they overlap *only* that region, we will
@@ -670,7 +670,7 @@ The data is now as clean as we can get it. In the next section we will use the M
 our sequencing and bioinformatics pipeline is.
 
 
-## Optional: Calculate error rates based on our mock community
+# Optional: Calculate error rates based on our mock community
 
 
 > ### {% icon comment %} Skipping the mock community analysis
@@ -883,7 +883,13 @@ best efforts, some chimeras or other contaminations may have slipped through our
 Now that we have assessed our error rates we are ready for some real analysis.
 
 
-### Removing Mock sample
+# OTU-based Analysis
+
+In this tutorial we will continue with an OTU-based approach, for the phylotype and phylogenic
+approaches, please refer to the [mothur wiki page](https://www.mothur.org/wiki/MiSeq_SOP).
+
+
+## Removing Mock sample
 
 Now that we have cleaned up our data set as best we can, and assured ourselves of the quality of our sequencing
 pipeline by considering a mock sample, we are almost ready to cluster and classify our real data. But
@@ -899,11 +905,6 @@ the **Remove.groups** tool:
 >
 {: .hands_on}
 
-
-# OTU-based Analysis
-
-In this tutorial we will continue with an OTU-based approach, for the phylotype and phylogenic
-approaches, please refer to the [mothur wiki page](https://www.mothur.org/wiki/MiSeq_SOP).
 
 ## Clustering sequences into OTUs
 
