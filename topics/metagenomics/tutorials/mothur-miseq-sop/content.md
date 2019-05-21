@@ -1567,7 +1567,7 @@ of the others.
 # Visualisations
 
 We may now wish to further visualize our results. We can convert our *shared* file to the more widely used `biom` format and
-view it in a platform like [Phinch](http://www.phinch.org/).
+view it in a platform like [Phinch](http://www.phinch.org/) developed by {% cite Bik2014 %}.
 
 ## Phinch
 
