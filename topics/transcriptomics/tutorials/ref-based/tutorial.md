@@ -290,6 +290,9 @@ We will map our RNA reads to the *Drosophila melanogaster* genome using STAR.
 >    1. Rename the dataset if necessary
 >    2. Verify that the datatype is `gtf` and not `gff`, and that the database is `dm6`
 >
+>    {% include snippets/change_datatype.md %}
+>    {% include snippets/change_dbkey.md %}
+>
 > 2. **RNA STAR** {% icon tool %} with the following parameters to map your reads on the reference genome:
 >    - *"Single-end or paired-end reads"*: `Paired-end (as individual datasets)`
 >       - {% icon param-files %} *"RNA-Seq FASTQ/FASTA file, forward reads"*: the `Read 1 Output` (outputs of **Cutadapt** {% icon tool %})
