@@ -120,6 +120,12 @@ check-slides: build  ## check the markdown-formatted links in slides
 				-f {}"
 .PHONY: check-slides
 
+check-slides-internal:  ## check internal links in the remark slides
+	$(ACTIVATE_ENV) && \
+		remark -u remark-validate-links topics/**/slides*.html topics/**/slides/*.html
+.PHONY: check-slides-internal
+
+
 check-yaml: ## lint yaml files
 	$(ACTIVATE_ENV) && \
 		find . -name "*.yaml" | xargs -L 1 -I '{}' sh -c "yamllint {}" \
