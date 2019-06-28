@@ -30,6 +30,7 @@ matrix:
       if: branch != gh-pages
     - env: CHECK=htmlproofer
     - env: CHECK=htmlproofer-internal
+    - env: CHECK=slides-internal
     - env: CHECK=pdf-generation
   allow_failures:
     - env: CHECK=htmlproofer
@@ -70,6 +71,9 @@ script:
       elif [ "$CHECK" == "slides" ]
       then
         make check-slides
+      elif [ "$CHECK" == "slides-internal" ]
+      then
+        make check-slides-internal
       elif [ "$CHECK" == "site-build" ]
       then
         make build
