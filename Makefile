@@ -46,6 +46,7 @@ ACTIVATE_ENV = source $(shell dirname $(dir $(CONDA)))/bin/activate $(CONDA_ENV)
 install: clean ## install dependencies
 	$(ACTIVATE_ENV) && \
 		npm install decktape && \
+		npm install --global remark-cli remark-validate-links && \
 		gem update --system && \
 		gem install nokogiri:'1.10.0' -- --use-system-libraries --with-xml=$(CONDA_PREFIX)/lib && \
 		gem install addressable:'2.5.2' jekyll jekyll-feed jekyll-environment-variables jekyll-github-metadata jekyll-scholar csl-styles awesome_bot html-proofer pkg-config
