@@ -1,2 +1,2 @@
 metagenomics: topics/metagenomics/**/*
-transcriptomics: topics/transcriptomics/**/*
+topic:transcriptomics: topics/transcriptomics/**/*
