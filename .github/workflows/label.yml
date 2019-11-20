@@ -9,10 +9,6 @@ name: Labeler
 on: [pull_request]
 
 jobs:
-  metagenomics: topics/metagenomics/**/*
-  transcriptomics:
-    - topics/transcriptomics/**/*
-  
   runs-on: ubuntu-latest
 
   steps:
