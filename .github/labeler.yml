@@ -1,6 +1,6 @@
 topic:admin: 
   - topics/admin/**/*
-"topic:admin": 
+"topic:adminq": 
   - topics/admin/**/*
 template-and-tools:
   - bin/**/*
