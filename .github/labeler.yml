@@ -2,6 +2,10 @@ topic:admin:
   - topics/admin/**/*
 "topic:adminq": 
   - topics/admin/**/*
+admin: 
+  - topics/admin/**/*
+admin2: 
+  - topics/admin/
 template-and-tools:
   - bin/**/*
   - _includes/**/*
