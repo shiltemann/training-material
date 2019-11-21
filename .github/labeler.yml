@@ -1,5 +1,13 @@
-"topic:admin": "topics/admin/**/*"
-assembly: topics/assembly/**/*
+topic:admin: 
+  - topics/admin/**/*
+"topic:dev": 
+  - "topics/dev/**/*"
+"topic:introduction": 
+  - topics/introduction/**/*
+topic:contributing: 
+  - "topics/contributing/**/*"
+assembly: 
+  - topics/assembly/**/*
 topic/admin: topics/admin/**/*
 template-and-tools:
   - bin/**/*
