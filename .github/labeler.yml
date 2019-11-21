@@ -1,5 +1,7 @@
 topic:admin: 
   - topics/admin/**/*
+"topic:admin": 
+  - topics/admin/**/*
 template-and-tools:
   - bin/**/*
   - _includes/**/*
@@ -7,3 +9,4 @@ template-and-tools:
   - _plugins/**/*
   - assets/**/*
   - ./*
+  - *
