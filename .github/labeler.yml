@@ -1,5 +1,5 @@
-"topic:admin": topics/admin/**/*
-"topic:assembly": topics/assembly/**/*
+"topic:admin": "topics/admin/**/*"
+topic:assembly: "topics/assembly/**/*"
 template-and-tools:
   - bin/**/*
   - _includes/**/*
