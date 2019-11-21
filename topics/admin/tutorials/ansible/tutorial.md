@@ -57,21 +57,6 @@ role
 :    A folder containing some tasks, templates, files, and default values for variables. People share roles on ["Ansible Galaxy"](https://galaxy.ansible.com/).
 
 playbook
-:    a YAML file listing a set of tasks and/or roles that should be applied to a group of hosts.
-
-vault
-:    An encrypted YAML file. You put your secrets here and then you can use them in tasks/roles/playbooks.
-
-Looking at each of these briefly:
-
-## Inventory file
-
-```ini
-[webservers]
-web_a
-web_b
-
-[databases]
 db_1.example.org ansible_user=root
 ```
 
