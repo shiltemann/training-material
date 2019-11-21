@@ -9,4 +9,3 @@ template-and-tools:
   - _plugins/**/*
   - assets/**/*
   - ./*
-  - *
