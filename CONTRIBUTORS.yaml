@@ -51,7 +51,7 @@ andrewjpage:
 
 annasyme:
     name: Anna Syme
-    
+
 annefou:
     name: Anne Fouilloux
     twitter: AnneFouilloux
@@ -140,7 +140,7 @@ cganote:
 chrisbarnettster:
     name: Christopher Barnettster
     gitter: chrisbarnettster
-    
+
 daltis20012009:
     name: Krzys Poterlowicz
     github: false
@@ -360,6 +360,9 @@ melpetera:
 michelemaroni89:
     name: Michele Maroni
 
+mmiladi:
+    name: Milad Miladi
+
 moffmade:
     name: Cory Maughmer
 
@@ -490,8 +493,8 @@ subinamehta:
     linkedin: subinamehta
     gitter: subinamehta
     orcid: 0000-0001-9818-0537
-    
-    
+
+
 tealiie:
 
 thomasmanke:
