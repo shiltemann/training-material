@@ -285,10 +285,14 @@ module Jekyll
       # Add contributors/authors
       if material.key?('contributors') then
         contributors = material['contributors'].map{ |x|
-          {
-            "@type": "Person",
-            "name": "#{site['data']['contributors'][x]['name']}" #expand to use real names
-          }
+          if site['data']['contributors'].key?(x) then
+            {
+              "@type": "Person",
+              "name": "#{site['data']['contributors'][x]['name']}" #expand to use real names
+            }
+          else
+            puts "Error accessing #{x} in contributors"
+          end
         }
         data['author'] = contributors
         data['contributor'] = contributors
