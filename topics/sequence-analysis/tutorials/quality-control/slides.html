@@ -56,6 +56,16 @@ Segue: Might be concerned about different processing for each
 
 ---
 
+# Quality Control
+
+![qc](../images/pipeline-quality.png)
+
+???
+
+Second step after you have data
+
+---
+
 ### From experiments to data
 
 ![](../../images/from_exp_to_data.png)
@@ -67,60 +77,7 @@ Quality control = First step of the bioinformatics analyses
 - But no matter what technique used, same file format
 - Always should go through QC
 
-Segue: So let's look at how that data is stored
-
----
-
-### Sequences: FASTA
-
-```
->Identifier1 (comment)
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
->Identifier2 (comment)
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-XX
-```
-
-???
-
-- familiar if you've seen genomic data before
-- Starts with greater-than sign
-- Then an identifier with no spaces
-- Everything after a space is a comment
-- Newline
-- Everything up to next greater-than is sequence data (wrapping unnecessary)
-
-Segue: But this is just sequence, and we have data from a sequencer, which includes quality
-
----
-
-### Sequences: FASTQ
-
-```
-@Identifier1 (comment)
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-+
-QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
-@Identifier2 (comment)
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-+
-QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
-```
-
-???
-
-- Four lines
-- @ + identifier on first line, just like fasta
-- sequence
-- +
-- quality score characters
-
-Segue: so what do the quality chars mean?
+Segue: So let's look in detail at those qualities
 
 ---
 
@@ -168,6 +125,7 @@ Phred Quality Score | Probability of incorrect base call | Base call accuracy
 - Uses ASCII (common computer encoding, maps numbers to characters)
 - Each technology has a different mapping
 - Mostly see illumina 1.8 these days, others only if historical
+
 
 ---
 

@@ -25,11 +25,9 @@ contributors:
 
 ---
 
-# Example NGS pipeline
+# Mapping in the NGS Pipeline
 
-![High level view of a typical NGS workflow](../../images/mapping/variant_calling_workflow.png)
-
-A high level view of a typical NGS bioinformatics workflow
+![Mapping](../images/pipeline-mapping.png)
 
 ???
 - Mapping step occurs if a reference genome is available for the organism of interest
@@ -502,30 +500,6 @@ Can have learners play around with this alignment game now
 
 Or use Lego bricks, each nucleotide a different colour
 
-
-
----
-
-## Paired-end sequencing
-
-- **Sequencing:** Cut longer fragments of DNA, sequence only the ends
-
-  .center[.image-90[![Paired-end reads](../../images/mapping/pairedend_read.png)]]
-
-- **Mapping:** known distance between reads improves accuracy
-
-  .center[.image-75[![Mapping of paired-end reads](../../images/mapping/pairedend_mapping.png)]]
-
-???
-
-- The fragments are too long to sequence entirely, but we can sequence
-the ends.
-- Then we have the added information of how far apart these two reads must map
-- This improves our mapping
-
-- For example for multi-mapped reads, or repeats (next slide)
-
-
 ---
 class: top
 
@@ -585,297 +559,6 @@ class: top
     - longer than expected distance between mates: deletion in sample
     - shorter than expected distance beetween mates: insertion in sample
     - unexpected orientation of one mate: inversion in sample
-
-
----
-class: top
-
-## Paired-end FASTQ files
-
-- Sequencer produces two FASTQ files:
-  - **Forward** reads (usually **`_1`** or **`_R1`** in file name)
-  - **Reverse** reads (usually **`_2`** or **`_R2`** in file name)
-
-
-  ![Paired-end reads as two separate FASTQ files](../../images/mapping/pairedend_fastq.png)
-
-
-???
-When you have paired-end data, you will usually get 2 files.
- - File names identical except for e.g. `_1`/`_2` or `_R1`/`_R2`
- - First file contains all the forward reads ("left" sides of pairs)
- - Other file contains all the reverse reads
-
-
-Pairing also visible in read names
-  - `/1` `/2` at end or `1:` and `2:` in read ID
-
---
-- Sometimes: One **interleaved** (or **interlaced**) FASTQ file
-  - Most tools require 2 separate files
-  - {% icon tool %} De-interlace tools in Galaxy for conversion
-
-
-???
-Sometimes data can be in a single **interleaved file** (aka **interlaced**)
- - alternating forward and reverse read
- - de-interlace tools in Galaxy to convert this to two separate files
-   - because many tools require two separate files
-
-
----
-class: top
-
-## Paired-end FASTQ files
-
-- Order of reads matters!
-  - **`N`<sup>th</sup>** read in forward file <i class="fa fa-arrows-h" aria-hidden="true"></i>
-**`N`<sup>th</sup>** read in reverse file
-  - Much faster than determining pairing by read names alone
-
-
-- ***Always trim and filter together!***
-
-
-???
-Most tools blindly assume that first read in forward file is paired with first read in reverse file etc
-
-Otherwise too slow
-  - for every read, worst case have to scan all reads in other file
-  - for files with millions of reads, that is millions ^ millions
-
-
-When trimming and filtering, if a read is removed from one file, its mate must be removed from other one too!
-
-**Always trim together in paired-end mode!**
-
---
-
-.pull-left[
-.red[
-```
-@PAIR-1 forward
-GGGTGATGGCCGCTGCCGATGGCGTCAAAT
-+
-))%255CCF>>>>>>CCCCCCC65`IIII%
-```
-]
-.orange[
-```
-@PAIR-2 forward
-GATTTGGGGTTCAAAGCAGTATCGATCAA
-+
-!''3((((^^d+))%%%++)(%%%%).1)
-```
-]
-.blue[
-```
-@PAIR-3 forward
-TCGCACTCAACGCCCTGCATATGACAAGAC
-+
-A64;##=#B9=AAAAAAAAAA9#:AB95%^
-```
-]
-
-**`mysample_R1.fastq`**
-]
-
-.pull-right[
-<i class="fa fa-arrows-h" style="position:absolute;font-size:3em;left:6.4em;"></i>
-.red[
-```
-@PAIR-1 reverse
-AAGTTACCCTTAACAACTTAAGGGTTTTCA
-+
-fffddf`feedB`IABa)^%YBBBRTT\^d
-```
-]
-<i class="fa fa-arrows-h" style="position:absolute;font-size:3em;left:6.4em;"></i>
-.orange[
-```
-@PAIR-2 reverse
-AGCAGAAGTCGATGATAATACGCGTCGTTT
-+
-IIIIIII^^IIId`?III%IIIGII>IIII
-```
-]<i class="fa fa-arrows-h" style="position:absolute;font-size:3em;left:6.4em;"></i>
-.blue[
-```
-@PAIR-3 reverse
-AATCCATTTGTTCAACTCACAGTTTACCGT
-+
-9C;=;=<9@4868>9:67AA<9>65<=>59
-```
-]
-**`mysample_R2.fastq`**
-]
-
-???
-
-
-- Nth read in forward file belongs in a pair with Nth read in reverse file
-- So red reads in this slide form a pair, orange ones, etc
-
-
----
-class: top
-
-## Paired-end FASTQ files
-
-- Order of reads matters!
-  - **`N`<sup>th</sup>** read in forward file <i class="fa fa-arrows-h" aria-hidden="true"></i>
-**`N`<sup>th</sup>** read in reverse file
-  - Much faster than determining pairing by read names alone
-
-
-- ***Always trim and filter together!***
-
-.pull-left[
-<i class="fa fa-arrows-h" style="position:absolute;font-size:3em;left:6.4em;"></i>
-.red[
-```
-@PAIR-1 forward
-GGGTGATGGCCGCTGCCGATGGCGTCAAAT
-+
-))%255CCF>>>>>>CCCCCCC65`IIII%
-```
-]
-.left[<i class="fa fa-cut" style="width:15%;position:absolute;font-size:5em;"></i>]
-<i class="fa fa-arrows-h" style="position:absolute;font-size:3em;left:6.4em;"></i>
-.orange[
-```
-@PAIR-2 forward
-GATTTGGGGTTCAAAGCAGTATCGATCAA
-+
-!''3((((^^d+))%%%++)(%%%%).1)
-```
-]
-<i class="fa fa-arrows-h" style="position:absolute;font-size:3em;left:6.4em;"></i>
-.blue[
-```
-@PAIR-3 forward
-TCGCACTCAACGCCCTGCATATGACAAGAC
-+
-A64;##=#B9=AAAAAAAAAA9#:AB95%^
-```
-]
-
-**`mysample_R1.fastq`**
-]
-.pull-right[
-.red[
-```
-@PAIR-1 reverse
-AAGTTACCCTTAACAACTTAAGGGTTTTCA
-+
-fffddf`feedB`IABa)^%YBBBRTT\^d
-```
-]
-.orange[
-```
-@PAIR-2 reverse
-AGCAGAAGTCGATGATAATACGCGTCGTTT
-+
-IIIIIII^^IIId`?III%IIIGII>IIII
-```
-]
-.blue[
-```
-@PAIR-3 reverse
-AATCCATTTGTTCAACTCACAGTTTACCGT
-+
-9C;=;=<9@4868>9:67AA<9>65<=>59
-```
-]
-**`mysample_R2.fastq`**
-]
-
-???
-
-- Important to always provide both files to trimming and filtering tools together
-- If a read in one file gets removed (e.g. because it is below quality threshold), but it's mate is not, the pairing between the two files is no longer correct.
-
-- If one half of pair is trimmed, the other
- - also removed, or
- - put into separate "singletons" FASTQ file that some mappers can use
-
-- FAQ:" why not look at read names to determine pairing?"
-  - analysis would be much slower if for every read must scan (max) entire other file for mate, since often millions or reads (for whole-genome sequencing).
----
-class: top
-
-## Paired-end FASTQ files
-
-- Order of reads matters!
-  - **`N`<sup>th</sup>** read in forward file <i class="fa fa-arrows-h" aria-hidden="true"></i>
-**`N`<sup>th</sup>** read in reverse file
-  - Much faster than determining pairing by read names alone
-
-
-- ***Always trim and filter together!***
-
-.pull-left[
-<i class="fa fa-arrows-h" style="position:absolute;font-size:3em;left:6.4em;"></i>
-.red[
-```
-@PAIR-1 forward
-GGGTGATGGCCGCTGCCGATGGCGTCAAAT
-+
-))%255CCF>>>>>>CCCCCCC65`IIII%
-```
-]
-<i class="fa fa-frown-o" style="position:absolute;font-size:3em;left:6.4em;"></i>
-.blue[
-```
-@PAIR-3 forward
-TCGCACTCAACGCCCTGCATATGACAAGAC
-+
-A64;##=#B9=AAAAAAAAAA9#:AB95%^
-```
-]
-<i class="fa fa-frown-o" style="position:absolute;font-size:3em;left:6.4em;"></i>
-.green[
-```
-@PAIR-4 forward
-AAACTTCGTAGGTCCATTTGACAGCGTGCA
-+
-6664%!!III^(=%3333^^d^d:#32333
-```
-]
-**`mysample_R1.fastq`**
-]
-.pull-right[
-.red[
-```
-@PAIR-1 reverse
-AAGTTACCCTTAACAACTTAAGGGTTTTCA
-+
-fffddf`feedB`IABa)^%YBBBRTT\^d
-```
-]
-.orange[
-```
-@PAIR-2 reverse
-AGCAGAAGTCGATGATAATACGCGTCGTTT
-+
-IIIIIII^^IIId`?III%IIIGII>IIII
-```
-]
-.blue[
-```
-@PAIR-3 reverse
-AATCCATTTGTTCAACTCACAGTTTACCGT
-+
-9C;=;=<9@4868>9:67AA<9>65<=>59
-```
-]
-**`mysample_R2.fastq`**
-]
-
-
-
-???
-By cutting the yellow read only from the forward reads file, but leaving the other side of pair in the other file, an incorrect pairing is now assumed by downstream tools
 
 
 ---
@@ -984,7 +667,15 @@ Not an easy task..
 
 # SAM/BAM file format
 
-![Example of SAM file format](../../images/bam_file.png "SAM/BAM file")
+```
+1:497:R:-272+13M17D24M	113	chr1	497	37	37M	15	100338662	0
+CGGGTCTGACCTGAGGAGAACTGTGCTCCGCCTTCAG	0;==-==9;>>>>>=>>>>>>>>>>>=>>>>>>>>>>
+XT:A:U	NM:i:0	SM:i:37	AM:i:0	X0:i:1	X1:i:0	XM:i:0	XO:i:0	XG:i:0	MD:Z:37
+
+19:20389:F:275+18M2D19M	99	chr1	17644	0	37M	=	17919	314
+TATGACTGCTAATAATACCTACACATGTTAGAACCAT	>>>>>>>>>>>>>>>>>>>><<>>><<>>4::>>:<9
+RG:Z:UM0098:1	XT:A:R	NM:i:0	SM:i:0	AM:i:0	X0:i:4	X1:i:0	XM:i:0	XO:i:0	XG:i:0	MD:Z:37
+```
 
 **SAM:** **S**equence **A**lignment **M**ap
 
@@ -994,7 +685,18 @@ Not an easy task..
 
 # SAM/BAM file format
 
-![More detailed view of SAM format](../../images/bam_file_explained.png "SAM/BAM file detail")
+```
+1:497:R:-272+13M17D24M	113	chr1	497	37	37M	15	100338662	0
+CGGGTCTGACCTGAGGAGAACTGTGCTCCGCCTTCAG	0;==-==9;>>>>>=>>>>>>>>>>>=>>>>>>>>>>
+XT:A:U	NM:i:0	SM:i:37	AM:i:0	X0:i:1	X1:i:0	XM:i:0	XO:i:0	XG:i:0	MD:Z:37
+```
+
+Value                    | Meaning
+---                      | ---
+`1:497:R:-272+13M17D24M` | Read ID
+`chr1	497	37`          | Read position (chr, start, length)
+`37M`                    | CIGAR string representing alignment (37 Matches)
+`CGGGTCTGACCTG...`       | Read Sequence
 
 
 - Original read information (from FASTQ) plus mapping information

@@ -1,0 +1,82 @@
+---
+layout: introduction_slides
+logo: "GTN"
+class: enlarge120
+
+title: "Introduction to Sequence Analysis"
+type: "introduction"
+contributors:
+  - hexylena
+---
+
+# What is sequencing?
+
+---
+
+### Illumina Sequencing
+
+- The "Sequencing Library" (sample to be sequenced) is randomly fragmented
+- These are approximately 200-600 bases in length
+- "Adapters" (short, known sequences) are ligated to both ends of these fragments
+- Adapter ligated fragments are PCR amplified
+- Each of these adapters has a flow cell binding site, P5 and P7
+
+---
+
+### Flow Cell
+
+- Flow cell is a small glass slide with fluid channels
+- The channels are covered with complementary sequences to the adapters
+- The DNA is washed across this slide and it binds to the slide, fixing strands in place
+- There are sometimes multiple "lanes" on a flow cell
+- These can be used to reduce contamination
+
+---
+
+### Bridge PCR
+
+- "Bridge PCR" is used to amplify the sequence
+- This is used to produce a cluster of identical sequences which can then be sequenced
+- Amplification is necessary to ensure a strong signal from each region
+
+---
+
+### Cleaving
+
+- After bridge PCR, there is a mixture of orientations (3', 5')
+- The P5 region is cleaved, leaving only P7 regions attached to the cell
+- Then regions are homoegeneously oriented
+
+
+---
+
+### Sequencing
+
+- With Illumina: "Sequencing by Synthesis"
+- *Fluorescent reversible terminators* are used, nucleotides with a 3' block that can be removed later
+- This blocker prevents multiple nucleotides from being added at once
+
+
+
+Through the in-situ amplification process, the strands are amplified by several thousand. DNA libraries are hybridized to the flow cell in low molar quantities (6-20pM). This results in a large physical separation between template DNA strands. At the end of amplification, small clusters of identical DNA are left as molecules immobilized on a 2D surface, that can be sequenced en masse.
+
+
+---
+
+## Paired-end Sequencing
+
+- A larger fragment of DNA (500-600 bases) is generated
+- Each end is sequenced
+
+---
+
+### Mate-pair Sequencing
+
+- Just like paired-end sequencing
+- Instead of 100-300 bases inbetween pairs, more like 5000 bases
+
+---
+
+### Nanopore
+
+- Physical meausure opening and closing of a pore
