@@ -549,7 +549,7 @@ We would like to visualize 3 of the more informative QC metrics:
 >    - {% icon param-file %} *"Annotated data matrix"*: `3k PBMC with mito annotation and qc metrics`
 >    - *"Method used for plotting"*: `Generic: Violin plot, using 'pl.violin'`
 >      - *"Keys for accessing variables"*: `Subset of variables in 'adata.var_names' or fields of '.obs'`
->        - *"Keys for accessing variables"*: `total_counts, n_genes_by_counts, pct_counts_mito`
+>        - *"Keys for accessing variables"*: `n_genes_by_counts, total_counts, pct_counts_mito`
 >      - In *"Violin plot attributes"*:
 >        - *"Add a stripplot on top of the violin plot"*: `Yes`
 >          - *"Add a jitter to the stripplot"*: `Yes`
@@ -766,7 +766,7 @@ We will freeze the current state of the AnnData object, i.e. the logarithmized r
 >    - {% icon param-file %} *"Annotated data matrix"*: output of **Inspect and manipulate** {% icon tool %}
 >    - *"Function to manipulate the object"*: `Freeze the current state into the 'raw' attribute`
 >
-> 2. Rename the generated output `3k PBMC after QC filtering and normalization/scaling`
+> 2. Rename the generated output `3k PBMC after QC filtering and normalization`
 {: .hands_on}
 
 ## Selection of features
@@ -804,7 +804,7 @@ Both highly variable genes and other genes are still in the `AnnData` object. We
 
 > ### {% icon hands_on %} Hands-on: Keep the highly variable genes
 >
-> 1. Inspect the output of the last **Filter** {% icon tool %})
+> 1. Inspect the output of the last **Filter** {% icon tool %}
 >
 >    > ### {% icon question %} Questions
 >    >
@@ -1101,7 +1101,7 @@ On these plots we see the different cells projected onto the first 3 PCs. We can
 >    >
 >    > > ### {% icon solution %} Solution
 >    > >
->    > > CST3 is the gene the most associated with the 1st PC, NKG7 the one for the 2nd PC, and PPBP for the 3rd PC.
+>    > > CST3 is the gene the most associated with the 1st PC, NKG7 the one for the 2nd PC, and PF4 and PPBP for the 3rd PC (for consistency with the published [scanpy](https://scanpy-tutorials.readthedocs.io/en/latest/pbmc3k.html) and [Seurat](https://satijalab.org/seurat/v3.1/pbmc3k_tutorial.html) documentation, we will use PPBP).
 >    > >
 >    > {: .solution}
 >    {: .question}
@@ -1256,12 +1256,14 @@ Here, we will reduce the neighborhood to 2 UMAP components and then we will chec
 >    > >
 >    > > An extra object `X_umap` has been added to `obsm` with the 2 UMAP coordinates for each cell, as a table of 2 columns and 2,638 lines.
 >    > >
->    > > This information can be accessed by:
->    > > 1. Inspect the dataset `3k PBMC with only HVG, after scaling, PCA and KNN graph`
+>    > > This information can be accessed using:
+>    > > 1. **Inspect AnnData** {% icon tool %} with the following parameters:
+>    > >    - {% icon param-file %} *"Annotated data matrix"*: `3k PBMC with only HVG, after scaling, PCA, KNN graph, UMAP`
+>    > >    - *"What to inspect?"*: `Generalinformation about the object`
 >    > > 2. **Inspect AnnData** {% icon tool %} with the following parameters:
->    > >    - {% icon param-file %} *"Annotated data matrix"*: `3k PBMC with only HVG, after scaling, PCA and KNN graph`
+>    > >    - {% icon param-file %} *"Annotated data matrix"*: `3k PBMC with only HVG, after scaling, PCA and KNN graph, UMAP`
 >    > >    - *"What to inspect?"*: `Multi-dimensional observations annotation (obsm)`
->    > >      - *"What to inspect in for the observations?"*: `UMAP coordinates (X_umap)`
+>    > >    - *"What to inspect in for the observations?"*: `UMAP coordinates (X_umap)`
 >    > {: .solution}
 >    >
 >    {: .question}
@@ -1308,7 +1310,7 @@ Currently, the Louvain graph-clustering method (community detection based on opt
 >
 >    > ### {% icon question %} Questions
 >    >
->    > How is the UMAP reduction stored in the `AnnData` object?
+>    > How is the clustering information stored in the `AnnData` object?
 >    >
 >    > > ### {% icon solution %} Solution
 >    > >
@@ -1350,7 +1352,7 @@ The cells in the same clusters should be co-localized in the UMAP coordinate plo
 > >
 > > 1. 8 clusters are identified, more or less corresponding to the ones we could see on the UMAP plots.
 > > 2. We expect that:
-> >    * CST3 should be representative of clusters 1, 3, 4, 7
+> >    * CST3 should be representative of clusters 1, 3, 4, 6
 > >    * NKG7 for clusters 0, 3 and 5
 > >    * PPBP for cluster 7
 > {: .solution}
@@ -1442,7 +1444,7 @@ RPS25 | S100A9 | HLA-DRB1 | CST7 | FTH1 | GNLY | HLA-DRB1 | NRGN
 >
 > > ### {% icon solution %} Solution
 > >
-> > * CST3 is a marker gene for clusters 1, 4, 7 (not 3 as guessed previously)
+> > * CST3 is a marker gene for clusters 1, 4, 6 (not 3 as guessed previously)
 > > * NKG7 for clusters 3 and 5 (not 0 as guessed previously)
 > > * PPBP for cluster 7, as guessed previously
 > >

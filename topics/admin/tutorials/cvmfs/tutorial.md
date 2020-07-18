@@ -229,8 +229,6 @@ Now all we need to do is tell Galaxy how to find it! This tutorial assumes that 
 >
 {: .hands_on}
 
-You've now finished the tutorial, and you can [jump to the end](#feedback-google) or read on to learn about configuring CVMFS without Ansible.
-
 # Other Aspects
 
 ## Development
@@ -253,4 +251,4 @@ The client talks directly to the stratum 1 (or to a proxy), and manages the data
 
 ## Plant Data
 
-If you are working with plants, you can find separate reference data here: (frederikcoppens/galaxy_data_management)[https://github.com/frederikcoppens/galaxy_data_management]
+If you are working with plants, you can find separate reference data here: [frederikcoppens/galaxy_data_management](https://github.com/frederikcoppens/galaxy_data_management)
