@@ -1,1 +1,0 @@
-../../visualisation/faqs/visualizations_igv_add_genome.md

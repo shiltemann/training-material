@@ -1,27 +1,238 @@
----
-layout: tutorial_slides
-logo: assets/images/GAT.png
+<!DOCTYPE html>
+<html>
 
-title: "Docker and Galaxy"
-zenodo_link: ""
-questions:
-  - "Why Docker? What is it?"
-  - "How to use Docker?"
-  - "How to integrate Galaxy in Docker to facilitate its deployment?"
-objectives:
-  - "Docker basics"
-  - "Galaxy Docker image (usage)"
-  - "Galaxy Docker (internals)"
-  - "Galaxy flavours"
-time_estimation: "1h"
-key_points:
-  - "Use Docker"
-  - "Integrate your tools into Galaxy"
-  - "Use Galaxy inside Docker to have a flavoured Galaxy instance"
-contributors:
-  - bebatut
-  - bgruening
+
+
+
+
+
+
+
+
+  <head>
+    <meta charset="utf-8">
+    <title>Docker and Galaxy</title>
+    
+        <script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
+
+    
+    <link rel="stylesheet" href="/training-material/assets/css/slides.css">
+    <script src="https://kit.fontawesome.com/67b3f98409.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+    
+    
+    
+    
+    <meta name="description" content="Resources related to configuration and maintenance of Gal..." />
+    <meta property="og:title" content="Galaxy Training: Docker and Galaxy" />
+    <meta property="og:description" content="Resources related to configuration and maintenance of Gal..." />
+    <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
+    <script type="application/ld+json">
+      
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "citation": {
+    "@type": "CreativeWork",
+    "name": "Community-Driven Data Analysis Training for Biology",
+    "url": "https://doi.org/10.1016/j.cels.2018.05.012"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
+  "headline": "Docker and Galaxy",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/main/LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "Galaxy Server administration",
+    "description": "Resources related to configuration and maintenance of Galaxy servers",
+    "url": "https://training.galaxyproject.org//training-material/topics/admin/"
+  },
+  "courseCode": "admin / galaxy-docker / slides",
+  "learningResourceType": "slides",
+  "name": "Slides for 'Docker and Galaxy' tutorial",
+  "url": "https://training.galaxyproject.org//training-material/topics/admin/tutorials/galaxy-docker/slides.html",
+  "timeRequired": "PT1H",
+  "description": "The questions this  addresses are:\n - Why Docker? What is it?\n - How to use Docker?\n - How to integrate Galaxy in Docker to facilitate its deployment?\n\n\\nThe objectives are:\n - Docker basics\n - Galaxy Docker image (usage)\n - Galaxy Docker (internals)\n - Galaxy flavours\n\n",
+  "hasPart": [
+
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Bérénice Batut"
+    },
+    {
+      "@type": "Person",
+      "name": "Björn Grüning"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Bérénice Batut"
+    },
+    {
+      "@type": "Person",
+      "name": "Björn Grüning"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "Galaxy Server administration",
+      "description": "Resources related to configuration and maintenance of Galaxy servers",
+      "url": "https://training.galaxyproject.org//training-material/topics/admin/"
+    }
+  ]
+}
+    </script>
+    <script type="text/javascript" src="/training-material/assets/js/jquery.slim.min.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+name: inverse
+layout: true
+class: center, middle, inverse
+
+<div class="my-header"><span>
+<a href="/training-material/topics/admin" title="Return to topic page" ><i class="fa fa-level-up" aria-hidden="true"></i></a>
+
+<a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/main/topics/admin/tutorials/galaxy-docker/slides.html"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+
+</span></div>
+
+<div class="my-footer"><span>
+
+  
+<img src="/training-material/assets/images/GAT.png" alt="page logo" style="height: 40px;"/>
+  
+
+</span></div>
+
 ---
+
+
+  
+<img src="/training-material/assets/images/GAT.png" alt="page logo" class="cover-logo" />
+  
+
+
+# Docker and Galaxy
+
+
+<div class="contributors-line">
+
+
+ <a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Bérénice Batut">Bérénice Batut</a> <a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Björn Grüning">Björn Grüning</a>
+
+
+</div>
+
+
+
+
+.footnote[Tip: press `P` to view the presenter notes]
+
+???
+Presenter notes contain extra information which might be useful if you
+intend to use these slides for teaching.
+
+Press `P` again to switch presenter notes off
+
+Press `C` to create a new window where the same presentation will be displayed.
+This window is linked to the main window. Changing slides on one will cause the
+slide to change on the other. Useful when presenting.
+
+---
+
+
+
+
+
+
+### &lt;i class=&quot;far fa-question-circle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;question&lt;/span&gt; Questions
+
+
+- Why Docker? What is it?
+
+- How to use Docker?
+
+- How to integrate Galaxy in Docker to facilitate its deployment?
+
+
+---
+
+
+
+### &lt;i class=&quot;fas fa-bullseye&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;objectives&lt;/span&gt; Objectives
+
+
+- Docker basics
+
+- Galaxy Docker image (usage)
+
+- Galaxy Docker (internals)
+
+- Galaxy flavours
+
+
+---
+
 
 ### Preparing Admin Training VMs
 
@@ -60,7 +271,7 @@ variety of different tools and visualisations
 
 ---
 
-## Why Docker? <br>What is it?
+## Why Docker? &lt;br&gt;What is it?
 
 ![](../../images/docker_whale.png)
 
@@ -73,7 +284,7 @@ variety of different tools and visualisations
 - Different packaging
 - Conflict between tools or versions
 
-<i class="fa fa-long-arrow-right"></i> Impact on usability and reproducibility
+&lt;i class=&quot;fa fa-long-arrow-right&quot;&gt;&lt;/i&gt; Impact on usability and reproducibility
 
 ---
 
@@ -254,7 +465,7 @@ This message shows that your installation appears to be working correctly.
 
 To generate this message, Docker took the following steps:
  1. The Docker client contacted the Docker daemon.
- 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+ 2. The Docker daemon pulled the &quot;hello-world&quot; image from the Docker Hub.
  3. The Docker daemon created a new container from that image which runs the
     executable that produces the output you are currently reading.
  4. The Docker daemon streamed that output to the Docker client, which sent it
@@ -289,7 +500,7 @@ c57b6bcc83e3: Pull complete
 Digest: sha256:178598e51a26abbc958b8a2e48825c90bc22e641de3d31e18aaf55f3258ba93b
 Status: Downloaded newer image for docker/whalesay:latest
  ________
-< Galaxy >
+&lt; Galaxy &gt;
  --------
     \
      \
@@ -297,7 +508,7 @@ Status: Downloaded newer image for docker/whalesay:latest
                     ##        .
               ## ## ##       ==
            ## ## ## ##      ===
-       /""""""""""""""""___/ ===
+       /&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;___/ ===
   ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~
        \______ o          __/
         \    \        __/
@@ -352,7 +563,7 @@ $ docker run -t -i docker/whalesay
 root@7de97f8dd5eb:/cowsay#
 root@7de97f8dd5eb:/cowsay# cowsay Galaxy
  ________
-< Galaxy >
+&lt; Galaxy &gt;
  --------
     \
      \
@@ -360,7 +571,7 @@ root@7de97f8dd5eb:/cowsay# cowsay Galaxy
                     ##        .
               ## ## ##       ==
            ## ## ## ##      ===
-       /""""""""""""""""___/ ===
+       /&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;___/ ===
   ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~
        \______ o          __/
         \    \        __/
@@ -376,11 +587,11 @@ root@7de97f8dd5eb:/cowsay#
 $ docker run -i -t
     -p 8080:80 -p 8021:21 -p 9002:9002
     --privileged=true
-    -e "NONUSE=reports"
-    -e "GALAXY_CONFIG_ADMIN_USERS=albert@einstein.gov"
-    -e "GALAXY_CONFIG_MASTER_API_KEY=83D4jaba7330aDKHkakjGa937"
-    -e "GALAXY_CONFIG_BRAND='My own Galaxy flavour'"
-    -e "GALAXY_LOGGING=full"
+    -e &quot;NONUSE=reports&quot;
+    -e &quot;GALAXY_CONFIG_ADMIN_USERS=albert@einstein.gov&quot;
+    -e &quot;GALAXY_CONFIG_MASTER_API_KEY=83D4jaba7330aDKHkakjGa937&quot;
+    -e &quot;GALAXY_CONFIG_BRAND='My own Galaxy flavour'&quot;
+    -e &quot;GALAXY_LOGGING=full&quot;
 
     bgruening/galaxy-stable:18.05
 ```
@@ -395,10 +606,10 @@ possibility to add many different parameters to control the container when start
 
 ```sh
 $ mkdir data
-$ docker run docker/whalesay cowsay Galaxy > data/cowsay
+$ docker run docker/whalesay cowsay Galaxy &gt; data/cowsay
 $ more data/cowsay
  ________
-< Galaxy >
+&lt; Galaxy &gt;
  --------
     \
      \
@@ -406,7 +617,7 @@ $ more data/cowsay
                     ##        .
               ## ## ##       ==
            ## ## ## ##      ===
-       /""""""""""""""""___/ ===
+       /&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;___/ ===
   ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~
        \______ o          __/
         \    \        __/
@@ -414,10 +625,10 @@ $ more data/cowsay
 $ docker run -t -i docker/whalesay
 root@f4fa8ed32ef8:/cowsay# ls
 ChangeLog  INSTALL  LICENSE  MANIFEST  README  Wrap.pm.diff  cows  cowsay  cowsay.1  install.pl  install.sh  pgp_public_key.txt
-root@f4fa8ed32ef8:/cowsay# cowsay Hello Galaxy > cowsay2
+root@f4fa8ed32ef8:/cowsay# cowsay Hello Galaxy &gt; cowsay2
 ```
 
-Can we access the `cowsay` file inside the container? <br>And the `cowsay2` file outside the container?
+Can we access the `cowsay` file inside the container? &lt;br&gt;And the `cowsay2` file outside the container?
 
 ---
 
@@ -478,7 +689,7 @@ cowsay_Galaxy
 $ docker run -t -i -v $PWD/data:/data docker/whalesay
 root@f4fa8ed32ef8:/cowsay# ls /data
 cowsay_Galaxy
-root@f4fa8ed32ef8:/cowsay# cowsay Galaxy2 > /data/cowsay_Galaxy2
+root@f4fa8ed32ef8:/cowsay# cowsay Galaxy2 &gt; /data/cowsay_Galaxy2
 root@f4fa8ed32ef8:/cowsay# ls /data
 cowsay_Galaxy  cowsay_Galaxy2
 root@f4fa8ed32ef8:/cowsay# exit
@@ -488,7 +699,7 @@ cowsay_Galaxy   cowsay_Galaxy2
 
 ---
 
-### Execution of commands <br>inside a running container
+### Execution of commands &lt;br&gt;inside a running container
 
 ![](../../images/docker_concept_exec.png)
 
@@ -501,12 +712,12 @@ Run a command in a running container
 ### `docker exec`
 
 ```sh
-$ docker run -d docker/whalesay /bin/sh -c "while true; do sleep 1; done"
+$ docker run -d docker/whalesay /bin/sh -c &quot;while true; do sleep 1; done&quot;
 7179e85085ef14634f8b50f908a255707743dec0a5d1fd7fb3cd9036334d5177
 $ docker exec 7179e85085ef14634f8b50f908a255707743dec0a5d1fd7fb3cd9036334d5177 \
 cowsay Galaxy
  ________
-< Galaxy >
+&lt; Galaxy &gt;
  --------
     \
      \
@@ -514,7 +725,7 @@ cowsay Galaxy
                     ##        .
               ## ## ##       ==
            ## ## ## ##      ===
-       /""""""""""""""""___/ ===
+       /&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;___/ ===
   ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~
        \______ o          __/
         \    \        __/
@@ -532,7 +743,7 @@ Note: Sending SIGTERM and then SIGKILL after a grace period
 
 ---
 
-### `docker stop` & `docker start`
+### `docker stop` &amp; `docker start`
 
 ```sh
 $ docker stop 7179e85085ef14634f8b50f908a255707743dec0a5d1fd7fb3cd9036334d5177
@@ -549,7 +760,7 @@ $
 $ docker exec 7179e85085ef14634f8b50f908a255707743dec0a5d1fd7fb3cd9036334d5177 \
 cowsay Galaxy
  ________
-< Galaxy >
+&lt; Galaxy &gt;
  --------
     \
      \
@@ -557,7 +768,7 @@ cowsay Galaxy
                     ##        .
               ## ## ##       ==
            ## ## ## ##      ===
-       /""""""""""""""""___/ ===
+       /&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;___/ ===
   ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~
        \______ o          __/
         \    \        __/
@@ -577,27 +788,27 @@ cowsay Galaxy
 ```sh
 $ docker ps
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
-7179e85085ef        docker/whalesay     "/bin/sh -c 'while tr"   12 minutes ago      Up 2 seconds                            agitated_lovelace
+7179e85085ef        docker/whalesay     &quot;/bin/sh -c 'while tr&quot;   12 minutes ago      Up 2 seconds                            agitated_lovelace
 $
 $ docker ps -a
 CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS                        PORTS               NAMES
-7de97f8dd5eb        docker/whalesay        "/bin/bash"              4 minutes ago       Exited (0) About a minute ago                       trusting_swanson
-9218bbee9c48        docker/whalesay        "/bin/bash"              5 minutes ago       Exited (0) 4 minutes ago                            evil_swirles
-7179e85085ef        docker/whalesay        "/bin/sh -c 'while tr"   13 minutes ago      Up 55 seconds                                       agitated_lovelace
-ad275579c454        ubuntu                 "/bin/sh -c 'while tr"   15 minutes ago      Exited (137) 13 minutes ago                         condescending_mestorf
-66179c4d16da        ubuntu                 "/bin/bash"              About an hour ago   Exited (130) 15 minutes ago                         determined_pasteur
-27386c8b69b3        ubuntu                 "/bin/sh"                About an hour ago   Exited (0) About an hour ago                        lonely_ramanujan
-4cfefa19e6fa        docker/whalesay        "/bin/bash"              About an hour ago   Exited (0) About an hour ago                        thirsty_chandrasekhar
-82687eb94ab9        docker/whalesay        "cowsay Galaxy"          2 hours ago         Exited (0) 2 hours ago                              fervent_babbage
-6dbabb9384ad        tmp-bioconda-builder   "/usr/local/bin/tini "   8 days ago          Exited (0) 7 days ago                               tender_bhaskara
-5d6f09b94727        tmp-bioconda-builder   "/usr/local/bin/tini "   8 days ago          Exited (0) 8 days ago                               jolly_brattain
-4e6f38b4c34c        tmp-bioconda-builder   "/usr/local/bin/tini "   8 days ago          Created                                             angry_colden
-b3e6c7412a75        tmp-bioconda-builder   "/usr/local/bin/tini "   8 days ago          Created                                             desperate_visvesvaraya
-1ec56c9e37f8        tmp-bioconda-builder   "/usr/local/bin/tini "   8 days ago          Created                                             hopeful_khorana
-2b129d00eb10        tmp-bioconda-builder   "/usr/local/bin/tini "   8 days ago          Created                                             gigantic_ptolemy
-da45ab698f58        fb77c13d04c0           "/usr/local/bin/tini "   13 days ago         Exited (0) 13 days ago                              jovial_yalow
-48dc3ed4e173        fb77c13d04c0           "/usr/local/bin/tini "   13 days ago         Created                                             focused_ritchie
-e9195b6512dd        a2107450fdf2           "/usr/local/bin/tini "   2 weeks ago         Created                                             thirsty_bardeen
+7de97f8dd5eb        docker/whalesay        &quot;/bin/bash&quot;              4 minutes ago       Exited (0) About a minute ago                       trusting_swanson
+9218bbee9c48        docker/whalesay        &quot;/bin/bash&quot;              5 minutes ago       Exited (0) 4 minutes ago                            evil_swirles
+7179e85085ef        docker/whalesay        &quot;/bin/sh -c 'while tr&quot;   13 minutes ago      Up 55 seconds                                       agitated_lovelace
+ad275579c454        ubuntu                 &quot;/bin/sh -c 'while tr&quot;   15 minutes ago      Exited (137) 13 minutes ago                         condescending_mestorf
+66179c4d16da        ubuntu                 &quot;/bin/bash&quot;              About an hour ago   Exited (130) 15 minutes ago                         determined_pasteur
+27386c8b69b3        ubuntu                 &quot;/bin/sh&quot;                About an hour ago   Exited (0) About an hour ago                        lonely_ramanujan
+4cfefa19e6fa        docker/whalesay        &quot;/bin/bash&quot;              About an hour ago   Exited (0) About an hour ago                        thirsty_chandrasekhar
+82687eb94ab9        docker/whalesay        &quot;cowsay Galaxy&quot;          2 hours ago         Exited (0) 2 hours ago                              fervent_babbage
+6dbabb9384ad        tmp-bioconda-builder   &quot;/usr/local/bin/tini &quot;   8 days ago          Exited (0) 7 days ago                               tender_bhaskara
+5d6f09b94727        tmp-bioconda-builder   &quot;/usr/local/bin/tini &quot;   8 days ago          Exited (0) 8 days ago                               jolly_brattain
+4e6f38b4c34c        tmp-bioconda-builder   &quot;/usr/local/bin/tini &quot;   8 days ago          Created                                             angry_colden
+b3e6c7412a75        tmp-bioconda-builder   &quot;/usr/local/bin/tini &quot;   8 days ago          Created                                             desperate_visvesvaraya
+1ec56c9e37f8        tmp-bioconda-builder   &quot;/usr/local/bin/tini &quot;   8 days ago          Created                                             hopeful_khorana
+2b129d00eb10        tmp-bioconda-builder   &quot;/usr/local/bin/tini &quot;   8 days ago          Created                                             gigantic_ptolemy
+da45ab698f58        fb77c13d04c0           &quot;/usr/local/bin/tini &quot;   13 days ago         Exited (0) 13 days ago                              jovial_yalow
+48dc3ed4e173        fb77c13d04c0           &quot;/usr/local/bin/tini &quot;   13 days ago         Created                                             focused_ritchie
+e9195b6512dd        a2107450fdf2           &quot;/usr/local/bin/tini &quot;   2 weeks ago         Created                                             thirsty_bardeen
 ```
 
 Note: Name of containers and id
@@ -626,7 +837,7 @@ Need a Dockerfile. I will describe it later. Here it is just to give you a broad
 
 ---
 
-### {% icon hands_on %} Hands on! (1)
+### &lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;hands_on&lt;/span&gt; Hands on! (1)
 
 Play with `quay.io/biocontainers/samtools:1.3--1`
 
@@ -640,7 +851,7 @@ Play with `quay.io/biocontainers/samtools:1.3--1`
 
 ---
 
-### {% icon hands_on %} Hands on! (2)
+### &lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;hands_on&lt;/span&gt; Hands on! (2)
 
 Play with `quay.io/biocontainers/samtools:1.3--1`
 
@@ -692,7 +903,7 @@ Review of the commands
 
 ---
 
-### Dockerfile & Layers
+### Dockerfile &amp; Layers
 
 ![](../../images/dockerfile_layers.svg)
 
@@ -700,7 +911,7 @@ Review of the commands
 
 ### But Don't Do it Manually, Use Biocontainers
 
-[Tool Dependencies and Containers]({% link topics/dev/tutorials/containers/slides.html %})
+[Tool Dependencies and Containers](/training-material/topics/dev/tutorials/containers/slides.html)
 
 ---
 
@@ -730,7 +941,7 @@ https://github.com/bgruening/docker-galaxy-stable
 
 ---
 
-### {% icon hands_on %} Hands on!
+### &lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;hands_on&lt;/span&gt; Hands on!
 
 Launch a Galaxy Docker Container and try to
 
@@ -744,7 +955,7 @@ Launch a Galaxy Docker Container and try to
 
 ---
 
-### Galaxy + SLURM = <i class="fa fa-heart" aria-hidden="true"></i>
+### Galaxy + SLURM = &lt;i class=&quot;fa fa-heart&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
 
 https://github.com/bgruening/docker-galaxy-stable/tree/dev/docs/Running_jobs_outside_of_the_container.md
 
@@ -809,7 +1020,7 @@ tools:
 
 ---
 
-### {% icon hands_on %} Hands on!
+### &lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;hands_on&lt;/span&gt; Hands on!
 
 Create a Galaxy Flavour
 
@@ -820,3 +1031,79 @@ Create a Galaxy Flavour
 ![](../../images/galaxy_flavour_generator.png)
 
 https://github.com/galaxyFlavorsGenerators/galaxyFlavorGenerator
+
+
+
+
+---
+### &lt;i class=&quot;fas fa-key&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;keypoints&lt;/span&gt; Key points
+
+
+- Use Docker
+
+- Integrate your tools into Galaxy
+
+- Use Galaxy inside Docker to have a flavoured Galaxy instance
+
+
+
+
+
+
+
+---
+
+## Thank you!
+
+This material is the result of a collaborative work. Thanks to the [Galaxy Training Network](https://wiki.galaxyproject.org/Teach/GTN) and all the contributors!
+
+
+<div class="contributors-line">
+
+
+ <a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Bérénice Batut">Bérénice Batut</a> <a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Björn Grüning">Björn Grüning</a>
+
+
+</div>
+
+
+
+  
+<img src="/training-material/assets/images/GAT.png" alt="page logo" style="height: 100px;"/>
+  
+
+
+This material is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+
+    </textarea>
+	<script src="/training-material/assets/js/remark-latest.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+    <script type="text/javascript" src="/training-material/assets/js/clipboard.min.js"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({navigation: {scroll: false,}});
+      var hljs = remark.highlighter.engine;
+      var snippets = document.querySelectorAll('code.remark-code');
+        [].forEach.call(snippets,function(snippet){
+          snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        });
+      var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
+        target:function(trigger){return trigger.parentElement;
+      }});
+    </script>
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('body').prepend("<div style='text-align: center'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
+
+  </body>
+</html>

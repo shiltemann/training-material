@@ -1,12 +1,212 @@
----
-layout: tutorial_slides
-logo: assets/images/gat.png
+<!DOCTYPE html>
+<html>
 
-title: "Galaxy Troubleshooting"
-contributors:
-  - martenson
-  - natefoo
+
+
+
+
+
+
+
+
+  <head>
+    <meta charset="utf-8">
+    <title>Galaxy Troubleshooting</title>
+    
+        <script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
+
+    
+    <link rel="stylesheet" href="/training-material/assets/css/slides.css">
+    <script src="https://kit.fontawesome.com/67b3f98409.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+    
+    
+    
+    
+    <meta name="description" content="Resources related to configuration and maintenance of Gal..." />
+    <meta property="og:title" content="Galaxy Training: Galaxy Troubleshooting" />
+    <meta property="og:description" content="Resources related to configuration and maintenance of Gal..." />
+    <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
+    <script type="application/ld+json">
+      
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "citation": {
+    "@type": "CreativeWork",
+    "name": "Community-Driven Data Analysis Training for Biology",
+    "url": "https://doi.org/10.1016/j.cels.2018.05.012"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
+  "headline": "Galaxy Troubleshooting",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/main/LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "Galaxy Server administration",
+    "description": "Resources related to configuration and maintenance of Galaxy servers",
+    "url": "https://training.galaxyproject.org//training-material/topics/admin/"
+  },
+  "courseCode": "admin / troubleshooting / slides",
+  "learningResourceType": "slides",
+  "name": "Slides for 'Galaxy Troubleshooting' tutorial",
+  "url": "https://training.galaxyproject.org//training-material/topics/admin/tutorials/troubleshooting/slides.html",
+  "description": "",
+  "hasPart": [
+
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Martin Čech"
+    },
+    {
+      "@type": "Person",
+      "name": "Nate Coraor"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Martin Čech"
+    },
+    {
+      "@type": "Person",
+      "name": "Nate Coraor"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "Galaxy Server administration",
+      "description": "Resources related to configuration and maintenance of Galaxy servers",
+      "url": "https://training.galaxyproject.org//training-material/topics/admin/"
+    }
+  ]
+}
+    </script>
+    <script type="text/javascript" src="/training-material/assets/js/jquery.slim.min.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+name: inverse
+layout: true
+class: center, middle, inverse
+
+<div class="my-header"><span>
+<a href="/training-material/topics/admin" title="Return to topic page" ><i class="fa fa-level-up" aria-hidden="true"></i></a>
+
+<a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/main/topics/admin/tutorials/troubleshooting/slides.html"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+
+</span></div>
+
+<div class="my-footer"><span>
+
+  
+<img src="/training-material/assets/images/gat.png" alt="page logo" style="height: 40px;"/>
+  
+
+</span></div>
+
 ---
+
+
+  
+<img src="/training-material/assets/images/gat.png" alt="page logo" class="cover-logo" />
+  
+
+
+# Galaxy Troubleshooting
+
+
+<div class="contributors-line">
+
+
+ <a href="/training-material/hall-of-fame/martenson/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/martenson" alt="Martin Čech">Martin Čech</a> <a href="/training-material/hall-of-fame/natefoo/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/natefoo" alt="Nate Coraor">Nate Coraor</a>
+
+
+</div>
+
+
+
+
+.footnote[Tip: press `P` to view the presenter notes]
+
+???
+Presenter notes contain extra information which might be useful if you
+intend to use these slides for teaching.
+
+Press `P` again to switch presenter notes off
+
+Press `C` to create a new window where the same presentation will be displayed.
+This window is linked to the main window. Changing slides on one will cause the
+slide to change on the other. Useful when presenting.
+
+---
+
+
+
+
+
+
+
+
+
 In system administration...
 # Everything always goes wrong
 
@@ -146,10 +346,10 @@ Or timeout messages in the Galaxy UI
 
 In uWSGI logs:
 ```
-*** uWSGI listen queue of socket "0.0.0.0:8080" (fd: 6) full !!! (101/100) ***
-*** uWSGI listen queue of socket "0.0.0.0:8080" (fd: 6) full !!! (101/100) ***
-*** uWSGI listen queue of socket "0.0.0.0:8080" (fd: 6) full !!! (101/100) ***
-*** uWSGI listen queue of socket "0.0.0.0:8080" (fd: 6) full !!! (101/100) ***
+*** uWSGI listen queue of socket &quot;0.0.0.0:8080&quot; (fd: 6) full !!! (101/100) ***
+*** uWSGI listen queue of socket &quot;0.0.0.0:8080&quot; (fd: 6) full !!! (101/100) ***
+*** uWSGI listen queue of socket &quot;0.0.0.0:8080&quot; (fd: 6) full !!! (101/100) ***
+*** uWSGI listen queue of socket &quot;0.0.0.0:8080&quot; (fd: 6) full !!! (101/100) ***
 ```
 
 Galaxy is not processing requests in a timely manner
@@ -193,7 +393,7 @@ $ uptime
 
 Averages are 1, 5, 15 minutes.
 
-Average should be <= number of cores (`lscpu`, beware SMT)
+Average should be &lt;= number of cores (`lscpu`, beware SMT)
 
 More on troubleshooting load later
 
@@ -206,7 +406,7 @@ More on troubleshooting load later
 
 *often I now begin in Grafana
 
-![Grafana Load Graph](../../images/troubleshooting/grafana-load-graph.png "Grafana Load Graph")
+![Grafana Load Graph](../../images/troubleshooting/grafana-load-graph.png &quot;Grafana Load Graph&quot;)
 
 ---
 # 504 Gateway Timeout or slow UI
@@ -250,14 +450,14 @@ Loaded tool id: toolshed.g2.bx.psu.edu/repos/iuc/sickle/sickle/1.33, version: 1.
 
 - After startup, check `integrated_tool_panel.xml` for
 ```xml
-<tool id="toolshed.g2.bx.psu.edu/repos/iuc/sickle/sickle/1.33" />
+&lt;tool id=&quot;toolshed.g2.bx.psu.edu/repos/iuc/sickle/sickle/1.33&quot; /&gt;
 ```
 
 - If it is TS tool check `shed_tool_conf.xml` for
 ```xml
-<tool file="toolshed.g2.bx.psu.edu/repos/iuc/sickle/43e081d32f90/sickle/sickle.xml" guid="toolshed.g2.bx.psu.edu/repos/iuc/sickle/sickle/1.33">
+&lt;tool file=&quot;toolshed.g2.bx.psu.edu/repos/iuc/sickle/43e081d32f90/sickle/sickle.xml&quot; guid=&quot;toolshed.g2.bx.psu.edu/repos/iuc/sickle/sickle/1.33&quot;&gt;
 ...
-</tool>
+&lt;/tool&gt;
 ```
 
 - Multiple job handlers? Sometimes they don't all get the update.
@@ -265,12 +465,12 @@ Loaded tool id: toolshed.g2.bx.psu.edu/repos/iuc/sickle/sickle/1.33, version: 1.
 ---
 # Tool errors
 
-Tool stdout/stderr is available in UI under "i" icon on history dataset
+Tool stdout/stderr is available in UI under &quot;i&quot; icon on history dataset
 
 .left[Debugging on the filesystem:]
 1. Set `cleanup_job` to `onsuccess`
 2. Cause a job failure
-3. Go to job working directory (find in logs or `/srv/galaxy/jobs/<hash>/<job_id>`)
+3. Go to job working directory (find in logs or `/srv/galaxy/jobs/&lt;hash&gt;/&lt;job_id&gt;`)
 4. Poke around, try running things (`srun --pty bash` considered useful)
 
 Familiarize yourself with the places Galaxy keeps things (demo?)
@@ -296,7 +496,7 @@ Congratulations, running SuperAwesome tool was successful!
 What happens: job fails (!!?!?)
 
 Solutions:
-- If the wrapped tool uses proper exit codes, use `<tool profile="16.04">` or later to ignore stderr
+- If the wrapped tool uses proper exit codes, use `&lt;tool profile=&quot;16.04&quot;&gt;` or later to ignore stderr
 - Using current tool development best practices ensures this is the case
 
 ---
@@ -363,7 +563,7 @@ sh: command not found: samtools
 
 Solutions:
 - Verify that `tool_dependency_dir` is accessible *on the cluster, as the user running Galaxy jobs*
-- Verify that tool dependencies are properly installed: Galaxy UI "Admin > Manage dependencies"
+- Verify that tool dependencies are properly installed: Galaxy UI &quot;Admin &gt; Manage dependencies&quot;
 - Use BioContainers (Docker/Singularity)
 
 ---
@@ -371,7 +571,7 @@ Solutions:
 
 An incredibly useful feature to hit unruly tool dependencies with a large hammer.
 
-![Manage Dependencies](../../images/troubleshooting/manage-dependencies.png "Manage Dependencies")
+![Manage Dependencies](../../images/troubleshooting/manage-dependencies.png &quot;Manage Dependencies&quot;)
 
 --
 
@@ -380,13 +580,13 @@ An incredibly useful feature to hit unruly tool dependencies with a large hammer
 ---
 # An aside - dependency problems on geriatric Galaxies
 
-Galaxy Tool Shed dependencies are dead.<sup>1</sup> If you don't know what Tool Shed dependencies are (lucky you) skip this slide.
+Galaxy Tool Shed dependencies are dead.&lt;sup&gt;1&lt;/sup&gt; If you don't know what Tool Shed dependencies are (lucky you) skip this slide.
 
 Don't attempt to fix Galaxy Tool Shed dependencies, just update tool and reinstall with Conda.
 
 Put Conda first in [dependency_resolvers_conf.xml](https://github.com/galaxyproject/galaxy/blob/dev/config/dependency_resolvers_conf.xml.sample) if you still need to support both.
 
-.reduce70[.footnote[<sup>1</sup> The Tool Shed should only be used for Galaxy Tool configuration files and wrapper scripts]]
+.reduce70[.footnote[&lt;sup&gt;1&lt;/sup&gt; The Tool Shed should only be used for Galaxy Tool configuration files and wrapper scripts]]
 
 ---
 class: left
@@ -400,12 +600,12 @@ foo: error while loading shared libraries: libdeepthought.so.42: cannot open sha
 `foo` was compiled against `libdeepthought.so.42` but it's not on the runtime linker path
 
 Solutions:
-- Reinstall tool dependencies ("Admin > Manage dependencies"). If it still fails<sup>2</sup>:
+- Reinstall tool dependencies (&quot;Admin &gt; Manage dependencies&quot;). If it still fails&lt;sup&gt;2&lt;/sup&gt;:
   - Determine conda package providing `libdeepthought.so`
   - Downgrade it to the version that provides `libdeepthought.so.42`
 - Use BioContainers (Docker/Singularity)
 
-.center[.reduce70[.footnote[<sup>2</sup> First, Google the error because someone named Björn has probably already found and fixed the problem.]]]
+.center[.reduce70[.footnote[&lt;sup&gt;2&lt;/sup&gt; First, Google the error because someone named Björn has probably already found and fixed the problem.]]]
 
 ???
 Galaxy ensures that the correct version(s) of tool(s) immediate dependencies are controlled, but dependencies of dependencies are up to conda. Occasionally, upgrades to these second level dependencies break existing conda packages, requiring package authors to update the first level dependencies to correct the issue.
@@ -458,9 +658,9 @@ galaxy.tools.actions INFO 2019-02-01 14:30:20,500 [p:6590,w:1,m:0] [uWSGIWorker1
 galaxy.tools.actions INFO 2019-02-01 14:30:20,507 [p:6590,w:1,m:0] [uWSGIWorker1Core2] Added output datasets to history (6.210 ms)
 galaxy.tools.actions INFO 2019-02-01 14:30:20,513 [p:6590,w:1,m:0] [uWSGIWorker1Core2] Setup for job Job[unflushed,tool_id=testing] complete, ready to flush (5.408 ms)
 galaxy.tools.actions INFO 2019-02-01 14:30:20,558 [p:6590,w:1,m:0] [uWSGIWorker1Core2] Flushed transaction for job Job[id=21,tool_id=testing] (44.550 ms)
-galaxy.web.stack.transport DEBUG 2019-02-01 14:30:20,559 [p:6590,w:1,m:0] [uWSGIWorker1Core2] Sending message to farm job-handlers: {"__classname__": "JobHandlerMessage", "params": {"task": "setup", "job_id": 21}, "target": "job_handler"}
+galaxy.web.stack.transport DEBUG 2019-02-01 14:30:20,559 [p:6590,w:1,m:0] [uWSGIWorker1Core2] Sending message to farm job-handlers: {&quot;__classname__&quot;: &quot;JobHandlerMessage&quot;, &quot;params&quot;: {&quot;task&quot;: &quot;setup&quot;, &quot;job_id&quot;: 21}, &quot;target&quot;: &quot;job_handler&quot;}
 galaxy.tools.execute DEBUG 2019-02-01 14:30:20,559 [p:6590,w:1,m:0] [uWSGIWorker1Core2] Tool [testing] created job [21] (73.833 ms)
-galaxy.web.stack.transport DEBUG 2019-02-01 14:30:20,560 [p:6593,w:0,m:1] [UWSGIFarmMessageTransport.dispatcher_thread] Received message: {"__classname__": "JobHandlerMessage", "params": {"task": "setup", "job_id": 21}, "target": "job_handler"}
+galaxy.web.stack.transport DEBUG 2019-02-01 14:30:20,560 [p:6593,w:0,m:1] [UWSGIFarmMessageTransport.dispatcher_thread] Received message: {&quot;__classname__&quot;: &quot;JobHandlerMessage&quot;, &quot;params&quot;: {&quot;task&quot;: &quot;setup&quot;, &quot;job_id&quot;: 21}, &quot;target&quot;: &quot;job_handler&quot;}
 galaxy.tools.execute DEBUG 2019-02-01 14:30:20,562 [p:6590,w:1,m:0] [uWSGIWorker1Core2] Executed 1 job(s) for tool testing request: (91.901 ms)
 galaxy.web.stack.transport DEBUG 2019-02-01 14:30:20,580 [p:6593,w:0,m:1] [UWSGIFarmMessageTransport.dispatcher_thread] Released lock
 galaxy.web.stack.transport DEBUG 2019-02-01 14:30:20,580 [p:6594,w:0,m:2] [UWSGIFarmMessageTransport.dispatcher_thread] Acquired message lock, waiting for new message
@@ -471,10 +671,10 @@ galaxy.jobs DEBUG 2019-02-01 14:30:21,539 [p:6593,w:0,m:1] [JobHandlerQueue.moni
 galaxy.jobs DEBUG 2019-02-01 14:30:21,565 [p:6593,w:0,m:1] [JobHandlerQueue.monitor_thread] (21) Working directory for job is: /srv/galaxy/jobs/000/21
 galaxy.jobs.runners DEBUG 2019-02-01 14:30:21,579 [p:6593,w:0,m:1] [JobHandlerQueue.monitor_thread] Job [21] queued (44.601 ms)
 galaxy.jobs.handler INFO 2019-02-01 14:30:21,585 [p:6593,w:0,m:1] [JobHandlerQueue.monitor_thread] (21) Job dispatched
-galaxy.jobs.command_factory INFO 2019-02-01 14:30:21,714 [p:6593,w:0,m:1] [SlurmRunner.work_thread-2] Built script [/srv/galaxy/jobs/000/21/tool_script.sh] for tool command [echo "Running with '${GALAXY_SLOTS:-1}' threads" > "/data/000/dataset_21.dat"]
+galaxy.jobs.command_factory INFO 2019-02-01 14:30:21,714 [p:6593,w:0,m:1] [SlurmRunner.work_thread-2] Built script [/srv/galaxy/jobs/000/21/tool_script.sh] for tool command [echo &quot;Running with '${GALAXY_SLOTS:-1}' threads&quot; &gt; &quot;/data/000/dataset_21.dat&quot;]
 galaxy.jobs.runners DEBUG 2019-02-01 14:30:21,791 [p:6593,w:0,m:1] [SlurmRunner.work_thread-2] (21) command is: rm -rf working; mkdir -p working; cd working; /srv/galaxy/jobs/000/21/tool_script.sh; return_code=$?; cd '/srv/galaxy/jobs/000/21';
-[ "$GALAXY_VIRTUAL_ENV" = "None" ] && GALAXY_VIRTUAL_ENV="$_GALAXY_VIRTUAL_ENV"; _galaxy_setup_environment True
-python "/srv/galaxy/jobs/000/21/set_metadata_FVs2H3.py" "/srv/galaxy/jobs/000/21/registry.xml" "/srv/galaxy/jobs/000/21/working/galaxy.json" "/srv/galaxy/jobs/000/21/metadata_in_HistoryDatasetAssociation_21_LeYyR2,/srv/galaxy/jobs/000/21/metadata_kwds_HistoryDatasetAssociation_21_2yXqbX,/srv/galaxy/jobs/000/21/metadata_out_HistoryDatasetAssociation_21_WwKZCq,/srv/galaxy/jobs/000/21/metadata_results_HistoryDatasetAssociation_21_nfKGx4,/data/000/dataset_21.dat,/srv/galaxy/jobs/000/21/metadata_override_HistoryDatasetAssociation_21_xsOoSa" 5242880; sh -c "exit $return_code"
+[ &quot;$GALAXY_VIRTUAL_ENV&quot; = &quot;None&quot; ] &amp;&amp; GALAXY_VIRTUAL_ENV=&quot;$_GALAXY_VIRTUAL_ENV&quot;; _galaxy_setup_environment True
+python &quot;/srv/galaxy/jobs/000/21/set_metadata_FVs2H3.py&quot; &quot;/srv/galaxy/jobs/000/21/registry.xml&quot; &quot;/srv/galaxy/jobs/000/21/working/galaxy.json&quot; &quot;/srv/galaxy/jobs/000/21/metadata_in_HistoryDatasetAssociation_21_LeYyR2,/srv/galaxy/jobs/000/21/metadata_kwds_HistoryDatasetAssociation_21_2yXqbX,/srv/galaxy/jobs/000/21/metadata_out_HistoryDatasetAssociation_21_WwKZCq,/srv/galaxy/jobs/000/21/metadata_results_HistoryDatasetAssociation_21_nfKGx4,/data/000/dataset_21.dat,/srv/galaxy/jobs/000/21/metadata_override_HistoryDatasetAssociation_21_xsOoSa&quot; 5242880; sh -c &quot;exit $return_code&quot;
 galaxy.jobs.runners.drmaa DEBUG 2019-02-01 14:30:21,821 [p:6593,w:0,m:1] [SlurmRunner.work_thread-2] (21) submitting file /srv/galaxy/jobs/000/21/galaxy_21.sh
 galaxy.jobs.runners.drmaa INFO 2019-02-01 14:30:21,843 [p:6593,w:0,m:1] [SlurmRunner.work_thread-2] (21) queued as 19
 galaxy.jobs DEBUG 2019-02-01 14:30:21,843 [p:6593,w:0,m:1] [SlurmRunner.work_thread-2] (21) Persisting job destination (destination id: slurm)
@@ -509,22 +709,22 @@ galaxy.tools.actions INFO 2019-02-01 14:30:20,500 [p:6590,w:1,m:0] [uWSGIWorker1
 galaxy.tools.actions INFO 2019-02-01 14:30:20,507 [p:6590,w:1,m:0] [uWSGIWorker1Core2] Added output datasets to history (6.210 ms)
 galaxy.tools.actions INFO 2019-02-01 14:30:20,513 [p:6590,w:1,m:0] [uWSGIWorker1Core2] Setup for job Job[unflushed,tool_id=testing] complete, ready to flush (5.408 ms)
 galaxy.tools.actions INFO 2019-02-01 14:30:20,558 [p:6590,w:1,m:0] [uWSGIWorker1Core2] Flushed transaction for job Job[id=21,tool_id=testing] (44.550 ms)
-galaxy.web.stack.transport DEBUG 2019-02-01 14:30:20,559 [p:6590,w:1,m:0] [uWSGIWorker1Core2] Sending message to farm job-handlers: {"__classname__": "JobHandlerMessage", "params": {"task": "setup", "job_id": 21}, "target": "job_handler"}
+galaxy.web.stack.transport DEBUG 2019-02-01 14:30:20,559 [p:6590,w:1,m:0] [uWSGIWorker1Core2] Sending message to farm job-handlers: {&quot;__classname__&quot;: &quot;JobHandlerMessage&quot;, &quot;params&quot;: {&quot;task&quot;: &quot;setup&quot;, &quot;job_id&quot;: 21}, &quot;target&quot;: &quot;job_handler&quot;}
 galaxy.tools.execute DEBUG 2019-02-01 14:30:20,559 [p:6590,w:1,m:0] [uWSGIWorker1Core2] Tool [testing] created job [21] (73.833 ms)
 galaxy.tools.execute DEBUG 2019-02-01 14:30:20,562 [p:6590,w:1,m:0] [uWSGIWorker1Core2] Executed 1 job(s) for tool testing request: (91.901 ms)
 ```
 
 - Job is assigned **Galaxy** job ID 21
-- "Executed" is misleading - the Job has been created in the `job` table of the database, but is not picked up by a job handler yet.
+- &quot;Executed&quot; is misleading - the Job has been created in the `job` table of the database, but is not picked up by a job handler yet.
 - All of this has occurred in the web worker.
-- If not using mules and "Executed" is the last message you see, verify job assigned to a valid handler.
+- If not using mules and &quot;Executed&quot; is the last message you see, verify job assigned to a valid handler.
 
 ---
 class: smaller
 # Successful job lifecycle
 
 ```console
-galaxy.web.stack.transport DEBUG 2019-02-01 14:30:20,560 [p:6593,w:0,m:1] [UWSGIFarmMessageTransport.dispatcher_thread] Received message: {"__classname__": "JobHandlerMessage", "params": {"task": "setup", "job_id": 21}, "target": "job_handler"}
+galaxy.web.stack.transport DEBUG 2019-02-01 14:30:20,560 [p:6593,w:0,m:1] [UWSGIFarmMessageTransport.dispatcher_thread] Received message: {&quot;__classname__&quot;: &quot;JobHandlerMessage&quot;, &quot;params&quot;: {&quot;task&quot;: &quot;setup&quot;, &quot;job_id&quot;: 21}, &quot;target&quot;: &quot;job_handler&quot;}
 galaxy.web.stack.transport DEBUG 2019-02-01 14:30:20,580 [p:6593,w:0,m:1] [UWSGIFarmMessageTransport.dispatcher_thread] Released lock
 galaxy.web.stack.transport DEBUG 2019-02-01 14:30:20,580 [p:6594,w:0,m:2] [UWSGIFarmMessageTransport.dispatcher_thread] Acquired message lock, waiting for new message
 ```
@@ -547,18 +747,18 @@ galaxy.jobs.handler INFO 2019-02-01 14:30:21,585 [p:6593,w:0,m:1] [JobHandlerQue
 ```
 
 - `(21)` at beginning of job log messages is **Galaxy** job ID
-- Job is mapped to destination: `<destination id="slurm"/>`
-- Job is dispatched to job runner plugin: `<plugin id="slurm"/>`
+- Job is mapped to destination: `&lt;destination id=&quot;slurm&quot;/&gt;`
+- Job is dispatched to job runner plugin: `&lt;plugin id=&quot;slurm&quot;/&gt;`
 
 ---
 class: smaller
 # Successful job lifecycle
 
 ```console
-galaxy.jobs.command_factory INFO 2019-02-01 14:30:21,714 [p:6593,w:0,m:1] [SlurmRunner.work_thread-2] Built script [/srv/galaxy/jobs/000/21/tool_script.sh] for tool command [echo "Running with '${GALAXY_SLOTS:-1}' threads" > "/data/000/dataset_21.dat"]
+galaxy.jobs.command_factory INFO 2019-02-01 14:30:21,714 [p:6593,w:0,m:1] [SlurmRunner.work_thread-2] Built script [/srv/galaxy/jobs/000/21/tool_script.sh] for tool command [echo &quot;Running with '${GALAXY_SLOTS:-1}' threads&quot; &gt; &quot;/data/000/dataset_21.dat&quot;]
 galaxy.jobs.runners DEBUG 2019-02-01 14:30:21,791 [p:6593,w:0,m:1] [SlurmRunner.work_thread-2] (21) command is: rm -rf working; mkdir -p working; cd working; /srv/galaxy/jobs/000/21/tool_script.sh; return_code=$?; cd '/srv/galaxy/jobs/000/21';
-[ "$GALAXY_VIRTUAL_ENV" = "None" ] && GALAXY_VIRTUAL_ENV="$_GALAXY_VIRTUAL_ENV"; _galaxy_setup_environment True
-python "/srv/galaxy/jobs/000/21/set_metadata_FVs2H3.py" "/srv/galaxy/jobs/000/21/registry.xml" "/srv/galaxy/jobs/000/21/working/galaxy.json" "/srv/galaxy/jobs/000/21/metadata_in_HistoryDatasetAssociation_21_LeYyR2,/srv/galaxy/jobs/000/21/metadata_kwds_HistoryDatasetAssociation_21_2yXqbX,/srv/galaxy/jobs/000/21/metadata_out_HistoryDatasetAssociation_21_WwKZCq,/srv/galaxy/jobs/000/21/metadata_results_HistoryDatasetAssociation_21_nfKGx4,/data/000/dataset_21.dat,/srv/galaxy/jobs/000/21/metadata_override_HistoryDatasetAssociation_21_xsOoSa" 5242880; sh -c "exit $return_code"
+[ &quot;$GALAXY_VIRTUAL_ENV&quot; = &quot;None&quot; ] &amp;&amp; GALAXY_VIRTUAL_ENV=&quot;$_GALAXY_VIRTUAL_ENV&quot;; _galaxy_setup_environment True
+python &quot;/srv/galaxy/jobs/000/21/set_metadata_FVs2H3.py&quot; &quot;/srv/galaxy/jobs/000/21/registry.xml&quot; &quot;/srv/galaxy/jobs/000/21/working/galaxy.json&quot; &quot;/srv/galaxy/jobs/000/21/metadata_in_HistoryDatasetAssociation_21_LeYyR2,/srv/galaxy/jobs/000/21/metadata_kwds_HistoryDatasetAssociation_21_2yXqbX,/srv/galaxy/jobs/000/21/metadata_out_HistoryDatasetAssociation_21_WwKZCq,/srv/galaxy/jobs/000/21/metadata_results_HistoryDatasetAssociation_21_nfKGx4,/data/000/dataset_21.dat,/srv/galaxy/jobs/000/21/metadata_override_HistoryDatasetAssociation_21_xsOoSa&quot; 5242880; sh -c &quot;exit $return_code&quot;
 galaxy.jobs.runners.drmaa DEBUG 2019-02-01 14:30:21,821 [p:6593,w:0,m:1] [SlurmRunner.work_thread-2] (21) submitting file /srv/galaxy/jobs/000/21/galaxy_21.sh
 galaxy.jobs.runners.drmaa INFO 2019-02-01 14:30:21,843 [p:6593,w:0,m:1] [SlurmRunner.work_thread-2] (21) queued as 19
 galaxy.jobs DEBUG 2019-02-01 14:30:21,843 [p:6593,w:0,m:1] [SlurmRunner.work_thread-2] (21) Persisting job destination (destination id: slurm)
@@ -587,7 +787,7 @@ galaxy.model.metadata DEBUG 2019-02-01 14:30:51,850 [p:6593,w:0,m:1] [SlurmRunne
 ---
 # Jobs aren't running
 
-![Job in new state](../../images/troubleshooting/hda-new.png "Job in new state")
+![Job in new state](../../images/troubleshooting/hda-new.png &quot;Job in new state&quot;)
 
 Corresponds to `job.state = 'new'` in database
 
@@ -599,14 +799,14 @@ Troubleshooting depends on your job handler configuration
 
 Solutions:
 - If using single process or mules
-  - Ensure no `<handlers>` in `job_conf.xml`
+  - Ensure no `&lt;handlers&gt;` in `job_conf.xml`
   - Check handler logs
-- If using `assign_with="db-skip-locked"`
-  - Ensure no `default` attribute in `<handlers>`
-  - Ensure no individual `<handler>`s defined
+- If using `assign_with=&quot;db-skip-locked&quot;`
+  - Ensure no `default` attribute in `&lt;handlers&gt;`
+  - Ensure no individual `&lt;handler&gt;`s defined
   - Ensure `handler` column of `job` table is being set to `_default_`
   - Ensure handlers started with `--attach-to-pool=job-handlers`
-- If using `assign_with="db-preassign"`
+- If using `assign_with=&quot;db-preassign&quot;`
   - Ensure that handler ID(s) in `job_conf.xml` match `server_name`(s)
   - Ensure `handler` column of `job` table is being set to valid handler ID
 
@@ -628,12 +828,12 @@ id  | tool_id | state |    handler        | username |        create_time       
 21  | testing | new   | **job_handler_0** | admin    | 2019-02-01 14:30:20.540327 |                 |
 ]
 
-The correct value of the `handler` column in the database varies by job handler assignment method (`<handlers assign_with=...>`):
-- mules: `null` (empty) then `main.job-handlers.<mule_id>` after assignment
+The correct value of the `handler` column in the database varies by job handler assignment method (`&lt;handlers assign_with=...&gt;`):
+- mules: `null` (empty) then `main.job-handlers.&lt;mule_id&gt;` after assignment
 - db-skip-locked: `_default_` then `handlerN` (where `handlerN` is the value of one of your handlers' `--server-name`)
 - db-preassign: `handlerN`
 
-In this case, `job_handler_0` is not `handler0` or `handler1` (probably due to a misconfiguration in `<handlers>` section of `job_conf.xml`), so no handler will find this job.
+In this case, `job_handler_0` is not `handler0` or `handler1` (probably due to a misconfiguration in `&lt;handlers&gt;` section of `job_conf.xml`), so no handler will find this job.
 
 ---
 # An aside - unruly log files
@@ -651,7 +851,7 @@ Galaxy subtitutes `{pool_name}` with e.g. `job-handlers` and `{server_id}` with 
 ---
 # Jobs aren't running
 
-![Job in queued state](../../images/troubleshooting/hda-queued.png "Job in queued state")
+![Job in queued state](../../images/troubleshooting/hda-queued.png &quot;Job in queued state&quot;)
 
 Corresponds to `job.state = 'queued'` in database
 
@@ -659,7 +859,7 @@ A handler has seen this job
 
 .left[Verify concurrency limits unmet in `job_conf.xml`:]
 - Local jobs: value of plugin `workers` attribute (default: 4)
-- All jobs: Entire `<limits>` section
+- All jobs: Entire `&lt;limits&gt;` section
 
 Users are *not* informed when they have reached the job limits. Exceeding disk quota also pauses jobs, but users are notified of this.
 
@@ -677,13 +877,13 @@ If external ID is assigned, job is queued on a cluster. Use cluster queue status
 ---
 # Jobs aren't finishing
 
-![Job in running state](../../images/troubleshooting/hda-running.png "Job in running state")
+![Job in running state](../../images/troubleshooting/hda-running.png &quot;Job in running state&quot;)
 
 Corresponds to `job.state = 'running'` in database
 
 Get job runner external (DRM) ID (`gxadmin query job-info`), use cluster queue status tool(s) to investigate further.
 
-.left[If the DRM job is finished but the Galaxy job is still "running":]
+.left[If the DRM job is finished but the Galaxy job is still &quot;running&quot;:]
 - Check last job handler log message for job
 - Setting/collecting metadata can be slow: wait
 - Check handlers health (`py-spy` or `gdb` (demos later!))
@@ -725,7 +925,7 @@ galaxy    3440 17.2  5.2 1696480 863536 ?      D    Nov10 167:46 python3 scripts
 
 Kernel uninterruptable sleep. Probably IO. Check filesystems, disks.
 
-- Investigate `/proc/<pid>/fd` (demo!) or `lsof -p <pid>` (demo!)
+- Investigate `/proc/&lt;pid&gt;/fd` (demo!) or `lsof -p &lt;pid&gt;` (demo!)
 - Use `strace` (demo!)
 
 .reduce70[.footnote[This slide covers how to investigate kernel uninterruptable sleep processes]]
@@ -738,22 +938,22 @@ Kernel uninterruptable sleep. Probably IO. Check filesystems, disks.
 - Use `time dd` (quick and dirty) or `fio` to test write performance (demo!)
 - Use Wireshark
 
-![Packet capture in Wireshark](../../images/troubleshooting/wireshark.png "Packet capture in Wireshark")
+![Packet capture in Wireshark](../../images/troubleshooting/wireshark.png &quot;Packet capture in Wireshark&quot;)
 
 ---
 # Local or Network FS slow/down
 
 Solutions:
 - Don't put the Galaxy server in that FS. Local distribution, CVMFS, ??
-- Install Galaxy in two places and use [Pulsar Embedded Mode](https://github.com/galaxyproject/galaxy/blob/8c2066f07ac7bb48c59cf8378e5a852e6fb82a4e/config/job_conf.xml.sample_advanced#L101) with [file actions](https://pulsar.readthedocs.io/en/latest/galaxy_conf.html#data-staging) to rewrite paths<sup>3</sup>
+- Install Galaxy in two places and use [Pulsar Embedded Mode](https://github.com/galaxyproject/galaxy/blob/8c2066f07ac7bb48c59cf8378e5a852e6fb82a4e/config/job_conf.xml.sample_advanced#L101) with [file actions](https://pulsar.readthedocs.io/en/latest/galaxy_conf.html#data-staging) to rewrite paths&lt;sup&gt;3&lt;/sup&gt;
 - Get a better network FS
 
-.reduce70[.footnote[<sup>3</sup> Ply @jmchilton with McDonalds hashbrowns for more Pulsar Embedded Mode documentation]]
+.reduce70[.footnote[&lt;sup&gt;3&lt;/sup&gt; Ply @jmchilton with McDonalds hashbrowns for more Pulsar Embedded Mode documentation]]
 
 ---
 # NFS caching errors
 
-Galaxy gets "No such file or directory" for files that exist. NFS attribute caching is to blame. Set:
+Galaxy gets &quot;No such file or directory&quot; for files that exist. NFS attribute caching is to blame. Set:
 
 ```yaml
 galaxy:
@@ -793,7 +993,7 @@ To alter the grace period, set the [*reload-mercy options](https://uwsgi-docs.re
 Slow queries, high load, etc.
 
 - Use `EXPLAIN ANALYZE` (demo!)
-  - [Example of the "jobs ready to run" query](https://gist.github.com/natefoo/da46bea8136ba67d65f616c86a27c454)
+  - [Example of the &quot;jobs ready to run&quot; query](https://gist.github.com/natefoo/da46bea8136ba67d65f616c86a27c454)
   - `database_engine_option_echo` (but warning, extremely verbose)
   - `slow_query_log_threshold` logs to Galaxy log file
   - `sentry_sloreq_threshold` if using Sentry
@@ -833,7 +1033,7 @@ Find `Python.h` on [packages.ubuntu.com](http://packages.ubuntu.com/) and instal
 ---
 # Job failures
 
-"Unable to run job due to a misconfiguration of the Galaxy job running system.  Please contact a site administrator."
+&quot;Unable to run job due to a misconfiguration of the Galaxy job running system.  Please contact a site administrator.&quot;
 
 There is a traceback in the Galaxy log. Go find it.
 
@@ -862,9 +1062,7 @@ In the Admin/Users menu you can run `Recalculate Disk Usage` on a certain user
 
 There is also a command line version: `scripts/set_user_disk_usage.py`
 
-{% comment %}
-![Recalculate Disk Usage Option](images/admin_recalc_usage.png)
-{% endcomment %}
+
 
 ---
 # Any troubling Galaxy situations you have?
@@ -876,3 +1074,68 @@ There is also a command line version: `scripts/set_user_disk_usage.py`
 - [Galaxy Help](https://help.galaxyproject.org/)
 - [galaxy-dev Mailing list](http://dev.list.galaxyproject.org/)
 - [Hub Support page](https://galaxyproject.org/support/)
+
+
+
+
+
+
+
+
+
+---
+
+## Thank you!
+
+This material is the result of a collaborative work. Thanks to the [Galaxy Training Network](https://wiki.galaxyproject.org/Teach/GTN) and all the contributors!
+
+
+<div class="contributors-line">
+
+
+ <a href="/training-material/hall-of-fame/martenson/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/martenson" alt="Martin Čech">Martin Čech</a> <a href="/training-material/hall-of-fame/natefoo/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/natefoo" alt="Nate Coraor">Nate Coraor</a>
+
+
+</div>
+
+
+
+  
+<img src="/training-material/assets/images/gat.png" alt="page logo" style="height: 100px;"/>
+  
+
+
+This material is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+
+    </textarea>
+	<script src="/training-material/assets/js/remark-latest.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+    <script type="text/javascript" src="/training-material/assets/js/clipboard.min.js"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({navigation: {scroll: false,}});
+      var hljs = remark.highlighter.engine;
+      var snippets = document.querySelectorAll('code.remark-code');
+        [].forEach.call(snippets,function(snippet){
+          snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        });
+      var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
+        target:function(trigger){return trigger.parentElement;
+      }});
+    </script>
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('body').prepend("<div style='text-align: center'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
+
+  </body>
+</html>

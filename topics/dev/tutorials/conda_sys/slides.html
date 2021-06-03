@@ -1,32 +1,237 @@
----
-layout: tutorial_slides
-logo: "GTN"
+<!DOCTYPE html>
+<html>
 
-title: "Prerequisites for building software/conda packages"
-subtopic: dependencies
-questions:
-  - "What does 'installing a software' means on a Linux architecture?"
-  - "Why my compilations always fail?"
-  - "How to solve common compiling and installation issues?"
-objectives:
-  - "Learn how to compile and install tools using standard procedures."
-  - "Learn needed tricks to write conda build.sh files."
-time_estimation: "1h"
-key_points:
-  - "There is a common procedure to compile and install many tools: `./configure && make && make install`"
-  - "Some exotic tools require adjustements to compile or install properly"
-  - "Pay attention to INSTALL and README files, and to documentation"
-contributors:
-  - abretaud
-  - cmonjeau
+
+
+
+
+
+
+
+
+  <head>
+    <meta charset="utf-8">
+    <title>Prerequisites for building software/conda packages</title>
+    
+        <script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
+
+    
+    <link rel="stylesheet" href="/training-material/assets/css/slides.css">
+    <script src="https://kit.fontawesome.com/67b3f98409.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+    
+    
+    
+    
+    <meta name="description" content="Galaxy is an open-source project. Everyone can contribute..." />
+    <meta property="og:title" content="Galaxy Training: Prerequisites for building software/conda packages" />
+    <meta property="og:description" content="Galaxy is an open-source project. Everyone can contribute..." />
+    <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
+    <script type="application/ld+json">
+      
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "citation": {
+    "@type": "CreativeWork",
+    "name": "Community-Driven Data Analysis Training for Biology",
+    "url": "https://doi.org/10.1016/j.cels.2018.05.012"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
+  "headline": "Prerequisites for building software/conda packages",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/main/LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "Development in Galaxy",
+    "description": "Galaxy is an open-source project. Everyone can contribute to its development with core Galaxy development, integration of softwares in Galaxy environment, ...",
+    "url": "https://training.galaxyproject.org//training-material/topics/dev/"
+  },
+  "courseCode": "dev / conda_sys / slides",
+  "learningResourceType": "slides",
+  "name": "Slides for 'Prerequisites for building software/conda packages' tutorial",
+  "url": "https://training.galaxyproject.org//training-material/topics/dev/tutorials/conda_sys/slides.html",
+  "timeRequired": "PT1H",
+  "description": "The questions this  addresses are:\n - What does 'installing a software' means on a Linux architecture?\n - Why my compilations always fail?\n - How to solve common compiling and installation issues?\n\n\\nThe objectives are:\n - Learn how to compile and install tools using standard procedures.\n - Learn needed tricks to write conda build.sh files.\n\n",
+  "hasPart": [
+
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Anthony Bretaudeau"
+    },
+    {
+      "@type": "Person",
+      "name": "Cyril Monjeaud"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Anthony Bretaudeau"
+    },
+    {
+      "@type": "Person",
+      "name": "Cyril Monjeaud"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "Development in Galaxy",
+      "description": "Galaxy is an open-source project. Everyone can contribute to its development with core Galaxy development, integration of softwares in Galaxy environment, ...",
+      "url": "https://training.galaxyproject.org//training-material/topics/dev/"
+    }
+  ]
+}
+    </script>
+    <script type="text/javascript" src="/training-material/assets/js/jquery.slim.min.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+name: inverse
+layout: true
+class: center, middle, inverse
+
+<div class="my-header"><span>
+<a href="/training-material/topics/dev" title="Return to topic page" ><i class="fa fa-level-up" aria-hidden="true"></i></a>
+
+<a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/main/topics/dev/tutorials/conda_sys/slides.html"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+
+</span></div>
+
+<div class="my-footer"><span>
+
+<img src="/training-material/assets/images/GTN-60px.png" alt="Galaxy Training Network" style="height: 40px;"/>
+
+</span></div>
+
 ---
+
+
+<img src="/training-material/assets/images/GTN.png" alt="Galaxy Training Network" class="cover-logo"/>
+
+
+# Prerequisites for building software/conda packages
+
+
+<div class="contributors-line">
+
+
+ <a href="/training-material/hall-of-fame/abretaud/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/abretaud" alt="Anthony Bretaudeau">Anthony Bretaudeau</a> <a href="/training-material/hall-of-fame/cmonjeau/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/cmonjeau" alt="Cyril Monjeaud">Cyril Monjeaud</a>
+
+
+</div>
+
+
+
+
+.footnote[Tip: press `P` to view the presenter notes]
+
+???
+Presenter notes contain extra information which might be useful if you
+intend to use these slides for teaching.
+
+Press `P` again to switch presenter notes off
+
+Press `C` to create a new window where the same presentation will be displayed.
+This window is linked to the main window. Changing slides on one will cause the
+slide to change on the other. Useful when presenting.
+
+---
+
+
+
+
+
+
+### &lt;i class=&quot;far fa-question-circle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;question&lt;/span&gt; Questions
+
+
+- What does 'installing a software' means on a Linux architecture?
+
+- Why my compilations always fail?
+
+- How to solve common compiling and installation issues?
+
+
+---
+
+
+
+### &lt;i class=&quot;fas fa-bullseye&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;objectives&lt;/span&gt; Objectives
+
+
+- Learn how to compile and install tools using standard procedures.
+
+- Learn needed tricks to write conda build.sh files.
+
+
+---
+
 
 class: left, enlarge120
 
 ### Environment variables
 
 ```sh
-$ MY_NAME="Bobby"
+$ MY_NAME=&quot;Bobby&quot;
 $ echo $MY_NAME
 Bobby
 ```
@@ -72,7 +277,7 @@ Paths separated by `:`, ordered list (highest priority first).
 As all environment variable, you can redefine it:
 
 ```sh
-$ export PATH="/opt/xxx/bin/:$PATH"
+$ export PATH=&quot;/opt/xxx/bin/:$PATH&quot;
 $ echo $PATH
 /opt/xxx/bin/:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin
 ```
@@ -90,10 +295,10 @@ $ which the_binary
 /opt/xxx/bin/the_binary
 ```
 
-It throws an error if the binary is not "in the PATH".
+It throws an error if the binary is not &quot;in the PATH&quot;.
 
 ```sh
-$ export PATH="/usr/bin/"
+$ export PATH=&quot;/usr/bin/&quot;
 $ echo $PATH
 /usr/bin
 ```
@@ -345,15 +550,15 @@ $ ./configure --zlib-dir=/home/somewhere/zlib/
 Or, you can define some standard environment variables:
 
 ```sh
-$ export CFLAGS="-I/home/somewhere/zlib/include $CFLAGS"
-$ export LDFLAGS="-L/home/somewhere/zlib/lib $LDFLAGS"
+$ export CFLAGS=&quot;-I/home/somewhere/zlib/include $CFLAGS&quot;
+$ export LDFLAGS=&quot;-L/home/somewhere/zlib/lib $LDFLAGS&quot;
 ```
 
 In some cases, you might need to define additional variables:
 
 ```sh
-$ export CPATH="/home/somewhere/zlib/include:$CPATH"
-$ export LIBRARY_PATH="/home/somewhere/zlib/lib:$LIBRARY_PATH"
+$ export CPATH=&quot;/home/somewhere/zlib/include:$CPATH&quot;
+$ export LIBRARY_PATH=&quot;/home/somewhere/zlib/lib:$LIBRARY_PATH&quot;
 ```
 
 ---
@@ -365,7 +570,7 @@ class: left, enlarge120
 The `CFLAGS` environment variable can also be used for other purposes like enabling some compiler optimisation, predefining some C macro or compiling with debugging symbols.
 
 ```sh
-$ export CFLAGS="-I/home/somewhere/zlib/include -O2 -DDEBUG -g"
+$ export CFLAGS=&quot;-I/home/somewhere/zlib/include -O2 -DDEBUG -g&quot;
 ```
 
 When you are compiling C++ code, you need to use `CXXFLAGS` instead of `CFLAGS`.
@@ -452,16 +657,90 @@ To list all the libraries needed by the program and identify the one causing the
 ```sh
 $ ldd `which nano`
 	linux-vdso.so.1 (0x00007ffdfb48c000)
-	libmagic.so.1 => not found
-	libncursesw.so.6 => /lib64/libncursesw.so.6 (0x00007f16cbb54000)
+	libmagic.so.1 =&gt; not found
+	libncursesw.so.6 =&gt; /lib64/libncursesw.so.6 (0x00007f16cbb54000)
 ```
 
 Make sure the library is correctly installed. If it is installed in an exotic location, use the `LD_LIBRARY_PATH` environment.
 
 ```sh
-$ export LD_LIBRARY_PATH="/home/somewhere/magic/:$LD_LIBRARY_PATH"
+$ export LD_LIBRARY_PATH=&quot;/home/somewhere/magic/:$LD_LIBRARY_PATH&quot;
 $ ldd `which nano`
 	linux-vdso.so.1 (0x00007ffdfb48c000)
-	libmagic.so.1 => /home/somewhere/magic/lib/libmagic.so.1
-	libncursesw.so.6 => /lib64/libncursesw.so.6 (0x00007f16cbb54000)
+	libmagic.so.1 =&gt; /home/somewhere/magic/lib/libmagic.so.1
+	libncursesw.so.6 =&gt; /lib64/libncursesw.so.6 (0x00007f16cbb54000)
 ```
+
+
+
+
+---
+### &lt;i class=&quot;fas fa-key&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;keypoints&lt;/span&gt; Key points
+
+
+- There is a common procedure to compile and install many tools: `./configure &amp;&amp; make &amp;&amp; make install`
+
+- Some exotic tools require adjustements to compile or install properly
+
+- Pay attention to INSTALL and README files, and to documentation
+
+
+
+
+
+
+
+---
+
+## Thank you!
+
+This material is the result of a collaborative work. Thanks to the [Galaxy Training Network](https://wiki.galaxyproject.org/Teach/GTN) and all the contributors!
+
+
+<div class="contributors-line">
+
+
+ <a href="/training-material/hall-of-fame/abretaud/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/abretaud" alt="Anthony Bretaudeau">Anthony Bretaudeau</a> <a href="/training-material/hall-of-fame/cmonjeau/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/cmonjeau" alt="Cyril Monjeaud">Cyril Monjeaud</a>
+
+
+</div>
+
+
+
+<img src="/training-material/assets/images/GTN.png" alt="Galaxy Training Network" style="height: 100px;"/>
+
+
+This material is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+
+    </textarea>
+	<script src="/training-material/assets/js/remark-latest.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+    <script type="text/javascript" src="/training-material/assets/js/clipboard.min.js"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({navigation: {scroll: false,}});
+      var hljs = remark.highlighter.engine;
+      var snippets = document.querySelectorAll('code.remark-code');
+        [].forEach.call(snippets,function(snippet){
+          snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        });
+      var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
+        target:function(trigger){return trigger.parentElement;
+      }});
+    </script>
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('body').prepend("<div style='text-align: center'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
+
+  </body>
+</html>

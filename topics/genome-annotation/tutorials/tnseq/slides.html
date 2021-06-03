@@ -1,33 +1,267 @@
----
-layout: tutorial_slides
-logo: "GTN"
+<!DOCTYPE html>
+<html>
 
-title: "Essential genes detection with Transposon insertion sequencing"
-zenodo_link: "https://doi.org/10.5281/zenodo.940733"
-tags:
-  - bacteria
-  - tnseq
-  - essential genes
-questions:
-  - "What is Transposon insertion Sequencing?"
-  - "How to get TA sites Coverage ? "
-  - "How to predict essential genes ?"
-objectives:
-  - "Understand the read structure of TnSeq analyses"
-  - "Predict Essential genes with Transit"
-  - "Compare gene essentiality in control sample and an different experimental condition"
-time_estimation: "7H"
-key_points:
-contributors:
-  - delphine-l
+
+
+
+
+
+
+
+
+  <head>
+    <meta charset="utf-8">
+    <title>Essential genes detection with Transposon insertion sequencing</title>
+    
+        <script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
+
+    
+    <link rel="stylesheet" href="/training-material/assets/css/slides.css">
+    <script src="https://kit.fontawesome.com/67b3f98409.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+    
+    
+    
+    
+    <meta name="description" content="Genome annotation is a multi-level process that includes ..." />
+    <meta property="og:title" content="Galaxy Training: Essential genes detection with Transposon insertion seque..." />
+    <meta property="og:description" content="Genome annotation is a multi-level process that includes ..." />
+    <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
+    <script type="application/ld+json">
+      
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "citation": {
+    "@type": "CreativeWork",
+    "name": "Community-Driven Data Analysis Training for Biology",
+    "url": "https://doi.org/10.1016/j.cels.2018.05.012"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
+  "headline": "Essential genes detection with Transposon insertion sequencing",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/main/LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "Genome Annotation",
+    "description": "Genome annotation is a multi-level process that includes prediction of protein-coding\ngenes, as well as other functional genome units such as structural RNAs, tRNAs,\nsmall RNAs, pseudogenes, control regions, direct and inverted repeats, insertion\nsequences, transposons and other mobile elements.\n",
+    "url": "https://training.galaxyproject.org//training-material/topics/genome-annotation/"
+  },
+  "courseCode": "genome-annotation / tnseq / slides",
+  "learningResourceType": "slides",
+  "name": "Slides for 'Essential genes detection with Transposon insertion sequencing' tutorial",
+  "url": "https://training.galaxyproject.org//training-material/topics/genome-annotation/tutorials/tnseq/slides.html",
+  "timeRequired": "PT7H",
+  "keywords": "bacteria, tnseq, essential genes",
+  "description": "The questions this  addresses are:\n - What is Transposon insertion Sequencing?\n - How to get TA sites Coverage ? \n - How to predict essential genes ?\n\n\\nThe objectives are:\n - Understand the read structure of TnSeq analyses\n - Predict Essential genes with Transit\n - Compare gene essentiality in control sample and an different experimental condition\n\n",
+  "coursePrerequisites": [
+    {
+      "@type": "CreativeWork",
+      "url": "https://training.galaxyproject.org//training-material/topics/introduction/",
+      "name": "Introduction to Galaxy Analyses",
+      "description": "Introduction to Galaxy Analyses",
+      "provider": {
+        "@type": "Organization",
+        "email": "galaxytrainingnetwork@gmail.com",
+        "name": "Galaxy Training Network",
+        "url": "https://galaxyproject.org/teach/gtn/"
+      }
+    }
+  ],
+  "hasPart": [
+
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Delphine Lariviere"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Delphine Lariviere"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "Genome Annotation",
+      "description": "Genome annotation is a multi-level process that includes prediction of protein-coding\ngenes, as well as other functional genome units such as structural RNAs, tRNAs,\nsmall RNAs, pseudogenes, control regions, direct and inverted repeats, insertion\nsequences, transposons and other mobile elements.\n",
+      "url": "https://training.galaxyproject.org//training-material/topics/genome-annotation/"
+    }
+  ]
+}
+    </script>
+    <script type="text/javascript" src="/training-material/assets/js/jquery.slim.min.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+name: inverse
+layout: true
+class: center, middle, inverse
+
+<div class="my-header"><span>
+<a href="/training-material/topics/genome-annotation" title="Return to topic page" ><i class="fa fa-level-up" aria-hidden="true"></i></a>
+
+<a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/main/topics/genome-annotation/tutorials/tnseq/slides.html"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+
+</span></div>
+
+<div class="my-footer"><span>
+
+<img src="/training-material/assets/images/GTN-60px.png" alt="Galaxy Training Network" style="height: 40px;"/>
+
+</span></div>
+
 ---
 
-<!--
+
+<img src="/training-material/assets/images/GTN.png" alt="Galaxy Training Network" class="cover-logo"/>
+
+
+# Essential genes detection with Transposon insertion sequencing
+
+
+<div class="contributors-line">
+
+
+ <a href="/training-material/hall-of-fame/delphine-l/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/delphine-l" alt="Delphine Lariviere">Delphine Lariviere</a>
+
+
+</div>
+
+
+
+
+---
+
+## Requirements
+
+Before diving into this slide deck, we recommend you to have a look at:
+
+
+
+    
+        
+        
+            
+        
+- [Introduction to Galaxy Analyses](/training-material/topics/introduction)
+    
+
+
+
+
+
+
+.footnote[Tip: press `P` to view the presenter notes]
+
+???
+Presenter notes contain extra information which might be useful if you
+intend to use these slides for teaching.
+
+Press `P` again to switch presenter notes off
+
+Press `C` to create a new window where the same presentation will be displayed.
+This window is linked to the main window. Changing slides on one will cause the
+slide to change on the other. Useful when presenting.
+
+---
+
+
+
+
+
+
+### &lt;i class=&quot;far fa-question-circle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;question&lt;/span&gt; Questions
+
+
+- What is Transposon insertion Sequencing?
+
+- How to get TA sites Coverage ? 
+
+- How to predict essential genes ?
+
+
+---
+
+
+
+### &lt;i class=&quot;fas fa-bullseye&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;objectives&lt;/span&gt; Objectives
+
+
+- Understand the read structure of TnSeq analyses
+
+- Predict Essential genes with Transit
+
+- Compare gene essentiality in control sample and an different experimental condition
+
+
+---
+
+
+&lt;!--
 To show speaker notes during a presentation:
 press c to clone the slides (opens a new window)
 on one window, press p to show speaker notes
 display the other window
--->
+--&gt;
 
 ## Motivation
 
@@ -50,7 +284,7 @@ Identifying the impact of mutations on bacterial fitness allows to classify cert
 ### Data production
 
 
-.center[<img name="method" src="../../images/tnseq/principle_tnseq_part1.png" width='80%' alt="Description of tnseq method" >
+.center[&lt;img name=&quot;method&quot; src=&quot;../../images/tnseq/principle_tnseq_part1.png&quot; width='80%' alt=&quot;Description of tnseq method&quot; &gt;
 
 From [Chao et al.](http://www.doi.org/10.1038/nrmicro.2015.7)]
 
@@ -66,7 +300,7 @@ The initial population genomes are mutated so that the genome is saturated with 
 
 
 .center[
-<img name="method" src="../../images/tnseq/principle_tnseq_part2.png" width='80%' alt="Description of tnseq method" >
+&lt;img name=&quot;method&quot; src=&quot;../../images/tnseq/principle_tnseq_part2.png&quot; width='80%' alt=&quot;Description of tnseq method&quot; &gt;
 
 From [Chao et al.](http://www.doi.org/10.1038/nrmicro.2015.7)
 ]
@@ -164,7 +398,7 @@ The advantage of a target specific transposon, like the mariner, in opposition o
 ### Structure of the modified mariner transposon Himar1
 
 .center[
-<img name="TranspStructure" src="../../images/tnseq/tranposon_structure.png" width='50%' alt="Structure of the transpson construct, containing several barcodes and adapters" >
+&lt;img name=&quot;TranspStructure&quot; src=&quot;../../images/tnseq/tranposon_structure.png&quot; width='50%' alt=&quot;Structure of the transpson construct, containing several barcodes and adapters&quot; &gt;
 
 From [Santiago et al.](http://www.doi.org/10.1186/s12864-015-1361-3)
 ]
@@ -198,7 +432,7 @@ With the count of insertions at every insertion site, there is several methods e
 ### Methods of Analysis
 
 .center[
-<img name="AnalysesMethods" src="../../images/tnseq/type_of_analyses.png" width='70%'  alt="Different types of TnSeq Analyses methods" >
+&lt;img name=&quot;AnalysesMethods&quot; src=&quot;../../images/tnseq/type_of_analyses.png&quot; width='70%'  alt=&quot;Different types of TnSeq Analyses methods&quot; &gt;
 
 From [Chao et al.](http://www.doi.org/10.1038/nrmicro.2015.7)
 ]
@@ -272,7 +506,7 @@ The re-sampling method is a comparative analysis the allows that can be used to 
 .left[#### 1. Data Structure]
 
 
-<img src="../../images/tnseq/preprocessing.png" width='90%' alt="Workflow for preprocessing the read before alignment" >
+&lt;img src=&quot;../../images/tnseq/preprocessing.png&quot; width='90%' alt=&quot;Workflow for preprocessing the read before alignment&quot; &gt;
 
 ???
 
@@ -293,9 +527,9 @@ The pre-processing of the data will be done through several steps of Cutadapt so
 .center[
  Barcode data:
  ```markdown
- >control
+ &gt;control
  ^CTCAGAAG
- >condition
+ &gt;condition
  ^GACGTCAT
  ```
 ]
@@ -362,7 +596,7 @@ All these steps are performed with the Cutadapt tool
 
 
 .center[
-<img name="method" src="../../images/tnseq/Map_cov.png" width='90%' alt="The read align to the genome with its 3' end covering half of the TA site" >
+&lt;img name=&quot;method&quot; src=&quot;../../images/tnseq/Map_cov.png&quot; width='90%' alt=&quot;The read align to the genome with its 3' end covering half of the TA site&quot; &gt;
 ]
 
 - We are using the tool BamCoverage with an offset of `-1`
@@ -505,7 +739,7 @@ zbar	Posterior Probability of Essentiality.
 Call	Essentiality call for the gene. Depends on FDR corrected thresholds. E=Essential U=Uncertain, NE=Non-Essential, S=too short
 
 
-Note: Technically, Bayesian models are used to calculate posterior probabilities, not p-values (which is a concept associated with the frequentist framework). However, we have implemented a method for computing the approximate false-discovery rate (FDR) that serves a similar purpose. This determines a threshold for significance on the posterior probabilities that is corrected for multiple tests. The actual thresholds used are reported in the headers of the output file (and are near 1 for essentials and near 0 for non-essentials). There can be many genes that score between the two thresholds (t1 < zbar < t2). This reflects intrinsic uncertainty associated with either low read counts, sparse insertion density, or small genes. If the insertion_density is too low (< ~30%), the method may not work as well, and might indicate an unusually large number of Uncertain or Essential genes.
+Note: Technically, Bayesian models are used to calculate posterior probabilities, not p-values (which is a concept associated with the frequentist framework). However, we have implemented a method for computing the approximate false-discovery rate (FDR) that serves a similar purpose. This determines a threshold for significance on the posterior probabilities that is corrected for multiple tests. The actual thresholds used are reported in the headers of the output file (and are near 1 for essentials and near 0 for non-essentials). There can be many genes that score between the two thresholds (t1 &lt; zbar &lt; t2). This reflects intrinsic uncertainty associated with either low read counts, sparse insertion density, or small genes. If the insertion_density is too low (&lt; ~30%), the method may not work as well, and might indicate an unusually large number of Uncertain or Essential genes.
 
 
 ---
@@ -517,3 +751,66 @@ Note: Technically, Bayesian models are used to calculate posterior probabilities
 - Be aware of your library saturation: A saturation too low will give you a lot of false essential Genes
 - Do not Accept Mismatches in your alignements when working with very short reads
 - Be careful when you use different tools based on genomic positions, some tools start at position 1, or 0
+
+
+
+
+
+
+
+
+
+---
+
+## Thank you!
+
+This material is the result of a collaborative work. Thanks to the [Galaxy Training Network](https://wiki.galaxyproject.org/Teach/GTN) and all the contributors!
+
+
+<div class="contributors-line">
+
+
+ <a href="/training-material/hall-of-fame/delphine-l/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/delphine-l" alt="Delphine Lariviere">Delphine Lariviere</a>
+
+
+</div>
+
+
+
+<img src="/training-material/assets/images/GTN.png" alt="Galaxy Training Network" style="height: 100px;"/>
+
+
+This material is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+
+    </textarea>
+	<script src="/training-material/assets/js/remark-latest.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+    <script type="text/javascript" src="/training-material/assets/js/clipboard.min.js"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({navigation: {scroll: false,}});
+      var hljs = remark.highlighter.engine;
+      var snippets = document.querySelectorAll('code.remark-code');
+        [].forEach.call(snippets,function(snippet){
+          snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        });
+      var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
+        target:function(trigger){return trigger.parentElement;
+      }});
+    </script>
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('body').prepend("<div style='text-align: center'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
+
+  </body>
+</html>

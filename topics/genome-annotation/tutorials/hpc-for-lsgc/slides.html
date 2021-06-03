@@ -1,28 +1,261 @@
----
-layout: tutorial_slides
-logo: "GTN"
+<!DOCTYPE html>
+<html>
 
-title: "High Performance Computing for Pairwise Genome Comparison"
-zenodo_link: "https://doi.org/10.5281/zenodo.4485547"
-questions:
-  - What is sequence comparison and why does it matter?
-  - What are the challenges and how can we use High Performance Computing to overcome them?
-  - How can we use Galaxy for large scale sequence comparison?
-objectives:
-  - Learn the basics of genome comparison
-  - Run sequence comparisons in Galaxy
-  - Using GECKO for sequence comparison
-  - Using CHROMEISTER for comparing large sequences such as plants and chromosomes
-requirements:
-time_estimation: "2h"
-key_points:
-  - Sequence comparison is difficult due to its computational complexity and the growth of databases
-  - There are several approaches to sequencen comparison, and we need to know which one to use (DP-based, alignment-free, seeds, etc.)
-  - We have learnt the internals regarding GECKO, GECKO-MGV and CHROMEISTER to work with single chromosome comparisons and/or exhaustive searchs, the post-processing and for larger/noisy experiments, respectively
-contributors:
-  - estebanpw
+
+
+
+
+
+
+
+
+  <head>
+    <meta charset="utf-8">
+    <title>High Performance Computing for Pairwise Genome Comparison</title>
+    
+        <script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
+
+    
+    <link rel="stylesheet" href="/training-material/assets/css/slides.css">
+    <script src="https://kit.fontawesome.com/67b3f98409.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+    
+    
+    
+    
+    <meta name="description" content="Genome annotation is a multi-level process that includes ..." />
+    <meta property="og:title" content="Galaxy Training: High Performance Computing for Pairwise Genome Comparison" />
+    <meta property="og:description" content="Genome annotation is a multi-level process that includes ..." />
+    <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
+    <script type="application/ld+json">
+      
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "citation": {
+    "@type": "CreativeWork",
+    "name": "Community-Driven Data Analysis Training for Biology",
+    "url": "https://doi.org/10.1016/j.cels.2018.05.012"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
+  "headline": "High Performance Computing for Pairwise Genome Comparison",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/main/LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "Genome Annotation",
+    "description": "Genome annotation is a multi-level process that includes prediction of protein-coding\ngenes, as well as other functional genome units such as structural RNAs, tRNAs,\nsmall RNAs, pseudogenes, control regions, direct and inverted repeats, insertion\nsequences, transposons and other mobile elements.\n",
+    "url": "https://training.galaxyproject.org//training-material/topics/genome-annotation/"
+  },
+  "courseCode": "genome-annotation / hpc-for-lsgc / slides",
+  "learningResourceType": "slides",
+  "name": "Slides for 'High Performance Computing for Pairwise Genome Comparison' tutorial",
+  "url": "https://training.galaxyproject.org//training-material/topics/genome-annotation/tutorials/hpc-for-lsgc/slides.html",
+  "timeRequired": "PT2H",
+  "description": "The questions this  addresses are:\n - What is sequence comparison and why does it matter?\n - What are the challenges and how can we use High Performance Computing to overcome them?\n - How can we use Galaxy for large scale sequence comparison?\n\n\\nThe objectives are:\n - Learn the basics of genome comparison\n - Run sequence comparisons in Galaxy\n - Using GECKO for sequence comparison\n - Using CHROMEISTER for comparing large sequences such as plants and chromosomes\n\n",
+  "coursePrerequisites": [
+    {
+      "@type": "CreativeWork",
+      "url": "https://training.galaxyproject.org//training-material/topics/introduction/",
+      "name": "Introduction to Galaxy Analyses",
+      "description": "Introduction to Galaxy Analyses",
+      "provider": {
+        "@type": "Organization",
+        "email": "galaxytrainingnetwork@gmail.com",
+        "name": "Galaxy Training Network",
+        "url": "https://galaxyproject.org/teach/gtn/"
+      }
+    }
+  ],
+  "hasPart": [
+
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Esteban Perez-Wohlfeil"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Esteban Perez-Wohlfeil"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "Genome Annotation",
+      "description": "Genome annotation is a multi-level process that includes prediction of protein-coding\ngenes, as well as other functional genome units such as structural RNAs, tRNAs,\nsmall RNAs, pseudogenes, control regions, direct and inverted repeats, insertion\nsequences, transposons and other mobile elements.\n",
+      "url": "https://training.galaxyproject.org//training-material/topics/genome-annotation/"
+    }
+  ]
+}
+    </script>
+    <script type="text/javascript" src="/training-material/assets/js/jquery.slim.min.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+name: inverse
+layout: true
+class: center, middle, inverse
+
+<div class="my-header"><span>
+<a href="/training-material/topics/genome-annotation" title="Return to topic page" ><i class="fa fa-level-up" aria-hidden="true"></i></a>
+
+<a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/main/topics/genome-annotation/tutorials/hpc-for-lsgc/slides.html"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+
+</span></div>
+
+<div class="my-footer"><span>
+
+<img src="/training-material/assets/images/GTN-60px.png" alt="Galaxy Training Network" style="height: 40px;"/>
+
+</span></div>
 
 ---
+
+
+<img src="/training-material/assets/images/GTN.png" alt="Galaxy Training Network" class="cover-logo"/>
+
+
+# High Performance Computing for Pairwise Genome Comparison
+
+
+<div class="contributors-line">
+
+
+ <a href="/training-material/hall-of-fame/estebanpw/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/estebanpw" alt="Esteban Perez-Wohlfeil">Esteban Perez-Wohlfeil</a>
+
+
+</div>
+
+
+
+
+---
+
+## Requirements
+
+Before diving into this slide deck, we recommend you to have a look at:
+
+
+
+    
+        
+        
+            
+        
+- [Introduction to Galaxy Analyses](/training-material/topics/introduction)
+    
+
+
+
+
+
+
+.footnote[Tip: press `P` to view the presenter notes]
+
+???
+Presenter notes contain extra information which might be useful if you
+intend to use these slides for teaching.
+
+Press `P` again to switch presenter notes off
+
+Press `C` to create a new window where the same presentation will be displayed.
+This window is linked to the main window. Changing slides on one will cause the
+slide to change on the other. Useful when presenting.
+
+---
+
+
+
+
+
+
+### &lt;i class=&quot;far fa-question-circle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;question&lt;/span&gt; Questions
+
+
+- What is sequence comparison and why does it matter?
+
+- What are the challenges and how can we use High Performance Computing to overcome them?
+
+- How can we use Galaxy for large scale sequence comparison?
+
+
+---
+
+
+
+### &lt;i class=&quot;fas fa-bullseye&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;objectives&lt;/span&gt; Objectives
+
+
+- Learn the basics of genome comparison
+
+- Run sequence comparisons in Galaxy
+
+- Using GECKO for sequence comparison
+
+- Using CHROMEISTER for comparing large sequences such as plants and chromosomes
+
+
+---
+
 
 ### What is sequence comparison?
 
@@ -53,7 +286,7 @@ contributors:
 - So what is the problem?
 
  - New technology produces huge amounts of data
- - Optimal sequence comparison has complexity O(n<sup>2</sup>), which is a lot when sequences are long
+ - Optimal sequence comparison has complexity O(n&lt;sup&gt;2&lt;/sup&gt;), which is a lot when sequences are long
  - Several ways to compare sequences, each having its advantages: DP-based, gapped and ungapped, alignment-free
  - DNA contains lots of repeats and low complexity regions, which make it difficult to find the conserved signal
  - And also makes it very hard for computational algorithms
@@ -70,12 +303,12 @@ contributors:
 Sequence type    | Approx. length
 ---        | ---          
 Gene			|  ~1,000 to 10,000 bp
-Bacteria genome		|  ~10<sup>6</sup> bp
-Mammalian chr.		|  ~10<sup>8</sup> bp
-Mammalian genome	|  ~2 * 10<sup>9</sup> bp
-Plant genome		|  ~3 * 10<sup>9</sup> bp
-Large plant genomes	|  ~2 * 10<sup>10</sup> bp
-Amoeba genome		|  ~6 * 10<sup>11</sup> bp
+Bacteria genome		|  ~10&lt;sup&gt;6&lt;/sup&gt; bp
+Mammalian chr.		|  ~10&lt;sup&gt;8&lt;/sup&gt; bp
+Mammalian genome	|  ~2 * 10&lt;sup&gt;9&lt;/sup&gt; bp
+Plant genome		|  ~3 * 10&lt;sup&gt;9&lt;/sup&gt; bp
+Large plant genomes	|  ~2 * 10&lt;sup&gt;10&lt;/sup&gt; bp
+Amoeba genome		|  ~6 * 10&lt;sup&gt;11&lt;/sup&gt; bp
 
 
 ---
@@ -170,7 +403,7 @@ Amoeba genome		|  ~6 * 10<sup>11</sup> bp
 
 - Use dynamic programming to compute an accumulated score
 
-- The score of each cell comes from either the diagonal (no penalty but match/mismatch score) or from a row or column, which is a gap in either the query or reference sequence ("jumping" gap penalty is included then)
+- The score of each cell comes from either the diagonal (no penalty but match/mismatch score) or from a row or column, which is a gap in either the query or reference sequence (&quot;jumping&quot; gap penalty is included then)
 
 - Match =  4
 - Miss  = -4
@@ -200,7 +433,7 @@ Amoeba genome		|  ~6 * 10<sup>11</sup> bp
 - Worst case scenario this algorithm takes quadratic time and space
 
  - Imagine comparing two amoeba genomes (Not your usual case, though)
-  - Total number of cells: 10<sup>22</sup> \~the number of sand grains in the earth
+  - Total number of cells: 10&lt;sup&gt;22&lt;/sup&gt; \~the number of sand grains in the earth
 
 ---
 ### How do we include alignments? Cont. IV
@@ -297,7 +530,7 @@ Amoeba genome		|  ~6 * 10<sup>11</sup> bp
 
 - Once each dictionary is sorted, perfect matches between words produce a set of seeds (alignment candidates)
 
-- Seeds are then sorted (by their diagonal position **x**<sub>start</sub> - **y**<sub>start</sub>) and filtered
+- Seeds are then sorted (by their diagonal position **x**&lt;sub&gt;start&lt;/sub&gt; - **y**&lt;sub&gt;start&lt;/sub&gt;) and filtered
 
 - Finally, the seeds are extended (up and downstream) to generate a set of High-scoring Segment Pairs (HSPs)
 
@@ -493,3 +726,77 @@ Amoeba genome		|  ~6 * 10<sup>11</sup> bp
 ![](../../images/hpc-for-lsgc/Chrom07.png)
 ]
 
+
+
+
+
+---
+### &lt;i class=&quot;fas fa-key&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;keypoints&lt;/span&gt; Key points
+
+
+- Sequence comparison is difficult due to its computational complexity and the growth of databases
+
+- There are several approaches to sequencen comparison, and we need to know which one to use (DP-based, alignment-free, seeds, etc.)
+
+- We have learnt the internals regarding GECKO, GECKO-MGV and CHROMEISTER to work with single chromosome comparisons and/or exhaustive searchs, the post-processing and for larger/noisy experiments, respectively
+
+
+
+
+
+
+
+---
+
+## Thank you!
+
+This material is the result of a collaborative work. Thanks to the [Galaxy Training Network](https://wiki.galaxyproject.org/Teach/GTN) and all the contributors!
+
+
+<div class="contributors-line">
+
+
+ <a href="/training-material/hall-of-fame/estebanpw/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/estebanpw" alt="Esteban Perez-Wohlfeil">Esteban Perez-Wohlfeil</a>
+
+
+</div>
+
+
+
+<img src="/training-material/assets/images/GTN.png" alt="Galaxy Training Network" style="height: 100px;"/>
+
+
+This material is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+
+    </textarea>
+	<script src="/training-material/assets/js/remark-latest.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+    <script type="text/javascript" src="/training-material/assets/js/clipboard.min.js"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({navigation: {scroll: false,}});
+      var hljs = remark.highlighter.engine;
+      var snippets = document.querySelectorAll('code.remark-code');
+        [].forEach.call(snippets,function(snippet){
+          snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        });
+      var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
+        target:function(trigger){return trigger.parentElement;
+      }});
+    </script>
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('body').prepend("<div style='text-align: center'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
+
+  </body>
+</html>

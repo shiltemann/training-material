@@ -1,11 +1,203 @@
----
-layout: tutorial_slides
-logo: assets/images/gat.png
+<!DOCTYPE html>
+<html>
 
-title: "Galaxy on the Cloud"
-contributors:
-  - slugger70
+
+
+
+
+
+
+
+
+  <head>
+    <meta charset="utf-8">
+    <title>Galaxy on the Cloud</title>
+    
+        <script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
+
+    
+    <link rel="stylesheet" href="/training-material/assets/css/slides.css">
+    <script src="https://kit.fontawesome.com/67b3f98409.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+    
+    
+    
+    
+    <meta name="description" content="Resources related to configuration and maintenance of Gal..." />
+    <meta property="og:title" content="Galaxy Training: Galaxy on the Cloud" />
+    <meta property="og:description" content="Resources related to configuration and maintenance of Gal..." />
+    <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
+    <script type="application/ld+json">
+      
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "citation": {
+    "@type": "CreativeWork",
+    "name": "Community-Driven Data Analysis Training for Biology",
+    "url": "https://doi.org/10.1016/j.cels.2018.05.012"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
+  "headline": "Galaxy on the Cloud",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/main/LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "Galaxy Server administration",
+    "description": "Resources related to configuration and maintenance of Galaxy servers",
+    "url": "https://training.galaxyproject.org//training-material/topics/admin/"
+  },
+  "courseCode": "admin / cloudbursting / slides",
+  "learningResourceType": "slides",
+  "name": "Slides for 'Galaxy on the Cloud' tutorial",
+  "url": "https://training.galaxyproject.org//training-material/topics/admin/tutorials/cloudbursting/slides.html",
+  "description": "",
+  "hasPart": [
+
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Simon Gladman"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Simon Gladman"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "Galaxy Server administration",
+      "description": "Resources related to configuration and maintenance of Galaxy servers",
+      "url": "https://training.galaxyproject.org//training-material/topics/admin/"
+    }
+  ]
+}
+    </script>
+    <script type="text/javascript" src="/training-material/assets/js/jquery.slim.min.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+name: inverse
+layout: true
+class: center, middle, inverse
+
+<div class="my-header"><span>
+<a href="/training-material/topics/admin" title="Return to topic page" ><i class="fa fa-level-up" aria-hidden="true"></i></a>
+
+<a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/main/topics/admin/tutorials/cloudbursting/slides.html"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+
+</span></div>
+
+<div class="my-footer"><span>
+
+  
+<img src="/training-material/assets/images/gat.png" alt="page logo" style="height: 40px;"/>
+  
+
+</span></div>
+
 ---
+
+
+  
+<img src="/training-material/assets/images/gat.png" alt="page logo" class="cover-logo" />
+  
+
+
+# Galaxy on the Cloud
+
+
+<div class="contributors-line">
+
+
+ <a href="/training-material/hall-of-fame/slugger70/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/slugger70" alt="Simon Gladman">Simon Gladman</a>
+
+
+</div>
+
+
+
+
+.footnote[Tip: press `P` to view the presenter notes]
+
+???
+Presenter notes contain extra information which might be useful if you
+intend to use these slides for teaching.
+
+Press `P` again to switch presenter notes off
+
+Press `C` to create a new window where the same presentation will be displayed.
+This window is linked to the main window. Changing slides on one will cause the
+slide to change on the other. Useful when presenting.
+
+---
+
+
+
+
+
+
+
+
 
 # All these Clouds
 ## It's positively meterological..
@@ -18,7 +210,7 @@ contributors:
 .large[
 * Galaxy in the Clouds?
 * AWS and other Clouds
-* CloudMan and CloudLaunch (& cloud agnosticisim)
+* CloudMan and CloudLaunch (&amp; cloud agnosticisim)
 * Genomics Virtual Lab
 * Architecture
 * Persistence
@@ -64,7 +256,7 @@ What do you do now?
 **Cloud computing** ... is a model for enabling ubiquitous, **on-demand** access to a **shared pool** of configurable **computing resources** ... which can be **rapidly provisioned and released** with minimal management effort. Cloud computing and storage ... may be located far from the user – ranging in distance from **across a city to across the world.** - Wikipedia, Cloud Computing.
 
 .center[![Amazon Web Services](../../images/aws_logo.png) ![OpenStack](../../images/OpenStack-logo.png)
-<br /> ![Google Cloud](../../images/gce-logo.png) ![Microsoft Azure](../../images/Microsoft_Azure_Logo.svg)]
+&lt;br /&gt; ![Google Cloud](../../images/gce-logo.png) ![Microsoft Azure](../../images/Microsoft_Azure_Logo.svg)]
 
 
 ???
@@ -129,7 +321,7 @@ Don't have to purchase + maintain hardware, which is great. Uploading data can b
   * with different sets of tools installed
   * with access to reference data
   * for different clouds (AWS globally, Jetstream, NeCTAR, CLIMB etc.)
-* You just need credentials for the cloud you want to "launch" on.
+* You just need credentials for the cloud you want to &quot;launch&quot; on.
   * Credentials are generally strings
   * An access key and a secret key or username and password with project details
   * They are obtained from the cloud account admin page you want to use
@@ -188,7 +380,7 @@ https://launch.usegalaxy.org/
 
 # CloudMan
 
-.center[<img src='../../images/cloudman-main.png' width=85%>]
+.center[&lt;img src='../../images/cloudman-main.png' width=85%&gt;]
 
 ???
 
@@ -199,7 +391,7 @@ The green are worker nodes
 
 # CloudMan Admin
 
-.center[<img src='../../images/cloudman-admin.png' width=80%>]
+.center[&lt;img src='../../images/cloudman-admin.png' width=80%&gt;]
 
 ???
 
@@ -212,8 +404,8 @@ Can start NGINX, Galaxy, Pulsar, etc.
 
 .large[
 * Your CloudMan instance is a single machine
-  * It is the "Head node" of a cluster
-* CloudMan can start "worker" nodes.
+  * It is the &quot;Head node&quot; of a cluster
+* CloudMan can start &quot;worker&quot; nodes.
   * More cloud instances (of any size)
   * Automatically connects to file system
   * Are registered in Slurm setup
@@ -230,7 +422,7 @@ Can start NGINX, Galaxy, Pulsar, etc.
   * When queue is full and jobs wait certain time, new nodes are launched.
 ]
 
-.center[<img src='../../images/cloudman-scaling.png' width=60%>]
+.center[&lt;img src='../../images/cloudman-scaling.png' width=60%&gt;]
 
 
 ---
@@ -252,10 +444,10 @@ Can start NGINX, Galaxy, Pulsar, etc.
 # CloudMan Galaxy
 
 .pull-left[
-<img src='../../images/Cloudman-tools.png' height=85% />
+&lt;img src='../../images/Cloudman-tools.png' height=85% /&gt;
 ]
 .pull-right[
-<img src='../../images/reference_data.png'/>
+&lt;img src='../../images/reference_data.png'/&gt;
 ]
 
 
@@ -266,19 +458,19 @@ Can start NGINX, Galaxy, Pulsar, etc.
 * Configured for Slurm out of the box
 ```xml
 ...
-    <destinations default="default_dynamic_job_wrapper">
-        <destination id="slurm_cluster" runner="slurm"/>
-        <destination id="slurm_4slots" runner="slurm">
-            <param id="nativeSpecification">--ntasks=4</param>
-        </destination>
-        <destination id="default_dynamic_job_wrapper" runner="dynamic">
-          <param id="type">python</param>
-          <param id="function">default_dynamic_job_wrapper</param>
-        </destination>
+    &lt;destinations default=&quot;default_dynamic_job_wrapper&quot;&gt;
+        &lt;destination id=&quot;slurm_cluster&quot; runner=&quot;slurm&quot;/&gt;
+        &lt;destination id=&quot;slurm_4slots&quot; runner=&quot;slurm&quot;&gt;
+            &lt;param id=&quot;nativeSpecification&quot;&gt;--ntasks=4&lt;/param&gt;
+        &lt;/destination&gt;
+        &lt;destination id=&quot;default_dynamic_job_wrapper&quot; runner=&quot;dynamic&quot;&gt;
+          &lt;param id=&quot;type&quot;&gt;python&lt;/param&gt;
+          &lt;param id=&quot;function&quot;&gt;default_dynamic_job_wrapper&lt;/param&gt;
+        &lt;/destination&gt;
     ...
-    </destinations>
-    <tools>
-        <tool id="toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa/0.3.1" destination="slurm_4slots" />
+    &lt;/destinations&gt;
+    &lt;tools&gt;
+        &lt;tool id=&quot;toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa/0.3.1&quot; destination=&quot;slurm_4slots&quot; /&gt;
 ...
 ```
 ``` ini
@@ -317,3 +509,68 @@ NodeName=w3 NodeAddr=45.113.232.93 CPUs=8 RealMemory=32176 Weight=5 State=UNKNOW
     * Send jobs to them
 ]
 
+
+
+
+
+
+
+
+
+
+---
+
+## Thank you!
+
+This material is the result of a collaborative work. Thanks to the [Galaxy Training Network](https://wiki.galaxyproject.org/Teach/GTN) and all the contributors!
+
+
+<div class="contributors-line">
+
+
+ <a href="/training-material/hall-of-fame/slugger70/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/slugger70" alt="Simon Gladman">Simon Gladman</a>
+
+
+</div>
+
+
+
+  
+<img src="/training-material/assets/images/gat.png" alt="page logo" style="height: 100px;"/>
+  
+
+
+This material is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+
+    </textarea>
+	<script src="/training-material/assets/js/remark-latest.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+    <script type="text/javascript" src="/training-material/assets/js/clipboard.min.js"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({navigation: {scroll: false,}});
+      var hljs = remark.highlighter.engine;
+      var snippets = document.querySelectorAll('code.remark-code');
+        [].forEach.call(snippets,function(snippet){
+          snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        });
+      var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
+        target:function(trigger){return trigger.parentElement;
+      }});
+    </script>
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('body').prepend("<div style='text-align: center'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
+
+  </body>
+</html>

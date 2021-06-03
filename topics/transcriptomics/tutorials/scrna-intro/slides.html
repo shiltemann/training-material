@@ -1,45 +1,337 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+
+
+
+
+  <head>
+    <meta charset="utf-8">
+    <title>An introduction to scRNA-seq data analysis</title>
+    
+        <script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
+
+    
+    <link rel="stylesheet" href="/training-material/assets/css/slides.css">
+    <script src="https://kit.fontawesome.com/67b3f98409.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+    
+    
+    
+    
+    <meta name="description" content="Training material for all kinds of transcriptomics analysis." />
+    <meta property="og:title" content="Galaxy Training: An introduction to scRNA-seq data analysis" />
+    <meta property="og:description" content="Training material for all kinds of transcriptomics analysis." />
+    <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
+    <script type="application/ld+json">
+      
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "citation": {
+    "@type": "CreativeWork",
+    "name": "Community-Driven Data Analysis Training for Biology",
+    "url": "https://doi.org/10.1016/j.cels.2018.05.012"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
+  "headline": "An introduction to scRNA-seq data analysis",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/main/LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "Transcriptomics",
+    "description": "Training material for all kinds of transcriptomics analysis.",
+    "url": "https://training.galaxyproject.org//training-material/topics/transcriptomics/"
+  },
+  "courseCode": "transcriptomics / scrna-intro / slides",
+  "learningResourceType": "slides",
+  "name": "Slides for 'An introduction to scRNA-seq data analysis' tutorial",
+  "url": "https://training.galaxyproject.org//training-material/topics/transcriptomics/tutorials/scrna-intro/slides.html",
+  "timeRequired": "PT30M",
+  "keywords": "single-cell",
+  "description": "The questions this  addresses are:\n - How are samples compared?\n - How are cells captured?\n - How does bulk RNA-seq differ from scRNA-seq?\n - Why is clustering important?\n\n\\nThe objectives are:\n - To understand the pitfalls in scRNA-seq sequencing and amplification, and how they are overcome.\n - Know the types of variation in an analysis and how to control for them.\n - Grasp what dimension reduction is, and how it might be performed.\n - Be familiarised with the main types of clustering techniques and when to use them.\n\n",
+  "coursePrerequisites": [
+    {
+      "@type": "CreativeWork",
+      "url": "https://training.galaxyproject.org//training-material/topics/introduction/",
+      "name": "Introduction to Galaxy Analyses",
+      "description": "Introduction to Galaxy Analyses",
+      "provider": {
+        "@type": "Organization",
+        "email": "galaxytrainingnetwork@gmail.com",
+        "name": "Galaxy Training Network",
+        "url": "https://galaxyproject.org/teach/gtn/"
+      }
+    },
+    {
+      "@type": "Course",
+      "url": "https://training.galaxyproject.org//training-material/topics/sequence-analysis/tutorials/quality-control/slides.html",
+      "name": "Quality Control",
+      "description": "Slides for 'Quality Control' tutorial",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive",
+      "provider": {
+        "@type": "Organization",
+        "email": "galaxytrainingnetwork@gmail.com",
+        "name": "Galaxy Training Network",
+        "url": "https://galaxyproject.org/teach/gtn/"
+      }
+    },
+    {
+      "@type": "Course",
+      "url": "https://training.galaxyproject.org//training-material/topics/sequence-analysis/tutorials/quality-control/tutorial.html",
+      "name": "Quality Control",
+      "description": "Hands-on for 'Quality Control' tutorial",
+      "learningResourceType": "hands-on tutorial",
+      "interactivityType": "expositive",
+      "provider": {
+        "@type": "Organization",
+        "email": "galaxytrainingnetwork@gmail.com",
+        "name": "Galaxy Training Network",
+        "url": "https://galaxyproject.org/teach/gtn/"
+      }
+    },
+    {
+      "@type": "Course",
+      "url": "https://training.galaxyproject.org//training-material/topics/sequence-analysis/tutorials/mapping/slides.html",
+      "name": "Mapping",
+      "description": "Slides for 'Mapping' tutorial",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive",
+      "provider": {
+        "@type": "Organization",
+        "email": "galaxytrainingnetwork@gmail.com",
+        "name": "Galaxy Training Network",
+        "url": "https://galaxyproject.org/teach/gtn/"
+      }
+    },
+    {
+      "@type": "Course",
+      "url": "https://training.galaxyproject.org//training-material/topics/sequence-analysis/tutorials/mapping/tutorial.html",
+      "name": "Mapping",
+      "description": "Hands-on for 'Mapping' tutorial",
+      "learningResourceType": "hands-on tutorial",
+      "interactivityType": "expositive",
+      "provider": {
+        "@type": "Organization",
+        "email": "galaxytrainingnetwork@gmail.com",
+        "name": "Galaxy Training Network",
+        "url": "https://galaxyproject.org/teach/gtn/"
+      }
+    }
+  ],
+  "hasPart": [
+
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Mehmet Tekman"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Mehmet Tekman"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "Transcriptomics",
+      "description": "Training material for all kinds of transcriptomics analysis.",
+      "url": "https://training.galaxyproject.org//training-material/topics/transcriptomics/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "http://edamontology.org/topic_3308",
+      "inDefinedTermSet": "http://edamontology.org",
+      "termCode": "topic_3308",
+      "url": "https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_3308"
+    }
+  ]
+}
+    </script>
+    <script type="text/javascript" src="/training-material/assets/js/jquery.slim.min.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+name: inverse
+layout: true
+class: center, middle, inverse
+
+<div class="my-header"><span>
+<a href="/training-material/topics/transcriptomics" title="Return to topic page" ><i class="fa fa-level-up" aria-hidden="true"></i></a>
+
+<a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/main/topics/transcriptomics/tutorials/scrna-intro/slides.html"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+
+</span></div>
+
+<div class="my-footer"><span>
+
+<img src="/training-material/assets/images/GTN-60px.png" alt="Galaxy Training Network" style="height: 40px;"/>
+
+</span></div>
+
 ---
-layout: tutorial_slides
-logo: "GTN"
-title: "An introduction to scRNA-seq data analysis"
 
-subtopic: single-cell
-priority: 1
 
-video: yes
-zenodo_link: ""
-tags:
-  - single-cell
-questions:
-  - How are samples compared?
-  - How are cells captured?
-  - How does bulk RNA-seq differ from scRNA-seq?
-  - Why is clustering important?
-objectives:
-  - To understand the pitfalls in scRNA-seq sequencing and amplification, and how they are overcome.
-  - Know the types of variation in an analysis and how to control for them.
-  - Grasp what dimension reduction is, and how it might be performed.
-  - Be familiarised with the main types of clustering techniques and when to use them.
+<img src="/training-material/assets/images/GTN.png" alt="Galaxy Training Network" class="cover-logo"/>
 
-time_estimation: 30m
-key_points:
-  - scRNA-seq requires much pre-processing before analysis can be performed.
-  - Groups of similarly profiled-cells are compared against other groups.
-  - Detectability issues requires careful consideration at all stages.
-  - Clustering is an integral part of an analysis.
 
-follow_up_training:
-  -
-    type: "internal"
-    topic_name: transcriptomics
-    tutorials:
-        - scrna-preprocessing
+# An introduction to scRNA-seq data analysis
 
-contributors:
-  - mtekman
+
+<div class="contributors-line">
+
+
+ <a href="/training-material/hall-of-fame/mtekman/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/mtekman" alt="Mehmet Tekman">Mehmet Tekman</a>
+
+
+</div>
+
+
 
 
 ---
+
+## Requirements
+
+Before diving into this slide deck, we recommend you to have a look at:
+
+
+
+    
+        
+        
+            
+        
+- [Introduction to Galaxy Analyses](/training-material/topics/introduction)
+    
+
+    
+        
+        
+            
+        
+- [Sequence analysis](/training-material/topics/sequence-analysis)
+    - Quality Control: [<i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span> slides](/training-material/topics/sequence-analysis/tutorials/quality-control/slides.html) - [<i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span> hands-on](/training-material/topics/sequence-analysis/tutorials/quality-control/tutorial.html)
+    - Mapping: [<i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span> slides](/training-material/topics/sequence-analysis/tutorials/mapping/slides.html) - [<i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span> hands-on](/training-material/topics/sequence-analysis/tutorials/mapping/tutorial.html)
+    
+
+
+
+
+
+
+.footnote[Tip: press `P` to view the presenter notes]
+
+???
+Presenter notes contain extra information which might be useful if you
+intend to use these slides for teaching.
+
+Press `P` again to switch presenter notes off
+
+Press `C` to create a new window where the same presentation will be displayed.
+This window is linked to the main window. Changing slides on one will cause the
+slide to change on the other. Useful when presenting.
+
+---
+
+
+
+
+
+
+### &lt;i class=&quot;far fa-question-circle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;question&lt;/span&gt; Questions
+
+
+- How are samples compared?
+
+- How are cells captured?
+
+- How does bulk RNA-seq differ from scRNA-seq?
+
+- Why is clustering important?
+
+
+---
+
+
+
+### &lt;i class=&quot;fas fa-bullseye&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;objectives&lt;/span&gt; Objectives
+
+
+- To understand the pitfalls in scRNA-seq sequencing and amplification, and how they are overcome.
+
+- Know the types of variation in an analysis and how to control for them.
+
+- Grasp what dimension reduction is, and how it might be performed.
+
+- Be familiarised with the main types of clustering techniques and when to use them.
+
+
+---
+
 
 # Single-cell RNA-seq
 
@@ -292,7 +584,7 @@ Another method is flow cytometry, which reduces the human-error component of thi
 .pull-left[
 *Optical Scatter*
   * Ratio of Cell Size:Wavelength
-  * If Cell Size < Laser Wavelength (~400nm)
+  * If Cell Size &lt; Laser Wavelength (~400nm)
     * Low intensity and high inconsistency scatter
 
   * Measured in terms of:
@@ -329,7 +621,7 @@ Another method is flow cytometry, which reduces the human-error component of thi
 
 .pull-left[
 .reduce90[
-<br />
+&lt;br /&gt;
 
 *Side Scatter (SSC)*
   * Measures 90° to laser, along path of cells
@@ -533,7 +825,7 @@ However if we group the reads by their UMIs, and then count only the number of u
 
 --
 
-<br />
+&lt;br /&gt;
 
 .reduce90[
 * Can every transcript in a cell have its own UMI?
@@ -613,8 +905,8 @@ Edit distances guard against **sequencing errors.**
 * Pink appears twice in different genes.
 * In what context are UMIs unique?
 
-<br />
-<br />
+&lt;br /&gt;
+&lt;br /&gt;
 
 ]
 
@@ -622,7 +914,7 @@ Edit distances guard against **sequencing errors.**
 
 .reduce90[
 *In what context are UMIs unique?*
-  * UMIs are "random salt"
+  * UMIs are &quot;random salt&quot;
     * 'Unique enough' at the transcript level
 
   * We wish to count transcripts only
@@ -697,7 +989,7 @@ For Each Cell:
 .reduce70[* Median Gene Expression is high]
 
 
-<br />
+&lt;br /&gt;
 
 *scRNA-seq*: Very Low Sequencing Depth
 
@@ -756,7 +1048,7 @@ Can't divide by zero!
 
 1. Separate odd sizes (red) and even sizes (blue) into two groups
 
-1. Sort each group by library size and place on opposite sides of a "ring"
+1. Sort each group by library size and place on opposite sides of a &quot;ring&quot;
 ]
 ]
 
@@ -816,7 +1108,7 @@ Can't divide by zero!
   * Expression from the top most differentially expressed genes
 
 *Unwanted Variation*
-  * "Confounders"
+  * &quot;Confounders&quot;
   * Technical Variation
      * Batch source
      * Library Size
@@ -839,7 +1131,7 @@ Can't divide by zero!
 .pull-left[
 .reduce90[
 .center[*Transcription Bursting*]
- * Transcription not continuous, occurs in "bursts"
+ * Transcription not continuous, occurs in &quot;bursts&quot;
  * Phenomenon hidden in bulk RNA-seq
 ]
 ]
@@ -1230,3 +1522,98 @@ If the new configuration has instead increased the number of external links, the
 - In this regard, the vast UseGalaxy resources can be put to good use by testing out the many different paths of the analysis, and the Galaxy Training Network provides tutorials and hands-on trainings to assist you in this regard.
 - Please explore them to better develop your understanding.
 
+
+
+
+
+---
+### &lt;i class=&quot;fas fa-key&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;keypoints&lt;/span&gt; Key points
+
+
+- scRNA-seq requires much pre-processing before analysis can be performed.
+
+- Groups of similarly profiled-cells are compared against other groups.
+
+- Detectability issues requires careful consideration at all stages.
+
+- Clustering is an integral part of an analysis.
+
+
+
+
+
+---
+### &lt;i class=&quot;fas fa-graduation-cap&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;curriculum&lt;/span&gt; Do you want to extend your knowledge?
+
+
+Follow one of our recommended follow-up trainings:
+
+
+
+    
+        
+        
+            
+        
+- [Transcriptomics](/training-material/topics/transcriptomics)
+    - Pre-processing of Single-Cell RNA Data: [&lt;i class=&quot;fab fa-slideshare&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;slides&lt;/span&gt; slides](/training-material/topics/transcriptomics/tutorials/scrna-preprocessing/slides.html) - [&lt;i class=&quot;fas fa-laptop&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;tutorial&lt;/span&gt; hands-on](/training-material/topics/transcriptomics/tutorials/scrna-preprocessing/tutorial.html)
+    
+
+
+
+
+
+---
+
+## Thank you!
+
+This material is the result of a collaborative work. Thanks to the [Galaxy Training Network](https://wiki.galaxyproject.org/Teach/GTN) and all the contributors!
+
+
+<div class="contributors-line">
+
+
+ <a href="/training-material/hall-of-fame/mtekman/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/mtekman" alt="Mehmet Tekman">Mehmet Tekman</a>
+
+
+</div>
+
+
+
+<img src="/training-material/assets/images/GTN.png" alt="Galaxy Training Network" style="height: 100px;"/>
+
+
+This material is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+
+    </textarea>
+	<script src="/training-material/assets/js/remark-latest.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+    <script type="text/javascript" src="/training-material/assets/js/clipboard.min.js"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({navigation: {scroll: false,}});
+      var hljs = remark.highlighter.engine;
+      var snippets = document.querySelectorAll('code.remark-code');
+        [].forEach.call(snippets,function(snippet){
+          snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        });
+      var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
+        target:function(trigger){return trigger.parentElement;
+      }});
+    </script>
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('body').prepend("<div style='text-align: center'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
+
+  </body>
+</html>

@@ -1,28 +1,250 @@
----
-layout: tutorial_slides
-logo: "GTN"
+<!DOCTYPE html>
+<html>
 
-title: "Tool Shed: sharing Galaxy tools"
-questions:
-  - "What is a Tool Shed?"
-  - "How to install tools and workflows from a Tool Shed into a Galaxy instance?"
-  - "What are the Tool Shed repository types?"
-  - "How to publish with Planemo?"
-objectives:
-  - "Discover what is a Tool Shed"
-  - "Be able to install tools and workflows from a Tool Shed into a Galaxy instance"
-  - "Be able to publish tools with Planemo"
-time_estimation: "3h"
-subtopic: tooldev
-key_points:
-  - "Use Planemo"
-  - "Contribute to the Main Tool Shed"
-contributors:
-  - abretaud
-  - loraine-gueguen
-  - slegras
-  - bebatut
+
+
+
+
+
+
+
+
+  <head>
+    <meta charset="utf-8">
+    <title>Tool Shed: sharing Galaxy tools</title>
+    
+        <script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
+
+    
+    <link rel="stylesheet" href="/training-material/assets/css/slides.css">
+    <script src="https://kit.fontawesome.com/67b3f98409.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+    
+    
+    
+    
+    <meta name="description" content="Galaxy is an open-source project. Everyone can contribute..." />
+    <meta property="og:title" content="Galaxy Training: Tool Shed: sharing Galaxy tools" />
+    <meta property="og:description" content="Galaxy is an open-source project. Everyone can contribute..." />
+    <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
+    <script type="application/ld+json">
+      
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "citation": {
+    "@type": "CreativeWork",
+    "name": "Community-Driven Data Analysis Training for Biology",
+    "url": "https://doi.org/10.1016/j.cels.2018.05.012"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
+  "headline": "Tool Shed: sharing Galaxy tools",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/main/LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "Development in Galaxy",
+    "description": "Galaxy is an open-source project. Everyone can contribute to its development with core Galaxy development, integration of softwares in Galaxy environment, ...",
+    "url": "https://training.galaxyproject.org//training-material/topics/dev/"
+  },
+  "courseCode": "dev / toolshed / slides",
+  "learningResourceType": "slides",
+  "name": "Slides for 'Tool Shed: sharing Galaxy tools' tutorial",
+  "url": "https://training.galaxyproject.org//training-material/topics/dev/tutorials/toolshed/slides.html",
+  "timeRequired": "PT3H",
+  "description": "The questions this  addresses are:\n - What is a Tool Shed?\n - How to install tools and workflows from a Tool Shed into a Galaxy instance?\n - What are the Tool Shed repository types?\n - How to publish with Planemo?\n\n\\nThe objectives are:\n - Discover what is a Tool Shed\n - Be able to install tools and workflows from a Tool Shed into a Galaxy instance\n - Be able to publish tools with Planemo\n\n",
+  "hasPart": [
+
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Anthony Bretaudeau"
+    },
+    {
+      "@type": "Person",
+      "name": "Loraine Guéguen"
+    },
+    {
+      "@type": "Person",
+      "name": "Stéphanie Legras"
+    },
+    {
+      "@type": "Person",
+      "name": "Bérénice Batut"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Anthony Bretaudeau"
+    },
+    {
+      "@type": "Person",
+      "name": "Loraine Guéguen"
+    },
+    {
+      "@type": "Person",
+      "name": "Stéphanie Legras"
+    },
+    {
+      "@type": "Person",
+      "name": "Bérénice Batut"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "Development in Galaxy",
+      "description": "Galaxy is an open-source project. Everyone can contribute to its development with core Galaxy development, integration of softwares in Galaxy environment, ...",
+      "url": "https://training.galaxyproject.org//training-material/topics/dev/"
+    }
+  ]
+}
+    </script>
+    <script type="text/javascript" src="/training-material/assets/js/jquery.slim.min.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+name: inverse
+layout: true
+class: center, middle, inverse
+
+<div class="my-header"><span>
+<a href="/training-material/topics/dev" title="Return to topic page" ><i class="fa fa-level-up" aria-hidden="true"></i></a>
+
+<a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/main/topics/dev/tutorials/toolshed/slides.html"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+
+</span></div>
+
+<div class="my-footer"><span>
+
+<img src="/training-material/assets/images/GTN-60px.png" alt="Galaxy Training Network" style="height: 40px;"/>
+
+</span></div>
+
 ---
+
+
+<img src="/training-material/assets/images/GTN.png" alt="Galaxy Training Network" class="cover-logo"/>
+
+
+# Tool Shed: sharing Galaxy tools
+
+
+<div class="contributors-line">
+
+
+ <a href="/training-material/hall-of-fame/abretaud/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/abretaud" alt="Anthony Bretaudeau">Anthony Bretaudeau</a> <a href="/training-material/hall-of-fame/loraine-gueguen/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/loraine-gueguen" alt="Loraine Guéguen">Loraine Guéguen</a> <a href="/training-material/hall-of-fame/slegras/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/slegras" alt="Stéphanie Legras">Stéphanie Legras</a> <a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Bérénice Batut">Bérénice Batut</a>
+
+
+</div>
+
+
+
+
+.footnote[Tip: press `P` to view the presenter notes]
+
+???
+Presenter notes contain extra information which might be useful if you
+intend to use these slides for teaching.
+
+Press `P` again to switch presenter notes off
+
+Press `C` to create a new window where the same presentation will be displayed.
+This window is linked to the main window. Changing slides on one will cause the
+slide to change on the other. Useful when presenting.
+
+---
+
+
+
+
+
+
+### &lt;i class=&quot;far fa-question-circle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;question&lt;/span&gt; Questions
+
+
+- What is a Tool Shed?
+
+- How to install tools and workflows from a Tool Shed into a Galaxy instance?
+
+- What are the Tool Shed repository types?
+
+- How to publish with Planemo?
+
+
+---
+
+
+
+### &lt;i class=&quot;fas fa-bullseye&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;objectives&lt;/span&gt; Objectives
+
+
+- Discover what is a Tool Shed
+
+- Be able to install tools and workflows from a Tool Shed into a Galaxy instance
+
+- Be able to publish tools with Planemo
+
+
+---
+
 
 ## 1. What is a Tool Shed?
 
@@ -57,8 +279,8 @@ contributors:
 
 ### Available Tool Sheds
 
-- [Galaxy community Tool Shed](https://toolshed.g2.bx.psu.edu/) -> Main Tool Shed
-- [Galaxy community test Tool Shed](https://testtoolshed.g2.bx.psu.edu/) -> Sandbox for testing
+- [Galaxy community Tool Shed](https://toolshed.g2.bx.psu.edu/) -&gt; Main Tool Shed
+- [Galaxy community test Tool Shed](https://testtoolshed.g2.bx.psu.edu/) -&gt; Sandbox for testing
 - [List of public Tool Sheds](https://galaxyproject.org/toolshed/public-toolsheds/)
 
 ---
@@ -82,14 +304,14 @@ contributors:
 ### Connect your Galaxy to a Tool Shed
 
 - Only for third party toolsheds (Main and Test by default)
-- Add `<tool_shed />` block in `config/tool_sheds_conf.xml`
+- Add `&lt;tool_shed /&gt;` block in `config/tool_sheds_conf.xml`
 - Restart Galaxy
 
 ---
 
 ### Install a tool from the Tool Shed
 
-- Go to the admin interface and click on "Search Tool Shed"
+- Go to the admin interface and click on &quot;Search Tool Shed&quot;
 ![](../../images/admin_searchtoolshed_ss.png)
 - Select a Tool Shed
 
@@ -106,10 +328,10 @@ contributors:
 
 ### Install a tool from the Tool Shed
 
-- Types of repository</span>
-  - <span style="color:orange"> Tools (`$name`)</span>
-  - <span style="color:blue"> Tool suites (`suite_$name`)</span>
-  - <span style="color:red"> Tool dependencies (`package_$name_$version`)</span> (gradually removed, replaced by Conda dependencies)
+- Types of repository&lt;/span&gt;
+  - &lt;span style=&quot;color:orange&quot;&gt; Tools (`$name`)&lt;/span&gt;
+  - &lt;span style=&quot;color:blue&quot;&gt; Tool suites (`suite_$name`)&lt;/span&gt;
+  - &lt;span style=&quot;color:red&quot;&gt; Tool dependencies (`package_$name_$version`)&lt;/span&gt; (gradually removed, replaced by Conda dependencies)
 ![](../../images/typeOfRep_ss.png)
 
 ---
@@ -126,8 +348,8 @@ contributors:
 
 - Install the tool
 ![](../../images/installTool_ss.png)
-- <span style="font-size:70%"> Selecting Tool Shed AND conda will make Galaxy to install both</span>
-- <span style="font-size:70%"> Recommended: use conda </span>
+- &lt;span style=&quot;font-size:70%&quot;&gt; Selecting Tool Shed AND conda will make Galaxy to install both&lt;/span&gt;
+- &lt;span style=&quot;font-size:70%&quot;&gt; Recommended: use conda &lt;/span&gt;
 
 ---
 
@@ -140,7 +362,7 @@ contributors:
 
 ### Manage installed tools
 
-- Admin > Manage installed tools
+- Admin &gt; Manage installed tools
 ![](../../images/manage_installed_tools.png)
 ![](../../images/repStatus_ss.png)
 
@@ -160,11 +382,11 @@ contributors:
 
 ###  How to install a workflow?
 
-- Admin > Search Tool Shed
+- Admin &gt; Search Tool Shed
 - Search the workflow
   1. ![](../../images/toolshedWorkflow_ss.png)
   2. ![](../../images/schemaWorkflow_ss.png)
-- <span style="font-size:70%"> Tools can come with the workflow if they are not yet installed </span>
+- &lt;span style=&quot;font-size:70%&quot;&gt; Tools can come with the workflow if they are not yet installed &lt;/span&gt;
 
 ---
 
@@ -191,7 +413,7 @@ contributors:
 
 ###  How to install a workflow?
 
-- Repository Actions > Import workflow to Galaxy
+- Repository Actions &gt; Import workflow to Galaxy
 
 ![](../../images/exportWorkflow_ss.png)
 
@@ -244,16 +466,16 @@ contributors:
 ###  Tool suite
 
 - relationship between a dependent repository and one or more required repository (tools, datatypes, workflows,...)
-- -> One XML file
+- -&gt; One XML file
 ```xml
-<?xml version="1.0"?>
-<repositories description="Pipeline phylogeny">
-   <repository toolshed="https://testtoolshed.g2.bx.psu.edu"
-     name="fasta_to_phylip" owner="gandres" changeset_revision="a895633568" />
-   <repository name="mafft" owner="gandres" />
-   <repository name="phyml" owner="gandres" />
+&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;repositories description=&quot;Pipeline phylogeny&quot;&gt;
+   &lt;repository toolshed=&quot;https://testtoolshed.g2.bx.psu.edu&quot;
+     name=&quot;fasta_to_phylip&quot; owner=&quot;gandres&quot; changeset_revision=&quot;a895633568&quot; /&gt;
+   &lt;repository name=&quot;mafft&quot; owner=&quot;gandres&quot; /&gt;
+   &lt;repository name=&quot;phyml&quot; owner=&quot;gandres&quot; /&gt;
 […]
-</repositories>
+&lt;/repositories&gt;
 ```
 No need to write it yourself, Planemo does it for you
 
@@ -296,12 +518,12 @@ No need to write it yourself, Planemo does it for you
 
 - You have your file Galaxy-Workflow-NAME.ga
 - How to automatically install the tools used in the workflow?
-  - -> `repository_dependencies.xml`
+  - -&gt; `repository_dependencies.xml`
 ```xml
-<?xml version="1.0"?>
-<repositories description="Phylogeny workflow">
-   <repository name="suite_phylogeny" owner="galaxy" />
-</repositories>
+&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;repositories description=&quot;Phylogeny workflow&quot;&gt;
+   &lt;repository name=&quot;suite_phylogeny&quot; owner=&quot;galaxy&quot; /&gt;
+&lt;/repositories&gt;
 ```
 
 ---
@@ -340,18 +562,18 @@ Their content or the file themselves are put to the right location on tool set u
 
 ![](../../images/repWithLoc_ss.png)
 
-<span style="font-size:60%">`tool_data_table_conf.xml.sample`</span>
+&lt;span style=&quot;font-size:60%&quot;&gt;`tool_data_table_conf.xml.sample`&lt;/span&gt;
 ```xml
-<tables>
-	<!-- Locations of indexes in the Bowtie2 mapper format -->
-	<table name="bowtie2_indexes" comment_char="#">
-		<columns>value, dbkey, name, path</columns>
-		<file path="tool-data/bowtie2_indices.loc" />
-	</table>
-</tables>
+&lt;tables&gt;
+	&lt;!-- Locations of indexes in the Bowtie2 mapper format --&gt;
+	&lt;table name=&quot;bowtie2_indexes&quot; comment_char=&quot;#&quot;&gt;
+		&lt;columns&gt;value, dbkey, name, path&lt;/columns&gt;
+		&lt;file path=&quot;tool-data/bowtie2_indices.loc&quot; /&gt;
+	&lt;/table&gt;
+&lt;/tables&gt;
 ```
-<span style="font-size:60%">On install, the content of the file and the right
-path to the *.loc file is added to `shed_tool_data_table_conf.xml`</span>
+&lt;span style=&quot;font-size:60%&quot;&gt;On install, the content of the file and the right
+path to the *.loc file is added to `shed_tool_data_table_conf.xml`&lt;/span&gt;
 
 ---
 
@@ -359,9 +581,9 @@ path to the *.loc file is added to `shed_tool_data_table_conf.xml`</span>
 
 ---
 
-{% icon warning %} *There are automated ways to publish to a ToolShed using GitHub and Continuous Integration*
+&lt;i class=&quot;fas fa-exclamation-triangle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;warning&lt;/span&gt; *There are automated ways to publish to a ToolShed using GitHub and Continuous Integration*
 
-[Check out these slides, "Publishing tools" section]({% link topics/dev/tutorials/tool-integration/slides.html %})
+[Check out these slides, &quot;Publishing tools&quot; section](/training-material/topics/dev/tutorials/tool-integration/slides.html)
 
 ---
 
@@ -379,17 +601,17 @@ planemo config_init
 ## [...]
 sheds:
      toolshed:
-           #key: "<TODO>"
-           #email: "<TODO>"
-           #password: "<TODO>"
+           #key: &quot;&lt;TODO&gt;&quot;
+           #email: &quot;&lt;TODO&gt;&quot;
+           #password: &quot;&lt;TODO&gt;&quot;
      testtoolshed:
-           #key: "<TODO>"
-           #email: "<TODO>"
-           #password: "<TODO>"
+           #key: &quot;&lt;TODO&gt;&quot;
+           #email: &quot;&lt;TODO&gt;&quot;
+           #password: &quot;&lt;TODO&gt;&quot;
      local:
-           #key: "<TODO>"
-           #email: "<TODO>"
-           #password: "<TODO>"
+           #key: &quot;&lt;TODO&gt;&quot;
+           #email: &quot;&lt;TODO&gt;&quot;
+           #password: &quot;&lt;TODO&gt;&quot;
 ```
 
 ---
@@ -405,17 +627,17 @@ sheds:
 ## [...]
 sheds:
      toolshed:
-           key: "xxxxxxxxxmytoolshedAPIkeyxxxxxxx"
-           #email: "<TODO>"
-           #password: "<TODO>"
+           key: &quot;xxxxxxxxxmytoolshedAPIkeyxxxxxxx&quot;
+           #email: &quot;&lt;TODO&gt;&quot;
+           #password: &quot;&lt;TODO&gt;&quot;
      testtoolshed:
-           #key: "<TODO>"
-           #email: "<TODO>"
-           #password: "<TODO>"
+           #key: &quot;&lt;TODO&gt;&quot;
+           #email: &quot;&lt;TODO&gt;&quot;
+           #password: &quot;&lt;TODO&gt;&quot;
      local:
-           #key: "<TODO>"
-           #email: "<TODO>"
-           #password: "<TODO>"
+           #key: &quot;&lt;TODO&gt;&quot;
+           #email: &quot;&lt;TODO&gt;&quot;
+           #password: &quot;&lt;TODO&gt;&quot;
 ```
 
 ---
@@ -423,13 +645,13 @@ sheds:
 ### Configure repository
 
 ```bash
-planemo shed_init --name="tandem_repeats_finder_2"
-                     --owner="gandres"
-                     --description="Tandem Repeats Finder description"
-                     --long_description="A long long description."
-                     --category="Sequence Analysis"
-                     [--remote_repository_url=<URL to .shed.yml on github>]
-                     [--homepage_url=<Homepage for tool.>]
+planemo shed_init --name=&quot;tandem_repeats_finder_2&quot;
+                     --owner=&quot;gandres&quot;
+                     --description=&quot;Tandem Repeats Finder description&quot;
+                     --long_description=&quot;A long long description.&quot;
+                     --category=&quot;Sequence Analysis&quot;
+                     [--remote_repository_url=&lt;URL to .shed.yml on github&gt;]
+                     [--homepage_url=&lt;Homepage for tool.&gt;]
 ```
 - Creates `.shed.yml` file in the current repository (tool repository):
 
@@ -446,7 +668,7 @@ owner: gandres
 ### Configure repository
 
 #### Naming conventions
-<small>
+&lt;small&gt;
 
 | Repository Type | Recommended Name         | Examples                 |
 | --------------- |--------------------------| -------------------------|
@@ -455,8 +677,8 @@ owner: gandres
 | Tool Suites     | `suite_$name`            | `suite_samtools`         |
 | Tools           | `$name`                  | `stringle`, `bowtie2`    |
 
-</small>
-<span style="color:red">Planemo will determine the repository type based on these conventions</span>
+&lt;/small&gt;
+&lt;span style=&quot;color:red&quot;&gt;Planemo will determine the repository type based on these conventions&lt;/span&gt;
 
 ---
 
@@ -469,10 +691,10 @@ owner: gandres
 ```yml
 [...]
 auto_tool_repositories:
-    name_template: "{{ tool_id }}"
-    description_template: "{{ tool_name }} (from the Trinity tool suite)"
+    name_template: &quot;&quot;
+    description_template: &quot; (from the Trinity tool suite)&quot;
 suite:
-    name: "suite_trinity"
+    name: &quot;suite_trinity&quot;
     description: Trinity tools to assemble transcript sequences from Illumina RNA-Seq data.
 ```
 
@@ -519,7 +741,7 @@ planemo shed_create --shed_target testtoolshed
 ```
 ```bash
 Repository created
-cd '[…]/tandem_repeats_finder' && git rev-parse HEAD
+cd '[…]/tandem_repeats_finder' &amp;&amp; git rev-parse HEAD
 Repository tandem_repeats_finder_2 updated successfully.
 ```
 ![](../../images/shedCreate.png)
@@ -533,12 +755,12 @@ planemo shed_diff --shed_target testtoolshed
 
 ```
 ```bash
-wget -q --recursive -O - 'https://testtoolshed.g2.bx.psu.edu/repository/download?repository_id=6306166e4da9a8bf&changeset_revision=default&file_type=gz' | tar -xzf - -C /tmp/tool_shed_diff_DMcOrR/_testtoolshed_ --strip-components 1
-mkdir "/tmp/tool_shed_diff_DMcOrR/_local_"; tar -xzf "/tmp/tmp5ousfg" -C "/tmp/tool_shed_diff_DMcOrR/_local_"; rm -rf /tmp/tmp5ousfg
-cd "/tmp/tool_shed_diff_DMcOrR"; diff -r _local_ _testtoolshed_
+wget -q --recursive -O - 'https://testtoolshed.g2.bx.psu.edu/repository/download?repository_id=6306166e4da9a8bf&amp;changeset_revision=default&amp;file_type=gz' | tar -xzf - -C /tmp/tool_shed_diff_DMcOrR/_testtoolshed_ --strip-components 1
+mkdir &quot;/tmp/tool_shed_diff_DMcOrR/_local_&quot;; tar -xzf &quot;/tmp/tmp5ousfg&quot; -C &quot;/tmp/tool_shed_diff_DMcOrR/_local_&quot;; rm -rf /tmp/tmp5ousfg
+cd &quot;/tmp/tool_shed_diff_DMcOrR&quot;; diff -r _local_ _testtoolshed_
 diff -r _local_/tandem_repeats_finder.xml _testtoolshed_/tandem_repeats_finder.xml
 41d40
-<     <param name="fileout_label2" type="text" value="Unused" label="none" help="Output name for files" />
+&lt;     &lt;param name=&quot;fileout_label2&quot; type=&quot;text&quot; value=&quot;Unused&quot; label=&quot;none&quot; help=&quot;Output name for files&quot; /&gt;
 ```
 - The repository needs to be updated
 
@@ -551,12 +773,12 @@ planemo shed_update --check_diff --shed_target testtoolshed
 
 ```
 ```bash
-wget -q --recursive -O - 'https://testtoolshed.g2.bx.psu.edu/repository/download?repository_id=6306166e4da9a8bf&changeset_revision=default&file_type=gz' | tar -xzf - -C /tmp/tool_shed_diff_DMcOrR/_testtoolshed_ --strip-components 1
-mkdir "/tmp/tool_shed_diff_DMcOrR/_local_"; tar -xzf "/tmp/tmp5ousfg" -C "/tmp/tool_shed_diff_DMcOrR/_local_"; rm -rf /tmp/tmp5ousfg
-cd "/tmp/tool_shed_diff_DMcOrR"; diff -r _local_ _testtoolshed_
+wget -q --recursive -O - 'https://testtoolshed.g2.bx.psu.edu/repository/download?repository_id=6306166e4da9a8bf&amp;changeset_revision=default&amp;file_type=gz' | tar -xzf - -C /tmp/tool_shed_diff_DMcOrR/_testtoolshed_ --strip-components 1
+mkdir &quot;/tmp/tool_shed_diff_DMcOrR/_local_&quot;; tar -xzf &quot;/tmp/tmp5ousfg&quot; -C &quot;/tmp/tool_shed_diff_DMcOrR/_local_&quot;; rm -rf /tmp/tmp5ousfg
+cd &quot;/tmp/tool_shed_diff_DMcOrR&quot;; diff -r _local_ _testtoolshed_
 diff -r _local_/tandem_repeats_finder.xml _testtoolshed_/tandem_repeats_finder.xml
 41d40
-<     <param name="fileout_label2" type="text" value="Unused" label="none" help="Output name for files" />
+&lt;     &lt;param name=&quot;fileout_label2&quot; type=&quot;text&quot; value=&quot;Unused&quot; label=&quot;none&quot; help=&quot;Output name for files&quot; /&gt;
 Repository tandem_repeats_finder updated successfully.
 Repository metadata updated.
 ```
@@ -584,7 +806,7 @@ planemo shed_update --check_diff --shed_target testtoolshed
 
 ![](../../images/planemo-logo.png)
 
-> Command-line utilities to assist in building and publishing Galaxy tools.
+&gt; Command-line utilities to assist in building and publishing Galaxy tools.
 
 ---
 
@@ -622,7 +844,7 @@ planemo shed_update
 
 ---
 
-### {% icon hands_on %} Hands-on
+### &lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;hands_on&lt;/span&gt; Hands-on
 
 ![](../../images/exercise.png)
 
@@ -635,7 +857,7 @@ Publish your tool (seqtk_seq) in your local toolshed with Planemo
 
 ---
 
-### {% icon hands_on %} Hands-on
+### &lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;hands_on&lt;/span&gt; Hands-on
 
 #### Step 1: Start and configure your toolshed
 - Start your toolshed (in galaxy home directory):
@@ -643,19 +865,19 @@ Publish your tool (seqtk_seq) in your local toolshed with Planemo
 ./run_tool_shed.sh
 ```
 - Toolshed available at `http://localhost:9009`
-<aside class="notes">
+&lt;aside class=&quot;notes&quot;&gt;
 login: galaxy/azerty
-</aside>
+&lt;/aside&gt;
 
 ---
 
-### {% icon hands_on %} Hands-on
+### &lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;hands_on&lt;/span&gt; Hands-on
 
 #### Step 2: Use planemo to publish your tool
 
 ---
 
-### {% icon hands_on %} Hands-on
+### &lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;hands_on&lt;/span&gt; Hands-on
 
 #### Step 2: Use planemo to publish your tool
 
@@ -666,12 +888,12 @@ planemo config_init
 
 ```yml
 [...]  local:
-#key: "<TODO>"
-email: "galaxy@localhost.fr"
-password: "azerty"
+#key: &quot;&lt;TODO&gt;&quot;
+email: &quot;galaxy@localhost.fr&quot;
+password: &quot;azerty&quot;
 ```
 ```bash
-planemo shed_init --name=seqtk_seq --owner=galaxy --description="common transformation of FASTA/Q" --category="Fasta Manipulation"
+planemo shed_init --name=seqtk_seq --owner=galaxy --description=&quot;common transformation of FASTA/Q&quot; --category=&quot;Fasta Manipulation&quot;
 ```
 ```bash
 planemo shed_lint .
@@ -682,13 +904,13 @@ planemo shed_create --shed_target local
 
 ---
 
-### {% icon hands_on %} Hands-on
+### &lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;hands_on&lt;/span&gt; Hands-on
 
 #### Step 3: Update your tool and then use planemo to update your tool on the Tool Shed
 
 ---
 
-### {% icon hands_on %} Hands-on
+### &lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;hands_on&lt;/span&gt; Hands-on
 
 #### Step 3: Update your tool and then use planemo to update your tool on the Tool Shed
 
@@ -698,3 +920,75 @@ planemo shed_diff --shed_target local
 ```bash
 planemo shed_update --check_diff --shed_target local
 ```
+
+
+
+
+---
+### &lt;i class=&quot;fas fa-key&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;keypoints&lt;/span&gt; Key points
+
+
+- Use Planemo
+
+- Contribute to the Main Tool Shed
+
+
+
+
+
+
+
+---
+
+## Thank you!
+
+This material is the result of a collaborative work. Thanks to the [Galaxy Training Network](https://wiki.galaxyproject.org/Teach/GTN) and all the contributors!
+
+
+<div class="contributors-line">
+
+
+ <a href="/training-material/hall-of-fame/abretaud/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/abretaud" alt="Anthony Bretaudeau">Anthony Bretaudeau</a> <a href="/training-material/hall-of-fame/loraine-gueguen/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/loraine-gueguen" alt="Loraine Guéguen">Loraine Guéguen</a> <a href="/training-material/hall-of-fame/slegras/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/slegras" alt="Stéphanie Legras">Stéphanie Legras</a> <a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Bérénice Batut">Bérénice Batut</a>
+
+
+</div>
+
+
+
+<img src="/training-material/assets/images/GTN.png" alt="Galaxy Training Network" style="height: 100px;"/>
+
+
+This material is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+
+    </textarea>
+	<script src="/training-material/assets/js/remark-latest.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+    <script type="text/javascript" src="/training-material/assets/js/clipboard.min.js"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({navigation: {scroll: false,}});
+      var hljs = remark.highlighter.engine;
+      var snippets = document.querySelectorAll('code.remark-code');
+        [].forEach.call(snippets,function(snippet){
+          snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        });
+      var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
+        target:function(trigger){return trigger.parentElement;
+      }});
+    </script>
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('body').prepend("<div style='text-align: center'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
+
+  </body>
+</html>

@@ -1,44 +1,276 @@
----
-layout: tutorial_slides
-logo: "GTN"
+<!DOCTYPE html>
+<html>
 
-title: "Tool development and integration into Galaxy"
-hands_on: "external"
-hands_on_url: "http://planemo.readthedocs.io/en/latest/writing_standalone.html"
-questions:
-  - "What is a tool for Galaxy?"
-  - "How to write a best-practice tool?"
-  - "How to deal with the tool environment?"
-objectives:
-  - "Learn what a tool is and its structure"
-  - "Use the Planemo utilities to develop a tool"
-  - "Deal with the dependencies"
-  - "Write functional tests"
-  - "Make a tool ready for publishing in a ToolShed"
-time_estimation: "6h"
-subtopic: tooldev
-key_points:
-  - "Galaxy Tool Syntax"
-  - "Use Planemo"
-  - "Use Conda"
-  - "Use GitHub"
-  - "Use Travis"
-  - "No more excuse to develop crappy Galaxy tools"
-follow_up_training:
-  -
-    type: "internal"
-    topic_name: dev
-    tutorials:
-      - conda
-contributors:
-  - shiltemann
-  - bebatut
-  - abretaud
-  - jmchilton
-  - nsoranzo
-  - bgruening
-  - lecorguille
+
+
+
+
+
+
+
+
+  <head>
+    <meta charset="utf-8">
+    <title>Tool development and integration into Galaxy</title>
+    
+        <script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
+
+    
+    <link rel="stylesheet" href="/training-material/assets/css/slides.css">
+    <script src="https://kit.fontawesome.com/67b3f98409.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+    
+    
+    
+    
+    <meta name="description" content="Galaxy is an open-source project. Everyone can contribute..." />
+    <meta property="og:title" content="Galaxy Training: Tool development and integration into Galaxy" />
+    <meta property="og:description" content="Galaxy is an open-source project. Everyone can contribute..." />
+    <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
+    <script type="application/ld+json">
+      
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "citation": {
+    "@type": "CreativeWork",
+    "name": "Community-Driven Data Analysis Training for Biology",
+    "url": "https://doi.org/10.1016/j.cels.2018.05.012"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
+  "headline": "Tool development and integration into Galaxy",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "https://github.com/galaxyproject/training-material/blob/main/LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "galaxytrainingnetwork@gmail.com",
+    "name": "Galaxy Training Network",
+    "url": "https://galaxyproject.org/teach/gtn/"
+  },
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "Development in Galaxy",
+    "description": "Galaxy is an open-source project. Everyone can contribute to its development with core Galaxy development, integration of softwares in Galaxy environment, ...",
+    "url": "https://training.galaxyproject.org//training-material/topics/dev/"
+  },
+  "courseCode": "dev / tool-integration / slides",
+  "learningResourceType": "slides",
+  "name": "Slides for 'Tool development and integration into Galaxy' tutorial",
+  "url": "https://training.galaxyproject.org//training-material/topics/dev/tutorials/tool-integration/slides.html",
+  "timeRequired": "PT6H",
+  "description": "The questions this  addresses are:\n - What is a tool for Galaxy?\n - How to write a best-practice tool?\n - How to deal with the tool environment?\n\n\\nThe objectives are:\n - Learn what a tool is and its structure\n - Use the Planemo utilities to develop a tool\n - Deal with the dependencies\n - Write functional tests\n - Make a tool ready for publishing in a ToolShed\n\n",
+  "hasPart": [
+
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Saskia Hiltemann"
+    },
+    {
+      "@type": "Person",
+      "name": "Bérénice Batut"
+    },
+    {
+      "@type": "Person",
+      "name": "Anthony Bretaudeau"
+    },
+    {
+      "@type": "Person",
+      "name": "John Chilton"
+    },
+    {
+      "@type": "Person",
+      "name": "Nicola Soranzo"
+    },
+    {
+      "@type": "Person",
+      "name": "Björn Grüning"
+    },
+    {
+      "@type": "Person",
+      "name": "Gildas Le Corguillé"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Saskia Hiltemann"
+    },
+    {
+      "@type": "Person",
+      "name": "Bérénice Batut"
+    },
+    {
+      "@type": "Person",
+      "name": "Anthony Bretaudeau"
+    },
+    {
+      "@type": "Person",
+      "name": "John Chilton"
+    },
+    {
+      "@type": "Person",
+      "name": "Nicola Soranzo"
+    },
+    {
+      "@type": "Person",
+      "name": "Björn Grüning"
+    },
+    {
+      "@type": "Person",
+      "name": "Gildas Le Corguillé"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "Development in Galaxy",
+      "description": "Galaxy is an open-source project. Everyone can contribute to its development with core Galaxy development, integration of softwares in Galaxy environment, ...",
+      "url": "https://training.galaxyproject.org//training-material/topics/dev/"
+    }
+  ]
+}
+    </script>
+    <script type="text/javascript" src="/training-material/assets/js/jquery.slim.min.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+name: inverse
+layout: true
+class: center, middle, inverse
+
+<div class="my-header"><span>
+<a href="/training-material/topics/dev" title="Return to topic page" ><i class="fa fa-level-up" aria-hidden="true"></i></a>
+
+<a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/main/topics/dev/tutorials/tool-integration/slides.html"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+
+</span></div>
+
+<div class="my-footer"><span>
+
+<img src="/training-material/assets/images/GTN-60px.png" alt="Galaxy Training Network" style="height: 40px;"/>
+
+</span></div>
+
 ---
+
+
+<img src="/training-material/assets/images/GTN.png" alt="Galaxy Training Network" class="cover-logo"/>
+
+
+# Tool development and integration into Galaxy
+
+
+<div class="contributors-line">
+
+
+ <a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a> <a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Bérénice Batut">Bérénice Batut</a> <a href="/training-material/hall-of-fame/abretaud/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/abretaud" alt="Anthony Bretaudeau">Anthony Bretaudeau</a> <a href="/training-material/hall-of-fame/jmchilton/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/jmchilton" alt="John Chilton">John Chilton</a> <a href="/training-material/hall-of-fame/nsoranzo/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/nsoranzo" alt="Nicola Soranzo">Nicola Soranzo</a> <a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Björn Grüning">Björn Grüning</a> <a href="/training-material/hall-of-fame/lecorguille/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/lecorguille" alt="Gildas Le Corguillé">Gildas Le Corguillé</a>
+
+
+</div>
+
+
+
+
+.footnote[Tip: press `P` to view the presenter notes]
+
+???
+Presenter notes contain extra information which might be useful if you
+intend to use these slides for teaching.
+
+Press `P` again to switch presenter notes off
+
+Press `C` to create a new window where the same presentation will be displayed.
+This window is linked to the main window. Changing slides on one will cause the
+slide to change on the other. Useful when presenting.
+
+---
+
+
+
+
+
+
+### &lt;i class=&quot;far fa-question-circle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;question&lt;/span&gt; Questions
+
+
+- What is a tool for Galaxy?
+
+- How to write a best-practice tool?
+
+- How to deal with the tool environment?
+
+
+---
+
+
+
+### &lt;i class=&quot;fas fa-bullseye&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;objectives&lt;/span&gt; Objectives
+
+
+- Learn what a tool is and its structure
+
+- Use the Planemo utilities to develop a tool
+
+- Deal with the dependencies
+
+- Write functional tests
+
+- Make a tool ready for publishing in a ToolShed
+
+
+---
+
 
 # Galaxy tools
 
@@ -55,7 +287,7 @@ contributors:
 ![](../../images/graphlan_screenshot.png)
 
 ```bash
-graphlan.py --format "png" --size 7 input_tree.txt png_image.png
+graphlan.py --format &quot;png&quot; --size 7 input_tree.txt png_image.png
 ```
 
 ---
@@ -77,10 +309,10 @@ Link between the Galaxy UI and the underlying tool:
 
 ???
 
-1. `<inputs>` (datasets and parameters) specified in the tool XML are exposed in the Galaxy tool UI
-2. When the user fills the form and click the `Execute` button, Galaxy fills the `<command>` template in the XML with the inputs entered by the user and execute the Cheetah code, producing a script as output
+1. `&lt;inputs&gt;` (datasets and parameters) specified in the tool XML are exposed in the Galaxy tool UI
+2. When the user fills the form and click the `Execute` button, Galaxy fills the `&lt;command&gt;` template in the XML with the inputs entered by the user and execute the Cheetah code, producing a script as output
 3. Galaxy creates a job for the generated script and executes it somewhere (bowtie2 is run in this case)
-4. Some (not necessarily all) output files become new history datasets, as specified in the `<outputs>` XML tag set
+4. Some (not necessarily all) output files become new history datasets, as specified in the `&lt;outputs&gt;` XML tag set
 
 ---
 
@@ -118,42 +350,42 @@ Galaxy tool XML format is formally defined in a XML Schema Definition (XSD), use
 How to invoke the tool?
 
 ```xml
-<requirements>
-    <requirement type="package" version="1.1.3">graphlan</requirement>
-</requirements>
-<command><![CDATA[
+&lt;requirements&gt;
+    &lt;requirement type=&quot;package&quot; version=&quot;1.1.3&quot;&gt;graphlan&lt;/requirement&gt;
+&lt;/requirements&gt;
+&lt;command&gt;&lt;![CDATA[
 graphlan.py
 --format $format
 ...
-]]></command>
+]]&gt;&lt;/command&gt;
 ```
 
 If the script is provided with the tool xml:
 
 ```xml
-<requirements>
-    <requirement type="package" version="2.7">python</requirement>
-</requirements>
-<command><![CDATA[
+&lt;requirements&gt;
+    &lt;requirement type=&quot;package&quot; version=&quot;2.7&quot;&gt;python&lt;/requirement&gt;
+&lt;/requirements&gt;
+&lt;command&gt;&lt;![CDATA[
 python '$__tool_directory__/graphlan.py'
 --format $format
 ...
-]]></command>
+]]&gt;&lt;/command&gt;
 ```
 
 ???
 
-- In the first case, `graphlan.py` is expected to be on the PATH and executable when the job executes. This is usually accomplished by specifying some `<requirement/>` tags.
+- In the first case, `graphlan.py` is expected to be on the PATH and executable when the job executes. This is usually accomplished by specifying some `&lt;requirement/&gt;` tags.
 - In the second case, `$__tool_directory__` is a special variable which is substituted by Galaxy with the directory where the tool XML is
 
 ---
 
-## `inputs` > `param` to `command`
+## `inputs` &gt; `param` to `command`
 
-Parameters are directly linked to variables in `<command>`
+Parameters are directly linked to variables in `&lt;command&gt;`
 
 ```xml
-<command><![CDATA[
+&lt;command&gt;&lt;![CDATA[
 graphlan.py
 ...
 #if str($dpi):
@@ -161,13 +393,13 @@ graphlan.py
 #end if
 '$input_tree'
 ...
-]]></command>
-<inputs>
-    <param name="input_tree" type="data" label="..."/>
+]]&gt;&lt;/command&gt;
+&lt;inputs&gt;
+    &lt;param name=&quot;input_tree&quot; type=&quot;data&quot; label=&quot;...&quot;/&gt;
 
-    <param argument="--dpi" type="integer" optional="true" label="..."
-        help="For non vectorial formats" />
-</inputs>
+    &lt;param argument=&quot;--dpi&quot; type=&quot;integer&quot; optional=&quot;true&quot; label=&quot;...&quot;
+        help=&quot;For non vectorial formats&quot; /&gt;
+&lt;/inputs&gt;
 ```
 
 - The `#if ... #end if` syntax comes from the [Cheetah](https://cheetahtemplate.org/) template language, which has a Python-like syntax
@@ -179,31 +411,31 @@ graphlan.py
 
 ---
 
-## `inputs` > `param` > `data`
+## `inputs` &gt; `param` &gt; `data`
 
 ![](../../images/input_data.png)
 
 ```xml
-<param name="..." type="data" format="txt" label="..." help="..." />
+&lt;param name=&quot;...&quot; type=&quot;data&quot; format=&quot;txt&quot; label=&quot;...&quot; help=&quot;...&quot; /&gt;
 ```
 
 .footnote[[List of possible formats](https://github.com/galaxyproject/galaxy/blob/dev/config/datatypes_conf.xml.sample)]
 
 ---
 
-## `inputs` > `param` > `integer` | `float`
+## `inputs` &gt; `param` &gt; `integer` | `float`
 
 ![](../../images/input_integer.png)
 
 ```xml
-<param name="..." type="integer" value="7" label="..." help="..."/>
+&lt;param name=&quot;...&quot; type=&quot;integer&quot; value=&quot;7&quot; label=&quot;...&quot; help=&quot;...&quot;/&gt;
 ```
 
 ![](../../images/input_integer_range.png)
 
 ```xml
-<param name="..." type="float" min="0" max="10" value="1" label="..."
-    help="..."/>
+&lt;param name=&quot;...&quot; type=&quot;float&quot; min=&quot;0&quot; max=&quot;10&quot; value=&quot;1&quot; label=&quot;...&quot;
+    help=&quot;...&quot;/&gt;
 ```
 
 ???
@@ -213,133 +445,133 @@ graphlan.py
 
 ---
 
-## `inputs` > `param` > `text`
+## `inputs` &gt; `param` &gt; `text`
 
 ![](../../images/input_text.png)
 
 ```xml
-<param name="..." type="text" value="..." label="..." help="..."/>
+&lt;param name=&quot;...&quot; type=&quot;text&quot; value=&quot;...&quot; label=&quot;...&quot; help=&quot;...&quot;/&gt;
 ```
 
 ---
 
-## `inputs` > `param` > `select`
+## `inputs` &gt; `param` &gt; `select`
 
 ![](../../images/input_select.png)
 
 ```xml
-<param name="..." type="select" label="..." help="...">
-    <option value="png" selected="true">PNG</option>
-    <option value="pdf">PDF</option>
-    <option value="ps">PS</option>
-    <option value="eps">EPS</option>
-    <option value="svg">SVG</option>
-</param>
+&lt;param name=&quot;...&quot; type=&quot;select&quot; label=&quot;...&quot; help=&quot;...&quot;&gt;
+    &lt;option value=&quot;png&quot; selected=&quot;true&quot;&gt;PNG&lt;/option&gt;
+    &lt;option value=&quot;pdf&quot;&gt;PDF&lt;/option&gt;
+    &lt;option value=&quot;ps&quot;&gt;PS&lt;/option&gt;
+    &lt;option value=&quot;eps&quot;&gt;EPS&lt;/option&gt;
+    &lt;option value=&quot;svg&quot;&gt;SVG&lt;/option&gt;
+&lt;/param&gt;
 ```
 
-If no `option` has `selected="true"`, the first one is selected by default.
+If no `option` has `selected=&quot;true&quot;`, the first one is selected by default.
 
 ---
 
-## `inputs` > `param` > `select`
+## `inputs` &gt; `param` &gt; `select`
 
 ![](../../images/input_select_checkboxes.png)
 
 ```xml
-<param name="..." type="select" display="radio" label="..." help="...">
-    <option value="min" selected="true">Minimum</option>
-    <option value="mean">Mean</option>
-    <option value="max">Max</option>
-    <option value="sum">Sum</option>
-</param>
+&lt;param name=&quot;...&quot; type=&quot;select&quot; display=&quot;radio&quot; label=&quot;...&quot; help=&quot;...&quot;&gt;
+    &lt;option value=&quot;min&quot; selected=&quot;true&quot;&gt;Minimum&lt;/option&gt;
+    &lt;option value=&quot;mean&quot;&gt;Mean&lt;/option&gt;
+    &lt;option value=&quot;max&quot;&gt;Max&lt;/option&gt;
+    &lt;option value=&quot;sum&quot;&gt;Sum&lt;/option&gt;
+&lt;/param&gt;
 ```
 
 ---
 
-## `inputs` > `param` > `select`
+## `inputs` &gt; `param` &gt; `select`
 
 ![](../../images/input_select_multiple.png)
 
 ```xml
-<param name="..." type="select" multiple="true" label="..." help="...">
-    <option value="ld" selected="true">Length distribution</option>
-    <option value="gc" selected="true">GC content distribution</option>
+&lt;param name=&quot;...&quot; type=&quot;select&quot; multiple=&quot;true&quot; label=&quot;...&quot; help=&quot;...&quot;&gt;
+    &lt;option value=&quot;ld&quot; selected=&quot;true&quot;&gt;Length distribution&lt;/option&gt;
+    &lt;option value=&quot;gc&quot; selected=&quot;true&quot;&gt;GC content distribution&lt;/option&gt;
     ...
-</param>
+&lt;/param&gt;
 ```
 
 ---
 
-## `inputs` > `param` > `boolean`
+## `inputs` &gt; `param` &gt; `boolean`
 
 ![](../../images/input_boolean.png)
 
 ```xml
-<param name="..." type="boolean" checked="false" truevalue="--log" falsevalue=""
-    label="..." help="..." />
+&lt;param name=&quot;...&quot; type=&quot;boolean&quot; checked=&quot;false&quot; truevalue=&quot;--log&quot; falsevalue=&quot;&quot;
+    label=&quot;...&quot; help=&quot;...&quot; /&gt;
 ```
 
 ---
 
 class: reduce70
 
-## `inputs` > `param` > `conditional`
+## `inputs` &gt; `param` &gt; `conditional`
 
 .image-75[ ![](../../images/input_conditional.png) ]
 
 ```xml
-<command><![CDATA[
+&lt;command&gt;&lt;![CDATA[
 #if $fastq_input.selector == 'paired':
     '$fastq_input.input1' '$fastq_input.input2'
 #else:
     '$fastq_input.input'
 #end if
-]]></command>
-<inputs>
-    <conditional name="fastq_input">
-        <param name="selector" type="select" label="Single or paired-end reads?">
-            <option value="paired">Paired-end</option>
-            <option value="single">Single-end</option>
-        </param>
-        <when value="paired">
-            <param name="input1" type="data" format="fastq" label="Forward reads" />
-            <param name="input2" type="data" format="fastq" label="Reverse reads" />
-        </when>
-        <when value="single">
-            <param name="input" type="data" format="fastq" label="Single reads" />
-        </when>
-    </conditional>
-</inputs>
+]]&gt;&lt;/command&gt;
+&lt;inputs&gt;
+    &lt;conditional name=&quot;fastq_input&quot;&gt;
+        &lt;param name=&quot;selector&quot; type=&quot;select&quot; label=&quot;Single or paired-end reads?&quot;&gt;
+            &lt;option value=&quot;paired&quot;&gt;Paired-end&lt;/option&gt;
+            &lt;option value=&quot;single&quot;&gt;Single-end&lt;/option&gt;
+        &lt;/param&gt;
+        &lt;when value=&quot;paired&quot;&gt;
+            &lt;param name=&quot;input1&quot; type=&quot;data&quot; format=&quot;fastq&quot; label=&quot;Forward reads&quot; /&gt;
+            &lt;param name=&quot;input2&quot; type=&quot;data&quot; format=&quot;fastq&quot; label=&quot;Reverse reads&quot; /&gt;
+        &lt;/when&gt;
+        &lt;when value=&quot;single&quot;&gt;
+            &lt;param name=&quot;input&quot; type=&quot;data&quot; format=&quot;fastq&quot; label=&quot;Single reads&quot; /&gt;
+        &lt;/when&gt;
+    &lt;/conditional&gt;
+&lt;/inputs&gt;
 ```
 
 ---
 
 class: reduce70
 
-## `inputs` > `param` > `repeat`
+## `inputs` &gt; `param` &gt; `repeat`
 
 ![](../../images/input_repeat.png)
 
 ```xml
-<command><![CDATA[
+&lt;command&gt;&lt;![CDATA[
 #for $i, $s in enumerate($series):
     rank_of_series=$i
     input_path=${s.input}
     x_column=${s.xcol}
 #end for
-]]></command>
+]]&gt;&lt;/command&gt;
 
-<inputs>
-    <repeat name="series" title="Series">
-        <param name="input" type="data" format="tabular" label="Dataset"/>
-        <param name="xcol" type="data_column" data_ref="input" label="Column for x axis"/>
-    </repeat>
-</inputs>
+&lt;inputs&gt;
+    &lt;repeat name=&quot;series&quot; title=&quot;Series&quot;&gt;
+        &lt;param name=&quot;input&quot; type=&quot;data&quot; format=&quot;tabular&quot; label=&quot;Dataset&quot;/&gt;
+        &lt;param name=&quot;xcol&quot; type=&quot;data_column&quot; data_ref=&quot;input&quot; label=&quot;Column for x axis&quot;/&gt;
+    &lt;/repeat&gt;
+&lt;/inputs&gt;
 ```
 
 ???
 
-It makes sense to use a `<repeat>` block only if it contains multiple related parameters, otherwise adding `multiple="true"` is preferable.
+It makes sense to use a `&lt;repeat&gt;` block only if it contains multiple related parameters, otherwise adding `multiple=&quot;true&quot;` is preferable.
 
 ---
 
@@ -354,11 +586,11 @@ Which files the tool will produce as output?
 ## `outputs`
 
 ```xml
-<outputs>
-    <data name="tree" format="txt" label="${tool.name} on ${on_string}: Tree" />
-    <data name="annotation" format="txt"
-        label="${tool.name} on ${on_string}: Annotation" />
-</outputs>
+&lt;outputs&gt;
+    &lt;data name=&quot;tree&quot; format=&quot;txt&quot; label=&quot;${tool.name} on ${on_string}: Tree&quot; /&gt;
+    &lt;data name=&quot;annotation&quot; format=&quot;txt&quot;
+        label=&quot;${tool.name} on ${on_string}: Annotation&quot; /&gt;
+&lt;/outputs&gt;
 ```
 
 ???
@@ -367,25 +599,25 @@ Which files the tool will produce as output?
 
 ---
 
-## `outputs` > `filter`
+## `outputs` &gt; `filter`
 
 Output is collected only if the `filter` evaluates to True
 
 ```xml
-<inputs>
-    <param type="select" name="format" label="Output format">
-        <option value="png">PNG</option>
-        <option value="pdf">PDF</option>
-    </param>
-</inputs>
-<outputs>
-    <data name="png_output" format="png" label="${tool.name} on ${on_string}: PNG">
-        <filter>format == "png"</filter>
-    </data>
-    <data name="pdf_output" format="pdf" label="${tool.name} on ${on_string}: PDF">
-        <filter>format == "pdf"</filter>
-    </data>
-</outputs>
+&lt;inputs&gt;
+    &lt;param type=&quot;select&quot; name=&quot;format&quot; label=&quot;Output format&quot;&gt;
+        &lt;option value=&quot;png&quot;&gt;PNG&lt;/option&gt;
+        &lt;option value=&quot;pdf&quot;&gt;PDF&lt;/option&gt;
+    &lt;/param&gt;
+&lt;/inputs&gt;
+&lt;outputs&gt;
+    &lt;data name=&quot;png_output&quot; format=&quot;png&quot; label=&quot;${tool.name} on ${on_string}: PNG&quot;&gt;
+        &lt;filter&gt;format == &quot;png&quot;&lt;/filter&gt;
+    &lt;/data&gt;
+    &lt;data name=&quot;pdf_output&quot; format=&quot;pdf&quot; label=&quot;${tool.name} on ${on_string}: PDF&quot;&gt;
+        &lt;filter&gt;format == &quot;pdf&quot;&lt;/filter&gt;
+    &lt;/data&gt;
+&lt;/outputs&gt;
 ```
 
 ???
@@ -400,12 +632,12 @@ Legacy tools (i.e. with `profile` unspecified or less than 16.04) by default fai
 
 Non-legacy tools by default fail if the tool exit code is not 0, which is equivalent to specify:
 ```xml
-<command detect_errors="exit_code"> ... </command>
+&lt;command detect_errors=&quot;exit_code&quot;&gt; ... &lt;/command&gt;
 ```
 
-To fail if either the tool exit code is not 0 or "Exception:"/"Error:" appears in standard error/output:
+To fail if either the tool exit code is not 0 or &quot;Exception:&quot;/&quot;Error:&quot; appears in standard error/output:
 ```xml
-<command detect_errors="aggressive"> ... </command>
+&lt;command detect_errors=&quot;aggressive&quot;&gt; ... &lt;/command&gt;
 ```
 
 ---
@@ -414,15 +646,15 @@ To fail if either the tool exit code is not 0 or "Exception:"/"Error:" appears i
 
 If you need more precision:
 ```xml
-<stdio>
-    <exit_code range=":-2" level="warning" description="Low disk space" />
-    <exit_code range="1:" level="fatal"  />
-    <regex match="Error:"  level="fatal" />
-</stdio>
-<command> ... </command>
+&lt;stdio&gt;
+    &lt;exit_code range=&quot;:-2&quot; level=&quot;warning&quot; description=&quot;Low disk space&quot; /&gt;
+    &lt;exit_code range=&quot;1:&quot; level=&quot;fatal&quot;  /&gt;
+    &lt;regex match=&quot;Error:&quot;  level=&quot;fatal&quot; /&gt;
+&lt;/stdio&gt;
+&lt;command&gt; ... &lt;/command&gt;
 ```
 
-<small>"Warning" level allows to add information to `stderr` without marking the dataset as failed</small>
+&lt;small&gt;&quot;Warning&quot; level allows to add information to `stderr` without marking the dataset as failed&lt;/small&gt;
 
 ---
 
@@ -431,7 +663,7 @@ If you need more precision:
 ![](../../images/help.png)
 
 ```xml
-<help><![CDATA[
+&lt;help&gt;&lt;![CDATA[
 **What it does**
 GraPhlAn is a software tool for producing high-quality circular
 representations of taxonomic and phylogenetic trees. GraPhlAn focuses
@@ -440,8 +672,8 @@ representations of phylogenetically- and taxonomically-driven
 investigation.
 
 For more information, check the `user manual
-<https://bitbucket.org/nsegata/graphlan/overview>`_.
-]]></help>
+&lt;https://bitbucket.org/nsegata/graphlan/overview&gt;`_.
+]]&gt;&lt;/help&gt;
 ```
 
 Content should be in [reStructuredText markup format](https://docutils.sourceforge.io/rst.html)
@@ -453,30 +685,30 @@ Content should be in [reStructuredText markup format](https://docutils.sourcefor
 ![](../../images/citations.png)
 
 ```xml
-<citations>
-    <citation type="doi">10.1093/bioinformatics/bts611</citation>
-    <citation type="doi">10.1093/nar/gks1219</citation>
-    <citation type="doi">10.1093/nar/gks1005</citation>
-    <citation type="doi">10.1093/bioinformatics/btq461</citation>
-    <citation type="doi">10.1038/nbt.2198</citation>
-</citations>
+&lt;citations&gt;
+    &lt;citation type=&quot;doi&quot;&gt;10.1093/bioinformatics/bts611&lt;/citation&gt;
+    &lt;citation type=&quot;doi&quot;&gt;10.1093/nar/gks1219&lt;/citation&gt;
+    &lt;citation type=&quot;doi&quot;&gt;10.1093/nar/gks1005&lt;/citation&gt;
+    &lt;citation type=&quot;doi&quot;&gt;10.1093/bioinformatics/btq461&lt;/citation&gt;
+    &lt;citation type=&quot;doi&quot;&gt;10.1038/nbt.2198&lt;/citation&gt;
+&lt;/citations&gt;
 ```
 
-<small>If no DOI is available, a BibTeX citation can be specified with `type="bibtex"`</small>
+&lt;small&gt;If no DOI is available, a BibTeX citation can be specified with `type=&quot;bibtex&quot;`&lt;/small&gt;
 
 ---
 
 ## Quoting params
 
-Always quote `text` and `data` parameters and output `data` in `<command>`
+Always quote `text` and `data` parameters and output `data` in `&lt;command&gt;`
 
 ```xml
-<command><![CDATA[
+&lt;command&gt;&lt;![CDATA[
 graphlan.py
 ...
 '$input_tree'
 '$png_output_image'
-]]></command>
+]]&gt;&lt;/command&gt;
 ```
 
 - For security reasons
@@ -487,18 +719,18 @@ graphlan.py
 
 ## Multiple commands
 
-Use `&&` to concatenate them
+Use `&amp;&amp;` to concatenate them
 
 ```xml
-<command><![CDATA[
+&lt;command&gt;&lt;![CDATA[
 graphlan.py
 --format '$format'
-&&
-echo "Yeah it worked!"
-]]></command>
+&amp;&amp;
+echo &quot;Yeah it worked!&quot;
+]]&gt;&lt;/command&gt;
 ```
 
-<small>The job will exit on the first error encountered.</small>
+&lt;small&gt;The job will exit on the first error encountered.&lt;/small&gt;
 
 ---
 
@@ -507,7 +739,7 @@ echo "Yeah it worked!"
 Use the `argument` tag when a `param` name reflects the command line argument
 
 ```xml
-<param argument="--size" type="integer" value="7" label="..." help="..."/>
+&lt;param argument=&quot;--size&quot; type=&quot;integer&quot; value=&quot;7&quot; label=&quot;...&quot; help=&quot;...&quot;/&gt;
 ```
 
 - It will be appended at the end of the displayed param help
@@ -522,17 +754,17 @@ Use sections to group related parameters
 ![](../../images/input_section.png)
 
 ```xml
-<section name="advanced" title="Advanced options" expanded="False">
-    <param argument="--size" type="integer" value="7" label="..." help="..."/>
+&lt;section name=&quot;advanced&quot; title=&quot;Advanced options&quot; expanded=&quot;False&quot;&gt;
+    &lt;param argument=&quot;--size&quot; type=&quot;integer&quot; value=&quot;7&quot; label=&quot;...&quot; help=&quot;...&quot;/&gt;
     ...
-</section>
+&lt;/section&gt;
 ```
 
 ---
 
 ![](../../images/planemo-logo.png)
 
-> Command-line utilities to assist in building and publishing Galaxy tools.
+&gt; Command-line utilities to assist in building and publishing Galaxy tools.
 
 - [Documentation](https://planemo.readthedocs.io/en/latest/)
 - [Tutorial](https://planemo.readthedocs.io/en/latest/writing_standalone.html)
@@ -563,7 +795,7 @@ Complicated version:
 $ planemo tool_init --id 'samtools_sort' --name 'Samtools sort' \
           --description 'order of storing aligned sequences' \
           --requirement 'samtools@1.3.1' \
-          --example_command "samtools sort -o '1_sorted.bam' '1.bam'" \
+          --example_command &quot;samtools sort -o '1_sorted.bam' '1.bam'&quot; \
           --example_input 1.bam \
           --example_output 1_sorted.bam \
           --test_case \
@@ -646,30 +878,30 @@ Building Galaxy Tools
 ## Good practices
 
 1. Build tests using inputs/parameters/outputs
-2. Run the tests --> Failed --> Coffee
+2. Run the tests --&gt; Failed --&gt; Coffee
 3. Develop
-4. Run the tests --> Failed --> Coffee
+4. Run the tests --&gt; Failed --&gt; Coffee
 5. Develop
-6. Run the tests --> Succeed --> Beer
+6. Run the tests --&gt; Succeed --&gt; Beer
 
 ---
 
 ## `tests`
 
 ```xml
-<tests>
-    <test>
-        <param name="input_tree" value="input_tree.txt"/>
-        <param name="format" value="png"/>
-        <param name="dpi" value="100"/>
-        <param name="size" value="7"/>
-        <param name="pad" value="2"/>
-        <output name="png_output_image" file="png_image.png" />
-    </test>
-</tests>
+&lt;tests&gt;
+    &lt;test&gt;
+        &lt;param name=&quot;input_tree&quot; value=&quot;input_tree.txt&quot;/&gt;
+        &lt;param name=&quot;format&quot; value=&quot;png&quot;/&gt;
+        &lt;param name=&quot;dpi&quot; value=&quot;100&quot;/&gt;
+        &lt;param name=&quot;size&quot; value=&quot;7&quot;/&gt;
+        &lt;param name=&quot;pad&quot; value=&quot;2&quot;/&gt;
+        &lt;output name=&quot;png_output_image&quot; file=&quot;png_image.png&quot; /&gt;
+    &lt;/test&gt;
+&lt;/tests&gt;
 ```
 
-<small>`input_tree.txt` and `png_image.png` must be in the `test-data/` directory</small>
+&lt;small&gt;`input_tree.txt` and `png_image.png` must be in the `test-data/` directory&lt;/small&gt;
 
 ---
 
@@ -690,23 +922,23 @@ graphlan/
 ## Comparing to an expected result
 
 ```xml
-<output ... compare="diff|re_match|sim_size|contains|re_match_multiline" ... />
+&lt;output ... compare=&quot;diff|re_match|sim_size|contains|re_match_multiline&quot; ... /&gt;
 ```
 
 ```xml
-<output name="out_file1" file="cf_maf2fasta_concat.dat" ftype="fasta" />
+&lt;output name=&quot;out_file1&quot; file=&quot;cf_maf2fasta_concat.dat&quot; ftype=&quot;fasta&quot; /&gt;
 ```
 
 ```xml
-<output ... md5="68b329da9893e34099c7d8ad5cb9c940" />
+&lt;output ... md5=&quot;68b329da9893e34099c7d8ad5cb9c940&quot; /&gt;
 ```
 
 ```xml
-<output ... lines_diff="4" />
+&lt;output ... lines_diff=&quot;4&quot; /&gt;
 ```
 
 ```xml
-<output ... compare="sim_size" delta="1000" />
+&lt;output ... compare=&quot;sim_size&quot; delta=&quot;1000&quot; /&gt;
 ```
 
 .footnote[[Complete documentation](https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-tests-test-output)]
@@ -724,17 +956,17 @@ graphlan/
 ## Checking the output content
 
 ```xml
-<output name="out_file1">
-    <assert_contents>
-        <has_text text="chr7" />
-        <not_has_text text="chr8" />
-        <has_text_matching expression="1274\d+53" />
-        <has_line_matching expression=".*\s+127489808\s+127494553" />
-        <!-- &#009; is XML escape code for tab -->
-        <has_line line="chr7&#009;127471195&#009;127489808" />
-        <has_n_columns n="3" />
-    </assert_contents>
-</output>
+&lt;output name=&quot;out_file1&quot;&gt;
+    &lt;assert_contents&gt;
+        &lt;has_text text=&quot;chr7&quot; /&gt;
+        &lt;not_has_text text=&quot;chr8&quot; /&gt;
+        &lt;has_text_matching expression=&quot;1274\d+53&quot; /&gt;
+        &lt;has_line_matching expression=&quot;.*\s+127489808\s+127494553&quot; /&gt;
+        &lt;!-- &amp;#009; is XML escape code for tab --&gt;
+        &lt;has_line line=&quot;chr7&amp;#009;127471195&amp;#009;127489808&quot; /&gt;
+        &lt;has_n_columns n=&quot;3&quot; /&gt;
+    &lt;/assert_contents&gt;
+&lt;/output&gt;
 ```
 
 .footnote[[Complete documentation](https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-tests-test-output-assert-contents)]
@@ -744,10 +976,10 @@ graphlan/
 ## Checking tool stdout/stderr
 
 ```xml
-<assert_stdout>
-    <has_text text="Step 1... determine cutoff point" />
-    <has_text text="Step 2... estimate parameters of null distribution" />
-</assert_stdout>
+&lt;assert_stdout&gt;
+    &lt;has_text text=&quot;Step 1... determine cutoff point&quot; /&gt;
+    &lt;has_text text=&quot;Step 2... estimate parameters of null distribution&quot; /&gt;
+&lt;/assert_stdout&gt;
 ```
 
 .footnote[[Complete documentation](https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-tests-test-output-assert-contents)]
@@ -757,25 +989,25 @@ graphlan/
 ## Nested inputs in `test`
 
 ```xml
-<tests>
-    <test>
-        <section name="advanced">
-            <repeat name="names">
-                <param name="first" value="Abraham"/>
-                <param name="last" value="Lincoln"/>
-            </repeat>
-            <repeat name="names">
-                <param name="first" value="Donald"/>
-                <param name="last" value="Trump"/>
-            </repeat>
-            <conditional name="image">
-                <param name="output_image" value="yes"/>
-                <param name="format" value="png"/>
-            </conditional>
-        </section>
+&lt;tests&gt;
+    &lt;test&gt;
+        &lt;section name=&quot;advanced&quot;&gt;
+            &lt;repeat name=&quot;names&quot;&gt;
+                &lt;param name=&quot;first&quot; value=&quot;Abraham&quot;/&gt;
+                &lt;param name=&quot;last&quot; value=&quot;Lincoln&quot;/&gt;
+            &lt;/repeat&gt;
+            &lt;repeat name=&quot;names&quot;&gt;
+                &lt;param name=&quot;first&quot; value=&quot;Donald&quot;/&gt;
+                &lt;param name=&quot;last&quot; value=&quot;Trump&quot;/&gt;
+            &lt;/repeat&gt;
+            &lt;conditional name=&quot;image&quot;&gt;
+                &lt;param name=&quot;output_image&quot; value=&quot;yes&quot;/&gt;
+                &lt;param name=&quot;format&quot; value=&quot;png&quot;/&gt;
+            &lt;/conditional&gt;
+        &lt;/section&gt;
         ...
-    </test>
-</tests>
+    &lt;/test&gt;
+&lt;/tests&gt;
 ```
 
 ---
@@ -817,10 +1049,10 @@ How Galaxy will deal with dependencies?
 ## `requirements`
 
 ```xml
-<requirements>
-    <requirement type="package" version="1.66">biopython</requirement>
-    <requirement type="package" version="1.0.0">graphlan</requirement>
-</requirements>
+&lt;requirements&gt;
+    &lt;requirement type=&quot;package&quot; version=&quot;1.66&quot;&gt;biopython&lt;/requirement&gt;
+    &lt;requirement type=&quot;package&quot; version=&quot;1.0.0&quot;&gt;graphlan&lt;/requirement&gt;
+&lt;/requirements&gt;
 ```
 
 Local installation using Conda packages
@@ -859,20 +1091,20 @@ class: packed
 ## `configfiles`
 
 ```xml
-<command><![CDATA[ mb $script_nexus ]]></command>
+&lt;command&gt;&lt;![CDATA[ mb $script_nexus ]]&gt;&lt;/command&gt;
 
-<configfiles>
-    <configfile name="script_nexus"><![CDATA[
+&lt;configfiles&gt;
+    &lt;configfile name=&quot;script_nexus&quot;&gt;&lt;![CDATA[
 set autoclose = yes;
 execute $input_data;
-#if str($data_type.type) == "nuc“
+#if str($data_type.type) == &quot;nuc“
     lset nst=$data_type.lset_params.lset_Nst;
 #end if
 mcmcp ngen=$mcmcp_ngen;
 mcmc;
 quit
-    ]]></configfile>
-</configfiles>
+    ]]&gt;&lt;/configfile&gt;
+&lt;/configfiles&gt;
 ```
 
 ```bash
@@ -896,78 +1128,78 @@ quit
 
 class: packed
 
-## `macros` > `xml`
+## `macros` &gt; `xml`
 
 macros.xml
 
 ```xml
-<macros>
-    <xml name="requirements">
-        <requirements>
-            <requirement type="package" version="2.5.0">blast</requirement>
-        </requirements>
-    </xml>
-    <xml name="stdio">
-        <stdio>
-            <exit_code range="1" level="fatal" />
-        </stdio>
-    </xml>
-</macros>
+&lt;macros&gt;
+    &lt;xml name=&quot;requirements&quot;&gt;
+        &lt;requirements&gt;
+            &lt;requirement type=&quot;package&quot; version=&quot;2.5.0&quot;&gt;blast&lt;/requirement&gt;
+        &lt;/requirements&gt;
+    &lt;/xml&gt;
+    &lt;xml name=&quot;stdio&quot;&gt;
+        &lt;stdio&gt;
+            &lt;exit_code range=&quot;1&quot; level=&quot;fatal&quot; /&gt;
+        &lt;/stdio&gt;
+    &lt;/xml&gt;
+&lt;/macros&gt;
 ```
 
 ncbi_blastn_wrapper.xml
 
 ```xml
-<macros>
-    <import>macros.xml</import>
-</macros>
-<expand macro="requirements"/>
-<expand macro="stdio"/>
+&lt;macros&gt;
+    &lt;import&gt;macros.xml&lt;/import&gt;
+&lt;/macros&gt;
+&lt;expand macro=&quot;requirements&quot;/&gt;
+&lt;expand macro=&quot;stdio&quot;/&gt;
 ```
 
 ---
 
-## `macros` > `token`
+## `macros` &gt; `token`
 
 macros.xml
 
 ```xml
-<macros>
-    <token name="@THREADS@">-num_threads "\${GALAXY_SLOTS:-8}"</token>
-</macros>
+&lt;macros&gt;
+    &lt;token name=&quot;@THREADS@&quot;&gt;-num_threads &quot;\${GALAXY_SLOTS:-8}&quot;&lt;/token&gt;
+&lt;/macros&gt;
 ```
 
 ncbi_blastn_wrapper.xml
 
 ```xml
-<command>
+&lt;command&gt;
 blastn -query '$query' @THREADS@ [...]
-</command>
+&lt;/command&gt;
 ```
 
 ---
 
-## `macros` > `xml` > `yield`
+## `macros` &gt; `xml` &gt; `yield`
 
 macros.xml
 
 ```xml
-<macros>
-    <xml name="requirements">
-        <requirements>
-            <requirement type="package" version="2.2.0">trinity</requirement>
-            <yield/>
-        </requirements>
-    </xml>
-</macros>
+&lt;macros&gt;
+    &lt;xml name=&quot;requirements&quot;&gt;
+        &lt;requirements&gt;
+            &lt;requirement type=&quot;package&quot; version=&quot;2.2.0&quot;&gt;trinity&lt;/requirement&gt;
+            &lt;yield/&gt;
+        &lt;/requirements&gt;
+    &lt;/xml&gt;
+&lt;/macros&gt;
 ```
 
 trinity.xml
 
 ```xml
-<expand macro="requirements">
-    <requirement type="package" version="1.1.2">bowtie</requirement>
-</expand>
+&lt;expand macro=&quot;requirements&quot;&gt;
+    &lt;requirement type=&quot;package&quot; version=&quot;1.1.2&quot;&gt;bowtie&lt;/requirement&gt;
+&lt;/expand&gt;
 ```
 
 ---
@@ -975,16 +1207,16 @@ trinity.xml
 ## `@TOOL_VERSION@` token
 
 ```xml
-<macros>
-    <token name="@TOOL_VERSION@">1.2</token>
-</macros>
+&lt;macros&gt;
+    &lt;token name=&quot;@TOOL_VERSION@&quot;&gt;1.2&lt;/token&gt;
+&lt;/macros&gt;
 ```
 
 ```xml
-<tool id="seqtk_seq" name="Convert to FASTA (seqtk)" version="@TOOL_VERSION@+galaxy3">
-    <requirements>
-        <requirement type="package" version="@TOOL_VERSION@">seqtk</requirement>
-    </requirements>
+&lt;tool id=&quot;seqtk_seq&quot; name=&quot;Convert to FASTA (seqtk)&quot; version=&quot;@TOOL_VERSION@+galaxy3&quot;&gt;
+    &lt;requirements&gt;
+        &lt;requirement type=&quot;package&quot; version=&quot;@TOOL_VERSION@&quot;&gt;seqtk&lt;/requirement&gt;
+    &lt;/requirements&gt;
 ```
 
 This means: the 3rd revision of the Galaxy tool for Seqtk 1.2 .
@@ -993,10 +1225,10 @@ This means: the 3rd revision of the Galaxy tool for Seqtk 1.2 .
 
 ---
 
-## `command` > Reserved variables
+## `command` &gt; Reserved variables
 
 ```xml
-<command><![CDATA[
+&lt;command&gt;&lt;![CDATA[
 # Email’s numeric ID (id column of galaxy_user table in the database)
 echo '$__user_id__'
 
@@ -1011,7 +1243,7 @@ echo '$__app__.config.user_library_import_dir'
 #if $input1.is_of_type('gff'):
     echo 'input1 type is ${input1.datatype}'
 #end if
-]]></command>
+]]&gt;&lt;/command&gt;
 ```
 .footnote[[Reserved Variables List](https://docs.galaxyproject.org/en/latest/dev/schema.html#reserved-variables)]
 
@@ -1020,7 +1252,7 @@ echo '$__app__.config.user_library_import_dir'
 ## Multiple inputs - Mapping over
 
 ```xml
-<param name="..." type="data" format="txt" label="..." help="..." />
+&lt;param name=&quot;...&quot; type=&quot;data&quot; format=&quot;txt&quot; label=&quot;...&quot; help=&quot;...&quot; /&gt;
 ```
 
 ![](../../images/input_data.png)
@@ -1037,7 +1269,7 @@ Possible to select multiple dataset:
 ## Multiple inputs - Single execution
 
 ```xml
-<param name="..." type="data" format="txt" multiple="true" label="..." help="..." />
+&lt;param name=&quot;...&quot; type=&quot;data&quot; format=&quot;txt&quot; multiple=&quot;true&quot; label=&quot;...&quot; help=&quot;...&quot; /&gt;
 ```
 
 ![](../../images/input_data_multiple2.png)
@@ -1045,12 +1277,12 @@ Possible to select multiple dataset:
 In the command:
 
 ```xml
-<command><![CDATA[
+&lt;command&gt;&lt;![CDATA[
 ...
 #for $input in $inputs
-    --input "$input"
+    --input &quot;$input&quot;
 #end for
-]]></command>
+]]&gt;&lt;/command&gt;
 ```
 
 One job for all selected dataset
@@ -1060,12 +1292,12 @@ One job for all selected dataset
 ## Multiple outputs
 
 ```xml
-<outputs>
-    <data name="output" format="txt">
-        <discover_datasets pattern="__designation_and_ext__"
-            directory="output_dir" visible="true" />
-    </data>
-</outputs>
+&lt;outputs&gt;
+    &lt;data name=&quot;output&quot; format=&quot;txt&quot;&gt;
+        &lt;discover_datasets pattern=&quot;__designation_and_ext__&quot;
+            directory=&quot;output_dir&quot; visible=&quot;true&quot; /&gt;
+    &lt;/data&gt;
+&lt;/outputs&gt;
 ```
 
 - `__designation_and_ext__`: a predefined regexp,
@@ -1075,12 +1307,12 @@ One job for all selected dataset
 If the output file extension is not present/usable:
 
 ```xml
-<outputs>
-    <data name="output" format="txt">
-        <discover_datasets pattern="__designation__" format="txt"
-            directory="output_dir" visible="true" />
-    </data>
-</outputs>
+&lt;outputs&gt;
+    &lt;data name=&quot;output&quot; format=&quot;txt&quot;&gt;
+        &lt;discover_datasets pattern=&quot;__designation__&quot; format=&quot;txt&quot;
+            directory=&quot;output_dir&quot; visible=&quot;true&quot; /&gt;
+    &lt;/data&gt;
+&lt;/outputs&gt;
 ```
 
 ---
@@ -1106,28 +1338,28 @@ Usage
 Mapping over:
 
 ```xml
-<param name="inputs" type="data" format="bam" label="Input BAM(s)" />
+&lt;param name=&quot;inputs&quot; type=&quot;data&quot; format=&quot;bam&quot; label=&quot;Input BAM(s)&quot; /&gt;
 ```
 
 ![](../../images/input_data_collection.png)
 
 Single execution:
-- accepted with `multiple="true"`
+- accepted with `multiple=&quot;true&quot;`
 - or accept only collections:
 
 ```xml
-<param name="inputs" type="data_collection" collection_type="list|paired|list:paired|..."
-    format="bam" label="Input BAM(s)" />
+&lt;param name=&quot;inputs&quot; type=&quot;data_collection&quot; collection_type=&quot;list|paired|list:paired|...&quot;
+    format=&quot;bam&quot; label=&quot;Input BAM(s)&quot; /&gt;
 ```
 
 ```xml
-<command><![CDATA[
+&lt;command&gt;&lt;![CDATA[
 ...
 #for $input in $inputs
     --input '$input'
     --sample_name '$input.element_identifier'
 #end for
-]]></command>
+]]&gt;&lt;/command&gt;
 ```
 
 ---
@@ -1137,18 +1369,18 @@ Single execution:
 A single paired collection:
 
 ```xml
-<collection name="paired_output" type="paired" label="Split Pair">
-    <data name="forward" format="txt" />
-    <data name="reverse" format_source="input1" from_work_dir="reverse.txt" />
-</collection>
+&lt;collection name=&quot;paired_output&quot; type=&quot;paired&quot; label=&quot;Split Pair&quot;&gt;
+    &lt;data name=&quot;forward&quot; format=&quot;txt&quot; /&gt;
+    &lt;data name=&quot;reverse&quot; format_source=&quot;input1&quot; from_work_dir=&quot;reverse.txt&quot; /&gt;
+&lt;/collection&gt;
 ```
 
 Unknown number of files:
 
 ```xml
-<collection name="output" type="list" label="Unknown number of files">
-    <discover_datasets pattern="__name_and_ext__" directory="outputs" />
-</collection>
+&lt;collection name=&quot;output&quot; type=&quot;list&quot; label=&quot;Unknown number of files&quot;&gt;
+    &lt;discover_datasets pattern=&quot;__name_and_ext__&quot; directory=&quot;outputs&quot; /&gt;
+&lt;/collection&gt;
 ```
 
 
@@ -1253,7 +1485,7 @@ Using planemo by hand
 - Ok for few tools
 - Makes contributing harder
 
-[Check out our tutorial to publish to the ToolShed using Planemo]({% link topics/dev/tutorials/toolshed/slides.html %})
+[Check out our tutorial to publish to the ToolShed using Planemo](/training-material/topics/dev/tutorials/toolshed/slides.html)
 
 ---
 
@@ -1304,13 +1536,13 @@ owner: gandres
 ```
 
 ```bash
-planemo shed_init --name="tandem_repeats_finder_2"
-                     --owner="gandres"
-                     --description="Tandem Repeats Finder description"
-                     --long_description="A long long description."
-                     --category="Sequence Analysis"
-                     [--remote_repository_url=<URL to .shed.yml on github>]
-                     [--homepage_url=<Homepage for tool.>]
+planemo shed_init --name=&quot;tandem_repeats_finder_2&quot;
+                     --owner=&quot;gandres&quot;
+                     --description=&quot;Tandem Repeats Finder description&quot;
+                     --long_description=&quot;A long long description.&quot;
+                     --category=&quot;Sequence Analysis&quot;
+                     [--remote_repository_url=&lt;URL to .shed.yml on github&gt;]
+                     [--homepage_url=&lt;Homepage for tool.&gt;]
 ```
 
 ---
@@ -1326,10 +1558,10 @@ Example: `trinity/.shed.yml`
 ```yml
 [...]
 auto_tool_repositories:
-    name_template: "{{ tool_id }}"
-    description_template: "{{ tool_name }} (from the Trinity tool suite)"
+    name_template: &quot;&quot;
+    description_template: &quot; (from the Trinity tool suite)&quot;
 suite:
-    name: "suite_trinity"
+    name: &quot;suite_trinity&quot;
     description: Trinity tools to assemble transcript sequences from Illumina RNA-Seq data.
 ```
 
@@ -1431,3 +1663,102 @@ RUN
 ```bash
 docker run -d -p 8080:80 galaxy-deeptools
 ```
+
+
+
+
+---
+### &lt;i class=&quot;fas fa-key&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;keypoints&lt;/span&gt; Key points
+
+
+- Galaxy Tool Syntax
+
+- Use Planemo
+
+- Use Conda
+
+- Use GitHub
+
+- Use Travis
+
+- No more excuse to develop crappy Galaxy tools
+
+
+
+
+
+---
+### &lt;i class=&quot;fas fa-graduation-cap&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;curriculum&lt;/span&gt; Do you want to extend your knowledge?
+
+
+Follow one of our recommended follow-up trainings:
+
+
+
+    
+        
+        
+            
+        
+- [Development in Galaxy](/training-material/topics/dev)
+    - Tool Dependencies and Conda: [&lt;i class=&quot;fab fa-slideshare&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;slides&lt;/span&gt; slides](/training-material/topics/dev/tutorials/conda/slides.html) - [&lt;i class=&quot;fas fa-laptop&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;tutorial&lt;/span&gt; hands-on](http://planemo.readthedocs.io/en/latest/writing_standalone.html)
+    
+
+
+
+
+
+---
+
+## Thank you!
+
+This material is the result of a collaborative work. Thanks to the [Galaxy Training Network](https://wiki.galaxyproject.org/Teach/GTN) and all the contributors!
+
+
+<div class="contributors-line">
+
+
+ <a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a> <a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Bérénice Batut">Bérénice Batut</a> <a href="/training-material/hall-of-fame/abretaud/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/abretaud" alt="Anthony Bretaudeau">Anthony Bretaudeau</a> <a href="/training-material/hall-of-fame/jmchilton/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/jmchilton" alt="John Chilton">John Chilton</a> <a href="/training-material/hall-of-fame/nsoranzo/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/nsoranzo" alt="Nicola Soranzo">Nicola Soranzo</a> <a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Björn Grüning">Björn Grüning</a> <a href="/training-material/hall-of-fame/lecorguille/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/lecorguille" alt="Gildas Le Corguillé">Gildas Le Corguillé</a>
+
+
+</div>
+
+
+
+<img src="/training-material/assets/images/GTN.png" alt="Galaxy Training Network" style="height: 100px;"/>
+
+
+This material is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+
+    </textarea>
+	<script src="/training-material/assets/js/remark-latest.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+    <script type="text/javascript" src="/training-material/assets/js/clipboard.min.js"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({navigation: {scroll: false,}});
+      var hljs = remark.highlighter.engine;
+      var snippets = document.querySelectorAll('code.remark-code');
+        [].forEach.call(snippets,function(snippet){
+          snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        });
+      var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
+        target:function(trigger){return trigger.parentElement;
+      }});
+    </script>
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('body').prepend("<div style='text-align: center'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
+
+  </body>
+</html>
