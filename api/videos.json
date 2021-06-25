@@ -90,6 +90,8 @@
                                
                        
                                
+                       
+                               
 			{
 				"id": "admin/tutorials/database/slides",
 				"topic": "Galaxy Server administration",
@@ -149,8 +151,6 @@
 				"topic": "Galaxy Server administration",
 				"title": "Gearing towards production"
 			},
-                               
-                       
                                
                        
                                
@@ -282,6 +282,16 @@
                                
                        
                                
+			{
+				"id": "contributing/tutorials/create-new-tutorial-slides/slides",
+				"topic": "Contributing to the Galaxy Training Material",
+				"title": "Creating Slides"
+			},
+                               
+                       
+                               
+                       
+                               
                        
                                
                        
@@ -300,6 +310,12 @@
 					
                        
                        
+                       
+                               
+                       
+                               
+                       
+                               
                        
                                
                        
@@ -432,6 +448,8 @@
                        
                                
                        
+                               
+                       
                
 					
                        
@@ -452,6 +470,14 @@
 				"id": "genome-annotation/tutorials/annotation-with-prokka/slides",
 				"topic": "Genome Annotation",
 				"title": "Genome annotation with Prokka"
+			},
+                               
+                       
+                               
+			{
+				"id": "genome-annotation/tutorials/apollo/slides",
+				"topic": "Genome Annotation",
+				"title": "Refining Genome Annotations with Apollo"
 			},
                                
                        
@@ -537,6 +563,8 @@
 				"topic": "Proteomics",
 				"title": "Introduction to proteomics, protein identification, quantification and statistical modelling"
 			},
+                               
+                       
                                
                        
                                
@@ -670,6 +698,8 @@
 				"topic": "Transcriptomics",
 				"title": "Plates, Batches, and Barcodes"
 			},
+                               
+                       
                                
                        
                                

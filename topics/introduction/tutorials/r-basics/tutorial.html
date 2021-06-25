@@ -172,6 +172,9 @@
                 <label data-value="rainbow" class="btn btn-secondary">
                     <input type="radio" name="options" id="rainbow" autocomplete="off"> Rainbow
                 </label>
+                <label data-value="progress" class="btn btn-secondary">
+                    <input type="radio" name="options" id="progress" autocomplete="off">🏳️‍🌈
+                </label>
                 <label data-value="halloween" class="btn btn-secondary">
                     <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
                 </label>
@@ -181,6 +184,20 @@
             </div>
 
         </div>
+
+        <div class="dropdown-item">
+            <div>
+                <i class="fas fa-history" aria-hidden="true"></i><span class="visually-hidden">galaxy-rulebuilder-history</span> Previous Versions
+            </div>
+
+            
+            <div id="archive-selector">
+            
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+            </div>
+
+        </div>
+
     </div>
 </li>
 
@@ -350,7 +367,7 @@
 }
     </script>
 
-    <section class="tutorial">
+    <section class="tutorial topic-introduction">
         <h1 data-toc-skip>R basics in Galaxy</h1>
         
 
@@ -397,6 +414,8 @@
         
             <ul>
                 
+                    
+                        
                     
                         
                     
@@ -514,7 +533,7 @@
             </ul>
             
 
-            <div><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Mar 12, 2021 </div>
+            <div><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Jun 17, 2021 </div>
         </blockquote>
 
         <div class="container">
@@ -618,10 +637,10 @@
 
 </blockquote>
 
-<p>Before diving in the tutorial, we need to open RStudio. If you do not know how or never interacted with RStudio, please follow the <a href="/training-material/topics/galaxy-interface/tutorials/rstudio/tutorial.html">dedicated tutorial</a>.</p>
+<p>Before diving in the tutorial, we need to open <span class="tool" data-tool="interactive_tool_rstudio" title="Tested with interactive_tool_rstudio"><strong>RStudio</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: interactive_tool_rstudio</span></span> . If you do not know how or never interacted with RStudio, please follow the <a href="/training-material/topics/galaxy-interface/tutorials/rstudio/tutorial.html">dedicated tutorial</a>.</p>
 
 <!--SNIPPET-->
-<blockquote class="notranslate hands_on">  <h3 data-toc-skip="" id="-hands-on-launch-rstudio"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Launch RStudio</h3>  <p>Depending on which server you are using, you may be able to run RStudio directly in <span class="notranslate">Galaxy</span>. If that is not available, RStudio Cloud can be an alte<span class="notranslate">rna</span>tive.</p>  <blockquote class="tip">    <h3 data-toc-skip="" id="tip-tip-launch-rstudio-in-galaxy"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Launch RStudio in <span class="notranslate">Galaxy</span></h3>    <p>Currently RStudio in <span class="notranslate">Galaxy</span> is only available on <a href="https://usegalaxy.eu">Use<span class="notranslate">Galaxy</span>.eu</a> and <a href="https://usegalaxy.org">Use<span class="notranslate">Galaxy</span>.org</a></p>    <ol>      <li>Open the Rstudio tool <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> by clicking <a href="https://usegalaxy.eu/?tool_id=interactive_tool_rstudio">here</a></li>      <li>Click Execute</li>      <li>The tool will start running and will stay running permanently</li>      <li>Click on the “User” menu at the top and go to “Active InteractiveTools” and locate the RStudio instance you started.</li>    </ol>  </blockquote>  <blockquote class="tip">    <h3 data-toc-skip="" id="tip-tip-launch-rstudio-cloud-if-not-available-on-galaxy"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Launch RStudio Cloud if not available on <span class="notranslate">Galaxy</span></h3>    <p>If RStudio is not available on the <span class="notranslate">Galaxy</span> instance:</p>    <ol>      <li>Register for <a href="https://client.login.rstudio.cloud/oauth/login?show_auth=0&amp;show_login=1&amp;show_setup=1">RStudio Cloud</a>, or login if you already have an account</li>      <li>Create a new project</li>    </ol>  </blockquote></blockquote>
+<blockquote class="notranslate hands_on">  <h3 data-toc-skip="" id="-hands-on-launch-rstudio"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"></span> Hands-on: Launch RStudio</h3>  <p>Depending on which server you are using, you may be able to run RStudio directly in <span class="notranslate">Galaxy</span>. If that is not available, RStudio Cloud can be an alte<span class="notranslate">rna</span>tive.</p>  <blockquote class="tip">  <h3 data-toc-skip="" id="tip-tip-launch-rstudio-in-galaxy"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Launch RStudio in <span class="notranslate">Galaxy</span></h3>  <p>Currently RStudio in <span class="notranslate">Galaxy</span> is only available on <a href="https://usegalaxy.eu">Use<span class="notranslate">Galaxy</span>.eu</a> and <a href="https://usegalaxy.org">Use<span class="notranslate">Galaxy</span>.org</a></p>  <ol>    <li>Open the Rstudio tool <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> by clicking <a href="https://usegalaxy.eu/?tool_id=interactive_tool_rstudio">here</a></li>    <li>Click Execute</li>    <li>The tool will start running and will stay running permanently</li>    <li>Click on the “User” menu at the top and go to “Active InteractiveTools” and locate the RStudio instance you started.</li>  </ol></blockquote>  <blockquote class="tip">  <h3 data-toc-skip="" id="tip-tip-launch-rstudio-cloud-if-not-available-on-galaxy"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Launch RStudio Cloud if not available on <span class="notranslate">Galaxy</span></h3>  <p>If RStudio is not available on the <span class="notranslate">Galaxy</span> instance:</p>  <ol>    <li>Register for <a href="https://client.login.rstudio.cloud/oauth/login?show_auth=0&amp;show_login=1&amp;show_setup=1">RStudio Cloud</a>, or login if you already have an account</li>    <li>Create a new project</li>  </ol></blockquote></blockquote>
 
 <h1 id="creating-objects-in-r">Creating objects in R</h1>
 
@@ -1619,6 +1638,8 @@ examples</a>). Also, several of these subsetting <span class="notranslate">expre
 
                     
 
+                    
+
                     <h1>Feedback</h1>
                     <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
 
@@ -1655,7 +1676,7 @@ examples</a>). Also, several of these subsetting <span class="notranslate">expre
                     <h1>Citing this Tutorial</h1>
                     <p>
                         <ol>
-                            <li id="citation-text">Bérénice Batut, Fotis E. Psomopoulos, Toby Hodges, 2021 <b>R basics in Galaxy (Galaxy Training Materials)</b>. <a href="/training-material/topics/introduction/tutorials/r-basics/tutorial.html">/training-material/topics/introduction/tutorials/r-basics/tutorial.html</a> Online; accessed TODAY
+                            <li id="citation-text">Bérénice Batut, Fotis E. Psomopoulos, Toby Hodges, 2021 <b>R basics in Galaxy (Galaxy Training Materials)</b>. <a href="https://training.galaxyproject.org/training-material/topics/introduction/tutorials/r-basics/tutorial.html">https://training.galaxyproject.org/training-material/topics/introduction/tutorials/r-basics/tutorial.html</a> Online; accessed TODAY
                             </li>
                             <li>
                             Batut et al., 2018 <b>Community-Driven Data Analysis Training for Biology</b> Cell Systems <a href="https://doi.org/10.1016%2Fj.cels.2018.05.012">10.1016/j.cels.2018.05.012</a>
@@ -1673,9 +1694,9 @@ examples</a>). Also, several of these subsetting <span class="notranslate">expre
     author = "Bérénice Batut and Fotis E. Psomopoulos and Toby Hodges",
     title = "R basics in Galaxy (Galaxy Training Materials)",
     year = "2021",
-    month = "03",
-    day = "12"
-    url = "\url{/training-material/topics/introduction/tutorials/r-basics/tutorial.html}",
+    month = "06",
+    day = "17"
+    url = "\url{https://training.galaxyproject.org/training-material/topics/introduction/tutorials/r-basics/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
 @article{Batut_2018,
@@ -1703,19 +1724,15 @@ document.getElementById("citation-code").innerHTML = document.getElementById("ci
 document.getElementById("citation-text").innerHTML = document.getElementById("citation-text").innerHTML.replace("TODAY", d.toDateString());
 </script>
 
-                </div>
-            </div>
-        </div>
+                    <h3><i class="far fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
 
-        <h3><i class="far fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+                    
 
-        
-
-        
-        <blockquote class="agenda follow-up">
-            <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="visually-hidden">curriculum</span> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
-            <ul>
-                
+                    
+                    <blockquote class="agenda follow-up">
+                        <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="visually-hidden">curriculum</span> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                        <ul>
+                            
     <li>
     
         
@@ -1763,9 +1780,13 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
     
     </li>
 
-            </ul>
-        </blockquote>
-        
+                        </ul>
+                    </blockquote>
+                    
+
+                </div>
+            </div>
+        </div>
     </section>
 </div>
 

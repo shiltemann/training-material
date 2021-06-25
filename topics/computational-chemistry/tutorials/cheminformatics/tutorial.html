@@ -172,6 +172,9 @@
                 <label data-value="rainbow" class="btn btn-secondary">
                     <input type="radio" name="options" id="rainbow" autocomplete="off"> Rainbow
                 </label>
+                <label data-value="progress" class="btn btn-secondary">
+                    <input type="radio" name="options" id="progress" autocomplete="off">🏳️‍🌈
+                </label>
                 <label data-value="halloween" class="btn btn-secondary">
                     <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
                 </label>
@@ -181,6 +184,20 @@
             </div>
 
         </div>
+
+        <div class="dropdown-item">
+            <div>
+                <i class="fas fa-history" aria-hidden="true"></i><span class="visually-hidden">galaxy-rulebuilder-history</span> Previous Versions
+            </div>
+
+            
+            <div id="archive-selector">
+            
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+            </div>
+
+        </div>
+
     </div>
 </li>
 
@@ -332,7 +349,7 @@
 }
     </script>
 
-    <section class="tutorial">
+    <section class="tutorial topic-computational-chemistry">
         <h1 data-toc-skip>Protein-ligand docking</h1>
         
 
@@ -466,11 +483,11 @@
         
     
         
-    
-        
         <a class="dropdown-item" href="https://cheminformatics.usegalaxy.eu/" title="ChemicalToolbox">
             ChemicalToolbox
         </a>
+        
+    
         
     
         
@@ -501,8 +518,6 @@
         <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
             Galaxy@GenOuest
         </a>
-        
-    
         
     
         
@@ -681,7 +696,7 @@
       <p>Check that the datatype is correct (PDB file).</p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-changing-the-datatype"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Changing the datatype</h3>  <ul>    <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>    <li>In the central panel, click on the <i class="fas fa-database" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-chart-select-data</span> <strong>Datatypes</strong> tab on the top</li>    <li>Select <code class="language-plaintext highlighter-rouge">datatypes</code></li>    <li>Click the <strong>Change datatype</strong> button</li>  </ul></blockquote>
+      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-changing-the-datatype"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Changing the datatype</h3>  <ul>  <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>  <li>In the central panel, click on the <i class="fas fa-database" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-chart-select-data</span> <strong>Datatypes</strong> tab on the top</li>  <li>Select <code class="language-plaintext highlighter-rouge">datatypes</code></li>  <li>Click the <strong>Change datatype</strong> button</li></ul></blockquote>
     </li>
   </ol>
 
@@ -799,7 +814,7 @@
       <p>Check that the datatype is correct (smi). This step is essential, as <span class="notranslate">Galaxy</span> does not automatically detect the datatype for SMILES files.</p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-changing-the-datatype"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Changing the datatype</h3>  <ul>    <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>    <li>In the central panel, click on the <i class="fas fa-database" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-chart-select-data</span> <strong>Datatypes</strong> tab on the top</li>    <li>Select <code class="language-plaintext highlighter-rouge">datatypes</code></li>    <li>Click the <strong>Change datatype</strong> button</li>  </ul></blockquote>
+      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-changing-the-datatype"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Changing the datatype</h3>  <ul>  <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>  <li>In the central panel, click on the <i class="fas fa-database" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-chart-select-data</span> <strong>Datatypes</strong> tab on the top</li>  <li>Select <code class="language-plaintext highlighter-rouge">datatypes</code></li>  <li>Click the <strong>Change datatype</strong> button</li></ul></blockquote>
     </li>
     <li>Rename dataset <strong>‘Compound library’</strong>.</li>
   </ol>
@@ -1088,7 +1103,7 @@ Oc1ccc(c(O)c1)c2n[nH]cc2c3ccc4OCOc4c3	CHEMBL577176
       </ul>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-selecting-a-datast-collection-as-input"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Selecting a datast collection as input</h3>  <ol>    <li>Click on <i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <strong>Dataset collection</strong> in front of the input parameter you want to supply the collection to.</li>    <li>Select the collection you want to use from the list</li>  </ol></blockquote>
+      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-selecting-a-datast-collection-as-input"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Selecting a datast collection as input</h3>  <ol>  <li>Click on <i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <strong>Dataset collection</strong> in front of the input parameter you want to supply the collection to.</li>  <li>Select the collection you want to use from the list</li></ol></blockquote>
     </li>
     <li><strong>Compound conversion</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
       <ul>
@@ -1175,22 +1190,22 @@ Oc1ccc(c(O)c1)c2n[nH]cc2c3ccc4OCOc4c3	CHEMBL577176
     
 
 </li>
-<li><span id="Pearl2006">Pearl, L. H., and C. Prodromou, 2006 <b>Structure and Mechanism of the Hsp90 Molecular Chaperone Machinery.</b> Annual Review of Biochemistry 75: 271–294.</span>
+<li><span id="Pearl2006">Pearl, L. H., and C. Prodromou, 2006 <b>Structure and Mechanism of the Hsp90 Molecular Chaperone Machinery</b>. Annual Review of Biochemistry 75: 271–294.</span>
     
     
     <a href="https://doi.org/10.1146/annurev.biochem.75.103004.142738">10.1146/annurev.biochem.75.103004.142738</a>
     
     
+      <!-- prevent duplicate doi links -->
+      
+    
 
 </li>
-<li><span id="Trott2009">Trott, O., and A. J. Olson, 2009 <b>AutoDock Vina: Improving the speed and accuracy of docking with a new scoring function,  efficient optimization,  and multithreading</b>. Journal of Computational Chemistry NA–NA.</span>
+<li><span id="Trott2009">Trott, O., and A. J. Olson, 2009 <b>AutoDock Vina: Improving the speed and accuracy of docking with a new scoring function,  efficient optimization,  and multithreading</b>. Journal of Computational Chemistry 31: NA–NA.</span>
     
     
     <a href="https://doi.org/10.1002/jcc.21334">10.1002/jcc.21334</a>
     
-    
-      <!-- prevent duplicate doi links -->
-      
     
 
 </li>
@@ -1223,6 +1238,8 @@ Oc1ccc(c(O)c1)c2n[nH]cc2c3ccc4OCOc4c3	CHEMBL577176
     
 
 </li></ol>
+                    
+
                     
 
                     <h1>Feedback</h1>
@@ -1261,7 +1278,7 @@ Oc1ccc(c(O)c1)c2n[nH]cc2c3ccc4OCOc4c3	CHEMBL577176
                     <h1>Citing this Tutorial</h1>
                     <p>
                         <ol>
-                            <li id="citation-text">Simon Bray, 2021 <b>Protein-ligand docking (Galaxy Training Materials)</b>. <a href="/training-material/topics/computational-chemistry/tutorials/cheminformatics/tutorial.html">/training-material/topics/computational-chemistry/tutorials/cheminformatics/tutorial.html</a> Online; accessed TODAY
+                            <li id="citation-text">Simon Bray, 2021 <b>Protein-ligand docking (Galaxy Training Materials)</b>. <a href="https://training.galaxyproject.org/training-material/topics/computational-chemistry/tutorials/cheminformatics/tutorial.html">https://training.galaxyproject.org/training-material/topics/computational-chemistry/tutorials/cheminformatics/tutorial.html</a> Online; accessed TODAY
                             </li>
                             <li>
                             Batut et al., 2018 <b>Community-Driven Data Analysis Training for Biology</b> Cell Systems <a href="https://doi.org/10.1016%2Fj.cels.2018.05.012">10.1016/j.cels.2018.05.012</a>
@@ -1281,7 +1298,7 @@ Oc1ccc(c(O)c1)c2n[nH]cc2c3ccc4OCOc4c3	CHEMBL577176
     year = "2021",
     month = "04",
     day = "07"
-    url = "\url{/training-material/topics/computational-chemistry/tutorials/cheminformatics/tutorial.html}",
+    url = "\url{https://training.galaxyproject.org/training-material/topics/computational-chemistry/tutorials/cheminformatics/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
 @article{Batut_2018,
@@ -1309,15 +1326,15 @@ document.getElementById("citation-code").innerHTML = document.getElementById("ci
 document.getElementById("citation-text").innerHTML = document.getElementById("citation-text").innerHTML.replace("TODAY", d.toDateString());
 </script>
 
+                    <h3><i class="far fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+
+                    
+
+                    
+
                 </div>
             </div>
         </div>
-
-        <h3><i class="far fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
-
-        
-
-        
     </section>
 </div>
 

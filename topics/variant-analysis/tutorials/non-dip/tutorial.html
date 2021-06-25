@@ -172,6 +172,9 @@
                 <label data-value="rainbow" class="btn btn-secondary">
                     <input type="radio" name="options" id="rainbow" autocomplete="off"> Rainbow
                 </label>
+                <label data-value="progress" class="btn btn-secondary">
+                    <input type="radio" name="options" id="progress" autocomplete="off">🏳️‍🌈
+                </label>
                 <label data-value="halloween" class="btn btn-secondary">
                     <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
                 </label>
@@ -181,6 +184,20 @@
             </div>
 
         </div>
+
+        <div class="dropdown-item">
+            <div>
+                <i class="fas fa-history" aria-hidden="true"></i><span class="visually-hidden">galaxy-rulebuilder-history</span> Previous Versions
+            </div>
+
+            
+            <div id="archive-selector">
+            
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+            </div>
+
+        </div>
+
     </div>
 </li>
 
@@ -403,7 +420,7 @@
 }
     </script>
 
-    <section class="tutorial">
+    <section class="tutorial topic-variant-analysis">
         <h1 data-toc-skip>Calling variants in non-diploid systems</h1>
         
 
@@ -685,8 +702,6 @@
         
     
         
-    
-        
         <a class="dropdown-item" href="https://streetscience.usegalaxy.eu/" title="Street Science">
             Street Science
         </a>
@@ -745,7 +760,7 @@
             </ul>
             
 
-            <div><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Mar 12, 2021 </div>
+            <div><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Jun 17, 2021 </div>
         </blockquote>
 
         <div class="container">
@@ -821,9 +836,9 @@
       <p>Create a new history for this tutorial and give it a meaningful name</p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-creating-a-new-history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a new history</h3>  <p>Click the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> icon at the top of the history panelIf the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> is missing:</p>  <ol>    <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>    <li>Select the option <strong>Create New</strong> from the menu</li>  </ol></blockquote>
+      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-creating-a-new-history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a new history</h3>  <p>Click the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> icon at the top of the history panel.</p>  <p>If the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> is missing:</p>  <ol>  <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>  <li>Select the option <strong>Create New</strong> from the menu</li></ol></blockquote>
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-renaming-a-history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Renaming a history</h3>  <ol>    <li>Click on <strong>Unnamed history</strong> (or the current name of the history) (<strong>Click to rename history</strong>) at the top of your history panel</li>    <li>Type the new name</li>    <li>Press <kbd>Enter</kbd></li>  </ol></blockquote>
+      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-renaming-a-history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Renaming a history</h3>  <ol>  <li>Click on <strong>Unnamed history</strong> (or the current name of the history) (<strong>Click to rename history</strong>) at the top of your history panel</li>  <li>Type the new name</li>  <li>Press <kbd>Enter</kbd></li></ol></blockquote>
     </li>
     <li>
       <p>Import files from <a href="https://zenodo.org/record/1251112">Zenodo</a>:</p>
@@ -839,7 +854,7 @@ https://zenodo.org/record/1251112/files/raw_mother-ds-2.fq
 <code class="language-plaintext highlighter-rouge">fastqsanger</code>, and fix any missing or wrong datatype assignment</p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-changing-the-datatype"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Changing the datatype</h3>  <ul>    <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>    <li>In the central panel, click on the <i class="fas fa-database" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-chart-select-data</span> <strong>Datatypes</strong> tab on the top</li>    <li>Select <code class="language-plaintext highlighter-rouge">fastqsanger</code></li>    <li>Click the <strong>Change datatype</strong> button</li>  </ul></blockquote>
+      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-changing-the-datatype"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Changing the datatype</h3>  <ul>  <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>  <li>In the central panel, click on the <i class="fas fa-database" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-chart-select-data</span> <strong>Datatypes</strong> tab on the top</li>  <li>Select <code class="language-plaintext highlighter-rouge">fastqsanger</code></li>  <li>Click the <strong>Change datatype</strong> button</li></ul></blockquote>
     </li>
   </ol>
 
@@ -859,7 +874,7 @@ https://zenodo.org/record/1251112/files/raw_mother-ds-2.fq
       </ul>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-select-multiple-datasets"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Select multiple datasets</h3>  <ol>    <li>Click on <i class="far fa-copy" aria-hidden="true"></i><span class="visually-hidden">param-files</span> <strong>Multiple datasets</strong></li>    <li>Select several files by keeping the <kbd>Ctrl</kbd> (or<kbd>COMMAND</kbd>) key pressed and clicking on the files of interest</li>  </ol></blockquote>
+      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-select-multiple-datasets"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Select multiple datasets</h3>  <ol>  <li>Click on <i class="far fa-copy" aria-hidden="true"></i><span class="visually-hidden">param-files</span> <strong>Multiple datasets</strong></li>  <li>Select several files by keeping the <kbd>Ctrl</kbd> (or<kbd>COMMAND</kbd>) key pressed and clicking on the files of interest</li></ol></blockquote>
     </li>
   </ol>
 
@@ -907,7 +922,7 @@ https://zenodo.org/record/1251112/files/raw_mother-ds-2.fq
 <blockquote class="comment">
   <h3 id="comment-more-about-selecting-datasets"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> More about selecting datasets</h3>
 
-  <p>By selecting datasets 1 and 3 as <strong>Select the first set of <span class="notranslate">reads</span></strong> and datasets 2 and 4 as <strong>Select the second set of <span class="notranslate">reads</span></strong>, <span class="notranslate">Galaxy</span> will automatically launch two BWA-MEM jobs using datasets 1,2 and 3,4 generating two resulting BAM files. 
+  <p>By selecting datasets 1 and 3 as <strong>Select the first set of <span class="notranslate">reads</span></strong> and datasets 2 and 4 as <strong>Select the second set of <span class="notranslate">reads</span></strong>, <span class="notranslate">Galaxy</span> will automatically launch two BWA-MEM jobs using datasets 1,2 and 3,4 generating two resulting BAM files.
 By setting <strong>Set read groups information</strong> to <code class="language-plaintext highlighter-rouge">Set read groups (SAM/BAM specifications)</code> and clicking <strong>Auto-assign</strong> we will ensure that the <span class="notranslate">reads</span> in the resulting BAM dataset are properly set.</p>
 </blockquote>
 
@@ -1389,7 +1404,7 @@ chrM	5539	.	A	G	3281.62	.	AB=0;ABP=0;AC=1;AF=0.5;AN=2;AO=379;CIGAR=1X;DP=787;DPB
   <h3 id="hands_on-hands-on-cut-columns-from-a-file"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Cut columns from a file</h3>
 
   <ol>
-    <li>Use <span class="tool" data-tool="https://usegalaxy.eu/root?tool_id=Cut1" title="Tested with https://usegalaxy.eu/root?tool_id=Cut1"><strong>Cut columns from a table</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: https://use<span class="notranslate">galaxy</span>.eu/root?tool_id=Cut1</span></span>  to select specific columns with the following parameters:
+    <li>Use <span class="tool" data-tool="Cut1" title="Tested with Cut1"><strong>Cut columns from a table</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: Cut1</span></span>  to select specific columns with the following parameters:
       <ul>
         <li><em>“Cut columns”</em>: <code class="language-plaintext highlighter-rouge">c2,c4,c5,c52,c54,c55</code></li>
         <li><em>“Delimited by”</em>: <code class="language-plaintext highlighter-rouge">Tab</code></li>
@@ -1553,6 +1568,8 @@ Child   341    694
 </li></ol>
                     
 
+                    
+
                     <h1>Feedback</h1>
                     <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
 
@@ -1589,7 +1606,7 @@ Child   341    694
                     <h1>Citing this Tutorial</h1>
                     <p>
                         <ol>
-                            <li id="citation-text">Anton Nekrutenko, Alex Ostrovsky, 2021 <b>Calling variants in non-diploid systems (Galaxy Training Materials)</b>. <a href="/training-material/topics/variant-analysis/tutorials/non-dip/tutorial.html">/training-material/topics/variant-analysis/tutorials/non-dip/tutorial.html</a> Online; accessed TODAY
+                            <li id="citation-text">Anton Nekrutenko, Alex Ostrovsky, 2021 <b>Calling variants in non-diploid systems (Galaxy Training Materials)</b>. <a href="https://training.galaxyproject.org/training-material/topics/variant-analysis/tutorials/non-dip/tutorial.html">https://training.galaxyproject.org/training-material/topics/variant-analysis/tutorials/non-dip/tutorial.html</a> Online; accessed TODAY
                             </li>
                             <li>
                             Batut et al., 2018 <b>Community-Driven Data Analysis Training for Biology</b> Cell Systems <a href="https://doi.org/10.1016%2Fj.cels.2018.05.012">10.1016/j.cels.2018.05.012</a>
@@ -1607,9 +1624,9 @@ Child   341    694
     author = "Anton Nekrutenko and Alex Ostrovsky",
     title = "Calling variants in non-diploid systems (Galaxy Training Materials)",
     year = "2021",
-    month = "03",
-    day = "12"
-    url = "\url{/training-material/topics/variant-analysis/tutorials/non-dip/tutorial.html}",
+    month = "06",
+    day = "17"
+    url = "\url{https://training.galaxyproject.org/training-material/topics/variant-analysis/tutorials/non-dip/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
 @article{Batut_2018,
@@ -1637,15 +1654,15 @@ document.getElementById("citation-code").innerHTML = document.getElementById("ci
 document.getElementById("citation-text").innerHTML = document.getElementById("citation-text").innerHTML.replace("TODAY", d.toDateString());
 </script>
 
+                    <h3><i class="far fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+
+                    
+
+                    
+
                 </div>
             </div>
         </div>
-
-        <h3><i class="far fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
-
-        
-
-        
     </section>
 </div>
 

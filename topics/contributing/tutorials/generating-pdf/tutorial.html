@@ -172,6 +172,9 @@
                 <label data-value="rainbow" class="btn btn-secondary">
                     <input type="radio" name="options" id="rainbow" autocomplete="off"> Rainbow
                 </label>
+                <label data-value="progress" class="btn btn-secondary">
+                    <input type="radio" name="options" id="progress" autocomplete="off">🏳️‍🌈
+                </label>
                 <label data-value="halloween" class="btn btn-secondary">
                     <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
                 </label>
@@ -181,6 +184,20 @@
             </div>
 
         </div>
+
+        <div class="dropdown-item">
+            <div>
+                <i class="fas fa-history" aria-hidden="true"></i><span class="visually-hidden">galaxy-rulebuilder-history</span> Previous Versions
+            </div>
+
+            
+            <div id="archive-selector">
+            
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+            </div>
+
+        </div>
+
     </div>
 </li>
 
@@ -317,7 +334,7 @@
 }
     </script>
 
-    <section class="tutorial">
+    <section class="tutorial topic-contributing">
         <h1 data-toc-skip>Generating PDF artefacts of the website</h1>
         
 
@@ -474,6 +491,8 @@
 
                     
 
+                    
+
                     <h1>Feedback</h1>
                     <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
 
@@ -510,7 +529,7 @@
                     <h1>Citing this Tutorial</h1>
                     <p>
                         <ol>
-                            <li id="citation-text">Bérénice Batut, 2018 <b>Generating PDF artefacts of the website (Galaxy Training Materials)</b>. <a href="/training-material/topics/contributing/tutorials/generating-pdf/tutorial.html">/training-material/topics/contributing/tutorials/generating-pdf/tutorial.html</a> Online; accessed TODAY
+                            <li id="citation-text">Bérénice Batut, 2018 <b>Generating PDF artefacts of the website (Galaxy Training Materials)</b>. <a href="https://training.galaxyproject.org/training-material/topics/contributing/tutorials/generating-pdf/tutorial.html">https://training.galaxyproject.org/training-material/topics/contributing/tutorials/generating-pdf/tutorial.html</a> Online; accessed TODAY
                             </li>
                             <li>
                             Batut et al., 2018 <b>Community-Driven Data Analysis Training for Biology</b> Cell Systems <a href="https://doi.org/10.1016%2Fj.cels.2018.05.012">10.1016/j.cels.2018.05.012</a>
@@ -530,7 +549,7 @@
     year = "2018",
     month = "10",
     day = "16"
-    url = "\url{/training-material/topics/contributing/tutorials/generating-pdf/tutorial.html}",
+    url = "\url{https://training.galaxyproject.org/training-material/topics/contributing/tutorials/generating-pdf/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
 @article{Batut_2018,
@@ -558,118 +577,134 @@ document.getElementById("citation-code").innerHTML = document.getElementById("ci
 document.getElementById("citation-text").innerHTML = document.getElementById("citation-text").innerHTML.replace("TODAY", d.toDateString());
 </script>
 
+                    <h3><i class="far fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+
+                    
+                    <blockquote class="agenda">
+                        <h3>Developing GTN training material</h3>
+                        This tutorial is part of a series to develop GTN training material, feel free to also look at:
+                        
+                        <ol>
+                        
+                            
+                                
+                        <li><a href="/training-material/topics/contributing/slides/introduction.html">Overview of the Galaxy Training Material</a></li>
+                                
+                            
+                        
+                            
+                                
+                                    
+                        <li><a href="/training-material/topics/contributing/tutorials/slides-with-video/tutorial.html">Adding auto-generated video to your slides</a></li>
+                                    
+                                
+                            
+                        
+                            
+                                
+                                    
+                        <li><a href="/training-material/topics/contributing/tutorials/github-command-line-contribution/tutorial.html">Contributing with GitHub via command-line</a></li>
+                                    
+                                
+                            
+                        
+                            
+                                
+                                    
+                        <li><a href="/training-material/topics/contributing/tutorials/github-interface-contribution/tutorial.html">Contributing with GitHub via its interface</a></li>
+                                    
+                                
+                            
+                        
+                            
+                                
+                                    
+                        <li><a href="/training-material/topics/contributing/tutorials/create-new-tutorial/tutorial.html">Creating a new tutorial</a></li>
+                                    
+                                
+                            
+                        
+                            
+                                
+                                    
+                        <li><a href="/training-material/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html">Creating content in Markdown</a></li>
+                                    
+                                
+                            
+                        
+                            
+                                
+                                    
+                        <li><a href="/training-material/topics/contributing/tutorials/create-new-tutorial-tours/tutorial.html">Creating Interactive Galaxy Tours</a></li>
+                                    
+                                
+                            
+                        
+                            
+                                
+                                    
+                        <li><a href="/training-material/topics/contributing/tutorials/create-new-tutorial-slides/slides.html">Creating Slides</a></li>
+                                    
+                                
+                            
+                        
+                            
+                                
+                                    
+                        <li><a href="/training-material/topics/contributing/tutorials/generating-pdf/tutorial.html">Generating PDF artefacts of the website</a></li>
+                                    
+                                
+                            
+                        
+                            
+                                
+                                    
+                        <li><a href="/training-material/topics/contributing/tutorials/create-new-topic/tutorial.html">Including a new topic</a></li>
+                                    
+                                
+                            
+                        
+                            
+                                
+                                    
+                        <li><a href="/training-material/topics/contributing/tutorials/running-jekyll/tutorial.html">Running the GTN website locally</a></li>
+                                    
+                                
+                            
+                        
+                            
+                                
+                                    
+                        <li><a href="/training-material/topics/contributing/tutorials/gitpod/tutorial.html">Running the GTN website online using GitPod</a></li>
+                                    
+                                
+                            
+                        
+                            
+                                
+                                    
+                        <li><a href="/training-material/topics/contributing/tutorials/create-new-tutorial-technical/tutorial.html">Tools, Data, and Workflows for tutorials</a></li>
+                                    
+                                
+                            
+                        
+                            
+                                
+                                    
+                        <li><a href="/training-material/topics/contributing/tutorials/admin-knitting/tutorial.html">Updating diffs in admin training</a></li>
+                                    
+                                
+                            
+                        
+                        </ol>
+                    </blockquote>
+                    
+
+                    
+
                 </div>
             </div>
         </div>
-
-        <h3><i class="far fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
-
-        
-        <blockquote class="agenda">
-            <h3>Developing GTN training material</h3>
-            This tutorial is part of a series to develop GTN training material, feel free to also look at:
-            
-            <ol>
-            
-                
-                    
-            <li><a href="/training-material/topics/contributing/slides/introduction.html">Overview of the Galaxy Training Material</a></li>
-                    
-                
-            
-                
-                    
-                        
-            <li><a href="/training-material/topics/contributing/tutorials/slides-with-video/tutorial.html">Adding auto-generated video to your slides</a></li>
-                        
-                    
-                
-            
-                
-                    
-                        
-            <li><a href="/training-material/topics/contributing/tutorials/github-command-line-contribution/tutorial.html">Contributing with GitHub via command-line</a></li>
-                        
-                    
-                
-            
-                
-                    
-                        
-            <li><a href="/training-material/topics/contributing/tutorials/github-interface-contribution/tutorial.html">Contributing with GitHub via its interface</a></li>
-                        
-                    
-                
-            
-                
-                    
-                        
-            <li><a href="/training-material/topics/contributing/tutorials/create-new-tutorial/tutorial.html">Creating a new tutorial</a></li>
-                        
-                    
-                
-            
-                
-                    
-                        
-            <li><a href="/training-material/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html">Creating content in Markdown</a></li>
-                        
-                    
-                
-            
-                
-                    
-                        
-            <li><a href="/training-material/topics/contributing/tutorials/create-new-tutorial-tours/tutorial.html">Creating Interactive Galaxy Tours</a></li>
-                        
-                    
-                
-            
-                
-                    
-                        
-            <li><a href="/training-material/topics/contributing/tutorials/create-new-tutorial-slides/slides.html">Creating Slides</a></li>
-                        
-                    
-                
-            
-                
-                    
-                        
-            <li><a href="/training-material/topics/contributing/tutorials/generating-pdf/tutorial.html">Generating PDF artefacts of the website</a></li>
-                        
-                    
-                
-            
-                
-                    
-                        
-            <li><a href="/training-material/topics/contributing/tutorials/create-new-topic/tutorial.html">Including a new topic</a></li>
-                        
-                    
-                
-            
-                
-                    
-                        
-            <li><a href="/training-material/topics/contributing/tutorials/running-jekyll/tutorial.html">Running the Galaxy Training material website locally</a></li>
-                        
-                    
-                
-            
-                
-                    
-                        
-            <li><a href="/training-material/topics/contributing/tutorials/create-new-tutorial-technical/tutorial.html">Tools, Data, and Workflows for tutorials</a></li>
-                        
-                    
-                
-            
-            </ol>
-        </blockquote>
-        
-
-        
     </section>
 </div>
 

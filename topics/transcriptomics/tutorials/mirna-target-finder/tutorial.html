@@ -172,6 +172,9 @@
                 <label data-value="rainbow" class="btn btn-secondary">
                     <input type="radio" name="options" id="rainbow" autocomplete="off"> Rainbow
                 </label>
+                <label data-value="progress" class="btn btn-secondary">
+                    <input type="radio" name="options" id="progress" autocomplete="off">🏳️‍🌈
+                </label>
                 <label data-value="halloween" class="btn btn-secondary">
                     <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
                 </label>
@@ -181,6 +184,20 @@
             </div>
 
         </div>
+
+        <div class="dropdown-item">
+            <div>
+                <i class="fas fa-history" aria-hidden="true"></i><span class="visually-hidden">galaxy-rulebuilder-history</span> Previous Versions
+            </div>
+
+            
+            <div id="archive-selector">
+            
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+            </div>
+
+        </div>
+
     </div>
 </li>
 
@@ -411,7 +428,7 @@
 }
     </script>
 
-    <section class="tutorial">
+    <section class="tutorial topic-transcriptomics">
         <h1 data-toc-skip>Whole transcriptome analysis of Arabidopsis thaliana</h1>
         
 
@@ -593,11 +610,11 @@
         
     
         
-    
-        
         <a class="dropdown-item" href="https://clipseq.usegalaxy.eu/" title="CLIP-Explorer">
             CLIP-Explorer
         </a>
+        
+    
         
     
         
@@ -646,8 +663,6 @@
         <a class="dropdown-item" href="https://humancellatlas.usegalaxy.eu/" title="Human Cell Atlas">
             Human Cell Atlas
         </a>
-        
-    
         
     
         
@@ -747,7 +762,7 @@
             </ul>
             
 
-            <div><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Apr 22, 2021 </div>
+            <div><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Jun 17, 2021 </div>
         </blockquote>
 
         <div class="container">
@@ -895,7 +910,7 @@ SRR1019439	BR treated m<span class="notranslate">RNA</span>	https://zenodo.org/r
   </ol>
 
   <!--SNIPPET-->
-  <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-adding-a-tag"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Adding a tag</h3>  <ul>    <li>Click on the dataset</li>    <li>Click on <i class="fas fa-tags" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-tags</span> <strong>Edit dataset tags</strong></li>    <li>Add a tag starting with <code class="language-plaintext highlighter-rouge">#</code>  Tags starting with <code class="language-plaintext highlighter-rouge">#</code> will be automatically propagated to the outputs of tools using this dataset.</li>    <li>Check that the tag is appearing below the dataset name</li>  </ul></blockquote>
+  <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-adding-a-tag"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Adding a tag</h3>  <ul>  <li>Click on the dataset</li>  <li>Click on <i class="fas fa-tags" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-tags</span> <strong>Edit dataset tags</strong></li>  <li>    <p>Add a tag starting with <code class="language-plaintext highlighter-rouge">#</code></p>    <p>Tags starting with <code class="language-plaintext highlighter-rouge">#</code> will be automatically propagated to the outputs of tools using this dataset.</p>  </li>  <li>Check that the tag is appearing below the dataset name</li></ul></blockquote>
 </blockquote>
 
 <p>Next we will retrieve the remaining datasets.</p>
@@ -942,7 +957,7 @@ mi<span class="notranslate">RNA</span>_stem-loop_seq.fasta	https://zenodo.org/re
     <h3 id="hands_on-hands-on-dataset-subsampling"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Dataset subsampling</h3>
 
     <ol>
-      <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/peterjc/sample_seqs" title="Tested with toolshed.g2.bx.psu.edu/repos/peterjc/sample_seqs"><strong>Sub-sample sequences files </strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/peterjc/sample_seqs</span></span>  with the following parameters:
+      <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/peterjc/sample_seqs/sample_seqs/0.2.5" title="Tested with toolshed.g2.bx.psu.edu/repos/peterjc/sample_seqs/sample_seqs/0.2.5"><strong>Sub-sample sequences files </strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/peterjc/sample_seqs/sample_seqs/0.2.5</span></span>  with the following parameters:
         <ul>
           <li><i class="far fa-copy" aria-hidden="true"></i><span class="visually-hidden">param-files</span> <em>“Multiple datasets”</em>: Each of the fastq files</li>
           <li><em>“Subsampling approach”</em>: <code class="language-plaintext highlighter-rouge">Take every N-th sequence (or pair e.g. every fifth sequence)</code></li>
@@ -2029,6 +2044,8 @@ https://zenodo.org/record/4710649/files/SRR7779229_BRL3_m<span class="notranslat
 </li></ol>
                     
 
+                    
+
                     <h1>Feedback</h1>
                     <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
 
@@ -2065,7 +2082,7 @@ https://zenodo.org/record/4710649/files/SRR7779229_BRL3_m<span class="notranslat
                     <h1>Citing this Tutorial</h1>
                     <p>
                         <ol>
-                            <li id="citation-text">Cristóbal Gallardo, Pavankumar Videm, Beatriz Serrano-Solano, 2021 <b>Whole transcriptome analysis of Arabidopsis thaliana (Galaxy Training Materials)</b>. <a href="/training-material/topics/transcriptomics/tutorials/mirna-target-finder/tutorial.html">/training-material/topics/transcriptomics/tutorials/mirna-target-finder/tutorial.html</a> Online; accessed TODAY
+                            <li id="citation-text">Cristóbal Gallardo, Pavankumar Videm, Beatriz Serrano-Solano, 2021 <b>Whole transcriptome analysis of Arabidopsis thaliana (Galaxy Training Materials)</b>. <a href="https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/mirna-target-finder/tutorial.html">https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/mirna-target-finder/tutorial.html</a> Online; accessed TODAY
                             </li>
                             <li>
                             Batut et al., 2018 <b>Community-Driven Data Analysis Training for Biology</b> Cell Systems <a href="https://doi.org/10.1016%2Fj.cels.2018.05.012">10.1016/j.cels.2018.05.012</a>
@@ -2083,9 +2100,9 @@ https://zenodo.org/record/4710649/files/SRR7779229_BRL3_m<span class="notranslat
     author = "Cristóbal Gallardo and Pavankumar Videm and Beatriz Serrano-Solano",
     title = "Whole transcriptome analysis of Arabidopsis thaliana (Galaxy Training Materials)",
     year = "2021",
-    month = "04",
-    day = "22"
-    url = "\url{/training-material/topics/transcriptomics/tutorials/mirna-target-finder/tutorial.html}",
+    month = "06",
+    day = "17"
+    url = "\url{https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/mirna-target-finder/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
 @article{Batut_2018,
@@ -2113,15 +2130,15 @@ document.getElementById("citation-code").innerHTML = document.getElementById("ci
 document.getElementById("citation-text").innerHTML = document.getElementById("citation-text").innerHTML.replace("TODAY", d.toDateString());
 </script>
 
+                    <h3><i class="far fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+
+                    
+
+                    
+
                 </div>
             </div>
         </div>
-
-        <h3><i class="far fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
-
-        
-
-        
     </section>
 </div>
 
