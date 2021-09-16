@@ -70,16 +70,13 @@
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
+  "dateModified": "1970-01-01 00:00:09 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Convolutional neural networks (CNN) \n Deep Learning - Part 3",
-  "inLanguage": {
-    "@type": "Language",
-    "name": "English",
-    "alternateName": "en"
-  },
   "interactivityType": "mixed",
   "isAccessibleForFree": true,
-  "license": "https://github.com/galaxyproject/training-material/blob/main/LICENSE.md",
+  "isFamilyFriendly": true,
+  "license": "https://spdx.org/licenses/CC-BY-4.0.html",
   "producer": {
     "@type": "Organization",
     "email": "galaxytrainingnetwork@gmail.com",
@@ -109,6 +106,11 @@
   "name": "Slides for 'Convolutional neural networks (CNN) \n Deep Learning - Part 3' tutorial",
   "url": "https://training.galaxyproject.org//training-material/topics/statistics/tutorials/CNN/slides.html",
   "description": "The questions this  addresses are:\n - What is a convolutional neural network (CNN)?\n - What are some applications of CNN?\n\n\\nThe objectives are:\n - Understand the inspiration behind CNN and learn the CNN architecture\n - Learn the convolution operation and its parameters\n - Learn how to create a CNN using Galaxy’s deep learning tools\n - Solve an image classification problem on MNIST digit classification dataset using CNN in Galaxy\n\n",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
   "coursePrerequisites": [
     {
       "@type": "CreativeWork",
@@ -166,6 +168,20 @@
     },
     {
       "@type": "Course",
+      "url": "https://training.galaxyproject.org//training-material/topics/statistics/tutorials/FNN/slides.html",
+      "name": "Feedforward neural networks (FNN) \n Deep Learning - Part 1",
+      "description": "Slides for 'Feedforward neural networks (FNN) \n Deep Learning - Part 1' tutorial",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive",
+      "provider": {
+        "@type": "Organization",
+        "email": "galaxytrainingnetwork@gmail.com",
+        "name": "Galaxy Training Network",
+        "url": "https://galaxyproject.org/teach/gtn/"
+      }
+    },
+    {
+      "@type": "Course",
       "url": "https://training.galaxyproject.org//training-material/topics/statistics/tutorials/RNN/slides.html",
       "name": "Recurrent neural networks (RNN) \n Deep Learning - Part 2",
       "description": "Slides for 'Recurrent neural networks (RNN) \n Deep Learning - Part 2' tutorial",
@@ -184,6 +200,20 @@
       "name": "Deep Learning (Part 2) - Recurrent neural networks (RNN)",
       "description": "Hands-on for 'Deep Learning (Part 2) - Recurrent neural networks (RNN)' tutorial",
       "learningResourceType": "hands-on tutorial",
+      "interactivityType": "expositive",
+      "provider": {
+        "@type": "Organization",
+        "email": "galaxytrainingnetwork@gmail.com",
+        "name": "Galaxy Training Network",
+        "url": "https://galaxyproject.org/teach/gtn/"
+      }
+    },
+    {
+      "@type": "Course",
+      "url": "https://training.galaxyproject.org//training-material/topics/statistics/tutorials/RNN/slides.html",
+      "name": "Recurrent neural networks (RNN) \n Deep Learning - Part 2",
+      "description": "Slides for 'Recurrent neural networks (RNN) \n Deep Learning - Part 2' tutorial",
+      "learningResourceType": "slides",
       "interactivityType": "expositive",
       "provider": {
         "@type": "Organization",
@@ -259,11 +289,25 @@ class: center, middle, inverse
 <div class="contributors-line">
 
 
- <a href="/training-material/hall-of-fame/kxk302/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/kxk302" alt="Kaivan Kamali">Kaivan Kamali</a>
+ <a href="/training-material/hall-of-fame/kxk302/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/kxk302" alt="Avatar">Kaivan Kamali</a>
 
 
 </div>
 
+
+<div class="footnote" style="bottom: 3em;"><i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Updated: Jul 9, 2021</div>
+<div class="footnote" style="bottom: 2em;">Or view the <a href="slides-plain.html">plain-text slides without JS</a></div>
+<div class="footnote" style="bottom: 1em;">Tip: press <kbd>P</kbd> to view the presenter notes</div>
+
+???
+Presenter notes contain extra information which might be useful if you
+intend to use these slides for teaching.
+
+Press `P` again to switch presenter notes off
+
+Press `C` to create a new window where the same presentation will be displayed.
+This window is linked to the main window. Changing slides on one will cause the
+slide to change on the other. Useful when presenting.
 
 
 
@@ -298,18 +342,6 @@ Before diving into this slide deck, we recommend you to have a look at:
 
 
 
-
-.footnote[Tip: press `P` to view the presenter notes]
-
-???
-Presenter notes contain extra information which might be useful if you
-intend to use these slides for teaching.
-
-Press `P` again to switch presenter notes off
-
-Press `C` to create a new window where the same presentation will be displayed.
-This window is linked to the main window. Changing slides on one will cause the
-slide to change on the other. Useful when presenting.
 
 ---
 
@@ -656,7 +688,7 @@ What is a convolutional neural network (CNN)?
 
 - Galaxy Training Materials ([training.galaxyproject.org](https://training.galaxyproject.org))
 
-![](/training-material/topics/introduction/images/gtn_stats.png)
+![Screenshot of the gtn stats page with 21 topics, 170 tutorials, 159 contributors, 16 scientific topics, and a growing community](/training-material/topics/introduction/images/gtn_stats.png)
 
 ???
 
@@ -710,13 +742,13 @@ What is a convolutional neural network (CNN)?
 
 ## Thank you!
 
-This material is the result of a collaborative work. Thanks to the [Galaxy Training Network](https://wiki.galaxyproject.org/Teach/GTN) and all the contributors!
+This material is the result of a collaborative work. Thanks to the [Galaxy Training Network](https://training.galaxyproject.org) and all the contributors!
 
 
 <div class="contributors-line">
 
 
- <a href="/training-material/hall-of-fame/kxk302/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/kxk302" alt="Kaivan Kamali">Kaivan Kamali</a>
+ <a href="/training-material/hall-of-fame/kxk302/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/kxk302" alt="Avatar">Kaivan Kamali</a>
 
 
 </div>
@@ -734,7 +766,7 @@ This material is licensed under the <a rel="license" href="https://creativecommo
     <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
     <script type="text/javascript" src="/training-material/assets/js/clipboard.min.js"></script>
     <script type="text/javascript">
-      var slideshow = remark.create({navigation: {scroll: false,}});
+      var slideshow = remark.create({navigation: {scroll: false}, ratio: '16:9'});
       var hljs = remark.highlighter.engine;
       var snippets = document.querySelectorAll('code.remark-code');
         [].forEach.call(snippets,function(snippet){

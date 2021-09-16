@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
         <link rel="stylesheet" href="/training-material/assets/css/syntax_highlighting.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+        <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml" />
 
         
         
@@ -29,7 +30,7 @@
     </head>
     <body data-spy="scroll" data-target="#toc">
         <header>
-    <nav class="navbar navbar-expand-md navbar-dark">
+    <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
             <a class="navbar-brand" href="/training-material/">
                 <img src="/training-material/assets/images/GTN-60px.png" height="30" alt="Galaxy Training Network logo">
@@ -42,9 +43,11 @@
             <div class="collapse navbar-collapse" id="top-navbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                         <a class="nav-link" href="/training-material/hall-of-fame" title="Hall of Fame">
-                            <i class="fas fa-users" aria-hidden="true"></i><span class="visually-hidden">hall-of-fame</span> Contributors
+                        
+                        <a class="nav-link" href="/training-material/hall-of-fame" title="Hall of Fame">
+                           <i class="fas fa-users" aria-hidden="true"></i><span class="visually-hidden">hall-of-fame</span> Contributors
                         </a>
+                        
                     </li>
                     <li class="nav-item dropdown">
     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Help">
@@ -63,10 +66,9 @@
            <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> FAQs
         </a>
         
-        <a class="dropdown-item" href="/training-material/topics/contributing/faqs/" title="Check our FAQs for the  topic">
+        <a class="dropdown-item" href="/training-material/topics/contributing/faqs/" title="Check our FAQs for the Contributing to the Galaxy Training Material topic">
            <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Topic FAQs
         </a>
-
         
         <a class="dropdown-item" href="https://help.galaxyproject.org/" title="Discuss on Galaxy Help">
             <i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Galaxy Help Forum
@@ -89,13 +91,19 @@
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
-        <a class="dropdown-item" href="/training-material/stats.html" title="Show view statistics about this rrepository">
+        <a class="dropdown-item" href="/training-material/stats.html" title="Show view statistics about this repository">
             <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> GTN statistics
         </a>
 
         <a class="dropdown-item" href="https://plausible.galaxyproject.eu/training.galaxyproject.org?period=12mo&page=/training-material/topics/contributing/" title="Show view statistics of this page">
             <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> Page Metrics
         </a>
+
+        
+            <a class="dropdown-item" href="/training-material/feedback.html" title="Show feedback statistics about this repository">
+                <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> GTN feedback
+            </a>
+        
 
         <div class="dropdown-item">
             <div>
@@ -126,7 +134,7 @@
                 العربية
                 </a>
                 
-                <a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2F%2Ftutorials%2F%2Ftutorial.html&edit-text=&act=url" title="">
+                <a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fcontributing%2Ftutorials%2F%2Ftutorial.html&edit-text=&act=url" title="">
                 And more!
                 </a>
             </div>
@@ -198,8 +206,8 @@
     </nav>
 </header>
 
-
-
+        <div class="container main-content" role="main">
+        
 
 
 
@@ -216,21 +224,20 @@
 </script>
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
-<div class="container main-content">
-	<section class="tutorials-list contributing topic-type-instructors">
-        <h1>Contributing to the Galaxy Training Material</h1>
-        <p>Galaxy is a great solution to train the bioinformatics concepts: numerous bioinformatics tools are available (more than 7,000 in the ToolShed), it can be used by people without amy computer science skills, it trains to use technology, outlining available resources and efforts that have made them accessible to researchers, it is scalable.<br> In 2016, the Galaxy Training Network decide to set up a new infrastructure for delivering easily Galaxy related training material. The idea was to develop something open and online based on a community effort, as always in Galaxy.</p>
+<section class="tutorials-list contributing topic-type-instructors">
+    <h1>Contributing to the Galaxy Training Material</h1>
+    <p>Galaxy is a great solution to train the bioinformatics concepts: numerous bioinformatics tools are available (more than 7,000 in the ToolShed), it can be used by people without amy computer science skills, it trains to use technology, outlining available resources and efforts that have made them accessible to researchers, it is scalable.<br> In 2016, the Galaxy Training Network decide to set up a new infrastructure for delivering easily Galaxy related training material. The idea was to develop something open and online based on a community effort, as always in Galaxy.</p>
 
-        
+    
 
+    
+        <h2 id="material">Material</h2>
         
-            <h2 id="material">Material</h2>
-            
-            
-              
-                <h3 id="st-writing-tutorials">Writing Tutorials</h3>
-                These will take you from zero to hero in writing Galaxy Training Materials. </br></br>
-                <table class="table table-responsive table-striped" >
+        
+          
+            <h3 id="st-writing-tutorials">Writing Tutorials</h3>
+            These will take you from zero to hero in writing Galaxy Training Materials. </br></br>
+            <table class="table table-responsive table-striped" >
   <thead>
     <tr>
       <th>Lesson</th>
@@ -239,8 +246,6 @@
 
       
 
-      
-      <th>Galaxy instances</th>
       
     </tr>
   </thead>
@@ -280,7 +285,6 @@
             <td> 
 
     </span>
-
  </td>
             <td> 
     <span class="btn-group">
@@ -291,6 +295,7 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
         
          <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
@@ -323,155 +328,6 @@
 
             
             
-              <td> 
-
-    <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Where to run the tutorial">
-        <i class="fas fa-globe" aria-hidden="true"></i><span class="visually-hidden">instances</span>
-    </a>
-    <ul class="dropdown-menu">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-        <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
-            Galaxy@GenOuest
-        </a>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-    </ul>
-
-
- </td>
-            
           
          </tr>
          
@@ -493,7 +349,6 @@
             <td> 
 
     </span>
-
  </td>
             <td> 
     <span class="btn-group">
@@ -504,6 +359,7 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
         
          <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
@@ -536,11 +392,6 @@
 
             
             
-              <td> 
-
-
- </td>
-            
           
          </tr>
          
@@ -564,18 +415,19 @@
           </td>
           
             <td> 
+	<a class="visually-hidden" href="/training-material/topics/contributing/tutorials/create-new-tutorial-slides/slides-plain.html" aria-label="more accessible, plain text slides">plain text</a>
     <span class="btn-group">
-        <a class="btn btn-default topic-icon" href="/training-material/topics/contributing/tutorials/create-new-tutorial-slides/slides.html">
-            <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
+        <a class="btn btn-default topic-icon" href="/training-material/topics/contributing/tutorials/create-new-tutorial-slides/slides.html" title="Slides">
+            <i class="fab fa-slideshare" aria-hidden="true"></i>
         </a>
         <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
         
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=en&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fcontributing%2Ftutorials%2Fcreate-new-tutorial-slides%2Fslides.html&edit-text=&act=url" title="">
-                English
-            </a>
+        
+
+        <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
             <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fcontributing%2Ftutorials%2Fcreate-new-tutorial-slides%2Fslides.html&edit-text=&act=url" title="">
                 Français
@@ -600,26 +452,23 @@
         <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fcontributing%2Ftutorials%2Fcreate-new-tutorial-slides%2Fslides.html&edit-text=&act=url" title="">
             And more!
         </a>
+
+	<a class="btn btn-default topic-icon" href="/training-material/topics/contributing/tutorials/create-new-tutorial-slides/slides-plain.html" aria-label="more accessible, plain text slides">
+		<i class="fas fa-file-alt" aria-hidden="true"></i> Plain text slides
+	</a>
     </ul>
     
 
-/
-<a class="topic-icon" href="/training-material/videos/watch.html?v=contributing/tutorials/create-new-tutorial-slides/slides">
-    <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span>
+<a class="btn btn-default topic-icon" href="/training-material/videos/watch.html?v=contributing/tutorials/create-new-tutorial-slides/slides" title="Video">
+    <i class="fas fa-video" aria-hidden="true"></i>
 </a>
 
     </span>
-
  </td>
             <td> 
  </td>
 
             
-            
-              <td> 
-
-
- </td>
             
           
          </tr>
@@ -650,7 +499,6 @@
             <td> 
 
     </span>
-
  </td>
             <td> 
     <span class="btn-group">
@@ -661,6 +509,7 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
         
          <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
@@ -693,11 +542,6 @@
 
             
             
-              <td> 
-
-
- </td>
-            
           
          </tr>
          
@@ -719,7 +563,6 @@
             <td> 
 
     </span>
-
  </td>
             <td> 
     <span class="btn-group">
@@ -730,6 +573,7 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
         
          <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
@@ -762,11 +606,6 @@
 
             
             
-              <td> 
-
-
- </td>
-            
           
          </tr>
          
@@ -788,7 +627,6 @@
             <td> 
 
     </span>
-
  </td>
             <td> 
     <span class="btn-group">
@@ -799,6 +637,7 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
         
          <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
@@ -831,11 +670,6 @@
 
             
             
-              <td> 
-
-
- </td>
-            
           
          </tr>
          
@@ -850,10 +684,10 @@
 
 
 
-              
-                <h3 id="st-contributing">Contributing</h3>
-                How to collaborate with the GTN </br></br>
-                <table class="table table-responsive table-striped" >
+          
+            <h3 id="st-contributing">Contributing</h3>
+            How to collaborate with the GTN </br></br>
+            <table class="table table-responsive table-striped" >
   <thead>
     <tr>
       <th>Lesson</th>
@@ -862,8 +696,6 @@
 
       
 
-      
-      <th>Galaxy instances</th>
       
     </tr>
   </thead>
@@ -893,18 +725,19 @@
           </td>
           
             <td> 
+	<a class="visually-hidden" href="/training-material/topics/contributing/tutorials/github-command-line-contribution/slides-plain.html" aria-label="more accessible, plain text slides">plain text</a>
     <span class="btn-group">
-        <a class="btn btn-default topic-icon" href="/training-material/topics/contributing/tutorials/github-command-line-contribution/slides.html">
-            <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
+        <a class="btn btn-default topic-icon" href="/training-material/topics/contributing/tutorials/github-command-line-contribution/slides.html" title="Slides">
+            <i class="fab fa-slideshare" aria-hidden="true"></i>
         </a>
         <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
         
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=en&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fcontributing%2Ftutorials%2Fgithub-command-line-contribution%2Fslides.html&edit-text=&act=url" title="">
-                English
-            </a>
+        
+
+        <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
             <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fcontributing%2Ftutorials%2Fgithub-command-line-contribution%2Fslides.html&edit-text=&act=url" title="">
                 Français
@@ -929,11 +762,14 @@
         <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fcontributing%2Ftutorials%2Fgithub-command-line-contribution%2Fslides.html&edit-text=&act=url" title="">
             And more!
         </a>
+
+	<a class="btn btn-default topic-icon" href="/training-material/topics/contributing/tutorials/github-command-line-contribution/slides-plain.html" aria-label="more accessible, plain text slides">
+		<i class="fas fa-file-alt" aria-hidden="true"></i> Plain text slides
+	</a>
     </ul>
     
 
     </span>
-
  </td>
             <td> 
     <span class="btn-group">
@@ -944,6 +780,7 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
         
          <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
@@ -976,11 +813,6 @@
 
             
             
-              <td> 
-
-
- </td>
-            
           
          </tr>
          
@@ -1002,7 +834,6 @@
             <td> 
 
     </span>
-
  </td>
             <td> 
     <span class="btn-group">
@@ -1013,6 +844,7 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
         
          <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
@@ -1044,11 +876,6 @@
  </td>
 
             
-            
-              <td> 
-
-
- </td>
             
           
          </tr>
@@ -1100,10 +927,10 @@
 
 
 
-              
-                <h3 id="st-extras">Extras</h3>
-                How to make your tutorials just a little bit extra cool with additional Galaxy and GTN features </br></br>
-                <table class="table table-responsive table-striped" >
+          
+            <h3 id="st-extras">Extras</h3>
+            How to make your tutorials just a little bit extra cool with additional Galaxy and GTN features </br></br>
+            <table class="table table-responsive table-striped" >
   <thead>
     <tr>
       <th>Lesson</th>
@@ -1112,8 +939,6 @@
 
       
 
-      
-      <th>Galaxy instances</th>
       
     </tr>
   </thead>
@@ -1141,7 +966,6 @@
             <td> 
 
     </span>
-
  </td>
             <td> 
     <span class="btn-group">
@@ -1152,6 +976,7 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
         
          <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
@@ -1183,11 +1008,6 @@
  </td>
 
             
-            
-              <td> 
-
-
- </td>
             
           
          </tr>
@@ -1226,7 +1046,6 @@
             <td> 
 
     </span>
-
  </td>
             <td> 
     <span class="btn-group">
@@ -1237,6 +1056,7 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
         
          <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
@@ -1268,11 +1088,6 @@
  </td>
 
             
-            
-              <td> 
-
-
- </td>
             
           
          </tr>
@@ -1312,19 +1127,19 @@
 
 
 
-              
+          
 
-              
-              
-              <div id="tutorial_list">
-              <h3> Other </h3>
-              <div class="search_box">
-                <i class="fas fa fa-search" aria-hidden="true"></i><span class="visually-hidden">search</span>
-                <input data-search-type="tutorial_title" class="search" id="tutorial_search" placeholder="Search" />
-                <span id="clear_search" title="Clear filters"> <i class="fas fa-times" aria-hidden="true"></i><span class="visually-hidden">galaxy-cross</span> </span>
-              </div></br>
-              Assorted other tutorials </br></br>
-              <table class="table table-responsive table-striped" >
+          
+          
+          <div id="tutorial_list">
+          <h3> Other </h3>
+          <div class="search_box">
+            <i class="fas fa fa-search" aria-hidden="true"></i><span class="visually-hidden">search</span>
+            <input data-search-type="tutorial_title" class="search" id="tutorial_search" placeholder="Search" />
+            <span id="clear_search" title="Clear filters"> <i class="fas fa-times" aria-hidden="true"></i><span class="visually-hidden">galaxy-cross</span> </span>
+          </div></br>
+          Assorted other tutorials </br></br>
+          <table class="table table-responsive table-striped" >
   <thead>
     <tr>
       <th>Lesson</th>
@@ -1333,8 +1148,6 @@
 
       
 
-      
-      <th>Galaxy instances</th>
       
     </tr>
   </thead>
@@ -1401,8 +1214,6 @@
             <td></td>
             
             
-              <td></td>
-            
           
          </tr>
          
@@ -1452,7 +1263,6 @@
             <td> 
 
     </span>
-
  </td>
             <td> 
     <span class="btn-group">
@@ -1463,6 +1273,7 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
         
          <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
@@ -1495,11 +1306,6 @@
 
             
             
-              <td> 
-
-
- </td>
-            
           
          </tr>
          
@@ -1521,7 +1327,6 @@
             <td> 
 
     </span>
-
  </td>
             <td> 
     <span class="btn-group">
@@ -1532,6 +1337,7 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
         
          <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
@@ -1563,11 +1369,6 @@
  </td>
 
             
-            
-              <td> 
-
-
- </td>
             
           
          </tr>
@@ -1602,7 +1403,6 @@
             <td> 
 
     </span>
-
  </td>
             <td> 
     <span class="btn-group">
@@ -1613,6 +1413,7 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
         
          <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
@@ -1645,11 +1446,6 @@
 
             
             
-              <td> 
-
-
- </td>
-            
           
          </tr>
          
@@ -1660,45 +1456,46 @@
 
 
 
-              </div>
-              
-
-            
+          </div>
+          
 
         
 
-        <h2 id="topic-faq">Frequently Asked Questions</h2>
-        Common questions regarding this topic have been collected on a <a href="faqs/">dedicated FAQ page </a>. Common questions related to specific tutorials can be accessed from the tutorials themselves.
+    
 
-        <h2 id="maintainers">Maintainers</h2>
-        <p>This material is maintained by:</p>
+    <h2 id="topic-faq">Frequently Asked Questions</h2>
+    Common questions regarding this topic have been collected on a <a href="faqs/">dedicated FAQ page </a>. Common questions related to specific tutorials can be accessed from the tutorials themselves.
+
+    <h2 id="maintainers">Maintainers</h2>
+    <p>This material is maintained by:</p>
+    
+    
+
+ <a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Avatar">Bérénice Batut</a> <a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Avatar">Björn Grüning</a>
+
+
+
+    <p>
+        <em>For any question related to this topic and the content, you can contact them or visit our <a href="https://gitter.im/Galaxy-Training-Network/Lobby">Gitter channel</a>.</em>
+    </p>
+
+    <h2 id="contributors">Contributors</h2>
+    <p>This material was contributed to by:</p>
+    
+    
+    
+    
+
+ <a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Avatar">Bérénice Batut</a> <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Avatar">Helena Rasche</a> <a href="/training-material/hall-of-fame/cmonjeau/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/cmonjeau" alt="Avatar">Cyril Monjeaud</a> <a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Avatar">Saskia Hiltemann</a> <a href="/training-material/hall-of-fame/lldelisle/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/lldelisle" alt="Avatar">Lucille Delisle</a> <a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Avatar">Björn Grüning</a>
+
+
+
+    
+</section>
+
+        </div>
         
-        
-
- <a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Bérénice Batut">Bérénice Batut</a> <a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Björn Grüning">Björn Grüning</a>
-
-
-
-        <p>
-            <em>For any question related to this topic and the content, you can contact them or visit our <a href="https://gitter.im/Galaxy-Training-Network/Lobby">Gitter channel</a>.</em>
-        </p>
-
-        <h2 id="contributors">Contributors</h2>
-        <p>This material was contributed to by:</p>
-        
-        
-        
-        
-
- <a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Bérénice Batut">Bérénice Batut</a> <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a> <a href="/training-material/hall-of-fame/cmonjeau/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/cmonjeau" alt="Cyril Monjeaud">Cyril Monjeaud</a> <a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a> <a href="/training-material/hall-of-fame/lldelisle/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/lldelisle" alt="Lucille Delisle">Lucille Delisle</a> <a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Björn Grüning">Björn Grüning</a>
-
-
-
-        
-    </section>
-</div>
-
-<footer>
+            <footer>
     <div class="container">
         <br><br>
         <p>
@@ -1706,16 +1503,13 @@
             provides researchers with online training materials, connects them with local trainers, and helps promoting open data analysis practices worldwide.
         </p>
         <p>
-    The content of the tutorials and website is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+The content of the tutorials is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. The website and infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>.
 </p>
-        <p>This is revision <a href="https://github.com/galaxyproject/training-material/commit/d9609fbc7f2ed75acedfde41186eff94386572be">d9609fbc7f2ed75acedfde41186eff94386572be</a></p>
+        <p>This is revision <a href="https://github.com/galaxyproject/training-material/commit/3ff85f7aee3012a7c610606a52de8f3a659a1380">3ff85f7aee3012a7c610606a52de8f3a659a1380</a></p>
     </div>
 </footer>
 
-
-
-
-
+        
     </body>
     <script type="text/javascript" src="/training-material/assets/js/jquery.slim.min.js"></script>
     <script type="text/javascript" src="/training-material/assets/js/popper.min.js"></script>

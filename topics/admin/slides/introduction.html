@@ -68,16 +68,13 @@
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
+  "dateModified": "1970-01-01 00:00:09 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Galaxy from an administrator's point of view",
-  "inLanguage": {
-    "@type": "Language",
-    "name": "English",
-    "alternateName": "en"
-  },
   "interactivityType": "mixed",
   "isAccessibleForFree": true,
-  "license": "https://github.com/galaxyproject/training-material/blob/main/LICENSE.md",
+  "isFamilyFriendly": true,
+  "license": "https://spdx.org/licenses/CC-BY-4.0.html",
   "producer": {
     "@type": "Organization",
     "email": "galaxytrainingnetwork@gmail.com",
@@ -107,6 +104,11 @@
   "name": "Introduction to 'Galaxy Server administration'",
   "url": "https://training.galaxyproject.org//training-material/topics/admin/slides/introduction.html",
   "description": "Slides for Galaxy Server administration",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
   "hasPart": [
 
   ],
@@ -189,15 +191,15 @@ class: center, middle, inverse
 <div class="contributors-line">
 
 
- <a href="/training-material/hall-of-fame/valentinmarcon/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/valentinmarcon" alt="Valentin Marcon">Valentin Marcon</a> <a href="/training-material/hall-of-fame/natefoo/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/natefoo" alt="Nate Coraor">Nate Coraor</a> <a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Björn Grüning">Björn Grüning</a> <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>
+ <a href="/training-material/hall-of-fame/valentinmarcon/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/valentinmarcon" alt="Avatar">Valentin Marcon</a> <a href="/training-material/hall-of-fame/natefoo/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/natefoo" alt="Avatar">Nate Coraor</a> <a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Avatar">Björn Grüning</a> <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Avatar">Helena Rasche</a>
 
 
 </div>
 
 
-
-
-.footnote[Tip: press `P` to view the presenter notes]
+<div class="footnote" style="bottom: 3em;"><i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Updated: Jul 9, 2021</div>
+<div class="footnote" style="bottom: 2em;">Or view the <a href="slides-plain.html">plain-text slides without JS</a></div>
+<div class="footnote" style="bottom: 1em;">Tip: press <kbd>P</kbd> to view the presenter notes</div>
 
 ???
 Presenter notes contain extra information which might be useful if you
@@ -209,9 +211,11 @@ Press `C` to create a new window where the same presentation will be displayed.
 This window is linked to the main window. Changing slides on one will cause the
 slide to change on the other. Useful when presenting.
 
+
+
 ---
 
-![](../images/use-resource-banner.png)
+![Picture with 125+ platforms for using galaxy written and a number of screenshots of those galaxies.](../images/use-resource-banner.png)
 
 ---
 
@@ -237,7 +241,16 @@ slide to change on the other. Useful when presenting.
 
 [Resource Directory](https://galaxyproject.org/use/)
 
-![](../images/options-to-choose.png)
+Supported                                         | Main | Local | Cloud | Appliance
+---------                                         | ---- | ----- | ----- | ---------
+Your data sets are moderately sized               | yes  | yes   | yes   | yes
+Your computation requirements are moderate        | yes  | yes   | yes   | yes
+You want to share your Galaxy objects with others | yes  | yes   | yes   | yes
+All needed Tools are installed on Main            | yes  | ?     | yes   | yes
+Your data sets are very large                     | no   | ?     | yes   | yes
+Your computation requirements are very large      | no   | ?     | yes   | yes
+You have absolute data security requirements      | no   | yes   | yes   | yes
+No network transfer of data                       | no   | yes   | no    | yes
 
 ---
 
@@ -559,13 +572,13 @@ Back up everything (except that which is managed by configuration management)
 
 ## Thank you!
 
-This material is the result of a collaborative work. Thanks to the [Galaxy Training Network](https://wiki.galaxyproject.org/Teach/GTN) and all the contributors!
+This material is the result of a collaborative work. Thanks to the [Galaxy Training Network](https://training.galaxyproject.org) and all the contributors!
 
 
 <div class="contributors-line">
 
 
- <a href="/training-material/hall-of-fame/valentinmarcon/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/valentinmarcon" alt="Valentin Marcon">Valentin Marcon</a> <a href="/training-material/hall-of-fame/natefoo/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/natefoo" alt="Nate Coraor">Nate Coraor</a> <a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Björn Grüning">Björn Grüning</a> <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>
+ <a href="/training-material/hall-of-fame/valentinmarcon/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/valentinmarcon" alt="Avatar">Valentin Marcon</a> <a href="/training-material/hall-of-fame/natefoo/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/natefoo" alt="Avatar">Nate Coraor</a> <a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Avatar">Björn Grüning</a> <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Avatar">Helena Rasche</a>
 
 
 </div>
@@ -583,7 +596,7 @@ This material is licensed under the <a rel="license" href="https://creativecommo
     <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
     <script type="text/javascript" src="/training-material/assets/js/clipboard.min.js"></script>
     <script type="text/javascript">
-      var slideshow = remark.create({navigation: {scroll: false,}});
+      var slideshow = remark.create({navigation: {scroll: false}, ratio: '16:9'});
       var hljs = remark.highlighter.engine;
       var snippets = document.querySelectorAll('code.remark-code');
         [].forEach.call(snippets,function(snippet){
