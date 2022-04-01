@@ -47,8 +47,44 @@
                         <a class="nav-link" href="/training-material/hall-of-fame" title="Hall of Fame">
                            <i class="fas fa-users" aria-hidden="true"></i><span class="visually-hidden">hall-of-fame</span> Contributors
                         </a>
+
                         
                     </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Languages">
+                            <i class="fas fa-language" aria-hidden="true"></i><span class="visually-hidden">language</span> Languages
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            
+                              <strong class="dropdown-header">Automatic Translations</strong>
+            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/variant-analysis/&edit-text=&act=url">
+                            Français
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/variant-analysis/&edit-text=&act=url">
+                            日本語
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/variant-analysis/&edit-text=&act=url">
+                            Español
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/variant-analysis/&edit-text=&act=url">
+                            Português
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/variant-analysis/&edit-text=&act=url">
+                            العربية
+                            </a>
+                            
+                            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/variant-analysis/&edit-text=&act=url" title="">
+                            And more!
+                            </a>
+                        </div>
+                    </li>
+
                     <li class="nav-item dropdown">
     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Help">
         <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">help</span> Help
@@ -104,41 +140,6 @@
                 <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> GTN feedback
             </a>
         
-
-        <div class="dropdown-item">
-            <div>
-                <i class="fas fa-language" aria-hidden="true"></i><span class="visually-hidden">language</span> Translate this page
-            </div>
-
-            <div id="lang-selector">
-                
-                <strong>Automatic Translations</strong>
-
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/variant-analysis/&edit-text=&act=url">
-                Français
-                </a>
-                
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/variant-analysis/&edit-text=&act=url">
-                日本語
-                </a>
-                
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/variant-analysis/&edit-text=&act=url">
-                Español
-                </a>
-                
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/variant-analysis/&edit-text=&act=url">
-                Português
-                </a>
-                
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/variant-analysis/&edit-text=&act=url">
-                العربية
-                </a>
-                
-                <a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvariant-analysis%2Ftutorials%2F%2Ftutorial.html&edit-text=&act=url" title="">
-                And more!
-                </a>
-            </div>
-        </div>
 
         <div class="dropdown-item">
             <div>
@@ -242,6 +243,7 @@ annotating previously observed variants with published knowledge, and
 by trying to link phenotypes of the sequenced samples to their variant
 genotypes.
 </p>
+    <i>You can view the tutorial materials in different languages by clicking the dropdown icon next to the slides (<i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>) and tutorial (<i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>) buttons below. </i>
 
     
     <h2 id="requirements">Requirements</h2>
@@ -330,17 +332,17 @@ genotypes.
   <thead>
     <tr>
       <th>Lesson</th>
-      <th>Slides</th>
-      <th>Hands-on</th>
+      <th title="Lecture for this training. May include a video version using automated text-to-speech.">Slides</th>
+      <th title="Practical tutorial guiding you through an analysis step by step.">Hands-on</th>
+      <th title="Recordings of various instructors teaching this tutorial. May use an outdated version of the tutorial.">Recordings</th>
 
       
-      <th>Input dataset</th>
-      <th>Workflows</th>
-      <th>Galaxy tour</th>
+      <th title="Datasets used in this tutorial, available from Zenodo.">Input dataset</th>
+      <th title="Galaxy workflows used in this tutorial.">Workflows</th>
       
 
       
-      <th>Galaxy instances</th>
+      <th title="List of public Galaxies on which this tutorial can be performed. ">Galaxy servers</th>
       
     </tr>
   </thead>
@@ -363,50 +365,66 @@ genotypes.
           
             <td>
             
-              <span class="btn-group">
-                <a class="btn btn-default topic-icon" href="/training-material/topics/variant-analysis/slides/introduction.html">
-                    <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
-                </a>
-                <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="sr-only">Toggle Dropdown</span>
-                </a>
-                <ul class="dropdown-menu">
-                  
-                    <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=en&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvariant-analysis%2Fslides%2Fintroduction.html&edit-text=&act=url" title="">
-                      English
-                    </a>
-                  
-                    <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvariant-analysis%2Fslides%2Fintroduction.html&edit-text=&act=url" title="">
-                      Français
-                    </a>
-                  
-                    <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvariant-analysis%2Fslides%2Fintroduction.html&edit-text=&act=url" title="">
-                      日本語
-                    </a>
-                  
-                    <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvariant-analysis%2Fslides%2Fintroduction.html&edit-text=&act=url" title="">
-                      Español
-                    </a>
-                  
-                    <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvariant-analysis%2Fslides%2Fintroduction.html&edit-text=&act=url" title="">
-                      Português
-                    </a>
-                  
-                    <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvariant-analysis%2Fslides%2Fintroduction.html&edit-text=&act=url" title="">
-                      العربية
-                    </a>
-                  
-                  <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvariant-analysis%2Fslides%2Fintroduction.html&edit-text=&act=url" title="">
-                      And more!
-                  </a>
-                </ul>
-                
-              </span>
+              
+
+
+    <span class="btn-group">
+	<a class="visually-hidden" href="/training-material/topics/variant-analysis/slides/slides-plain.html" aria-label="more accessible, plain text slides">plain text</a>
+    <span class="btn-group">
+        <a class="btn btn-default topic-icon" href="/training-material/topics/variant-analysis/slides/introduction.html" title="Slides">
+            <i class="fab fa-slideshare" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="View slides in different languages">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+        
+
+        <div class="dropdown-item"><strong>Automatic translations</strong></div>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvariant-analysis%2Fslides%2Fintroduction.html&edit-text=&act=url" title="">
+                Français
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvariant-analysis%2Fslides%2Fintroduction.html&edit-text=&act=url" title="">
+                日本語
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvariant-analysis%2Fslides%2Fintroduction.html&edit-text=&act=url" title="">
+                Español
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvariant-analysis%2Fslides%2Fintroduction.html&edit-text=&act=url" title="">
+                Português
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvariant-analysis%2Fslides%2Fintroduction.html&edit-text=&act=url" title="">
+                العربية
+            </a>
+        
+        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvariant-analysis%2Fslides%2Fintroduction%2Fslides.html&edit-text=&act=url" title="">
+            More Languages
+        </a>
+
+	<a class="btn btn-default topic-icon" href="/training-material/topics/variant-analysis/slides/slides-plain.html" aria-label="more accessible, plain text slides">
+		<i class="fas fa-file-alt" aria-hidden="true"></i> Plain text slides
+	</a>
+    </ul>
+    
+    </span>
+
+<!-- video slides -->
+
+
+</span>
+</span>
+
             
             </td>
             <td></td>
+            <td></td>
             
-              <td></td>
               <td></td>
               <td></td>
             
@@ -432,11 +450,14 @@ genotypes.
           </td>
           
             <td> 
+
+
     </span>
 
 <!-- video slides -->
 
 
+</span>
 </span>
  </td>
             <td> 
@@ -473,17 +494,30 @@ genotypes.
             </a>
         
         <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvariant-analysis%2Ftutorials%2Fdip%2Ftutorial.html&edit-text=&act=url" title="">
-            And more!
+            More Languages
         </a>
     </span>
 
  </td>
+            <td> 
 
+
+
+
+
+
+
+
+
+
+
+  
+</td>
             
               <td> 
 
 
-<a class="topic-icon" href="https://doi.org/10.5281/zenodo.60520">
+<a class="topic-icon" title="Zenodo datasets used in this tutorial" href="https://doi.org/10.5281/zenodo.60520">
     <i class="far fa-copy" aria-hidden="true"></i>
 </a>
 
@@ -496,12 +530,6 @@ genotypes.
     </a>
 
  </td>
-              <td> 
-<a class="topic-icon" href="https://github.com/galaxyproject/training-material/tree/main/topics/variant-analysis/tutorials/dip/tours/" title="Galaxy interactive tour" >
-    <i class="fas fa-magic" aria-hidden="true"></i>
-</a>
-
- </td>
             
             
               <td> 
@@ -512,6 +540,8 @@ genotypes.
     </a>
     <ul class="dropdown-menu">
     
+    
+        
     
         
     
@@ -578,11 +608,11 @@ genotypes.
         
     
         
+    
+        
         <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
             Galaxy@GenOuest
         </a>
-        
-    
         
     
         
@@ -646,10 +676,20 @@ genotypes.
         
     
         
+        <a class="dropdown-item" href="https://usegalaxy.be/" title="UseGalaxy.be">
+            UseGalaxy.be
+        </a>
+        
     
         
         <a class="dropdown-item" href="https://usegalaxy.eu" title="UseGalaxy.eu">
             UseGalaxy.eu
+        </a>
+        
+    
+        
+        <a class="dropdown-item" href="https://usegalaxy.fr/" title="UseGalaxy.fr">
+            UseGalaxy.fr
         </a>
         
     
@@ -665,6 +705,8 @@ genotypes.
         <a class="dropdown-item" href="https://usegalaxy.org.au" title="UseGalaxy.org.au">
             UseGalaxy.org.au
         </a>
+        
+    
         
     
         
@@ -694,20 +736,21 @@ genotypes.
           
           
             
-              <form method="GET" action="/training-material/search" style="display:inline"><input type="hidden" name="query" value="prokaryote">
-              <button class="label label-default tutorial_tag" id="prokaryote" style="background-color: hsl(271, 80.0%, 85%); color: #333; border: 1px solid hsl(271, 80.0%, 45%)" title="Click to show all tutorials with this tag">prokaryote</button>
-               </form>
+            <a href="/training-material/search?query=prokaryote" class="label label-default tutorial_tag" id="prokaryote" style="background-color: hsl(271, 80.0%, 85%); color: #333; border: 1px solid hsl(271, 80.0%, 45%)" title="Click to show all tutorials tagged prokaryote">prokaryote</a>
             
           
           </div>
           </td>
           
             <td> 
+
+
     </span>
 
 <!-- video slides -->
 
 
+</span>
 </span>
  </td>
             <td> 
@@ -744,17 +787,30 @@ genotypes.
             </a>
         
         <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvariant-analysis%2Ftutorials%2Fnon-dip%2Ftutorial.html&edit-text=&act=url" title="">
-            And more!
+            More Languages
         </a>
     </span>
 
  </td>
+            <td> 
 
+
+
+
+
+
+
+
+
+
+
+  
+</td>
             
               <td> 
 
 
-<a class="topic-icon" href="https://doi.org/10.5281/zenodo.1251112">
+<a class="topic-icon" title="Zenodo datasets used in this tutorial" href="https://doi.org/10.5281/zenodo.1251112">
     <i class="far fa-copy" aria-hidden="true"></i>
 </a>
 
@@ -767,12 +823,6 @@ genotypes.
     </a>
 
  </td>
-              <td> 
-<a class="topic-icon" href="https://github.com/galaxyproject/training-material/tree/main/topics/variant-analysis/tutorials/non-dip/tours/" title="Galaxy interactive tour" >
-    <i class="fas fa-magic" aria-hidden="true"></i>
-</a>
-
- </td>
             
             
               <td> 
@@ -783,6 +833,8 @@ genotypes.
     </a>
     <ul class="dropdown-menu">
     
+    
+        
     
         
     
@@ -849,11 +901,11 @@ genotypes.
         
     
         
+    
+        
         <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
             Galaxy@GenOuest
         </a>
-        
-    
         
     
         
@@ -917,10 +969,20 @@ genotypes.
         
     
         
+        <a class="dropdown-item" href="https://usegalaxy.be/" title="UseGalaxy.be">
+            UseGalaxy.be
+        </a>
+        
     
         
         <a class="dropdown-item" href="https://usegalaxy.eu" title="UseGalaxy.eu">
             UseGalaxy.eu
+        </a>
+        
+    
+        
+        <a class="dropdown-item" href="https://usegalaxy.fr/" title="UseGalaxy.fr">
+            UseGalaxy.fr
         </a>
         
     
@@ -948,6 +1010,8 @@ genotypes.
     
         
     
+        
+    
     </ul>
 
 
@@ -956,6 +1020,12 @@ genotypes.
           
          </tr>
          
+       
+    
+    
+
+    
+      
        
     
     
@@ -972,11 +1042,14 @@ genotypes.
           </td>
           
             <td> 
+
+
     </span>
 
 <!-- video slides -->
 
 
+</span>
 </span>
  </td>
             <td> 
@@ -1013,17 +1086,30 @@ genotypes.
             </a>
         
         <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvariant-analysis%2Ftutorials%2Fexome-seq%2Ftutorial.html&edit-text=&act=url" title="">
-            And more!
+            More Languages
         </a>
     </span>
 
  </td>
+            <td> 
 
+
+
+
+
+
+
+
+
+
+
+  
+</td>
             
               <td> 
 
 
-<a class="topic-icon" href="https://doi.org/10.5281/zenodo.3054169">
+<a class="topic-icon" title="Zenodo datasets used in this tutorial" href="https://doi.org/10.5281/zenodo.3054169">
     <i class="far fa-copy" aria-hidden="true"></i>
 </a>
 
@@ -1036,8 +1122,6 @@ genotypes.
     </a>
 
  </td>
-              <td> 
- </td>
             
             
               <td> 
@@ -1048,6 +1132,8 @@ genotypes.
     </a>
     <ul class="dropdown-menu">
     
+    
+        
     
         
     
@@ -1114,11 +1200,11 @@ genotypes.
         
     
         
+    
+        
         <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
             Galaxy@GenOuest
         </a>
-        
-    
         
     
         
@@ -1182,10 +1268,20 @@ genotypes.
         
     
         
+        <a class="dropdown-item" href="https://usegalaxy.be/" title="UseGalaxy.be">
+            UseGalaxy.be
+        </a>
+        
     
         
         <a class="dropdown-item" href="https://usegalaxy.eu" title="UseGalaxy.eu">
             UseGalaxy.eu
+        </a>
+        
+    
+        
+        <a class="dropdown-item" href="https://usegalaxy.fr/" title="UseGalaxy.fr">
+            UseGalaxy.fr
         </a>
         
     
@@ -1201,6 +1297,8 @@ genotypes.
         <a class="dropdown-item" href="https://usegalaxy.org.au" title="UseGalaxy.org.au">
             UseGalaxy.org.au
         </a>
+        
+    
         
     
         
@@ -1230,20 +1328,21 @@ genotypes.
           
           
             
-              <form method="GET" action="/training-material/search" style="display:inline"><input type="hidden" name="query" value="covid19">
-              <button class="label label-default tutorial_tag" id="covid19" style="background-color: hsl(332, 80.0%, 85%); color: #333; border: 1px solid hsl(332, 80.0%, 45%)" title="Click to show all tutorials with this tag">covid19</button>
-               </form>
+            <a href="/training-material/search?query=covid19" class="label label-default tutorial_tag" id="covid19" style="background-color: hsl(332, 80.0%, 85%); color: #333; border: 1px solid hsl(332, 80.0%, 45%)" title="Click to show all tutorials tagged covid19">covid19</a>
             
           
           </div>
           </td>
           
             <td> 
+
+
     </span>
 
 <!-- video slides -->
 
 
+</span>
 </span>
  </td>
             <td> 
@@ -1280,17 +1379,30 @@ genotypes.
             </a>
         
         <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvariant-analysis%2Ftutorials%2Fsars-cov-2%2Ftutorial.html&edit-text=&act=url" title="">
-            And more!
+            More Languages
         </a>
     </span>
 
  </td>
+            <td> 
 
+
+
+
+
+
+
+
+
+
+
+  
+</td>
             
               <td> 
 
 
-<a class="topic-icon" href="http://zenodo.org/record/3906454">
+<a class="topic-icon" title="Zenodo datasets used in this tutorial" href="http://zenodo.org/record/3906454">
     <i class="far fa-copy" aria-hidden="true"></i>
 </a>
 
@@ -1302,8 +1414,6 @@ genotypes.
         <i class="fas fa-share-alt" aria-hidden="true"></i>
     </a>
 
- </td>
-              <td> 
  </td>
             
             
@@ -1359,6 +1469,8 @@ genotypes.
         
     
         
+    
+        
         <a class="dropdown-item" href="https://africa.usegalaxy.eu/" title="Galaxy Africa">
             Galaxy Africa
         </a>
@@ -1368,6 +1480,8 @@ genotypes.
         <a class="dropdown-item" href="https://india.usegalaxy.eu/" title="Galaxy India">
             Galaxy India
         </a>
+        
+    
         
     
         
@@ -1437,18 +1551,26 @@ genotypes.
         
     
         
-    
-        
         <a class="dropdown-item" href="https://streetscience.usegalaxy.eu/" title="Street Science">
             Street Science
         </a>
         
     
         
+        <a class="dropdown-item" href="https://usegalaxy.be/" title="UseGalaxy.be">
+            UseGalaxy.be
+        </a>
+        
     
         
         <a class="dropdown-item" href="https://usegalaxy.eu" title="UseGalaxy.eu">
             UseGalaxy.eu
+        </a>
+        
+    
+        
+        <a class="dropdown-item" href="https://usegalaxy.fr/" title="UseGalaxy.fr">
+            UseGalaxy.fr
         </a>
         
     
@@ -1468,6 +1590,8 @@ genotypes.
         <a class="dropdown-item" href="https://usegalaxy.org.au" title="UseGalaxy.org.au">
             UseGalaxy.org.au
         </a>
+        
+    
         
     
         
@@ -1500,11 +1624,14 @@ genotypes.
           </td>
           
             <td> 
+
+
     </span>
 
 <!-- video slides -->
 
 
+</span>
 </span>
  </td>
             <td> 
@@ -1541,17 +1668,30 @@ genotypes.
             </a>
         
         <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvariant-analysis%2Ftutorials%2Fsomatic-variants%2Ftutorial.html&edit-text=&act=url" title="">
-            And more!
+            More Languages
         </a>
     </span>
 
  </td>
+            <td> 
 
+
+
+
+
+
+
+
+
+
+
+  
+</td>
             
               <td> 
 
 
-<a class="topic-icon" href="https://doi.org/10.5281/zenodo.2582555">
+<a class="topic-icon" title="Zenodo datasets used in this tutorial" href="https://doi.org/10.5281/zenodo.2582555">
     <i class="far fa-copy" aria-hidden="true"></i>
 </a>
 
@@ -1563,8 +1703,6 @@ genotypes.
         <i class="fas fa-share-alt" aria-hidden="true"></i>
     </a>
 
- </td>
-              <td> 
  </td>
             
             
@@ -1620,6 +1758,8 @@ genotypes.
         
     
         
+    
+        
         <a class="dropdown-item" href="https://africa.usegalaxy.eu/" title="Galaxy Africa">
             Galaxy Africa
         </a>
@@ -1629,6 +1769,8 @@ genotypes.
         <a class="dropdown-item" href="https://india.usegalaxy.eu/" title="Galaxy India">
             Galaxy India
         </a>
+        
+    
         
     
         
@@ -1698,18 +1840,26 @@ genotypes.
         
     
         
-    
-        
         <a class="dropdown-item" href="https://streetscience.usegalaxy.eu/" title="Street Science">
             Street Science
         </a>
         
     
         
+        <a class="dropdown-item" href="https://usegalaxy.be/" title="UseGalaxy.be">
+            UseGalaxy.be
+        </a>
+        
     
         
         <a class="dropdown-item" href="https://usegalaxy.eu" title="UseGalaxy.eu">
             UseGalaxy.eu
+        </a>
+        
+    
+        
+        <a class="dropdown-item" href="https://usegalaxy.fr/" title="UseGalaxy.fr">
+            UseGalaxy.fr
         </a>
         
     
@@ -1725,6 +1875,8 @@ genotypes.
         <a class="dropdown-item" href="https://usegalaxy.org.au" title="UseGalaxy.org.au">
             UseGalaxy.org.au
         </a>
+        
+    
         
     
         
@@ -1764,20 +1916,21 @@ genotypes.
           
           
             
-              <form method="GET" action="/training-material/search" style="display:inline"><input type="hidden" name="query" value="prokaryote">
-              <button class="label label-default tutorial_tag" id="prokaryote" style="background-color: hsl(271, 80.0%, 85%); color: #333; border: 1px solid hsl(271, 80.0%, 45%)" title="Click to show all tutorials with this tag">prokaryote</button>
-               </form>
+            <a href="/training-material/search?query=prokaryote" class="label label-default tutorial_tag" id="prokaryote" style="background-color: hsl(271, 80.0%, 85%); color: #333; border: 1px solid hsl(271, 80.0%, 45%)" title="Click to show all tutorials tagged prokaryote">prokaryote</a>
             
           
           </div>
           </td>
           
             <td> 
+
+
     </span>
 
 <!-- video slides -->
 
 
+</span>
 </span>
  </td>
             <td> 
@@ -1814,17 +1967,63 @@ genotypes.
             </a>
         
         <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvariant-analysis%2Ftutorials%2Ftb-variant-analysis%2Ftutorial.html&edit-text=&act=url" title="">
-            And more!
+            More Languages
         </a>
     </span>
 
  </td>
+            <td> 
 
+
+
+
+
+
+
+
+
+
+
+  
+  <li class="btn btn-default supporting_material">
+    <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Latest recordings of this tutorial in the GTN Video Library">
+        <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span> 
+    </a>
+    <ul class="dropdown-menu">
+        
+        
+
+        
+        
+        
+
+        <li>
+            <a class="dropdown-item" href="https://gallantries.github.io/video-library/videos/variant-analysis/tb-variant-analysis/tutorial" title="View GTN Video Library for this Tutorial">
+                <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span> Tutorial (February 2021)
+            </a>
+        </li>
+        
+        
+          
+          
+          
+
+        <li>
+            <a class="dropdown-item" href="https://gallantries.github.io/video-library/videos/variant-analysis/tb-variant-analysis/slides" title="View GTN Video Library for these Slides">
+                <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span> Lecture (February 2021)
+            </a>
+        </li>
+        
+        
+    </ul>
+   </li>
+   
+</td>
             
               <td> 
 
 
-<a class="topic-icon" href="https://doi.org/10.5281/zenodo.3496437">
+<a class="topic-icon" title="Zenodo datasets used in this tutorial" href="https://doi.org/10.5281/zenodo.3496437">
     <i class="far fa-copy" aria-hidden="true"></i>
 </a>
 
@@ -1836,8 +2035,6 @@ genotypes.
         <i class="fas fa-share-alt" aria-hidden="true"></i>
     </a>
 
- </td>
-              <td> 
  </td>
             
             
@@ -1893,6 +2090,8 @@ genotypes.
         
     
         
+    
+        
         <a class="dropdown-item" href="https://africa.usegalaxy.eu/" title="Galaxy Africa">
             Galaxy Africa
         </a>
@@ -1902,6 +2101,8 @@ genotypes.
         <a class="dropdown-item" href="https://india.usegalaxy.eu/" title="Galaxy India">
             Galaxy India
         </a>
+        
+    
         
     
         
@@ -1971,19 +2172,23 @@ genotypes.
         
     
         
-    
-        
         <a class="dropdown-item" href="https://streetscience.usegalaxy.eu/" title="Street Science">
             Street Science
         </a>
         
     
         
+        <a class="dropdown-item" href="https://usegalaxy.be/" title="UseGalaxy.be">
+            UseGalaxy.be
+        </a>
+        
     
         
         <a class="dropdown-item" href="https://usegalaxy.eu" title="UseGalaxy.eu">
             UseGalaxy.eu
         </a>
+        
+    
         
     
         
@@ -2002,6 +2207,8 @@ genotypes.
         <a class="dropdown-item" href="https://usegalaxy.org.au" title="UseGalaxy.org.au">
             UseGalaxy.org.au
         </a>
+        
+    
         
     
         
@@ -2034,11 +2241,14 @@ genotypes.
           </td>
           
             <td> 
+
+
     </span>
 
 <!-- video slides -->
 
 
+</span>
 </span>
  </td>
             <td> 
@@ -2075,17 +2285,30 @@ genotypes.
             </a>
         
         <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvariant-analysis%2Ftutorials%2Fmapping-by-sequencing%2Ftutorial.html&edit-text=&act=url" title="">
-            And more!
+            More Languages
         </a>
     </span>
 
  </td>
+            <td> 
 
+
+
+
+
+
+
+
+
+
+
+  
+</td>
             
               <td> 
 
 
-<a class="topic-icon" href="https://doi.org/10.5281/zenodo.1098033">
+<a class="topic-icon" title="Zenodo datasets used in this tutorial" href="https://doi.org/10.5281/zenodo.1098033">
     <i class="far fa-copy" aria-hidden="true"></i>
 </a>
 
@@ -2098,12 +2321,6 @@ genotypes.
     </a>
 
  </td>
-              <td> 
-<a class="topic-icon" href="https://github.com/galaxyproject/training-material/tree/main/topics/variant-analysis/tutorials/mapping-by-sequencing/tours/" title="Galaxy interactive tour" >
-    <i class="fas fa-magic" aria-hidden="true"></i>
-</a>
-
- </td>
             
             
               <td> 
@@ -2114,6 +2331,8 @@ genotypes.
     </a>
     <ul class="dropdown-menu">
     
+    
+        
     
         
     
@@ -2180,11 +2399,11 @@ genotypes.
         
     
         
+    
+        
         <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
             Galaxy@GenOuest
         </a>
-        
-    
         
     
         
@@ -2248,11 +2467,17 @@ genotypes.
         
     
         
+        <a class="dropdown-item" href="https://usegalaxy.be/" title="UseGalaxy.be">
+            UseGalaxy.be
+        </a>
+        
     
         
         <a class="dropdown-item" href="https://usegalaxy.eu" title="UseGalaxy.eu">
             UseGalaxy.eu
         </a>
+        
+    
         
     
         
@@ -2271,6 +2496,8 @@ genotypes.
         <a class="dropdown-item" href="https://usegalaxy.org.au" title="UseGalaxy.org.au">
             UseGalaxy.org.au
         </a>
+        
+    
         
     
         
@@ -2300,20 +2527,21 @@ genotypes.
           
           
             
-              <form method="GET" action="/training-material/search" style="display:inline"><input type="hidden" name="query" value="prokaryote">
-              <button class="label label-default tutorial_tag" id="prokaryote" style="background-color: hsl(271, 80.0%, 85%); color: #333; border: 1px solid hsl(271, 80.0%, 45%)" title="Click to show all tutorials with this tag">prokaryote</button>
-               </form>
+            <a href="/training-material/search?query=prokaryote" class="label label-default tutorial_tag" id="prokaryote" style="background-color: hsl(271, 80.0%, 85%); color: #333; border: 1px solid hsl(271, 80.0%, 45%)" title="Click to show all tutorials tagged prokaryote">prokaryote</a>
             
           
           </div>
           </td>
           
             <td> 
+
+
     </span>
 
 <!-- video slides -->
 
 
+</span>
 </span>
  </td>
             <td> 
@@ -2350,17 +2578,30 @@ genotypes.
             </a>
         
         <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvariant-analysis%2Ftutorials%2Fmicrobial-variants%2Ftutorial.html&edit-text=&act=url" title="">
-            And more!
+            More Languages
         </a>
     </span>
 
  </td>
+            <td> 
 
+
+
+
+
+
+
+
+
+
+
+  
+</td>
             
               <td> 
 
 
-<a class="topic-icon" href="https://doi.org/10.5281/zenodo.582600">
+<a class="topic-icon" title="Zenodo datasets used in this tutorial" href="https://doi.org/10.5281/zenodo.582600">
     <i class="far fa-copy" aria-hidden="true"></i>
 </a>
 
@@ -2373,12 +2614,6 @@ genotypes.
     </a>
 
  </td>
-              <td> 
-<a class="topic-icon" href="https://github.com/galaxyproject/training-material/tree/main/topics/variant-analysis/tutorials/microbial-variants/tours/" title="Galaxy interactive tour" >
-    <i class="fas fa-magic" aria-hidden="true"></i>
-</a>
-
- </td>
             
             
               <td> 
@@ -2389,6 +2624,8 @@ genotypes.
     </a>
     <ul class="dropdown-menu">
     
+    
+        
     
         
     
@@ -2455,11 +2692,11 @@ genotypes.
         
     
         
+    
+        
         <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
             Galaxy@GenOuest
         </a>
-        
-    
         
     
         
@@ -2523,11 +2760,17 @@ genotypes.
         
     
         
+        <a class="dropdown-item" href="https://usegalaxy.be/" title="UseGalaxy.be">
+            UseGalaxy.be
+        </a>
+        
     
         
         <a class="dropdown-item" href="https://usegalaxy.eu" title="UseGalaxy.eu">
             UseGalaxy.eu
         </a>
+        
+    
         
     
         
@@ -2546,6 +2789,8 @@ genotypes.
         <a class="dropdown-item" href="https://usegalaxy.org.au" title="UseGalaxy.org.au">
             UseGalaxy.org.au
         </a>
+        
+    
         
     
         
@@ -2585,20 +2830,21 @@ genotypes.
           
           
             
-              <form method="GET" action="/training-material/search" style="display:inline"><input type="hidden" name="query" value="covid19">
-              <button class="label label-default tutorial_tag" id="covid19" style="background-color: hsl(332, 80.0%, 85%); color: #333; border: 1px solid hsl(332, 80.0%, 45%)" title="Click to show all tutorials with this tag">covid19</button>
-               </form>
+            <a href="/training-material/search?query=covid19" class="label label-default tutorial_tag" id="covid19" style="background-color: hsl(332, 80.0%, 85%); color: #333; border: 1px solid hsl(332, 80.0%, 45%)" title="Click to show all tutorials tagged covid19">covid19</a>
             
           
           </div>
           </td>
           
             <td> 
+
+
     </span>
 
 <!-- video slides -->
 
 
+</span>
 </span>
  </td>
             <td> 
@@ -2635,17 +2881,53 @@ genotypes.
             </a>
         
         <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvariant-analysis%2Ftutorials%2Fsars-cov-2-variant-discovery%2Ftutorial.html&edit-text=&act=url" title="">
-            And more!
+            More Languages
         </a>
     </span>
 
  </td>
+            <td> 
 
+
+
+
+
+
+
+
+
+
+
+  
+  <li class="btn btn-default supporting_material">
+    <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Latest recordings of this tutorial in the GTN Video Library">
+        <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span> 
+    </a>
+    <ul class="dropdown-menu">
+        
+        
+
+        
+        
+        
+
+        <li>
+            <a class="dropdown-item" href="https://gallantries.github.io/video-library/videos/variant-analysis/sars-cov-2-variant-discovery/tutorial" title="View GTN Video Library for this Tutorial">
+                <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span> Tutorial (August 2021)
+            </a>
+        </li>
+        
+        
+        
+    </ul>
+   </li>
+   
+</td>
             
               <td> 
 
 
-<a class="topic-icon" href="https://zenodo.org/record/5036687">
+<a class="topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/5036687">
     <i class="far fa-copy" aria-hidden="true"></i>
 </a>
 
@@ -2657,8 +2939,6 @@ genotypes.
         <i class="fas fa-share-alt" aria-hidden="true"></i>
     </a>
 
- </td>
-              <td> 
  </td>
             
             
@@ -2699,8 +2979,16 @@ genotypes.
     <p>This material is maintained by:</p>
     
     
+<a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="https://avatars.githubusercontent.com/bebatut?s=27" alt="Avatar">Bérénice Batut</a>
 
- <a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Avatar">Bérénice Batut</a> <a href="/training-material/hall-of-fame/wm75/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/wm75" alt="Avatar">Wolfgang Maier</a> <a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Avatar">Björn Grüning</a> <a href="/training-material/hall-of-fame/nekrut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/nekrut" alt="Avatar">Anton Nekrutenko</a>
+
+<a href="/training-material/hall-of-fame/wm75/" class="contributor-badge contributor-wm75"><img src="https://avatars.githubusercontent.com/wm75?s=27" alt="Avatar">Wolfgang Maier</a>
+
+
+<a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge contributor-bgruening"><img src="https://avatars.githubusercontent.com/bgruening?s=27" alt="Avatar">Björn Grüning</a>
+
+
+<a href="/training-material/hall-of-fame/nekrut/" class="contributor-badge contributor-nekrut"><img src="https://avatars.githubusercontent.com/nekrut?s=27" alt="Avatar">Anton Nekrutenko</a>
 
 
 
@@ -2714,8 +3002,58 @@ genotypes.
     
     
     
+<a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="https://avatars.githubusercontent.com/bebatut?s=27" alt="Avatar">Bérénice Batut</a>
 
- <a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Avatar">Bérénice Batut</a> <a href="/training-material/hall-of-fame/yvanlebras/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/yvanlebras" alt="Avatar">Yvan Le Bras</a> <a href="/training-material/hall-of-fame/nekrut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/nekrut" alt="Avatar">Anton Nekrutenko</a> <a href="/training-material/hall-of-fame/nsoranzo/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/nsoranzo" alt="Avatar">Nicola Soranzo</a> <a href="/training-material/hall-of-fame/astrovsky01/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/astrovsky01" alt="Avatar">Alex Ostrovsky</a> <a href="/training-material/hall-of-fame/wm75/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/wm75" alt="Avatar">Wolfgang Maier</a> <a href="/training-material/hall-of-fame/torhou/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/torhou" alt="Avatar">Torsten Houwaart</a> <a href="/training-material/hall-of-fame/erxleben/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/erxleben" alt="Avatar">Anika Erxleben</a> <a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Avatar">Björn Grüning</a> <a href="/training-material/hall-of-fame/mvdbeek/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/mvdbeek" alt="Avatar">Marius van den Beek</a> <a href="/training-material/hall-of-fame/tnabtaf/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/tnabtaf" alt="Avatar">Dave Clements</a> <a href="/training-material/hall-of-fame/blankenberg/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/blankenberg" alt="Avatar">Daniel Blankenberg</a> <a href="/training-material/hall-of-fame/pvanheus/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/pvanheus" alt="Avatar">Peter van Heusden</a> <a href="/training-material/hall-of-fame/slugger70/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/slugger70" alt="Avatar">Simon Gladman</a> <a href="/training-material/hall-of-fame/thobalose/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/thobalose" alt="Avatar">Thoba Lose</a> <a href="/training-material/hall-of-fame/annasyme/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/annasyme" alt="Avatar">Anna Syme</a> <a href="/training-material/hall-of-fame/tseemann/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/tseemann" alt="Avatar">Torsten Seemann</a>
+
+<a href="/training-material/hall-of-fame/yvanlebras/" class="contributor-badge contributor-yvanlebras"><img src="https://avatars.githubusercontent.com/yvanlebras?s=27" alt="Avatar">Yvan Le Bras</a>
+
+
+<a href="/training-material/hall-of-fame/nekrut/" class="contributor-badge contributor-nekrut"><img src="https://avatars.githubusercontent.com/nekrut?s=27" alt="Avatar">Anton Nekrutenko</a>
+
+
+<a href="/training-material/hall-of-fame/nsoranzo/" class="contributor-badge contributor-nsoranzo"><img src="https://avatars.githubusercontent.com/nsoranzo?s=27" alt="Avatar">Nicola Soranzo</a>
+
+
+<a href="/training-material/hall-of-fame/astrovsky01/" class="contributor-badge contributor-astrovsky01"><img src="https://avatars.githubusercontent.com/astrovsky01?s=27" alt="Avatar">Alex Ostrovsky</a>
+
+
+<a href="/training-material/hall-of-fame/NickSto/" class="contributor-badge contributor-NickSto"><img src="https://avatars.githubusercontent.com/NickSto?s=27" alt="Avatar">Nick Stoler</a>
+
+
+<a href="/training-material/hall-of-fame/wm75/" class="contributor-badge contributor-wm75"><img src="https://avatars.githubusercontent.com/wm75?s=27" alt="Avatar">Wolfgang Maier</a>
+
+
+<a href="/training-material/hall-of-fame/torhou/" class="contributor-badge contributor-torhou"><img src="https://avatars.githubusercontent.com/torhou?s=27" alt="Avatar">Torsten Houwaart</a>
+
+
+<a href="/training-material/hall-of-fame/erxleben/" class="contributor-badge contributor-erxleben"><img src="https://avatars.githubusercontent.com/erxleben?s=27" alt="Avatar">Anika Erxleben</a>
+
+
+<a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge contributor-bgruening"><img src="https://avatars.githubusercontent.com/bgruening?s=27" alt="Avatar">Björn Grüning</a>
+
+
+<a href="/training-material/hall-of-fame/mvdbeek/" class="contributor-badge contributor-mvdbeek"><img src="https://avatars.githubusercontent.com/mvdbeek?s=27" alt="Avatar">Marius van den Beek</a>
+
+
+<a href="/training-material/hall-of-fame/tnabtaf/" class="contributor-badge contributor-tnabtaf"><img src="https://avatars.githubusercontent.com/tnabtaf?s=27" alt="Avatar">Dave Clements</a>
+
+
+<a href="/training-material/hall-of-fame/blankenberg/" class="contributor-badge contributor-blankenberg"><img src="https://avatars.githubusercontent.com/blankenberg?s=27" alt="Avatar">Daniel Blankenberg</a>
+
+
+<a href="/training-material/hall-of-fame/pvanheus/" class="contributor-badge contributor-pvanheus"><img src="https://avatars.githubusercontent.com/pvanheus?s=27" alt="Avatar">Peter van Heusden</a>
+
+
+<a href="/training-material/hall-of-fame/slugger70/" class="contributor-badge contributor-slugger70"><img src="https://avatars.githubusercontent.com/slugger70?s=27" alt="Avatar">Simon Gladman</a>
+
+
+<a href="/training-material/hall-of-fame/thobalose/" class="contributor-badge contributor-thobalose"><img src="https://avatars.githubusercontent.com/thobalose?s=27" alt="Avatar">Thoba Lose</a>
+
+
+<a href="/training-material/hall-of-fame/annasyme/" class="contributor-badge contributor-annasyme"><img src="https://avatars.githubusercontent.com/annasyme?s=27" alt="Avatar">Anna Syme</a>
+
+
+<a href="/training-material/hall-of-fame/tseemann/" class="contributor-badge contributor-tseemann"><img src="https://avatars.githubusercontent.com/tseemann?s=27" alt="Avatar">Torsten Seemann</a>
 
 
 
@@ -2788,7 +3126,7 @@ genotypes.
         <p>
 The content of the tutorials is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. The website and infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>.
 </p>
-        <p>This is revision <a href="https://github.com/galaxyproject/training-material/commit/627c9f4b07fd8eeed05b3b711594a5c3361e2f94">627c9f4b07fd8eeed05b3b711594a5c3361e2f94</a></p>
+        <p>This is revision <a href="https://github.com/galaxyproject/training-material/commit/e9438c9402c0e0be3e4d5d3a8d3ebaccd5785fb9">e9438c9402c0e0be3e4d5d3a8d3ebaccd5785fb9</a></p>
     </div>
 </footer>
 
