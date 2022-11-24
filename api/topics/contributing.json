@@ -68,7 +68,7 @@
           "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json"
         }
       ],
-      "last_modified_at": "2022-09-23T13:00:47+00:00",
+      "last_modified_at": "23-Sep-22",
       "url": "/topics/contributing/slides/introduction.html",
       "topic_name": "contributing",
       "tutorial_name": "introduction",
@@ -107,7 +107,7 @@
           "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json"
         }
       ],
-      "last_modified_at": "2022-10-18T14:23:35+00:00",
+      "last_modified_at": "18-Oct-22",
       "url": "/topics/contributing/tutorials/slides-with-video/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "slides-with-video",
@@ -159,7 +159,7 @@
           "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json"
         }
       ],
-      "last_modified_at": "2022-10-18T08:58:35+00:00",
+      "last_modified_at": "18-Oct-22",
       "url": "/topics/contributing/tutorials/create-new-tutorial-quiz/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "create-new-tutorial-quiz",
@@ -240,7 +240,7 @@
           "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json"
         }
       ],
-      "last_modified_at": "2022-10-18T14:23:35+00:00",
+      "last_modified_at": "18-Oct-22",
       "url": "/topics/contributing/tutorials/github-command-line-contribution/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "github-command-line-contribution",
@@ -298,7 +298,7 @@
           "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json"
         }
       ],
-      "last_modified_at": "2022-10-18T14:23:35+00:00",
+      "last_modified_at": "18-Oct-22",
       "url": "/topics/contributing/tutorials/github-interface-contribution/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "github-interface-contribution",
@@ -391,7 +391,7 @@
           "url": "https://training.galaxyproject.org/training-material/api/contributors/lldelisle.json"
         }
       ],
-      "last_modified_at": "2022-10-20T15:49:21+00:00",
+      "last_modified_at": "20-Oct-22",
       "url": "/topics/contributing/tutorials/create-new-tutorial/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "create-new-tutorial",
@@ -399,11 +399,11 @@
       "slides": false,
       "workflows": [
         {
-          "workflow": "Galaxy-Workflow-MakeAFakeInput.ga",
+          "workflow": "main_workflow.ga",
           "tests": false
         },
         {
-          "workflow": "main_workflow.ga",
+          "workflow": "Galaxy-Workflow-MakeAFakeInput.ga",
           "tests": false
         }
       ],
@@ -471,7 +471,7 @@
         "API": "Application Programming Interface",
         "JSON": "JavaScript Object Notation"
       },
-      "last_modified_at": "2022-10-21T12:03:22+00:00",
+      "last_modified_at": "21-Oct-22",
       "url": "/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "create-new-tutorial-content",
@@ -605,7 +605,7 @@
           "url": "https://training.galaxyproject.org/training-material/api/contributors/shiltemann.json"
         }
       ],
-      "last_modified_at": "2022-10-20T15:42:03+00:00",
+      "last_modified_at": "20-Oct-22",
       "url": "/topics/contributing/tutorials/create-new-tutorial-tours/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "create-new-tutorial-tours",
@@ -691,7 +691,7 @@
           "url": "https://training.galaxyproject.org/training-material/api/contributors/shiltemann.json"
         }
       ],
-      "last_modified_at": "2021-07-26T10:48:53+00:00",
+      "last_modified_at": "26-Jul-21",
       "url": "/topics/contributing/tutorials/create-new-tutorial-slides/slides.html",
       "topic_name": "contributing",
       "tutorial_name": "create-new-tutorial-slides",
@@ -767,7 +767,7 @@
           "erasmusplus"
         ]
       },
-      "last_modified_at": "2022-10-18T14:23:35+00:00",
+      "last_modified_at": "18-Oct-22",
       "url": "/topics/contributing/tutorials/design/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "design",
@@ -909,7 +909,7 @@
           "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json"
         }
       ],
-      "last_modified_at": "2022-10-20T13:47:11+00:00",
+      "last_modified_at": "20-Oct-22",
       "url": "/topics/contributing/tutorials/generating-pdf/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "generating-pdf",
@@ -958,7 +958,7 @@
           "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json"
         }
       ],
-      "last_modified_at": "2022-09-23T13:01:08+00:00",
+      "last_modified_at": "23-Sep-22",
       "url": "/topics/contributing/tutorials/schemas/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "schemas",
@@ -1006,7 +1006,7 @@
           "hexylena"
         ]
       },
-      "last_modified_at": "2022-10-18T14:25:39+00:00",
+      "last_modified_at": "18-Oct-22",
       "url": "/topics/contributing/tutorials/create-new-topic/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "create-new-topic",
@@ -1090,7 +1090,7 @@
           "erasmusplus"
         ]
       },
-      "last_modified_at": "2022-10-20T15:49:21+00:00",
+      "last_modified_at": "20-Oct-22",
       "url": "/topics/contributing/tutorials/learning-principles/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "learning-principles",
@@ -1098,9 +1098,9 @@
       "slides": false,
       "quiz": [
         {
-          "id": "teaching_or_training.yaml",
-          "path": "topics/contributing/tutorials/learning-principles/quiz/teaching_or_training.yaml",
-          "title": "Teaching or training?",
+          "id": "overloading_short_term_memory.yaml",
+          "path": "topics/contributing/tutorials/learning-principles/quiz/overloading_short_term_memory.yaml",
+          "title": "How can you avoid to overload learners working memory?",
           "contributors": [
             "bebatut"
           ]
@@ -1109,6 +1109,14 @@
           "id": "short_term_memory.yaml",
           "path": "topics/contributing/tutorials/learning-principles/quiz/short_term_memory.yaml",
           "title": "How short is your short term memory?",
+          "contributors": [
+            "bebatut"
+          ]
+        },
+        {
+          "id": "teaching_or_training.yaml",
+          "path": "topics/contributing/tutorials/learning-principles/quiz/teaching_or_training.yaml",
+          "title": "Teaching or training?",
           "contributors": [
             "bebatut"
           ]
@@ -1125,14 +1133,6 @@
           "id": "verbs.yaml",
           "path": "topics/contributing/tutorials/learning-principles/quiz/verbs.yaml",
           "title": "Identify observable and non observable actions (verbs)",
-          "contributors": [
-            "bebatut"
-          ]
-        },
-        {
-          "id": "overloading_short_term_memory.yaml",
-          "path": "topics/contributing/tutorials/learning-principles/quiz/overloading_short_term_memory.yaml",
-          "title": "How can you avoid to overload learners working memory?",
           "contributors": [
             "bebatut"
           ]
@@ -1269,7 +1269,7 @@
           "url": "https://training.galaxyproject.org/training-material/api/contributors/shiltemann.json"
         }
       ],
-      "last_modified_at": "2022-10-18T14:23:35+00:00",
+      "last_modified_at": "18-Oct-22",
       "url": "/topics/contributing/tutorials/running-jekyll/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "running-jekyll",
@@ -1326,7 +1326,7 @@
           "url": "https://training.galaxyproject.org/training-material/api/contributors/shiltemann.json"
         }
       ],
-      "last_modified_at": "2022-10-18T14:23:35+00:00",
+      "last_modified_at": "18-Oct-22",
       "url": "/topics/contributing/tutorials/gitpod/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "gitpod",
@@ -1383,7 +1383,7 @@
           "dirowa"
         ]
       },
-      "last_modified_at": "2022-10-18T10:13:05+00:00",
+      "last_modified_at": "18-Oct-22",
       "url": "/topics/contributing/tutorials/python/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "python",
@@ -1511,7 +1511,7 @@
           "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json"
         }
       ],
-      "last_modified_at": "2022-10-18T14:23:35+00:00",
+      "last_modified_at": "18-Oct-22",
       "url": "/topics/contributing/tutorials/create-new-tutorial-technical/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "create-new-tutorial-technical",
@@ -1566,7 +1566,7 @@
           "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json"
         }
       ],
-      "last_modified_at": "2022-10-18T14:23:35+00:00",
+      "last_modified_at": "18-Oct-22",
       "url": "/topics/contributing/tutorials/admin-knitting/tutorial.html",
       "topic_name": "contributing",
       "tutorial_name": "admin-knitting",
