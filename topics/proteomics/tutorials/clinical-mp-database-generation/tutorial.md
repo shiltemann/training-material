@@ -219,7 +219,6 @@ In this tutorial, as an example, we will analyze a subset of pap-smear fluid (PT
 ## Sub-step with **Protein Database Downloader**
 
 > <hands-on-title> Task description </hands-on-title>
-
 >
 > 1. {% tool [Protein Database Downloader](toolshed.g2.bx.psu.edu/repos/galaxyp/dbbuilder/dbbuilder/0.3.4) %} with the following parameters:
 >    - *"Dowload from?"*: `UniProtKB`
@@ -233,7 +232,6 @@ In this tutorial, as an example, we will analyze a subset of pap-smear fluid (PT
 ## Sub-step with **Protein Database Downloader**
 
 > <hands-on-title> Task description </hands-on-title>
-
 >
 > 1. {% tool [Protein Database Downloader](toolshed.g2.bx.psu.edu/repos/galaxyp/dbbuilder/dbbuilder/0.3.4) %} with the following parameters:
 >    - *"Dowload from?"*: `cRAP (contaminants)`
