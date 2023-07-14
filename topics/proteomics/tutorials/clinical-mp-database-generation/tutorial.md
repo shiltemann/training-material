@@ -239,8 +239,8 @@ In this tutorial, as an example, we will analyze a subset of pap-smear fluid (PT
 >    - *"Dowload from?"*: `cRAP (contaminants)`
 > 2. Rename as "Protein Database Contaminants (cRAP)"
 >
->
 {: .hands_on}
+
 ## Sub-step with **FASTA Merge Files and Filter Unique Sequences**
 
 > <hands-on-title> Task description </hands-on-title>
@@ -251,6 +251,7 @@ In this tutorial, as an example, we will analyze a subset of pap-smear fluid (PT
 >            - {% icon param-repeat %} *"Insert Input FASTA File(s)"*
 >                - {% icon param-file %} *"FASTA File"*: `Protein Database Human UniProt with Isoforms` (output of **Protein Database Downloader** {% icon tool %})
 >                - {% icon param-file %} *"FASTA File"*: `Protein Database Contaminants (cRAP)` (output of **Protein Database Downloader** {% icon tool %})
+>                  
 {: .hands_on}
 
 # Reducing Database size
