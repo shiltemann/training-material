@@ -229,6 +229,7 @@ In this tutorial, as an example, we will analyze a subset of pap-smear fluid (PT
 > 2. Rename as "Protein Database Human UniProt with Isoforms"
 >
 {: .hands_on}
+
 ## Sub-step with **Protein Database Downloader**
 
 > <hands-on-title> Task description </hands-on-title>
