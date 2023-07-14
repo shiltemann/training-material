@@ -154,7 +154,7 @@ In this tutorial, as an example, we will analyze a subset of pap-smear fluid (PT
 >    - *"uniprot output format"*: `fasta`
 > 2. Rename the output as Species.fasta
 >
-
+{: .hands_on}
 ## Sub-step with **UniProt**
 
 > <hands-on-title> Task description </hands-on-title>
@@ -201,6 +201,7 @@ In this tutorial, as an example, we will analyze a subset of pap-smear fluid (PT
 >    {: .comment}
 >
 {: .hands_on}
+
 > <question-title></question-title>
 >
 > 1. Can we select multiple files together?
@@ -225,7 +226,8 @@ In this tutorial, as an example, we will analyze a subset of pap-smear fluid (PT
 >        - In *"Taxonomy"*: `Homo sapiens (Human)`
 >	 - In  *"Proteome Set"*: `Reference Proteome Set`
 >	 - In  *"Include isoform data"*: `Yes`
->2. Rename as "Protein Database Human UniProt with Isoforms"
+> 2. Rename as "Protein Database Human UniProt with Isoforms"
+>
 {: .hands_on}
 ## Sub-step with **Protein Database Downloader**
 
@@ -234,8 +236,8 @@ In this tutorial, as an example, we will analyze a subset of pap-smear fluid (PT
 >
 > 1. {% tool [Protein Database Downloader](toolshed.g2.bx.psu.edu/repos/galaxyp/dbbuilder/dbbuilder/0.3.4) %} with the following parameters:
 >    - *"Dowload from?"*: `cRAP (contaminants)`
->2. Rename as "Protein Database Contaminants (cRAP)"
->`
+> 2. Rename as "Protein Database Contaminants (cRAP)"
+>
 >
 {: .hands_on}
 ## Sub-step with **FASTA Merge Files and Filter Unique Sequences**
@@ -249,6 +251,7 @@ In this tutorial, as an example, we will analyze a subset of pap-smear fluid (PT
 >                - {% icon param-file %} *"FASTA File"*: `Protein Database Human UniProt with Isoforms` (output of **Protein Database Downloader** {% icon tool %})
 >                - {% icon param-file %} *"FASTA File"*: `Protein Database Contaminants (cRAP)` (output of **Protein Database Downloader** {% icon tool %})
 {: .hands_on}
+
 # Reducing Database size
 
 ## Sub-step with **MetaNovo**
@@ -296,7 +299,7 @@ In this tutorial, as an example, we will analyze a subset of pap-smear fluid (PT
 >        - In *"Taxonomy"*: `Homo sapiens (Human)`
 >	 - In  *"Proteome Set"*: `Reference Proteome Set`
 >	 - In  *"Include isoform data"*: `Yes`
->2. Rename as "Protein Database Human SwissProt".
+> 2. Rename as "Protein Database Human SwissProt".
 {: .hands_on}
 
 ## Sub-step with **FASTA Merge Files and Filter Unique Sequences**
