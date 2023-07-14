@@ -12,12 +12,13 @@ objectives:
 - Generation of compact database
 time_estimation: 3H
 key_points:
-- download protein database with taxon names
+- download the protein database with taxon names
 contributors:
-- [@subinamehta
- - @dechendb
- - @PratikDJagtap
-  -@katherine-d21]
+- subinamehta
+- dechendb
+- PratikDJagtap
+- katherine-d21
+  
 follow_up_training:
 
     -
