@@ -19,9 +19,7 @@ key_points:
 - download the protein database with taxon names
 contributors:
 - subinamehta
-- dechendb
 - PratikDJagtap
-- katherine-d21
   
 follow_up_training:
 
@@ -121,19 +119,6 @@ have fun!
 >     -> `{{ page.title }}`):
 >
 >    ```
-<<<<<<< Updated upstream
->    https://zenodo.org/record/8144258/files/Genera_tabular.tabular
->    https://zenodo.org/record/8144258/files/Order_Family_tabular.tabular
->    https://zenodo.org/record/8144258/files/Species_tabular.tabular
->    https://zenodo.org/record/8144258/files/PTRC_Skubitz_Plex2_F10_9Aug19_Rage_Rep-19-06-08.mgf
->    https://zenodo.org/record/8144258/files/PTRC_Skubitz_Plex2_F11_9Aug19_Rage_Rep-19-06-08.mgf
->    https://zenodo.org/record/8144258/files/PTRC_Skubitz_Plex2_F13_9Aug19_Rage_Rep-19-06-08.mgf
->    https://zenodo.org/record/8144258/files/PTRC_Skubitz_Plex2_F14_9Aug19_Rage_Rep-19-06-08.mgf
->    https://zenodo.org/record/8144258/files/PTRC_Skubitz_Plex2_F15_9Aug19_Rage_Rep-19-06-08.mgf
->
-=======
->    
->>>>>>> Stashed changes
 >    ```
 >    ***TODO***: *Add the files by the ones on Zenodo here (if not added)*
 >
@@ -172,9 +157,7 @@ have fun!
 > 2. Run **Workflow** {% icon workflow %} using the following parameters:
 >    - *"Send results to a new history"*: `No`
 >    - {% icon param-file %} *"1: Input Dataset collection"*: `MGF dataset collection`
->    - {% icon param-file %} *"2: General_tabular"*: `Genera_tabular.tabular`
 >    - {% icon param-file %} *"3: Species_tabular"*: `Species_tabular.tabular`
->    - {% icon param-file %} *"4: Order_Family_tabular "*:`Order_Family_tabular.tabular`
 >
 >    {% snippet faqs/galaxy/workflows_run.md %}
 >
