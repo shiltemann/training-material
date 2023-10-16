@@ -18,8 +18,8 @@ key_points:
 <<<<<<< Updated upstream
 - download the protein database with taxon names
 contributors:
-- subinamehta
-- PratikDJagtap
+  - subinamehta
+  - pratikdjagtap
   
 follow_up_training:
 
