@@ -15,6 +15,11 @@ topic | features
 [metaQuantome-Taxonomy](tutorials/metaquantome-taxonomy/tutorial.md)| [:book:](tutorials/metaquantome-taxonomy/tutorial.md)
 [metaQuantome-Function](tutorials/metaquantome-function/tutorial.md)| [:book:](tutorials/metaquantome-function/tutorial.md)
 [EncyclopeDIA](tutorials/encyclopedia/tutorial.md)| [:book:](tutorials/encyclopedia/tutorial.md)
+[Clinical-Metaproteomics-Database-generation](tutorials/clinical-mp-database-generation/tutorial.md)|[:book:](tutorials/clinical-mp-database-generation/tutorial.md)
+[Clinical-Metaproteomics-Discovery](tutorials/clinical-mp-discovery/tutorial.md)|[:book:](tutorials/clinical-mp-discovery/tutorial.md)
+[Clinical-Metaproteomics-Data-Verification](tutorials/clinical-mp-data-verification/tutorial.md)|[:book:](tutorials/clinical-mp-data-verification/tutorial.md)
+[Clinical-Metaproteomics-Quantitation](tutorials/clinical-mp-quantitation/tutorial.md)|[:book:](tutorials/clinical-mp-quantitation/tutorial.md)
+[Clinical-Metaproteomics-Data-Interpretation](tutorials/clinical-mp-data-interpretation/tutorial.md)|[:book:](tutorials/clinical-mp-data-interpretation/tutorial.md)
 
 The Galaxy community offers many different ways of training. The table above lists all available training features of a specific topic to give you a fast and comprehensive overview.
 
