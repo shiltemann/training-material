@@ -402,7 +402,6 @@ A big step can have several subsections or sub steps:
 >
 {: .hands_on}
 
-
 # Conclusion
 
 The first step for the Clinical Metaproteomics study is database generation. As we didn’t have a reference database or information from 16srRNA-seq data, we generated a fasta database doing a literature survey, however, if 16D rRNA data is present, the taxon identified can be used for a customized database generation. As the size of the comprehensive database is generally  too large, we used the Metanovo tool to reduce the size of the database. This reduced database will be then used for clinical metaproteomics discovery workflow.
