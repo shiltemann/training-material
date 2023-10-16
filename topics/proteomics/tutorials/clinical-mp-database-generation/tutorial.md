@@ -27,16 +27,11 @@ follow_up_training:
         type: "internal"
         topic_name: proteomics
         tutorials:
-            - clinical-metaproteomics-discovery
-            - clinical-metaproteomics-validation
-            - clinical-metaproteomics-quantitation
-            - clinical-metaproteomics-data-interpretation
+            - clinical-mp-discovery
+            - clinical-mp-validation
+            - clinical-mp-quantitation
+            - clinical-mp-data-interpretation
 =======
-- The take-home messages
-- They will appear at the end of the tutorial
-contributors:
-- contributor1
-- contributor2
 
 ---
 >>>>>>> Stashed changes
