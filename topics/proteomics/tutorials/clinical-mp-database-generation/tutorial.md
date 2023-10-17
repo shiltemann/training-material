@@ -31,7 +31,7 @@ Metaproteomics {% cite Metaproteomics_video %}  is the large-scale characterizat
 
 
 
-![Database-Generation2](../../images/clinical-mp-database-generation-figure2.jpg "FIGURE-2")
+![Database-Generation2](../../images/clinical-mp/clinical-mp-database-generation-figure2.jpg "FIGURE-2")
 
 
 
@@ -48,24 +48,7 @@ Metaproteomics {% cite Metaproteomics_video %}  is the large-scale characterizat
 
 # Pretreatment
 =======
-Give some background about what the trainees will be doing in the section.
-Remember that many people reading your materials will likely be novices,
-so make sure to explain all the relevant concepts.
 
-## Title for a subsection
-Section and subsection titles will be displayed in the tutorial index on the left side of
-the page, so try to make them informative and concise!
-
-# Hands-on Sections
-Below are a series of hand-on boxes, one for each tool in your workflow file.
-Often you may wish to combine several boxes into one or make other adjustments such
-as breaking the tutorial into sections, we encourage you to make such changes as you
-see fit, this is just a starting point :)
-
-Anywhere you find the word "***TODO***", there is something that needs to be changed
-depending on the specifics of your tutorial.
-
-have fun!
 
 
 ## Get data
