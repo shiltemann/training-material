@@ -45,6 +45,7 @@ this article here in your tutorial like this:
 This will be rendered like this: {% cite Batut2018 %}, and links to a
 [bibliography section](#bibliography) which will automatically be created at the end of the
 tutorial.
+
 ![Data Quantitation](../../images/clinical-mp/clinical-mp-quantitation.jpg "FIGURE-1")
 
 
