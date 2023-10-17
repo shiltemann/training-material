@@ -46,7 +46,7 @@ This will be rendered like this: {% cite Batut2018 %}, and links to a
 [bibliography section](#bibliography) which will automatically be created at the end of the
 tutorial.
 
-![Discovery-Workflow](/images/clinical-mp-database-generation-figure2.jpg)
+![Discovery-Workflow](/images/clinical-mp/clinical-mp-database-generation-figure2.jpg)
 **Please follow our
 [tutorial to learn how to fill the Markdown]({{ site.baseurl }}/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html)**
 
