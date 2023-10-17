@@ -20,7 +20,14 @@ key_points:
 contributors:
 - contributor1
 - contributor2
-
+requirements:
+  -
+    type: "internal"
+    topic_name: proteomics
+    tutorials:
+      - clinical-metaproteonics
+subtopic: clinical-metaproteonics
+tags: [label-TMT11]
 ---
 
 
