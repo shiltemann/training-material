@@ -47,8 +47,7 @@ This will be rendered like this: {% cite Batut2018 %}, and links to a
 tutorial.
 
 ![Discovery-Workflow](/images/clinical-mp/clinical-mp-database-generation-figure2.jpg)
-**Please follow our
-[tutorial to learn how to fill the Markdown]({{ site.baseurl }}/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html)**
+
 
 > <agenda-title></agenda-title>
 >
