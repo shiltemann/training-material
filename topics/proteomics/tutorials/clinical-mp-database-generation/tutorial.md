@@ -115,23 +115,49 @@ Metaproteomics {% cite Metaproteomics_video %}  is the large-scale characterizat
 # Step-by-step analysis
 
 # Download Protein Sequences using taxon names
+First, we want to generate a large comprehensive protein sequence database using the UniProt XML Downloader to extract sequences for species of interest. To do so, you will need a tabular file that contains a list of species.
+
+For this tutorial, a literature survey was conducted to obtain 118 taxonomic species of organisms that are commonly associated with the female reproductive tract **(REF)**. This species list was used to generate a protein sequences FASTA database was generated using the UniProt XML Downloader tool within the Galaxy framework. In this tutorial, the Species FASTA database (3,383,217 sequences) has already been provided as an input. However, if you have your own list of species of interest as a tabular file (Your_Species_tabular.tabular), steps to generate a FASTA file from a tabular file have included:
+
 
 ## Sub-step with **UniProt**
 
 > <hands-on-title> Download Protein Sequences using UniProt XML downloader</hands-on-title>
->
 > 1. {% tool [UniProt](toolshed.g2.bx.psu.edu/repos/galaxyp/uniprotxml_downloader/uniprotxml_downloader/2.3.0) %} with the following parameters:
->    - *"Select"*: `Genera_tabular.tabular`
+>    - *"Select"*: `Your_Species_tabular.tabular`
 >        - {% icon param-file %} *"Dataset (tab separated) with Taxon ID/Name column"*: `output` (Input dataset)
 >        - *"Column with Taxon ID/name"*: `c1`
 >    - *"uniprot output format"*: `fasta`
-> 2. Rename the output as Genera.fasta
+> 2. Rename the output as Species_UniProt_FASTA.fasta
 >
 >    > <comment-title> short description </comment-title>
 >    >
 >    > This tool will help download the protein fasta sequences by inputting the taxon names.
 >    {: .comment}
 >
+
+{: .question}
+
+> <question-title></question-title>
+>
+> 1. Can we use a higher taxonomy clade than species for the UniProt XML downloader?
+=======
+***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
+
+> > <solution-title></solution-title>
+> >
+
+> > 1. Yes, the UniProt XML downloader can also be used for generating a database from Genus, Family, Order, or any other higher taxonomy clade. 
+=======
+> > 1. **TODO** Answer for question1
+
+> >
+> {: .solution}
+>
+{: .question}
+
+
+
 {: .hands_on}
 =======
 It comes first a description of the step: some background and some theory.
@@ -150,16 +176,7 @@ The idea is to keep the theory description before quite simple to focus more on 
 >
 
 {: .hands_on}
-## Sub-step with **UniProt**
 
-> <hands-on-title> Task description </hands-on-title>
->
-> 1. {% tool [UniProt](toolshed.g2.bx.psu.edu/repos/galaxyp/uniprotxml_downloader/uniprotxml_downloader/2.3.0) %} with the following parameters:
->    - *"Select"*: `Order_Family_tabular.tabular`
->        - {% icon param-file %} *"Dataset (tab separated) with Taxon ID/Name column"*: `output` (Input dataset)
->        - *"Column with Taxon ID/name"*: `c1`
->    - *"uniprot output format"*: `fasta`
-> 2. Rename the output as Order_Family.fasta
 >
 {: .hands_on}
 =======
@@ -174,34 +191,12 @@ A big step can have several subsections or sub steps:
 >
 > > <solution-title></solution-title>
 > >
-> > 1. The tools are run separately to reduce the load on the server and tool. If you have a limited number of taxon names then you can run it all together.
+> > 1. The tools are run separately to reduce the load on the server and tool. If you have a limited number of taxon names, then you can run it all together.
 > >
 > {: .solution}
 >
 {: .question}
 
-## Sub-step with **FASTA Merge Files and Filter Unique Sequences**
-
-> <hands-on-title> Task description </hands-on-title>
->
-> 1. {% tool [FASTA Merge Files and Filter Unique Sequences](toolshed.g2.bx.psu.edu/repos/galaxyp/fasta_merge_files_and_filter_unique_sequences/fasta_merge_files_and_filter_unique_sequences/1.2.0) %} with the following parameters:
->    - *"Run in batch mode?"*: `Merge individual FASTAs (output collection if the input is collection)`
->        - In *"Input FASTA File(s)"*:
->            - {% icon param-repeat %} *"Insert Input FASTA File(s)"*
->                - {% icon param-file %} *"FASTA File"*: `output` (Input dataset)
->
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
->
-{: .hands_on}
-
-<<<<<<< Updated upstream
 > <question-title></question-title>
 >
 > 1. Can we select multiple files together?
@@ -210,18 +205,16 @@ A big step can have several subsections or sub steps:
 
 > <question-title></question-title>
 >
-> 1. Question1?
+> 1. How many FASTA files can be merged at once, i.e. is there a limit on number/size of files?
 
-> 2. Question2?
 >
 > > <solution-title></solution-title>
 > >
 
 > > 1. Yes, that certainly can be done. We used one input file at a time to maintain the order of sequences in the database.
 =======
-> > 1. Answer for question1
+> > 1. **TODO** Answer for question1
 
-> > 2. Answer for question2
 > >
 > {: .solution}
 >
@@ -233,25 +226,47 @@ A big step can have several subsections or sub steps:
 > <hands-on-title> Task description </hands-on-title>
 >
 > 1. {% tool [Protein Database Downloader](toolshed.g2.bx.psu.edu/repos/galaxyp/dbbuilder/dbbuilder/0.3.4) %} with the following parameters:
->    - *"Dowload from?"*: `UniProtKB`
->        - In *"Taxonomy"*: `Homo sapiens (Human)`
->	 - In  *"Proteome Set"*: `Reference Proteome Set`
->	 - In  *"Include isoform data"*: `Yes`
-> 2. Rename as "Protein Database Human UniProt with Isoforms"
+>    - *"Download from?"*: `cRAP (contaminants)`
+> 2. Rename as "Protein Database Contaminants (cRAP)"
 >
 {: .hands_on}
 
 ## Sub-step with **Protein Database Downloader**
 
 > <hands-on-title> Task description </hands-on-title>
->
 > 1. {% tool [Protein Database Downloader](toolshed.g2.bx.psu.edu/repos/galaxyp/dbbuilder/dbbuilder/0.3.4) %} with the following parameters:
->    - *"Dowload from?"*: `cRAP (contaminants)`
-> 2. Rename as "Protein Database Contaminants (cRAP)"
->
+>    - *"Download from?"*: `UniProtKB(reviewed only)`
+>        - In *"Taxonomy"*: `Homo sapiens (Human)`
+>        - In *"reviewed"*: `UniProtKB/Swiss-Prot (reviewed only)`
+>	 - In  *"Proteome Set"*: `Reference Proteome Set`
+>	 - In  *"Include isoform data"*: `False`
+> 2. Rename as "Protein Database Human SwissProt".
 {: .hands_on}
 
+> <question-title></question-title>
+>
+
+=======
+***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
+
+> <question-title></question-title>
+>
+> 1. How often is the Protein Database Downloader updated?
+
+>
+> > <solution-title></solution-title>
+> >
+
+> > 1. **TODO** Answer for question1
+=======
+> >
+> {: .solution}
+>
+{: .question}
+
+
 ## Sub-step with **FASTA Merge Files and Filter Unique Sequences**
+Once generated, the Species UniProt database (~3.38 million sequences) will be merged with Human SwissProt database (reviewed only; ~20.4K sequences) and contaminant (cRAP) sequences database (116 sequences) and filtered to generate the large comprehensive database (~2.59 million sequences). The large comprehensive database will be used to generate a compact database using MetaNovo, which is much more manageable.
 
 > <hands-on-title> Task description </hands-on-title>
 >
@@ -259,8 +274,10 @@ A big step can have several subsections or sub steps:
 >    - *"Run in batch mode?"*: `Merge individual FASTAs (output collection if input is collection)`
 >        - In *"Input FASTA File(s)"*:
 >            - {% icon param-repeat %} *"Insert Input FASTA File(s)"*
->                - {% icon param-file %} *"FASTA File"*: `Protein Database Human UniProt with Isoforms` (output of **Protein Database Downloader** {% icon tool %})
+>                - {% icon param-file %} *"FASTA File"*: `Species_UniProt_FASTA ` (output of **UniProt XML downloader** {% icon tool %})
+>                - {% icon param-file %} *"FASTA File"*: `Protein Database Human SwissProt` (output of **Protein Database Downloader** {% icon tool %})
 >                - {% icon param-file %} *"FASTA File"*: `Protein Database Contaminants (cRAP)` (output of **Protein Database Downloader** {% icon tool %})
+> 2. Rename out as "Human UniProt Microbial Proteins cRAP for MetaNovo".
 >                  
 {: .hands_on}
 
@@ -269,6 +286,7 @@ A big step can have several subsections or sub steps:
 
 
 ## Sub-step with **MetaNovo**
+Next, the large comprehensive database of ~2.59 million sequences can be reduced using the MetaNovo tool **(tool info)** to generate a more manageable database that contains identified proteins. The compact MetaNovo-generated database (~1.9K sequences) will be merged with Human SwissProt (reviewed only) and contaminants (cRAP) databases to generate the reduced database (~21.2k protein sequences) that will be used for peptide identification **(cite Discovery module tutorial)**.
 
 > <hands-on-title> Metanovo tool generates a compact database from your comprehensive database. </hands-on-title>
 >
@@ -284,7 +302,7 @@ A big step can have several subsections or sub steps:
 >        - *"Maximal charge to search for"*: `5`
 >    - In *"Import Filters"*:
 >        - *"The maximal peptide length to consider when importing identification files"*: `50`
->
+>> 2. Rename as "MetaNovo Compact Database".
 >    ***TODO***: *Check parameter descriptions*
 >
 >    ***TODO***: *Consider adding a comment or tip box*
@@ -303,8 +321,9 @@ A big step can have several subsections or sub steps:
 > 1. Why are we reducing the size of the database?
 > 2. Why is this running TMT10 plex modification when the data is 11-plex?
 =======
-> 1. Question1?
-> 2. Question2?
+> 1. Regarding MetaNovo Spectrum Matching parameters, what are the most “important” parameters? Meaning, if a user wants to reduce or increase the sensitivity/number of output sequences, what should they change?
+
+> 2. **TODO** Question2?
 
 >
 > > <solution-title></solution-title>
@@ -316,16 +335,7 @@ A big step can have several subsections or sub steps:
 >
 {: .question}
 
-## Sub-step with **Protein Database Downloader**
 
-> <hands-on-title> Task description </hands-on-title>
-> 1. {% tool [Protein Database Downloader](toolshed.g2.bx.psu.edu/repos/galaxyp/dbbuilder/dbbuilder/0.3.4) %} with the following parameters:
->    - *"Dowload from?"*: `UniProtKB(reviewed only)`
->        - In *"Taxonomy"*: `Homo sapiens (Human)`
->	 - In  *"Proteome Set"*: `Reference Proteome Set`
->	 - In  *"Include isoform data"*: `Yes`
-> 2. Rename as "Protein Database Human SwissProt".
-{: .hands_on}
 
 =======
 
@@ -337,7 +347,9 @@ A big step can have several subsections or sub steps:
 >    - *"Run in batch mode?"*: `Merge individual FASTAs (output collection if input is collection)`
 >        - In *"Input FASTA File(s)"*:
 >            - {% icon param-repeat %} *"Insert Input FASTA File(s)"*
->                - {% icon param-file %} *"FASTA File"*: `output` (Input dataset)
+>                - {% icon param-file %} *"FASTA File"*: `MetaNovo Compact Database` (output of **MetaNovo** {% icon tool %})
+>                - {% icon param-file %} *"FASTA File"*: `Protein Database Human SwissProt` (output of **Protein Database Downloader** {% icon tool %})
+>                - {% icon param-file %} *"FASTA File"*: `Protein Database Contaminants (cRAP)` (output of **Protein Database Downloader** {% icon tool %})
 >
 >    ***TODO***: *Check parameter descriptions*
 >
@@ -352,4 +364,4 @@ A big step can have several subsections or sub steps:
 
 # Conclusion
 
-The first step for the Clinical Metaproteomics study is database generation. As we didn’t have a reference database or information from 16srRNA-seq data, we generated a fasta database doing a literature survey, however, if 16D rRNA data is present, the taxon identified can be used for a customized database generation. As the size of the comprehensive database is generally  too large, we used the Metanovo tool to reduce the size of the database. This reduced database will be then used for clinical metaproteomics discovery workflow.
+The first step for the Clinical Metaproteomics study is database generation. As we didn’t have a reference database or information from 16srRNA-seq data, we generated a fasta database doing a literature survey, however, if 16S rRNA data is present, the taxon identified can be used for a customized database generation. As the size of the comprehensive database is generally  too large, we used the Metanovo tool to reduce the size of the database. This reduced database will be then used for clinical metaproteomics discovery workflow.
