@@ -193,7 +193,7 @@ For this tutorial, a literature survey was conducted to obtain 118 taxonomic spe
 
 ## Sub-step with **Protein Database Downloader**
 
-> <hands-on-title> Download Human Uniprot reviewed database </hands-on-title>
+> <hands-on-title> Download Human SwissProt (reviewed) database </hands-on-title>
 > 1. {% tool [Protein Database Downloader](toolshed.g2.bx.psu.edu/repos/galaxyp/dbbuilder/dbbuilder/0.3.4) %} with the following parameters:
 >    - *"Download from?"*: `UniProtKB(reviewed only)`
 >        - In *"Taxonomy"*: `Homo sapiens (Human)`
