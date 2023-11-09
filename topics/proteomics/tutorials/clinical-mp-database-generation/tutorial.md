@@ -299,7 +299,7 @@ Next, the large comprehensive database of ~2.59 million sequences can be reduced
 
 ## Sub-step with **FASTA Merge Files and Filter Unique Sequences**
 
-> <hands-on-title> Merging databases to obtain reduced MetaNovo databases. </hands-on-title>
+> <hands-on-title> Merging databases to obtain reduced MetaNovo database for peptide discovery. </hands-on-title>
 >
 > 1. {% tool [FASTA Merge Files and Filter Unique Sequences](toolshed.g2.bx.psu.edu/repos/galaxyp/fasta_merge_files_and_filter_unique_sequences/fasta_merge_files_and_filter_unique_sequences/1.2.0) %} with the following parameters:
 >    - *"Run in batch mode?"*: `Merge individual FASTAs (output collection if input is collection)`
