@@ -14,15 +14,16 @@ time_estimation: 3H
 key_points:
 - create a customized proteomics database from 16SrRNA results.
 contributors:
-- contributor1
-- contributor2
+  - subinamehta
+  - pratikdjagtap
+  - timothygriffin
 requirements:
   -
     type: "internal"
     topic_name: proteomics
     tutorials:
       - clinical-metaproteomics
-subtopic: clinical-metaproteomics
+subtopic: multi-omics
 tags: [label-TMT11]
 ---
 
@@ -51,9 +52,6 @@ The first workflow for the clinical metaproteomics data analysis is the Database
 # Data Upload
 
 # Pretreatment
-=======
-
-
 
 ## Get data
 
@@ -237,8 +235,6 @@ Once generated, the Species UniProt database (~3.38 million sequences) will be m
 {: .hands_on}
 
 # Reducing Database size
-=======
-
 
 ## Sub-step with **MetaNovo**
 Next, the large comprehensive database of ~2.59 million sequences can be reduced using the MetaNovo tool **(tool info)** to generate a more manageable database that contains identified proteins. The compact MetaNovo-generated database (~1.9K sequences) will be merged with Human SwissProt (reviewed only) and contaminants (cRAP) databases to generate the reduced database (~21.2k protein sequences) that will be used for peptide identification **(cite Discovery module tutorial)**.
@@ -300,8 +296,6 @@ Next, the large comprehensive database of ~2.59 million sequences can be reduced
 > {: .solution}
 >
 {: .question}
-
-=======
 
 ## Sub-step with **FASTA Merge Files and Filter Unique Sequences**
 
