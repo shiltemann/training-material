@@ -25,33 +25,16 @@ requirements:
     type: "internal"
     topic_name: proteomics
     tutorials:
-      - clinical-metaproteonics
-subtopic: clinical-metaproteonics
+      - clinical-metaproteomics
+subtopic: multi-omics
 tags: [label-TMT11]
 ---
 
 
 # Introduction
+The next step of the clinical metaproteomics workflow is the quantification workflow. Running a quantification workflow in proteomics is essential for several critical purposes. It allows researchers to measure and compare the abundance of proteins or peptides in biological samples, offering valuable insights into biomarker discovery, comparative analysis, and differential expression studies. Quantitative proteomics helps reveal the functional roles of proteins, the stoichiometry of protein complexes, and the effects of drugs on protein expression in pharmacological studies. Additionally, it serves as a quality control measure, validating initial protein identifications, and providing data normalization for increased accuracy. Quantitative data are indispensable for hypothesis testing, systems biology, and their clinical relevance in areas such as disease diagnosis, prognosis, and therapeutic decision-making. In summary, the quantitation workflow in proteomics is a cornerstone for deciphering the complexities of protein expression and regulation, facilitating a wide array of biological and clinical applications. 
 
-<!-- This is a comment. -->
-
-General introduction about the topic and then an introduction of the
-tutorial (the questions and the objectives). It is nice also to have a
-scheme to sum up the pipeline used during the tutorial. The idea is to
-give to trainees insight into the content of the tutorial and the (theoretical
-and technical) key concepts they will learn.
-
-You may want to cite some publications; this can be done by adding citations to the
-bibliography file (`tutorial.bib` file next to your `tutorial.md` file). These citations
-must be in bibtex format. If you have the DOI for the paper you wish to cite, you can
-get the corresponding bibtex entry using [doi2bib.org](https://doi2bib.org).
-
-With the example you will find in the `tutorial.bib` file, you can add a citation to
-this article here in your tutorial like this:
-{% raw %} `{% cite Batut2018 %}`{% endraw %}.
-This will be rendered like this: {% cite Batut2018 %}, and links to a
-[bibliography section](#bibliography) which will automatically be created at the end of the
-tutorial.
+In this current workflow, we perform Quantification using the MaxQuant tool and the output will be interpreted in our next module.
 
 ![Data Quantitation](../../images/clinical-mp/clinical-mp-quantitation.jpg "FIGURE-1")
 
@@ -66,26 +49,6 @@ tutorial.
 >
 {: .agenda}
 
-# Title for your first section
-
-Give some background about what the trainees will be doing in the section.
-Remember that many people reading your materials will likely be novices,
-so make sure to explain all the relevant concepts.
-
-## Title for a subsection
-Section and subsection titles will be displayed in the tutorial index on the left side of
-the page, so try to make them informative and concise!
-
-# Hands-on Sections
-Below are a series of hand-on boxes, one for each tool in your workflow file.
-Often you may wish to combine several boxes into one or make other adjustments such
-as breaking the tutorial into sections, we encourage you to make such changes as you
-see fit, this is just a starting point :)
-
-Anywhere you find the word "***TODO***", there is something that needs to be changed
-depending on the specifics of your tutorial.
-
-have fun!
 
 ## Get data
 
@@ -118,30 +81,10 @@ have fun!
 >
 {: .hands_on}
 
-# Title of the section usually corresponding to a big step in the analysis
-
-It comes first a description of the step: some background and some theory.
-Some image can be added there to support the theory explanation:
-
-![Alternative text](../../images/image_name "Legend of the image")
-
-The idea is to keep the theory description before quite simple to focus more on the practical part.
-
-***TODO***: *Consider adding a detail box to expand the theory*
-
-> <details-title> More details about the theory </details-title>
->
-> But to describe more details, it is possible to use the detail boxes which are expandable
->
-{: .details}
-
-A big step can have several subsections or sub steps:
 
 
 
-{: .question}
-
-## Sub-step with **MaxQuant**
+# **MaxQuant**
 
 In the Discovery Module (**cite Discovery module**), we used MaxQuant (**cite tool**) to identify peptides for verification. Now, we will again use MaxQuant to further quantify the PepQuery-verified peptides, both microbial and human.
 
@@ -174,14 +117,6 @@ The outputs we are most interested in consist of the MaxQuant Evidence file, Max
 >    - In *"Output Options"*:
 >        - *"Select the desired outputs."*: ``
 >
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
 >
 {: .hands_on}
 
@@ -190,12 +125,21 @@ The outputs we are most interested in consist of the MaxQuant Evidence file, Max
 > <question-title></question-title>
 >
 > 1. Why can we switch back to using RAW files for MaxQuant, instead of using MGF files?
-> 2. Previously, we used MaxQuant in the Discovery workflow. Why are we using MaxQuant again, instead of Search GUI/PeptideShaker?
 >
 > > <solution-title></solution-title>
 > >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
+> > 1. MaxQuant prefers RAW format compared to MGF as it has more information compared to MGF. 
+> >
+> {: .solution}
+>
+{: .question}
+> <question-title></question-title>
+>
+> 1. Previously, we used MaxQuant in the Discovery workflow. Why are we using MaxQuant again, instead of Search GUI/PeptideShaker?
+>
+> > <solution-title></solution-title>
+> >
+> > 1. We are using MaxQuant for quantification purposes only. SearchGUI Peptide Shaker doesn't have the capability to perform quantification of peptides or proteins. 
 > >
 > {: .solution}
 >
@@ -210,32 +154,9 @@ The outputs we are most interested in consist of the MaxQuant Evidence file, Max
 >    - *"that"*: `NOT Matching`
 >    - *"the pattern"*: `(_HUMAN)|(_REVERSED)|(CON)|(con)`
 >
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
 >
 {: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
 
 ## Sub-step with **Select**
 
@@ -246,32 +167,8 @@ The outputs we are most interested in consist of the MaxQuant Evidence file, Max
 >    - *"that"*: `NOT Matching`
 >    - *"the pattern"*: `(_HUMAN)|(_REVERSED)|(CON)|(con)`
 >
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
->
 {: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
 
 ## Sub-step with **Cut**
 
@@ -281,32 +178,9 @@ The outputs we are most interested in consist of the MaxQuant Evidence file, Max
 >    - *"Cut columns"*: `c1`
 >    - {% icon param-file %} *"From"*: `out_file1` (output of **Select** {% icon tool %})
 >
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
 >
 {: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
 
 ## Sub-step with **Cut**
 
@@ -316,32 +190,8 @@ The outputs we are most interested in consist of the MaxQuant Evidence file, Max
 >    - *"Cut columns"*: `c1`
 >    - {% icon param-file %} *"From"*: `out_file1` (output of **Select** {% icon tool %})
 >
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
 >
 {: .hands_on}
-
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
 
 ## Sub-step with **Group**
 
@@ -351,32 +201,9 @@ The outputs we are most interested in consist of the MaxQuant Evidence file, Max
 >    - {% icon param-file %} *"Select data"*: `out_file1` (output of **Cut** {% icon tool %})
 >    - *"Group by column"*: `c1`
 >
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
 >
 {: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
 
 ## Sub-step with **Group**
 
@@ -386,42 +213,10 @@ The outputs we are most interested in consist of the MaxQuant Evidence file, Max
 >    - {% icon param-file %} *"Select data"*: `out_file1` (output of **Cut** {% icon tool %})
 >    - *"Group by column"*: `c1`
 >
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
 >
 {: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
-
-
-## Re-arrange
-
-To create the template, each step of the workflow had its own subsection.
-
-***TODO***: *Re-arrange the generated subsections into sections or other subsections.
-Consider merging some hands-on boxes to have a meaningful flow of the analyses*
 
 # Conclusion
 
-Sum up the tutorial and the key takeaways here. We encourage adding an overview image of the
-pipeline used.
+In summary, the implementation of a quantitation workflow using MaxQuant represents a significant advancement in quantitative proteomic research. This approach enables precise measurement of protein and peptide abundances, enhancing our ability to unravel the complexities of biological systems. By offering detailed insights into quantitative changes across different experimental conditions, this workflow is instrumental in biomarker discovery, comparative analysis, and understanding differential protein expression. Its capacity to generate accurate data supports a wide spectrum of applications, including disease research, drug development, and systems biology investigations. Furthermore, the MaxQuant-based quantitation workflow ensures data quality, enabling reliable and reproducible results. It serves as a vital step for quality control, allowing researchers to confidently draw meaningful conclusions from proteomic experiments.
