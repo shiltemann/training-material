@@ -40,6 +40,8 @@ The PepQuery tool is used to validate the identified microbial peptides from Sea
 Interestingly, the PepQuery tool does not rely on searching peptides against a reference protein sequence database as “traditional” shotgun proteomics does, which enables it to identify novel, disease-specific sequences with sensitivity and specificity in its protein validation.
 
 ![Data Verification](../../images/clinical-mp/clinical-mp-verification.jpg "FIGURE-1")
+
+Then we extract microbial protein sequences that are assigned to the PepQuery verified peptides. To this, we again add the Human UniProt Reference proteome (with Isoforms) and cRAP databases for creating a database for quantitation purposes.
 ![Data Verification](../../images/clinical-mp/clinical-mp-verification-figure2.jpg "FIGURE-2")
 
 
@@ -51,27 +53,6 @@ Interestingly, the PepQuery tool does not rely on searching peptides against a r
 > {:toc}
 >
 {: .agenda}
-
-# Title for your first section
-
-Give some background about what the trainees will be doing in the section.
-Remember that many people reading your materials will likely be novices,
-so make sure to explain all the relevant concepts.
-
-## Title for a subsection
-Section and subsection titles will be displayed in the tutorial index on the left side of
-the page, so try to make them informative and concise!
-
-# Hands-on Sections
-Below are a series of hand-on boxes, one for each tool in your workflow file.
-Often you may wish to combine several boxes into one or make other adjustments such
-as breaking the tutorial into sections, we encourage you to make such changes as you
-see fit, this is just a starting point :)
-
-Anywhere you find the word "***TODO***", there is something that needs to be changed
-depending on the specifics of your tutorial.
-
-have fun!
 
 ## Get data
 
@@ -85,9 +66,6 @@ have fun!
 >    ```
 >    
 >    ```
->    ***TODO***: *Add the files by the ones on Zenodo here (if not added)*
->
->    ***TODO***: *Remove the useless files (if added)*
 >
 >    {% snippet faqs/galaxy/datasets_import_via_link.md %}
 >
@@ -104,26 +82,6 @@ have fun!
 >
 {: .hands_on}
 
-# Title of the section usually corresponding to a big step in the analysis
-
-It comes first a description of the step: some background and some theory.
-Some image can be added there to support the theory explanation:
-
-![Alternative text](../../images/image_name "Legend of the image")
-
-The idea is to keep the theory description before quite simple to focus more on the practical part.
-
-***TODO***: *Consider adding a detail box to expand the theory*
-
-> <details-title> More details about the theory </details-title>
->
-> But to describe more details, it is possible to use the detail boxes which are expandable
->
-{: .details}
-
-A big step can have several subsections or sub steps:
-
-
 > # Extraction of Microbial Peptides
 Now that we have identified microbial peptides from SearchGUI/PeptideShaker and MaxQuant, we need to extract the microbial peptide sequences and group them to obtain a list of distinct microbial peptides. This list of distinct peptides will be used as input for PepQuery2 to verify confident microbial peptides.
 
@@ -139,32 +97,9 @@ First, we will use the Cut tool (**cite tool info?**) to select out the peptide 
 >    - *"Cut columns"*: `c6,c2`
 >    - {% icon param-file %} *"From"*: `output` (Input dataset)
 >
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
 >
 {: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
 
 ## Sub-step with **Cut**
 
@@ -174,32 +109,9 @@ First, we will use the Cut tool (**cite tool info?**) to select out the peptide 
 >    - *"Cut columns"*: `c1,c35`
 >    - {% icon param-file %} *"From"*: `output` (Input dataset)
 >
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
 >
 {: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
 
 Then, we will remove the header line from each of the Cut outputs in order to concatenate (link) them together more easily, using the Concatenate tool (**cite tool?**).
 
@@ -210,32 +122,10 @@ Then, we will remove the header line from each of the Cut outputs in order to co
 > 1. {% tool [Remove beginning](Remove beginning1) %} with the following parameters:
 >    - {% icon param-file %} *"from"*: `out_file1` (output of **Cut** {% icon tool %})
 >
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
 >
 {: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
 
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
 
 ## Sub-step with **Remove beginning**
 
@@ -244,32 +134,9 @@ Then, we will remove the header line from each of the Cut outputs in order to co
 > 1. {% tool [Remove beginning](Remove beginning1) %} with the following parameters:
 >    - {% icon param-file %} *"from"*: `out_file1` (output of **Cut** {% icon tool %})
 >
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
 >
 {: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
 
 ## Sub-step with **Concatenate datasets**
 
@@ -280,32 +147,9 @@ We will now concatenate the peptide and protein datasets from SearchGUI/PeptideS
 > 1. {% tool [Concatenate datasets](toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cat/0.1.1) %} with the following parameters:
 >    - {% icon param-files %} *"Datasets to concatenate"*: `out_file1` (output of **Remove beginning** {% icon tool %}), `out_file1` (output of **Remove beginning** {% icon tool %})
 >
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
 >
 {: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
 
 ## Sub-step with **FASTA Merge Files and Filter Unique Sequences**
 
@@ -320,32 +164,9 @@ We generate and merge Human UniProt (with Isoforms) and contaminants (cRAP) to m
 >                - {% icon param-file %} *"FASTA File"*: `Human UniProt+Isoforms FASTA` (output of **Protein Database Downloader** {% icon tool %})
 >                - - {% icon param-file %} *"FASTA File"*: `cRAP database` (output of **Protein Database Downloader** {% icon tool %})
 >
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
 >
 {: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
 
 
 ## Peptide verification using PepQuery
@@ -386,36 +207,13 @@ Interestingly, the PepQuery tool does not rely on searching peptides against a r
 >            - *"Minimum Charge"*: `2`
 >            - *"Maximum Charge"*: `6`
 >
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
 >
 {: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
 
 ## Sub-step with **Collapse Collection**
 
-Remember that PepQuery2 generates a PSM Rank file for each input MGF file, so we will have four PSM Rank files. To make the analysis more efficient, we will collaspe these four PSM Rank files into one dataset.
+Remember that PepQuery2 generates a PSM Rank file for each input MGF file, so we will have four PSM Rank files. To make the analysis more efficient, we will collapse these four PSM Rank files into one dataset.
 
 
 > <hands-on-title> Task description </hands-on-title>
@@ -424,32 +222,8 @@ Remember that PepQuery2 generates a PSM Rank file for each input MGF file, so we
 >    - {% icon param-file %} *"Collection of files to collapse into single dataset"*: `psm_rank_txt` (output of **PepQuery2** {% icon tool %})
 >    - *"Keep one header line"*: `Yes`
 >
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
 >
 {: .hands_on}
-
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
 
 
 
@@ -464,32 +238,9 @@ Now, we want to filter for confident peptides from PepQuery2.
 >    - *"With following condition"*: `c20=='Yes'`
 >    - *"Number of header lines to skip"*: `1`
 >
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
 >
 {: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
 
 ## Sub-step with **Remove beginning**
 
@@ -498,32 +249,9 @@ Now, we want to filter for confident peptides from PepQuery2.
 > 1. {% tool [Remove beginning](Remove beginning1) %} with the following parameters:
 >    - {% icon param-file %} *"from"*: `out_file1` (output of **Filter** {% icon tool %})
 >
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
 >
 {: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
 
 ## Sub-step with **Cut**
 
@@ -533,38 +261,13 @@ Now, we want to filter for confident peptides from PepQuery2.
 >    - *"Cut columns"*: `c1`
 >    - {% icon param-file %} *"From"*: `out_file1` (output of **Remove beginning** {% icon tool %})
 >
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
 >
 {: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
 
 ## Sub-step with **Query Tabular**
 
 We will use the Query Tabular tool (**cite tool***) to search the PepQuery-verified peptides against the concatenated dataset that contains peptides and proteins from SearchGUI/Peptide and MaxQuant.
-
-
 
 > <hands-on-title> Task description </hands-on-title>
 >
@@ -585,32 +288,8 @@ FROM pep
 INNER JOIN  prot on pep.mpep=prot.pep `
 >    - *"include query result column headers"*: `Yes`
 >
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
 >
 {: .hands_on}
-
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
 
 ## Sub-step with **Remove beginning**
 
@@ -619,32 +298,8 @@ INNER JOIN  prot on pep.mpep=prot.pep `
 > 1. {% tool [Remove beginning](Remove beginning1) %} with the following parameters:
 >    - {% icon param-file %} *"from"*: `output` (output of **Query Tabular** {% icon tool %})
 >
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
 >
 {: .hands_on}
-
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
 
 ## Sub-step with **Group**
 
@@ -660,32 +315,9 @@ Using the Group tool, we will be able to select out distinct (unique) peptides a
 >            - *"Type"*: `Concatenate Distinct`
 >            - *"On column"*: `c2`
 >
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
 >
 {: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
 
 ## Sub-step with **Query Tabular**
 
@@ -734,17 +366,26 @@ from t1`
 >
 {: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
 
 > <question-title></question-title>
 >
 > 1. What is the accession number of a protein?
-> 2. Can there be multiple accession numbers for one peptide or protein?
 >
 > > <solution-title></solution-title>
 > >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
+> > 1. An accession number of a protein, also referred to as a protein accession number, is a unique identifier assigned to a specific protein sequence in a protein sequence database. These accession numbers are used to reference and catalog proteins in a standardized and systematic manner
+> >
+> {: .solution}
+>
+{: .question}
+
+> <question-title></question-title>
+>
+> 1. Can there be multiple accession numbers for one peptide or protein?
+>
+> > <solution-title></solution-title>
+> >
+> > 1. Yes, it is possible for a single peptide or protein to have multiple accession numbers, particularly when dealing with different protein sequence databases, databases for specific species, or different versions of the same database. That's the reason in our workflow we merge both accession and sequences.
 > >
 > {: .solution}
 >
@@ -753,9 +394,6 @@ from t1`
 ## Sub-step with **UniProt**
 
 Using the UniProt IDs from Query Tabular, we will be able to generate a FASTA database for our PepQuery-verified peptides.
-
-
-
 
 > <hands-on-title> Task description </hands-on-title>
 >
@@ -766,32 +404,9 @@ Using the UniProt IDs from Query Tabular, we will be able to generate a FASTA da
 >        - *"Field"*: `Accession`
 >    - *"uniprot output format"*: `fasta`
 >
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
 >
 {: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
 
 ## Sub-step with **FASTA Merge Files and Filter Unique Sequences**
 
@@ -806,39 +421,10 @@ Lastly, we will merge the Human UniProt (with isoforms), contaminants (cRAP) and
 >            - {% icon param-repeat %} *"Insert Input FASTA File(s)"*
 >                - {% icon param-file %} *"FASTA File"*: `proteome` (output of **UniProt** {% icon tool %})
 >
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
 >
 {: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Question1?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-## Re-arrange
-
-To create the template, each step of the workflow had its own subsection.
-
-***TODO***: *Re-arrange the generated subsections into sections or other subsections.
-Consider merging some hands-on boxes to have a meaningful flow of the analyses*
 
 # Conclusion
 
-Sum up the tutorial and the key takeaways here. We encourage adding an overview image of the
-pipeline used.
+A peptide verification workflow is a critical step in proteomic research that enhances data reliability, quantitative accuracy, and biological understanding by confirming the presence and validity of selected peptides. It is a pivotal quality control process that ensures the trustworthiness of proteomic findings and supports downstream investigations. By completing this tutorial, you have not only verified the microbial peptides but also created a database consisting of protein sequences from the PepQuery-verified peptides. This database will be now used for quantitation purposes.
