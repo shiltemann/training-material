@@ -221,7 +221,7 @@ For this tutorial, a literature survey was conducted to obtain 118 taxonomic spe
 ## Sub-step with **FASTA Merge Files and Filter Unique Sequences**
 Once generated, the Species UniProt database (~3.38 million sequences) will be merged with the Human SwissProt database (reviewed only; ~20.4K sequences) and contaminant (cRAP) sequences database (116 sequences) and filtered to generate the large comprehensive database (~2.59 million sequences). The large comprehensive database will be used to generate a compact database using MetaNovo, which is much more manageable.
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Merging databases to obtain large comprehensive database for MetaNovo. </hands-on-title>
 >
 > 1. {% tool [FASTA Merge Files and Filter Unique Sequences](toolshed.g2.bx.psu.edu/repos/galaxyp/fasta_merge_files_and_filter_unique_sequences/fasta_merge_files_and_filter_unique_sequences/1.2.0) %} with the following parameters:
 >    - *"Run in batch mode?"*: `Merge individual FASTAs (output collection if input is collection)`
@@ -299,7 +299,7 @@ Next, the large comprehensive database of ~2.59 million sequences can be reduced
 
 ## Sub-step with **FASTA Merge Files and Filter Unique Sequences**
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Merging databases to obtain reduced MetaNovo databases. </hands-on-title>
 >
 > 1. {% tool [FASTA Merge Files and Filter Unique Sequences](toolshed.g2.bx.psu.edu/repos/galaxyp/fasta_merge_files_and_filter_unique_sequences/fasta_merge_files_and_filter_unique_sequences/1.2.0) %} with the following parameters:
 >    - *"Run in batch mode?"*: `Merge individual FASTAs (output collection if input is collection)`
