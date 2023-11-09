@@ -176,6 +176,11 @@ The final workflow in the array of clinical metaproteomics tutorials is the data
 >
 {: .hands_on}
 
+The MSstats output typically includes essential information such as estimated fold changes, p-values, and other statistical measures that help identify differentially expressed proteins across experimental conditions or sample groups. It provides a clear picture of the variations in protein expression levels, aiding in the prioritization of biologically relevant targets. MSstats output also often includes visualizations and quality control metrics, making it a valuable resource for researchers in their quest to extract meaningful insights from complex proteomic datasets and understand the underlying biology of their experiments.
+Example of our data interpretation:
+![Database-Interpretation](../../images/clinical-mp/clinical-mp-data-interpretation-figure2.jpg "FIGURE-2")
+
+
 # Conclusion
 With the completion of this tutorial, you have successfully completed the clinical metaproteomics tutorials.
 In conclusion, clinical metaproteomics tutorials represent an essential gateway to harnessing the power of advanced proteomic techniques in the realm of clinical research and applications. These bioinformatics tutorials serve as valuable guides for understanding the intricacies of metaproteomic workflows, from  data analysis to interpretation. By providing comprehensive knowledge and practical insights, they equip researchers and clinicians with the tools necessary to explore the rich diversity of the microbiome and its impact on health and disease or environment. As metaproteomic techniques continue to evolve and integrate with clinical practice, we hope these tutorials will be instrumental in shaping the clinical research.
