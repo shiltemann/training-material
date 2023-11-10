@@ -30,7 +30,9 @@ tags: [label-TMT11]
 
 # Introduction
 
-Metaproteomics {% cite Metaproteomics_video %}  is the large-scale characterization of the entire complement of proteins expressed by microbiota. However, metaproteomics analysis of clinical samples {% cite Metaproteomics_community_effort %} {% cite Jagtap 2015 %} is challenged by the presence of abundant human (host) proteins which hampers the confident detection of lower abundant microbial proteins. To address this, we used tandem mass spectrometry (MS/MS) and bioinformatics tools on the Galaxy platform to develop a metaproteomics workflow to characterize the metaproteomes of clinical samples. This clinical metaproteomics workflow holds potential for general clinical applications such as potential secondary infections during COVID-19 infection, microbiome changes during cystic fibrosis as well as broad research questions regarding host-microbe interactions. 
+[Metaproteomics](https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/metaproteomics/tutorial.html) is the large-scale characterization of the entire complement of proteins expressed by microbiota. However, metaproteomics analysis of clinical samples is challenged by the presence of abundant human (host) proteins which hampers the confident detection of lower abundant microbial proteins ([Batut et al., 2018](https://doi.org/10.1016/j.cels.2018.05.012); [Jagtap et al., 2015](https://doi.org/10.1002/pmic.201500074)).
+
+To address this, we used tandem mass spectrometry (MS/MS) and bioinformatics tools on the Galaxy platform to develop a metaproteomics workflow to characterize the metaproteomes of clinical samples. This clinical metaproteomics workflow holds potential for general clinical applications such as potential secondary infections during COVID-19 infection, microbiome changes during cystic fibrosis as well as broad research questions regarding host-microbe interactions. 
 
 ![Clinical-MP](../../images/clinical-mp/clinical-mp.jpg "FIGURE-1")
 
@@ -59,7 +61,7 @@ The first workflow for the clinical metaproteomics data analysis is the Database
 > <hands-on-title> Data Upload </hands-on-title>
 >
 > 1. Create a new history for this tutorial
-> 2. Import the files from [Zenodo]({{ page.zenodo_link }}) or from
+> 2. Import the files from [Zenodo](https://doi.org/10.5281/zenodo.10105821) or from
 >    the shared data library (`GTN - Material` -> `{{ page.topic_name }}`
 >     -> `{{ page.title }}`):
 >
@@ -113,7 +115,7 @@ The first workflow for the clinical metaproteomics data analysis is the Database
 # Download Protein Sequences using taxon names
 First, we want to generate a large comprehensive protein sequence database using the UniProt XML Downloader to extract sequences for species of interest. To do so, you will need a tabular file that contains a list of species.
 
-For this tutorial, a literature survey was conducted to obtain 118 taxonomic species of organisms that are commonly associated with the female reproductive tract **(REF)**. This species list was used to generate a protein sequence FASTA database was generated using the UniProt XML Downloader tool within the Galaxy framework. In this tutorial, the Species FASTA database (~3.38 million sequences) has already been provided as input. However, if you have your own list of species of interest as a tabular file (Your_Species_tabular.tabular), steps to generate a FASTA file from a tabular file are included:
+For this tutorial, a literature survey was conducted to obtain 118 taxonomic species of organisms that are commonly associated with the female reproductive tract ([Afiuni-Zadeh, S., Boylan, K.L.M., Jagtap, P.D. et al., 2018](https://doi.org/10.1038/s41598-018-29092-4)). This species list was used to generate a protein sequence FASTA database was generated using the UniProt XML Downloader tool within the Galaxy framework. In this tutorial, the Species FASTA database (~3.38 million sequences) has already been provided as input. However, if you have your own list of species of interest as a tabular file (Your_Species_tabular.tabular), steps to generate a FASTA file from a tabular file are included:
 
 
 ## Sub-step with **UniProt**
@@ -240,7 +242,7 @@ Once generated, the Species UniProt database (~3.38 million sequences) will be m
 # Reducing Database size
 
 ## Sub-step with **MetaNovo**
-Next, the large comprehensive database of ~2.59 million sequences can be reduced using the MetaNovo tool **(tool info)** to generate a more manageable database that contains identified proteins. The compact MetaNovo-generated database (~1.9K sequences) will be merged with Human SwissProt (reviewed only) and contaminants (cRAP) databases to generate the reduced database (~21.2k protein sequences) that will be used for peptide identification **(cite Discovery module tutorial)**.
+Next, the large comprehensive database of ~2.59 million sequences can be reduced using the MetaNovo tool to generate a more manageable database that contains identified proteins. The compact MetaNovo-generated database (~1.9K sequences) will be merged with Human SwissProt (reviewed only) and contaminants (cRAP) databases to generate the reduced database (~21.2k protein sequences) that will be used for peptide identification **(cite Discovery module tutorial)**.
 
 > <hands-on-title> Metanovo tool generates a compact database from your comprehensive database. </hands-on-title>
 >
