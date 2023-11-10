@@ -80,7 +80,6 @@ The first workflow for the clinical metaproteomics data analysis is the Database
 >
 
 > 5. Optional-Add to each database a tag corresponding to the file name.
-=======
 >
 >    {% snippet faqs/galaxy/datasets_add_tag.md %}
 >
@@ -130,7 +129,7 @@ For this tutorial, a literature survey was conducted to obtain 118 taxonomic spe
 >
 {: .hands_on}
 
-=======
+
 > <question-title></question-title>
 >
 > 1. Can we use a higher taxonomy clade than species for the UniProt XML downloader?
@@ -179,7 +178,6 @@ For this tutorial, a literature survey was conducted to obtain 118 taxonomic spe
 >
 {: .question}
 
-=======
 
 
 ## Sub-step with **Protein Database Downloader**
@@ -310,14 +308,6 @@ Next, the large comprehensive database of ~2.59 million sequences can be reduced
 >                - {% icon param-file %} *"FASTA File"*: `Protein Database Human SwissProt` (output of **Protein Database Downloader** {% icon tool %})
 >                - {% icon param-file %} *"FASTA File"*: `Protein Database Contaminants (cRAP)` (output of **Protein Database Downloader** {% icon tool %})
 >
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
 >
 {: .hands_on}
 
