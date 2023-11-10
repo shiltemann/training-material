@@ -101,7 +101,7 @@ Peptides identified from each program will be verified with the PepQuery tool to
 
 ## Sub-step with **FastaCLI**
 
-Using the FastaCLI tool, decoy sequences will be appended to the FASTA database. Decoy sequences are protein sequences are not expected to be present in samples. For more information on how to generate and append decoy sequences, see (GTN Protein FASTA Database Handling. link: https://training.galaxyproject.org/archive/2019-12-01/topics/proteomics/tutorials/database-handling/tutorial.html#creating-a-decoy-database)
+Using the FastaCLI tool, decoy sequences will be appended to the FASTA database. Decoy sequences are protein sequences are not expected to be present in samples. For more information on how to generate and append decoy sequences, see [GTN Protein FASTA Database Handling](https://training.galaxyproject.org/archive/2019-12-01/topics/proteomics/tutorials/database-handling/tutorial.html#creating-a-decoy-database).
 
 > <hands-on-title> Appending decoy sequenced to FASTA database </hands-on-title>
 >
