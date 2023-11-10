@@ -39,7 +39,7 @@ This tutorial can be followed with any user-defined database but would work best
 
 
 # Peptide identification
-The MSMS data will be searched against the compact database `Human UniProt Microbial Proteins (from MetaNovo) and cRAP `to identify peptide and protein sequences via sequence database searching. For this tutorial, two peptide identification programs will be used: SearchGUI/PeptideShaker and MaxQuant. However, you could use other software too, such as Fragpipe or Scribe.  For the purpose of this tutorial, a dataset of the 4 RAW/MGF files will be used as the MS/MS input.
+The MSMS data will be searched against the compact database `Human UniProt Microbial Proteins (from MetaNovo) and cRAP `to identify peptide and protein sequences via sequence database searching. For this tutorial, two peptide identification programs will be used: SearchGUI/PeptideShaker and MaxQuant. However, you could use other software too, such as Fragpipe or Scribe. For the purpose of this tutorial, a dataset of the 4 RAW/MGF files will be used as the MS/MS input.
 
 
 ![Discovery Workflow](../../images/clinical-mp/clinical-mp-discovery.jpg "FIGURE-1")
@@ -113,7 +113,7 @@ Using the FastaCLI tool, decoy sequences will be appended to the FASTA database.
 
 ## Sub-step with **msconvert**
 
-The msconvert tool allows for the conversion of mass spectrometry data files between different formats, such as thermo.raw, mgf, or mzml (**cite tool info**).
+The msconvert tool allows for the conversion of mass spectrometry data files between different formats, such as thermo.raw, mgf, or mzml.
 
 > <hands-on-title> Converting RAW files to MGF files </hands-on-title>
 >
@@ -143,9 +143,9 @@ The msconvert tool allows for the conversion of mass spectrometry data files bet
 {: .question}
 
 ## Sub-step with **Search GUI**
-SearchGUI is a database-searching tool that comprises different search engines to match sample MS/MS spectra to known peptide sequences **(cite ref)**. In our analysis, we will use **(list search engines)** as search algorithms within SearchGUI for matching spectra from mass spectrometry data against peptides from the protein sequence database.
+SearchGUI is a database-searching tool that comprises different search engines to match sample MS/MS spectra to known peptide sequences. In our analysis, we will use X!Tandem and MS-GF+ as search algorithms within SearchGUI for matching spectra from mass spectrometry data against peptides from the protein sequence database.
 
-The SearchGUI tool will perform a database search based on the parameters we've set and will generate a file (called a SearchGUI archive file) that will serve as the input for the PeptideShaker tool. The SearchGUI archive file contains Peptide-Spectral Matches (PSMs), and PeptideShaker (**cite tool info**) is a post-processing software that will assess the confidence of the data. PeptideShaker also infers the identities of proteins based on the matched peptide sequences, and users are able to visualize these outputs to interpret results.
+The SearchGUI tool will perform a database search based on the parameters we've set and will generate a file (called a SearchGUI archive file) that will serve as the input for the PeptideShaker tool. The SearchGUI archive file contains Peptide-Spectral Matches (PSMs), and PeptideShaker is a post-processing software that will assess the confidence of the data. PeptideShaker also infers the identities of proteins based on the matched peptide sequences, and users are able to visualize these outputs to interpret results.
 
 > <hands-on-title> Peptide discovery using SearchGUI </hands-on-title>
 >
