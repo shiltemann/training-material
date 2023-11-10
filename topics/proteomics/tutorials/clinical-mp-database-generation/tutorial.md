@@ -2,7 +2,7 @@
 layout: tutorial_hands_on
 
 title: Clinical-MP-Database Generation
-zenodo_link: ''
+zenodo_link: '[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10105821.svg)](https://doi.org/10.5281/zenodo.10105821)'
 questions:
 - Why do we need to generate a customized database for metaproteomics research?
 - How do we reduce the size of the database?
@@ -64,10 +64,14 @@ The first workflow for the clinical metaproteomics data analysis is the Database
 >     -> `{{ page.title }}`):
 >
 >    ```
+>    https://zenodo.org/records/10105821/files/HUMAN_SwissProt_Protein_Database.fasta
+>    https://zenodo.org/records/10105821/files/Species_UniProt_FASTA.fasta
+>    https://zenodo.org/records/10105821/files/Contaminants_(cRAP)_Protein_Database.fasta
+>    https://zenodo.org/records/10105821/files/PTRC_Skubitz_Plex2_F10_9Aug19_Rage_Rep-19-06-08.mgf
+>    https://zenodo.org/records/10105821/files/PTRC_Skubitz_Plex2_F11_9Aug19_Rage_Rep-19-06-08.mgf
+>    https://zenodo.org/records/10105821/files/PTRC_Skubitz_Plex2_F13_9Aug19_Rage_Rep-19-06-08.mgf
+>    https://zenodo.org/records/10105821/files/PTRC_Skubitz_Plex2_F15_9Aug19_Rage_Rep-19-06-08.mgf
 >    ```
->    ***TODO***: *Add the files by the ones on Zenodo here (if not added)*
->
->    ***TODO***: *Remove the useless files (if added)*
 >
 >    {% snippet faqs/galaxy/datasets_import_via_link.md %}
 >
@@ -80,7 +84,7 @@ The first workflow for the clinical metaproteomics data analysis is the Database
 >
 
 > 5. Optional-Add to each database a tag corresponding to the file name.
->
+> 6. Create a dataset collection of the 4 MGF datasets.
 >    {% snippet faqs/galaxy/datasets_add_tag.md %}
 >
 {: .hands_on}
