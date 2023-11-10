@@ -44,6 +44,7 @@ The MSMS data will be searched against the compact database `Human UniProt Micro
 
 ![Discovery Workflow](../../images/clinical-mp/clinical-mp-discovery.jpg "FIGURE-1")
 
+
 > <agenda-title></agenda-title>
 >
 > In this tutorial, we will cover:
