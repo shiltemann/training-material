@@ -18,8 +18,10 @@ key_points:
 - The take-home messages
 - They will appear at the end of the tutorial
 contributors:
-- contributor1
-- contributor2
+  - subinamehta
+  - pratikdjagtap
+  - timothygriffin
+  - katherine-d21
 requirements:
   -
     type: "internal"
@@ -262,7 +264,6 @@ The SearchGUI tool will perform a database search based on the parameters we've 
 >
 {: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
 
 > <question-title></question-title>
 >
@@ -305,7 +306,6 @@ We will generate and merge the Human SwissProt Protein Database and contaminants
 {: .hands_on}
 
 
-
 ## Sub-step with **FASTA-to-Tabular**
 
 > <hands-on-title> Converting FASTA sequences to TAB-delimited file </hands-on-title>
@@ -315,8 +315,6 @@ We will generate and merge the Human SwissProt Protein Database and contaminants
 >
 >
 {: .hands_on}
-
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
 
 
 ## Sub-step with **Filter Tabular**
