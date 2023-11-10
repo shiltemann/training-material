@@ -96,6 +96,7 @@ The final workflow in the array of clinical metaproteomics tutorials is the data
 >
 {: .hands_on}
 
+![Database-Interpretation](../../images/clinical-mp/clinical-mp-data-interpretation-figure2.jpg "FIGURE-2")
 
 ## Sub-step with **Select**
 
@@ -184,7 +185,7 @@ MSstats TMT(Tandem Mass Tag) is a computational tool designed for the robust sta
 
 The MSstats output typically includes essential information such as estimated fold changes, p-values, and other statistical measures that help identify differentially expressed proteins across experimental conditions or sample groups. It provides a clear picture of the variations in protein expression levels, aiding in the prioritization of biologically relevant targets. MSstats output also often includes visualizations and quality control metrics, making it a valuable resource for researchers in their quest to extract meaningful insights from complex proteomic datasets and understand the underlying biology of their experiments.
 Example of our data interpretation:
-![Database-Interpretation](../../images/clinical-mp/clinical-mp-data-interpretation-figure2.jpg "FIGURE-2")
+![Database-Interpretation](../../images/clinical-mp/clinical-mp-data-interpretation-figure3.jpg "FIGURE-3")
 
 
 # Conclusion
