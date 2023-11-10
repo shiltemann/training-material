@@ -12,8 +12,8 @@ objectives:
 - Generate a microbial peptide panel for verification
 time_estimation: 3H
 key_points:
-- The take-home messages
-- They will appear at the end of the tutorial
+- Employ SearchGUI/PeptideShaker and MaxQuant for database searching
+- Extraction of confident microbial peptides for verification
 contributors:
   - subinamehta
   - pratikdjagtap
