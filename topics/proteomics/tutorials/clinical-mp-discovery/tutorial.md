@@ -489,11 +489,12 @@ Here's what you might include in an Experimental Design file for MaxQuant:
 - **Other Metadata**: You can include additional metadata relevant to your experiment, such as the biological source, time points, or any other information that helps describe the samples and experimental conditions.
 
 Here's a simple example of what an Experimental Design file might look like:
-SampleName    Condition    Replicate    Label
-Sample1       Control      1            TMT-126
-Sample2       Control      2            TMT-127
-Sample3       Treated      1            TMT-128
-Sample4       Treated      2            TMT-129
+| SampleName  |   Condition  |  Replicate  |  Label |
+| ----------- | ----------- | :----: | ----------- |
+|Sample1 |     Control   |   1     |     TMT-126|
+|Sample2 |     Control   |   2   |         TMT-127|
+|Sample3 |     Treated   |   1     |       TMT-128|
+|Sample4 |     Treated   |   2       |     TMT-129|
 
 > >
 > {: .solution}
