@@ -39,9 +39,11 @@ The PepQuery tool is used to validate the identified microbial peptides from Sea
 
 Interestingly, the PepQuery tool does not rely on searching peptides against a reference protein sequence database as “traditional” shotgun proteomics does, which enables it to identify novel, disease-specific sequences with sensitivity and specificity in its protein validation.
 
+Then we extract microbial protein sequences that are assigned to the PepQuery verified peptides. To this, we again add the Human UniProt Reference proteome (with Isoforms) and cRAP databases for creating a database for quantitation purposes.
+
 ![Data Verification](../../images/clinical-mp/clinical-mp-verification.jpg "FIGURE-1")
 
-Then we extract microbial protein sequences that are assigned to the PepQuery verified peptides. To this, we again add the Human UniProt Reference proteome (with Isoforms) and cRAP databases for creating a database for quantitation purposes.
+
 ![Data Verification](../../images/clinical-mp/clinical-mp-verification-figure2.jpg "FIGURE-2")
 
 
@@ -91,7 +93,7 @@ Now that we have identified microbial peptides from SearchGUI/PeptideShaker and 
 
 First, we will use the Cut tool (**cite tool info?**) to select out the peptide and protein columns from the SearchGUI/PeptideShaker and MaxQuant Peptide Reports.
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Select out peptides and proteins from SGPS </hands-on-title>
 >
 > 1. {% tool [Cut](Cut1) %} with the following parameters:
 >    - *"Cut columns"*: `c6,c2`
@@ -103,7 +105,7 @@ First, we will use the Cut tool (**cite tool info?**) to select out the peptide 
 
 ## Sub-step with **Cut**
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Select out peptides and proteins from MaxQuant </hands-on-title>
 >
 > 1. {% tool [Cut](Cut1) %} with the following parameters:
 >    - *"Cut columns"*: `c1,c35`
@@ -117,7 +119,7 @@ Then, we will remove the header line from each of the Cut outputs in order to co
 
 ## Sub-step with **Remove beginning**
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Remove header lines from SGPS to prepare for concatenation </hands-on-title>
 >
 > 1. {% tool [Remove beginning](Remove beginning1) %} with the following parameters:
 >    - {% icon param-file %} *"from"*: `out_file1` (output of **Cut** {% icon tool %})
@@ -129,7 +131,7 @@ Then, we will remove the header line from each of the Cut outputs in order to co
 
 ## Sub-step with **Remove beginning**
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Remove header lines From MQ to prepare for concatenation </hands-on-title>
 >
 > 1. {% tool [Remove beginning](Remove beginning1) %} with the following parameters:
 >    - {% icon param-file %} *"from"*: `out_file1` (output of **Cut** {% icon tool %})
@@ -142,7 +144,7 @@ Then, we will remove the header line from each of the Cut outputs in order to co
 
 We will now concatenate the peptide and protein datasets from SearchGUI/PeptideShaker and MaxQuant. Later, we will generate a list of confident peptides using PepQuery2. The list of confident peptides will be searched against the concatenated peptide-protein datasets from SearchGUI/PeptideShaker and MaxQuant to generate a list of verified peptides.
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Concatenate peptides and proteins for PepQuery2 </hands-on-title>
 >
 > 1. {% tool [Concatenate datasets](toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cat/0.1.1) %} with the following parameters:
 >    - {% icon param-files %} *"Datasets to concatenate"*: `out_file1` (output of **Remove beginning** {% icon tool %}), `out_file1` (output of **Remove beginning** {% icon tool %})
@@ -155,7 +157,7 @@ We will now concatenate the peptide and protein datasets from SearchGUI/PeptideS
 
 We generate and merge Human UniProt (with Isoforms) and contaminants (cRAP) to make an input database for PepQuery2.
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Creating input database for PepQuery2 </hands-on-title>
 >
 > 1. {% tool [FASTA Merge Files and Filter Unique Sequences](toolshed.g2.bx.psu.edu/repos/galaxyp/fasta_merge_files_and_filter_unique_sequences/fasta_merge_files_and_filter_unique_sequences/1.2.0) %} with the following parameters:
 >    - *"Run in batch mode?"*: `Merge individual FASTAs (output collection if input is collection)`
@@ -169,13 +171,13 @@ We generate and merge Human UniProt (with Isoforms) and contaminants (cRAP) to m
 
 
 
-## Peptide verification using PepQuery
+## Peptide verification using PepQuery2
 The PepQuery2 tool will be used to validate the identified microbial peptides from SearchGUI/PeptideShaker and MaxQuant to ensure that they are indeed of microbial origin and that human peptides were not misassigned. We will use the list of Distinct Peptides (from the Discovery Module, **cite**), Human UniProt+Isoforms+cRAP database, and our MGF file collection as inputs for PepQuery2. The outputs we are interested in are the four PSM Rank (txt) files (one for each MGF file).
 
 Interestingly, the PepQuery tool does not rely on searching peptides against a reference protein sequence database as “traditional” shotgun proteomics does, which enables it to identify novel, disease-specific sequences with sensitivity and specificity in its protein validation (**cite tool info**).
 
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Peptide validation using PepQuery2 </hands-on-title>
 >
 > 1. {% tool [PepQuery2](toolshed.g2.bx.psu.edu/repos/galaxyp/pepquery2/pepquery2/2.0.2+galaxy0) %} with the following parameters:
 >    - *"Validation Task Type"*: `novel peptide/protein validation`
@@ -216,7 +218,7 @@ Interestingly, the PepQuery tool does not rely on searching peptides against a r
 Remember that PepQuery2 generates a PSM Rank file for each input MGF file, so we will have four PSM Rank files. To make the analysis more efficient, we will collapse these four PSM Rank files into one dataset.
 
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Collasping PSM rank files into a singular dataset </hands-on-title>
 >
 > 1. {% tool [Collapse Collection](toolshed.g2.bx.psu.edu/repos/nml/collapse_collections/collapse_dataset/5.1.0) %} with the following parameters:
 >    - {% icon param-file %} *"Collection of files to collapse into single dataset"*: `psm_rank_txt` (output of **PepQuery2** {% icon tool %})
@@ -231,7 +233,7 @@ Remember that PepQuery2 generates a PSM Rank file for each input MGF file, so we
 
 Now, we want to filter for confident peptides from PepQuery2.
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Filtering out confident peptides from PepQuery2 </hands-on-title>
 >
 > 1. {% tool [Filter](Filter1) %} with the following parameters:
 >    - {% icon param-file %} *"Filter"*: `output` (output of **Collapse Collection** {% icon tool %})
@@ -244,7 +246,7 @@ Now, we want to filter for confident peptides from PepQuery2.
 
 ## Sub-step with **Remove beginning**
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Remove header line from filtered PepQuery peptides </hands-on-title>
 >
 > 1. {% tool [Remove beginning](Remove beginning1) %} with the following parameters:
 >    - {% icon param-file %} *"from"*: `out_file1` (output of **Filter** {% icon tool %})
@@ -255,7 +257,7 @@ Now, we want to filter for confident peptides from PepQuery2.
 
 ## Sub-step with **Cut**
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Cut (select out) peptide sequences from PepQuery output </hands-on-title>
 >
 > 1. {% tool [Cut](Cut1) %} with the following parameters:
 >    - *"Cut columns"*: `c1`
@@ -269,7 +271,7 @@ Now, we want to filter for confident peptides from PepQuery2.
 
 We will use the Query Tabular tool (**cite tool***) to search the PepQuery-verified peptides against the concatenated dataset that contains peptides and proteins from SearchGUI/Peptide and MaxQuant.
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Querying verified peptides </hands-on-title>
 >
 > 1. {% tool [Query Tabular](toolshed.g2.bx.psu.edu/repos/iuc/query_tabular/query_tabular/3.3.0) %} with the following parameters:
 >    - In *"Database Table"*:
@@ -293,7 +295,7 @@ INNER JOIN  prot on pep.mpep=prot.pep `
 
 ## Sub-step with **Remove beginning**
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Removing header line </hands-on-title>
 >
 > 1. {% tool [Remove beginning](Remove beginning1) %} with the following parameters:
 >    - {% icon param-file %} *"from"*: `output` (output of **Query Tabular** {% icon tool %})
@@ -305,7 +307,7 @@ INNER JOIN  prot on pep.mpep=prot.pep `
 
 Using the Group tool, we will be able to select out distinct (unique) peptides and proteins from the Query Tabular tool.
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Distinct peptides from Query Tabular tool </hands-on-title>
 >
 > 1. {% tool [Group](Grouping1) %} with the following parameters:
 >    - {% icon param-file %} *"Select data"*: `out_file1` (output of **Remove beginning** {% icon tool %})
@@ -323,7 +325,7 @@ Using the Group tool, we will be able to select out distinct (unique) peptides a
 
 Again, we will use the Query Tabular tool to retrieve UniProt IDs (accession numbers) for the distinct (grouped) peptides.
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Retrieve UniProt IDs for distinct peptides </hands-on-title>
 >
 > 1. {% tool [Query Tabular](toolshed.g2.bx.psu.edu/repos/iuc/query_tabular/query_tabular/3.3.0) %} with the following parameters:
 >    - In *"Database Table"*:
@@ -395,7 +397,7 @@ from t1`
 
 Using the UniProt IDs from Query Tabular, we will be able to generate a FASTA database for our PepQuery-verified peptides.
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Generate FASTA database from UniProt IDs </hands-on-title>
 >
 > 1. {% tool [UniProt](toolshed.g2.bx.psu.edu/repos/galaxyp/uniprotxml_downloader/uniprotxml_downloader/2.4.0) %} with the following parameters:
 >    - *"Select"*: `A history dataset with a column containing Uniprot IDs`
@@ -413,7 +415,7 @@ Using the UniProt IDs from Query Tabular, we will be able to generate a FASTA da
 ## Generation of Compact Verified Database with UniProt
 Lastly, we will merge the Human UniProt (with isoforms), contaminants (cRAP) and the PepQuery-verified FASTA databases into one Quantitation Database that will be used as input for the Quantitation Module (**add link for Quantitation Module**).
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Generating compact verified database </hands-on-title>
 >
 > 1. {% tool [FASTA Merge Files and Filter Unique Sequences](toolshed.g2.bx.psu.edu/repos/galaxyp/fasta_merge_files_and_filter_unique_sequences/fasta_merge_files_and_filter_unique_sequences/1.2.0) %} with the following parameters:
 >    - *"Run in batch mode?"*: `Merge individual FASTAs (output collection if input is collection)`
