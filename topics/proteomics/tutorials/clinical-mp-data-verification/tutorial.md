@@ -34,11 +34,11 @@ In proteomic research, the primary goal is to obtain accurate and meaningful ins
 
 The PepQuery tool is used to validate the identified microbial peptides from SearchGUI/PeptideShaker and MaxQuant, to ensure that they are indeed of microbial origin and that human peptides were not misassigned. To do this, all confident microbial peptides from the two database search algorithms were merged and searched against the Human UniProt Reference proteome (with Isoforms) and cRAP databases.
 
-Interestingly, the PepQuery tool does not rely on searching peptides against a reference protein sequence database as “traditional” shotgun proteomics does, which enables it to identify novel, disease-specific sequences with sensitivity and specificity in its protein validation (Figure A).
+Interestingly, the PepQuery tool does not rely on searching peptides against a reference protein sequence database as “traditional” shotgun proteomics does, which enables it to identify novel, disease-specific sequences with sensitivity and specificity in its protein validation (Figure A). Then we extract microbial protein sequences that are assigned to the PepQuery verified peptides. To this, we again add the Human UniProt Reference proteome (with Isoforms) and cRAP databases for creating a database for quantitation purposes (Figure B).
 
 ![Data Verification](../../images/clinical-mp/clinical-mp-verification.jpg "FIGURE-1")
 
-Then we extract microbial protein sequences that are assigned to the PepQuery verified peptides. To this, we again add the Human UniProt Reference proteome (with Isoforms) and cRAP databases for creating a database for quantitation purposes(Figure B).
+
 
 ![Data Verification](../../images/clinical-mp/clinical-mp-verification-figure2.jpg "FIGURE-2")
 
@@ -94,7 +94,7 @@ Now that we have identified microbial peptides from SearchGUI/PeptideShaker and 
 >
 ## Sub-step with **Cut**
 
-First, we will use the Cut tool (**cite tool info?**) to select out the peptide and protein columns from the SearchGUI/PeptideShaker and MaxQuant Peptide Reports.
+First, we will use the Cut tool to select out the peptide and protein columns from the SearchGUI/PeptideShaker and MaxQuant Peptide Reports.
 
 > <hands-on-title> Select out peptides and proteins from SGPS </hands-on-title>
 >
@@ -118,7 +118,7 @@ First, we will use the Cut tool (**cite tool info?**) to select out the peptide 
 {: .hands_on}
 
 
-Then, we will remove the header line from each of the Cut outputs in order to concatenate (link) them together more easily, using the Concatenate tool (**cite tool?**).
+Then, we will remove the header line from each of the Cut outputs in order to concatenate (link) them together more easily, using the Concatenate tool.
 
 ## Sub-step with **Remove beginning**
 
@@ -177,7 +177,7 @@ We generate and merge Human UniProt (with Isoforms) and contaminants (cRAP) to m
 ## Peptide verification using PepQuery2
 The PepQuery2 tool will be used to validate the identified microbial peptides from SearchGUI/PeptideShaker and MaxQuant to ensure that they are indeed of microbial origin and that human peptides were not misassigned. We will use the list of Distinct Peptides (from the Discovery Module, **cite**), Human UniProt+Isoforms+cRAP database, and our MGF file collection as inputs for PepQuery2. The outputs we are interested in are the four PSM Rank (txt) files (one for each MGF file).
 
-Interestingly, the PepQuery tool does not rely on searching peptides against a reference protein sequence database as “traditional” shotgun proteomics does, which enables it to identify novel, disease-specific sequences with sensitivity and specificity in its protein validation (**cite tool info**).
+Interestingly, the PepQuery2 tool does not rely on searching peptides against a reference protein sequence database as “traditional” shotgun proteomics does, which enables it to identify novel, disease-specific sequences with sensitivity and specificity in its protein validation. More information about PepQuery is available, including the first [Wen B, Wang X, Zhang B., 2019](https://doi.org/10.1101%2Fgr.235028.118) and second iterations [Wen B & Zhang B., 2023](https://doi.org/10.1038/s41467-023-37462-4).
 
 
 > <hands-on-title> Peptide validation using PepQuery2 </hands-on-title>
@@ -272,7 +272,7 @@ Now, we want to filter for confident peptides from PepQuery2.
 
 ## Sub-step with **Query Tabular**
 
-We will use the Query Tabular tool (**cite tool***) to search the PepQuery-verified peptides against the concatenated dataset that contains peptides and proteins from SearchGUI/Peptide and MaxQuant.
+We will use the Query Tabular tool to search the PepQuery-verified peptides against the concatenated dataset that contains peptides and proteins from SearchGUI/Peptide and MaxQuant ([Johnson et al., 2018](https://doi.org/10.12688%2Ff1000research.16450.1)).
 
 > <hands-on-title> Querying verified peptides </hands-on-title>
 >
