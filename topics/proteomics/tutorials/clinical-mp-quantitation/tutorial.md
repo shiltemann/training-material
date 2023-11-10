@@ -90,7 +90,7 @@ In the Discovery Module (**cite Discovery module**), we used MaxQuant (**cite to
 
 The outputs we are most interested in consist of the MaxQuant Evidence file, MaxQuant Protein Groups, and MaxQuant Peptides. The MaxQuant Peptides file will allow us to group them to generate a list of quantified microbial peptides.
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Quantify verified peptides (from PepQuery2) </hands-on-title>
 >
 > 1. {% tool [MaxQuant](toolshed.g2.bx.psu.edu/repos/galaxyp/maxquant/maxquant/1.6.17.0+galaxy4) %} with the following parameters:
 >    - In *"Input Options"*:
@@ -147,7 +147,7 @@ The outputs we are most interested in consist of the MaxQuant Evidence file, Max
 
 ## Sub-step with **Select**
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Select microbial protein groups from MaxQuant </hands-on-title>
 >
 > 1. {% tool [Select](Grep1) %} with the following parameters:
 >    - {% icon param-file %} *"Select lines from"*: `proteinGroups` (output of **MaxQuant** {% icon tool %})
@@ -160,7 +160,7 @@ The outputs we are most interested in consist of the MaxQuant Evidence file, Max
 
 ## Sub-step with **Select**
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Select microbial peptides from MaxQuant </hands-on-title>
 >
 > 1. {% tool [Select](Grep1) %} with the following parameters:
 >    - {% icon param-file %} *"Select lines from"*: `peptides` (output of **MaxQuant** {% icon tool %})
@@ -172,7 +172,7 @@ The outputs we are most interested in consist of the MaxQuant Evidence file, Max
 
 ## Sub-step with **Cut**
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Select out microbial protein names </hands-on-title>
 >
 > 1. {% tool [Cut](Cut1) %} with the following parameters:
 >    - *"Cut columns"*: `c1`
@@ -184,7 +184,7 @@ The outputs we are most interested in consist of the MaxQuant Evidence file, Max
 
 ## Sub-step with **Cut**
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Select out microbial peptide sequences </hands-on-title>
 >
 > 1. {% tool [Cut](Cut1) %} with the following parameters:
 >    - *"Cut columns"*: `c1`
@@ -195,7 +195,7 @@ The outputs we are most interested in consist of the MaxQuant Evidence file, Max
 
 ## Sub-step with **Group**
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Generating list of quantified proteins </hands-on-title>
 >
 > 1. {% tool [Group](Grouping1) %} with the following parameters:
 >    - {% icon param-file %} *"Select data"*: `out_file1` (output of **Cut** {% icon tool %})
@@ -207,7 +207,7 @@ The outputs we are most interested in consist of the MaxQuant Evidence file, Max
 
 ## Sub-step with **Group**
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Generating list of quantified peptides </hands-on-title>
 >
 > 1. {% tool [Group](Grouping1) %} with the following parameters:
 >    - {% icon param-file %} *"Select data"*: `out_file1` (output of **Cut** {% icon tool %})
