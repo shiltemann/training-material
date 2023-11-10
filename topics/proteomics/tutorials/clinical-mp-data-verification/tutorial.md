@@ -4,19 +4,14 @@ layout: tutorial_hands_on
 title: Clinical-MP-Database Verification
 zenodo_link: '(https://doi.org/10.5281/zenodo.10105821)'
 questions:
-- Which biological questions are addressed by the tutorial?
-- Which bioinformatics techniques are important to know for this type of data?
+- Why do we need to verify our identified peptides
+- What is the importance of making a new database for quantification
 objectives:
-- The learning objectives are the goals of the tutorial
-- They will be informed by your audience and will communicate to them and to yourself
-  what you should focus on during the course
-- They are single sentences describing what a learner should be able to do once they
-  have completed the tutorial
-- You can use Bloom's Taxonomy to write effective learning objectives
+- Verification of peptides helps in confirming the presence of the peptides in our samplle
 time_estimation: 3H
 key_points:
-- The take-home messages
-- They will appear at the end of the tutorial
+- perform verification
+- extraction of accession numbers for getting protein sequences
 contributors:
   - subinamehta
   - pratikdjagtap
@@ -429,4 +424,4 @@ Lastly, we will merge the Human UniProt (with isoforms), contaminants (cRAP) and
 
 # Conclusion
 
-A peptide verification workflow is a critical step in proteomic research that enhances data reliability, quantitative accuracy, and biological understanding by confirming the presence and validity of selected peptides. It is a pivotal quality control process that ensures the trustworthiness of proteomic findings and supports downstream investigations. By completing this tutorial, you have not only verified the microbial peptides but also created a database consisting of protein sequences from the PepQuery-verified peptides. This database will be now used for quantitation purposes.
+A peptide verification workflow is a critical step in proteomic research that enhances data reliability, quantitative accuracy, and biological understanding by confirming the presence and validity of selected peptides. It is a pivotal quality control process that ensures the trustworthiness of proteomic findings and supports downstream investigations. By completing this tutorial, you have not only verified the microbial peptides but also created a database consisting of protein sequences from the PepQuery-verified peptides. The need of such a database is to ensure that when we quantify our proteins and peptides we are reducing the introduction of false positives. This database will be now used for quantitation purposes.
