@@ -175,7 +175,7 @@ We generate and merge Human UniProt (with Isoforms) and contaminants (cRAP) to m
 
 
 ## Peptide verification using PepQuery2
-The PepQuery2 tool will be used to validate the identified microbial peptides from SearchGUI/PeptideShaker and MaxQuant to ensure that they are indeed of microbial origin and that human peptides were not misassigned. We will use the list of Distinct Peptides (from the Discovery Module, **cite**), Human UniProt+Isoforms+cRAP database, and our MGF file collection as inputs for PepQuery2. The outputs we are interested in are the four PSM Rank (txt) files (one for each MGF file).
+The PepQuery2 tool will be used to validate the identified microbial peptides from SearchGUI/PeptideShaker and MaxQuant to ensure that they are indeed of microbial origin and that human peptides were not misassigned. We will use the list of `Distinct Peptides` (from the Discovery Module, **cite**), `Human UniProt+Isoforms+cRAP database`, and our `MGF file collection` as inputs for PepQuery2. The outputs we are interested in are the four PSM Rank (txt) files (one for each MGF file).
 
 Interestingly, the PepQuery2 tool does not rely on searching peptides against a reference protein sequence database as “traditional” shotgun proteomics does, which enables it to identify novel, disease-specific sequences with sensitivity and specificity in its protein validation. More information about PepQuery is available, including the first [Wen B, Wang X, Zhang B., 2019](https://doi.org/10.1101%2Fgr.235028.118) and second iterations [Wen B & Zhang B., 2023](https://doi.org/10.1038/s41467-023-37462-4).
 
