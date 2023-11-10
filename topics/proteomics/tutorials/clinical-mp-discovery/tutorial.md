@@ -142,7 +142,7 @@ The msconvert tool allows for the conversion of mass spectrometry data files bet
 ## Sub-step with **Search GUI**
 SearchGUI is a database-searching tool that comprises different search engines to match sample MS/MS spectra to known peptide sequences. In our analysis, we will use X!Tandem and MS-GF+ as search algorithms within SearchGUI for matching spectra from mass spectrometry data against peptides from the protein sequence database.
 
-The SearchGUI tool will perform a database search based on the parameters we've set and will generate a file (called a SearchGUI archive file) that will serve as the input for the PeptideShaker tool. The SearchGUI archive file contains Peptide-Spectral Matches (PSMs), and PeptideShaker is a post-processing software that will assess the confidence of the data. PeptideShaker also infers the identities of proteins based on the matched peptide sequences, and users are able to visualize these outputs to interpret results.
+The SearchGUI tool will perform a database search based on the parameters we've set and will generate a file (called a SearchGUI archive file) that will serve as the input for the PeptideShaker tool. The SearchGUI archive file contains Peptide-Spectral Matches (PSMs), and PeptideShaker is a post-processing software that will assess the confidence of the data. PeptideShaker also infers the identities of proteins based on the matched peptide sequences, and users are able to visualize these outputs to interpret results.  More information about database searching using SearchGUI and PeptideShaker is accessible at [Metaproteomics tutorial](https://gxy.io/GTN:T00221).
 
 > <hands-on-title> Peptide discovery using SearchGUI </hands-on-title>
 >
@@ -432,7 +432,7 @@ ORDER BY psms.ln`
 
 
 ## Sub-step with **MaxQuant**
-MaxQuant is an MS-based proteomics platform that is capable of processing raw data and provides improved mass precision and high precursor mass accuracy (HPMA), which resulted in increased protein identification and more in-depth proteomic analysis **(tool info)**. Raw MS/MS spectra will be searched against the reduced MetaNovo-generated database (~21.2k sequences).
+MaxQuant is an MS-based proteomics platform that is capable of processing raw data and provides improved mass precision and high precursor mass accuracy (HPMA), which resulted in increased protein identification and more in-depth proteomic analysis **(tool info)**. Raw MS/MS spectra will be searched against the reduced MetaNovo-generated database (~21.2k sequences). More information about analysis using MaxQuant is available, including [Label-free data analysis](https://gxy.io/GTN:T00218) and [MaxQuant and MSstats for the analysis of TMT data](https://gxy.io/GTN:T00220).
 
 > <hands-on-title> Peptide discovery using MaxQuant </hands-on-title>
 >
