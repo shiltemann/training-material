@@ -470,7 +470,6 @@ MaxQuant is an MS-based proteomics platform that is capable of processing raw da
 > <question-title></question-title>
 >
 > 1. What is the Experimental Design file for MaxQuant?
-> 2. Question2?
 >
 > > <solution-title></solution-title>
 > >
