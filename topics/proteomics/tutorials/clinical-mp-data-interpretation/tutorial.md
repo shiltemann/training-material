@@ -2,7 +2,7 @@
 layout: tutorial_hands_on
 
 title: Clinical-MP-Database Interpretation
-zenodo_link: ''
+zenodo_link: '(https://doi.org/10.5281/zenodo.10105821)'
 questions:
 - Which biological questions are addressed by the tutorial?
 - Which bioinformatics techniques are important to know for this type of data?
@@ -18,8 +18,10 @@ key_points:
 - The take-home messages
 - They will appear at the end of the tutorial
 contributors:
-- contributor1
-- contributor2
+  - subinamehta
+  - pratikdjagtap
+  - timothygriffin
+  - katherine-d21
 requirements:
   -
     type: "internal"
@@ -55,11 +57,13 @@ The final workflow in the array of clinical metaproteomics tutorials is the data
 >     -> `{{ page.title }}`):
 >
 >    ```
+>    https://zenodo.org/records/10105821/files/Annotation.tabular
+>    https://zenodo.org/records/10105821/files/Comparison_Matrix.tabular
+>    https://zenodo.org/records/10105821/files/MaxQuant_Evidence.tabular
+>    https://zenodo.org/records/10105821/files/MaxQuant_Protein_Groups.tabular
+>    https://zenodo.org/records/10105821/files/Quantified-Peptides.tabular
 >    
 >    ```
->    ***TODO***: *Add the files by the ones on Zenodo here (if not added)*
->
->    ***TODO***: *Remove the useless files (if added)*
 >
 >    {% snippet faqs/galaxy/datasets_import_via_link.md %}
 >
@@ -185,4 +189,4 @@ Example of our data interpretation:
 
 # Conclusion
 With the completion of this tutorial, you have successfully completed the clinical metaproteomics tutorials.
-In conclusion, clinical metaproteomics tutorials represent an essential gateway to harnessing the power of advanced proteomic techniques in the realm of clinical research and applications. These bioinformatics tutorials serve as valuable guides for understanding the intricacies of metaproteomic workflows, from  data analysis to interpretation. By providing comprehensive knowledge and practical insights, they equip researchers and clinicians with the tools necessary to explore the rich diversity of the microbiome and its impact on health and disease or environment. As metaproteomic techniques continue to evolve and integrate with clinical practice, we hope these tutorials will be instrumental in shaping the clinical research.
+In conclusion, clinical metaproteomics tutorials represent an essential gateway to harnessing the power of advanced proteomic techniques in the realm of clinical research and applications. These bioinformatics tutorials serve as valuable guides for understanding the intricacies of metaproteomic workflows, from  data analysis to interpretation. By providing comprehensive knowledge and practical insights, they equip researchers and clinicians with the tools necessary to explore the rich diversity of the microbiome and its impact on health and disease or environment. As metaproteomic techniques continue to evolve and integrate with clinical practice, we hope these tutorials will be instrumental in shaping clinical research.
