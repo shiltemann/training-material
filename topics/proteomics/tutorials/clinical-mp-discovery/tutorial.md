@@ -490,7 +490,7 @@ Here's what you might include in an Experimental Design file for MaxQuant:
 
 Here's a simple example of what an Experimental Design file might look like:
 | SampleName  |   Condition  |  Replicate  |  Label |
-| ----------- | ----------- | :----: | ----------- |
+| :----: | :----: | :----: | :----: |
 |Sample1 |     Control   |   1     |     TMT-126|
 |Sample2 |     Control   |   2   |         TMT-127|
 |Sample3 |     Treated   |   1     |       TMT-128|
