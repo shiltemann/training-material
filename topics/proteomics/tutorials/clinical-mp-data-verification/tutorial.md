@@ -2,7 +2,7 @@
 layout: tutorial_hands_on
 
 title: Clinical-MP-Database Verification
-zenodo_link: ''
+zenodo_link: '(https://doi.org/10.5281/zenodo.10105821)'
 questions:
 - Which biological questions are addressed by the tutorial?
 - Which bioinformatics techniques are important to know for this type of data?
@@ -18,8 +18,10 @@ key_points:
 - The take-home messages
 - They will appear at the end of the tutorial
 contributors:
-- contributor1
-- contributor2
+  - subinamehta
+  - pratikdjagtap
+  - timothygriffin
+  - katherine-d21
 requirements:
   -
     type: "internal"
@@ -66,7 +68,13 @@ Then we extract microbial protein sequences that are assigned to the PepQuery ve
 >     -> `{{ page.title }}`):
 >
 >    ```
->    
+>    https://zenodo.org/records/10105821/files/PTRC_Skubitz_Plex2_F10_9Aug19_Rage_Rep-19-06-08.mgf
+>    https://zenodo.org/records/10105821/files/PTRC_Skubitz_Plex2_F11_9Aug19_Rage_Rep-19-06-08.mgf
+>    https://zenodo.org/records/10105821/files/PTRC_Skubitz_Plex2_F13_9Aug19_Rage_Rep-19-06-08.mgf
+>    https://zenodo.org/records/10105821/files/PTRC_Skubitz_Plex2_F15_9Aug19_Rage_Rep-19-06-08.mgf
+>    https://zenodo.org/records/10105821/files/SGPS_Peptide_Report.tabular
+>    https://zenodo.org/records/10105821/files/MaxQuant_Peptide_Report.tabular
+>    https://zenodo.org/records/10105821/files/Distinct_Peptides_for_PepQuery.tabular
 >    ```
 >
 >    {% snippet faqs/galaxy/datasets_import_via_link.md %}
@@ -78,7 +86,8 @@ Then we extract microbial protein sequences that are assigned to the PepQuery ve
 >
 >    {% snippet faqs/galaxy/datasets_change_datatype.md datatype="datatypes" %}
 >
-> 5. Add to each database a tag corresponding to ...
+> 5. Add to each database a tag corresponding to input files.
+> 6. Users can create a database collection of the MGF files.
 >
 >    {% snippet faqs/galaxy/datasets_add_tag.md %}
 >
@@ -357,14 +366,6 @@ Again, we will use the Query Tabular tool to retrieve UniProt IDs (accession num
 from t1`
 >    - *"include query result column headers"*: `No`
 >
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
 >
 {: .hands_on}
 
