@@ -2,7 +2,7 @@
 layout: tutorial_hands_on
 
 title: Clinical-MP-Database Quantitation
-zenodo_link: ''
+zenodo_link: 'https://doi.org/10.5281/zenodo.10105821'
 questions:
 - Which biological questions are addressed by the tutorial?
 - Which bioinformatics techniques are important to know for this type of data?
@@ -18,8 +18,10 @@ key_points:
 - The take-home messages
 - They will appear at the end of the tutorial
 contributors:
-- contributor1
-- contributor2
+  - subinamehta
+  - pratikdjagtap
+  - timothygriffin
+  - katherine-d21
 requirements:
   -
     type: "internal"
@@ -60,11 +62,13 @@ In this current workflow, we perform Quantification using the MaxQuant tool and 
 >     -> `{{ page.title }}`):
 >
 >    ```
->    
+>    https://zenodo.org/records/10105821/files/PTRC_Skubitz_Plex2_F10_9Aug19_Rage_Rep-19-06-08.raw
+>    https://zenodo.org/records/10105821/files/PTRC_Skubitz_Plex2_F11_9Aug19_Rage_Rep-19-06-08.raw
+>    https://zenodo.org/records/10105821/files/PTRC_Skubitz_Plex2_F13_9Aug19_Rage_Rep-19-06-08.raw
+>    https://zenodo.org/records/10105821/files/PTRC_Skubitz_Plex2_F15_9Aug19_Rage_Rep-19-06-08.raw
+>    https://zenodo.org/records/10105821/files/Experimental-Design_Discovery_MaxQuant.tabular
+>    https://zenodo.org/records/10105821/files/Quantitation_Database_for_MaxQuant.fasta
 >    ```
->    ***TODO***: *Add the files by the ones on Zenodo here (if not added)*
->
->    ***TODO***: *Remove the useless files (if added)*
 >
 >    {% snippet faqs/galaxy/datasets_import_via_link.md %}
 >
@@ -75,7 +79,8 @@ In this current workflow, we perform Quantification using the MaxQuant tool and 
 >
 >    {% snippet faqs/galaxy/datasets_change_datatype.md datatype="datatypes" %}
 >
-> 5. Add to each database a tag corresponding to ...
+> 5. Add to each database a tag corresponding to input files.
+> 6. Create a dataset of the RAW files.
 >
 >    {% snippet faqs/galaxy/datasets_add_tag.md %}
 >
@@ -120,7 +125,6 @@ The outputs we are most interested in consist of the MaxQuant Evidence file, Max
 >
 {: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
 
 > <question-title></question-title>
 >
