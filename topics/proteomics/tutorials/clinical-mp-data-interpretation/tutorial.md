@@ -79,15 +79,15 @@ The final workflow in the array of clinical metaproteomics tutorials is the data
 
 ## Sub-step with **Unipept**
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Unipept serves as a vital bioinformatics platform for the analysis of mass spectrometry-based shotgun proteomics data, especially in the study of microbial communities. Its primary utility lies in taxonomic and functional analyses, enabling researchers to identify and quantify microorganisms within diverse environments. The platform facilitates comparative studies across samples, conditions, or time points, shedding light on the dynamic responses of microbial communities to environmental changes. Unipept integrates with public databases like UniProt, ensuring access to comprehensive and updated information for annotations. Being community-driven and open source, Unipept fosters collaboration and transparency, with a user-friendly web interface that accommodates researchers of varying bioinformatics expertise. In essence, Unipept is an invaluable resource, offering tools for the exploration of metaproteomic data and contributing to advancements in our understanding of microbial ecology. </hands-on-title>
 >
 > 1. {% tool [Unipept](toolshed.g2.bx.psu.edu/repos/galaxyp/unipept/unipept/4.5.1) %} with the following parameters:
 >    - *"Unipept application"*: `peptinfo: Tryptic peptides and associated EC and GO terms and lowest common ancestor taxonomy`
 >    - *"Peptides input format"*: `tabular`
 >        - {% icon param-file %} *"Tabular Input Containing Peptide column"*: `output` (Input dataset)
->        - *"Select column with peptides"*: `cc1`
+>        - *"Select column with peptides"*: `c1`
 >    - *"Match input peptides by"*: `Match to the full input peptide`
->    - *"Choose outputs"*: ``
+>    - *"Choose outputs"*: `mostly all tabular outputs`
 >
 >
 {: .hands_on}
@@ -95,7 +95,7 @@ The final workflow in the array of clinical metaproteomics tutorials is the data
 
 ## Sub-step with **Select**
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> We use the select tool to extract microbial sequences </hands-on-title>
 >
 > 1. {% tool [Select](Grep1) %} with the following parameters:
 >    - {% icon param-file %} *"Select lines from"*: `output` (Input dataset)
@@ -108,7 +108,7 @@ The final workflow in the array of clinical metaproteomics tutorials is the data
 
 ## Sub-step with **Select**
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Extract Human sequences </hands-on-title>
 >
 > 1. {% tool [Select](Grep1) %} with the following parameters:
 >    - {% icon param-file %} *"Select lines from"*: `output` (Input dataset)
@@ -121,7 +121,7 @@ The final workflow in the array of clinical metaproteomics tutorials is the data
 
 ## Sub-step with **MSstatsTMT**
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> MSstats TMT (Tandem Mass Tag) is a computational tool designed for the robust statistical analysis of mass spectrometry-based quantitative proteomics data using TMT labeling. TMT is a widely used method for multiplexed quantitative proteomics, enabling simultaneous identification and quantification of proteins across multiple samples. MSstats TMT plays a crucial role in this process by providing a statistical framework for analyzing TMT data, and facilitating accurate and reliable protein abundance measurements. The tool offers a range of features, including quality control, normalization, and statistical modeling, allowing researchers to identify differentially expressed proteins with confidence. MSstats TMT is particularly valuable in large-scale studies where quantifying protein expression across multiple conditions is essential for understanding complex biological processes. Its application contributes to advancing our understanding of proteomic changes in response to various experimental conditions or perturbations. </hands-on-title>
 >
 > 1. {% tool [MSstatsTMT](toolshed.g2.bx.psu.edu/repos/galaxyp/msstatstmt/msstatstmt/2.0.0+galaxy1) %} with the following parameters:
 >    - *"Input Source"*: `MaxQuant`
@@ -143,7 +143,7 @@ The final workflow in the array of clinical metaproteomics tutorials is the data
 
 ## Sub-step with **Select**
 
-> <hands-on-title> Task description </hands-on-title>
+> <hands-on-title> Remove reverse and contaminants </hands-on-title>
 >
 > 1. {% tool [Select](Grep1) %} with the following parameters:
 >    - {% icon param-file %} *"Select lines from"*: `out_file1` (output of **Select** {% icon tool %})
