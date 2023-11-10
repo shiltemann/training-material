@@ -2,7 +2,7 @@
 layout: tutorial_hands_on
 
 title: Clinical-MP-Database Discovery
-zenodo_link: ''
+zenodo_link: 'https://doi.org/10.5281/zenodo.10105821'
 questions:
 - Which biological questions are addressed by the tutorial?
 - Which bioinformatics techniques are important to know for this type of data?
@@ -25,7 +25,7 @@ requirements:
     type: "internal"
     topic_name: proteomics
     tutorials:
-      - clinical-metaproteonics
+      - clinical-metaproteomics
 subtopic: multi-omics
 tags: [label-TMT11]
 ---
@@ -65,11 +65,17 @@ This step is to identify proteins based on mass spectrometry data. The algorithm
 >     -> `{{ page.title }}`):
 >
 >    ```
->    
+>    https://zenodo.org/records/10105821/files/Human_UniProt_Microbial_Proteins_(from_MetaNovo)_and_cRAP.fasta
+>    https://zenodo.org/records/10105821/files/PTRC_Skubitz_Plex2_F10_9Aug19_Rage_Rep-19-06-08.raw
+>    https://zenodo.org/records/10105821/files/PTRC_Skubitz_Plex2_F11_9Aug19_Rage_Rep-19-06-08.raw
+>    https://zenodo.org/records/10105821/files/PTRC_Skubitz_Plex2_F13_9Aug19_Rage_Rep-19-06-08.raw
+>    https://zenodo.org/records/10105821/files/PTRC_Skubitz_Plex2_F15_9Aug19_Rage_Rep-19-06-08.raw
+>    https://zenodo.org/records/10105821/files/Experimental-Design_Discovery_MaxQuant.tabular
+>    https://zenodo.org/records/10105821/files/PTRC_Skubitz_Plex2_F10_9Aug19_Rage_Rep-19-06-08.mgf
+>    https://zenodo.org/records/10105821/files/PTRC_Skubitz_Plex2_F11_9Aug19_Rage_Rep-19-06-08.mgf
+>    https://zenodo.org/records/10105821/files/PTRC_Skubitz_Plex2_F13_9Aug19_Rage_Rep-19-06-08.mgf
+>    https://zenodo.org/records/10105821/files/PTRC_Skubitz_Plex2_F15_9Aug19_Rage_Rep-19-06-08.mgf
 >    ```
->    ***TODO***: *Add the files by the ones on Zenodo here (if not added)*
->
->    ***TODO***: *Remove the useless files (if added)*
 >
 >    {% snippet faqs/galaxy/datasets_import_via_link.md %}
 >
@@ -80,7 +86,8 @@ This step is to identify proteins based on mass spectrometry data. The algorithm
 >
 >    {% snippet faqs/galaxy/datasets_change_datatype.md datatype="datatypes" %}
 >
-> 5. Add to each database a tag corresponding to ...
+> 5. Add to each database a tag corresponding to user.
+> 6. Create a dataset collection of all the raw files and MGF files.
 >
 >    {% snippet faqs/galaxy/datasets_add_tag.md %}
 >
@@ -103,32 +110,8 @@ Using the FastaCLI tool, decoy sequences will be appended to the FASTA database.
 > 1. {% tool [FastaCLI](toolshed.g2.bx.psu.edu/repos/galaxyp/peptideshaker/fasta_cli/4.0.41+galaxy1) %} with the following parameters:
 >    - {% icon param-file %} *"Protein Database"*: `output` (Input dataset)
 >
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
 >
 {: .hands_on}
-
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> <question-title></question-title>
->
-> 1. Why are decoy sequences are added to our FASTA database?
-> 2. Question2?
->
-> > <solution-title></solution-title>
-> >
-> > 1. **TODO** Answer for question1
-> > 2. **TODO** Answer for question2
-> >
-> {: .solution}
->
-{: .question}
 
 ## Sub-step with **msconvert**
 
@@ -145,10 +128,6 @@ The msconvert tool allows for the conversion of mass spectrometry data files bet
 >        - *"(Re-)calculate charge states?"*: `no`
 >
 >
->    > <comment-title> short description </comment-title>
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
 >
 {: .hands_on}
 
@@ -462,7 +441,7 @@ ORDER BY psms.ln`
 
 
 ## Sub-step with **MaxQuant**
-MaxQuant is a MS-based proteomics platform that is capable of processing raw data and provides improved mass precision and high precursor mass accuracy (HPMA), which resulted in increased protein identification and more in-depth proteomic analysis **(tool info)**. Raw MS/MS spectra will be searched against the reduced MetaNovo-generated database (~21.2k sequences).
+MaxQuant is an MS-based proteomics platform that is capable of processing raw data and provides improved mass precision and high precursor mass accuracy (HPMA), which resulted in increased protein identification and more in-depth proteomic analysis **(tool info)**. Raw MS/MS spectra will be searched against the reduced MetaNovo-generated database (~21.2k sequences).
 
 > <hands-on-title> Peptide discovery using MaxQuant </hands-on-title>
 >
