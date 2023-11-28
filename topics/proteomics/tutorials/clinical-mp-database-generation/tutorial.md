@@ -34,7 +34,7 @@ subtopic: multi-omics
 tags: [label-TMT11]
 ---
 
-# Introduction
+# Abstract
 
 [Metaproteomics](https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/metaproteomics/tutorial.html) is the large-scale characterization of the entire complement of proteins expressed by microbiota. However, metaproteomics analysis of clinical samples is challenged by the presence of abundant human (host) proteins which hampers the confident detection of lower abundant microbial proteins ([Batut et al., 2018](https://doi.org/10.1016/j.cels.2018.05.012); [Jagtap et al., 2015](https://doi.org/10.1002/pmic.201500074)).
 
