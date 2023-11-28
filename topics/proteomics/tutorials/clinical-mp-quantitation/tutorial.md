@@ -10,11 +10,17 @@ objectives:
 time_estimation: 3H
 key_points:
 - Quantified Microbial and Human peptides/proteins can be analyzed separately so that the results are more comparative.
-contributors:
-  - subinamehta
-  - pratikdjagtap
-  - timothygriffin
-  - katherine-d21
+contributions:
+  authorship:
+    - subinamehta
+    - katherine-d21
+    - dechendb
+  editing:
+    - subinamehta
+    - katherine-d21
+  funding:
+    - pratikdjagtap
+    - timothygriffin
 requirements:
   -
     type: "internal"
@@ -31,7 +37,7 @@ The next step of the clinical metaproteomics workflow is the quantification work
 
 In this current workflow, we perform Quantification using the MaxQuant tool and the output will be interpreted in our next module.
 
-![Data Quantitation](../../images/clinical-mp/clinical-mp-quantitation.jpg "FIGURE-1")
+![Quantitation workflow](../../images/clinical-mp/clinical-mp-quantitation.jpg)
 
 
 
