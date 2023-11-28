@@ -14,11 +14,17 @@ time_estimation: 3H
 key_points:
 - Employ SearchGUI/PeptideShaker and MaxQuant for database searching
 - Extraction of confident microbial peptides for verification
-contributors:
-  - subinamehta
-  - pratikdjagtap
-  - timothygriffin
-  - katherine-d21
+contributions:
+  authorship:
+    - subinamehta
+    - katherine-d21
+    - dechendb
+  editing:
+    - subinamehta
+    - katherine-d21
+  funding:
+    - pratikdjagtap
+    - timothygriffin
 requirements:
   -
     type: "internal"
@@ -30,7 +36,7 @@ tags: [label-TMT11]
 ---
 
 
-# Introduction
+# Abstract
 
 This tutorial can be followed with any user-defined database but would work best if the clinical metaproteomics database generation workflow was used (**cite WF1**). The MetaNovo tool generates a more manageable database that contains identified proteins. The MetaNovo-generated database merged with Human SwissProt (reviewed only) and contaminants (cRAP) databases to generate a compact database (~21.2k protein sequences) that will be used for peptide identification.
 
@@ -39,7 +45,7 @@ This tutorial can be followed with any user-defined database but would work best
 The MSMS data will be searched against the compact database `Human UniProt Microbial Proteins (from MetaNovo) and cRAP `to identify peptide and protein sequences via sequence database searching. For this tutorial, two peptide identification programs will be used: SearchGUI/PeptideShaker and MaxQuant. However, you could use other software too, such as Fragpipe or Scribe. For the purpose of this tutorial, a dataset of the 4 RAW/MGF files will be used as the MS/MS input.
 
 
-![Discovery Workflow](../../images/clinical-mp/clinical-mp-discovery.jpg "FIGURE-1")
+![Discovery Workflow](../../images/clinical-mp/clinical-mp-discovery.jpg)
 
 
 > <agenda-title></agenda-title>
