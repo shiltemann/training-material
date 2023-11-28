@@ -12,11 +12,17 @@ time_estimation: 3H
 key_points:
 - perform verification
 - extraction of accession numbers for getting protein sequences
-contributors:
-  - subinamehta
-  - pratikdjagtap
-  - timothygriffin
-  - katherine-d21
+contributions:
+  authorship:
+    - subinamehta
+    - katherine-d21
+    - dechendb
+  editing:
+    - subinamehta
+    - katherine-d21
+  funding:
+    - pratikdjagtap
+    - timothygriffin
 requirements:
   -
     type: "internal"
@@ -36,11 +42,11 @@ The PepQuery tool is used to validate the identified microbial peptides from Sea
 
 Interestingly, the PepQuery tool does not rely on searching peptides against a reference protein sequence database as “traditional” shotgun proteomics does, which enables it to identify novel, disease-specific sequences with sensitivity and specificity in its protein validation (Figure A). Then we extract microbial protein sequences that are assigned to the PepQuery verified peptides. To this, we again add the Human UniProt Reference proteome (with Isoforms) and cRAP databases for creating a database for quantitation purposes (Figure B).
 
-![Data Verification](../../images/clinical-mp/clinical-mp-verification.jpg "FIGURE-1")
+![Peptide Verification](../../images/clinical-mp/clinical-mp-verification.jpg)
 
 
 
-![Data Verification](../../images/clinical-mp/clinical-mp-verification-figure2.jpg "FIGURE-2")
+![Database generation from verified peptides](../../images/clinical-mp/clinical-mp-verification-figure2.jpg)
 
 
 > <agenda-title></agenda-title>
