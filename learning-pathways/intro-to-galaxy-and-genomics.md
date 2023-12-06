@@ -3,10 +3,10 @@ layout: learning-pathway
 tags: [beginner]
 type: use
 
-maintainers:
+editorial_board:
 - shiltemann
 funding:
-- erasmusplus
+- gallantries
 
 title: Introduction to Galaxy and Sequence analysis
 description: |

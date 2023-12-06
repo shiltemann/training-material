@@ -7,11 +7,11 @@ description: |
   This pathway introduces trainers to learning principles, training techniques, lesson, session, course, and material design as well as assessment and feedback. This is has been developed for by trainers in the bioinformatics but is suitable for all trainers and educators in higher education.
 tags: [training, trainers]
 
-maintainers:
+editorial_board:
 - bebatut
 - fpsom
 funding:
-- erasmusplus
+- gallantries
 
 pathway:
   - section: "Module 1: Learning principles"
