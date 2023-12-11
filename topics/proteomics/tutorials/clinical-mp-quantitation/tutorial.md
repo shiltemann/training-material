@@ -37,7 +37,7 @@ The next step of the clinical metaproteomics workflow is the quantification work
 
 In this current workflow, we perform Quantification using the MaxQuant tool and the output will be interpreted in our next module.
 
-![Quantitation workflow](../../images/clinical-mp/clinical-mp-quantitation.jpg)
+![Quantitation workflow](../../images/clinical-mp/clinical-mp-quantification.JPG)
 
 
 
@@ -90,7 +90,7 @@ In this current workflow, we perform Quantification using the MaxQuant tool and 
 
 # **MaxQuant**
 
-In the Discovery Module (**cite Discovery module**), we used MaxQuant to identify peptides for verification. Now, we will again use MaxQuant to further quantify the PepQuery-verified peptides, both microbial and human. More information about quantitation using MaxQuant is available, including [Label-free data analysis](https://gxy.io/GTN:T00218) and [MaxQuant and MSstats for the analysis of TMT data](https://gxy.io/GTN:T00220).
+In the [Discovery Module](https://github.com/subinamehta/training-material/blob/main/topics/proteomics/tutorials/clinical-mp-discovery/tutorial.md), we used MaxQuant to identify peptides for verification. Now, we will again use MaxQuant to further quantify the PepQuery-verified peptides, both microbial and human. More information about quantitation using MaxQuant is available, including [Label-free data analysis](https://gxy.io/GTN:T00218) and [MaxQuant and MSstats for the analysis of TMT data](https://gxy.io/GTN:T00220).
 
 The outputs we are most interested in consist of the `MaxQuant Evidence file`, `MaxQuant Protein Group`s, and `MaxQuant Peptides`. The `MaxQuant Peptides` file will allow us to group them to generate a list of quantified microbial peptides.
 
