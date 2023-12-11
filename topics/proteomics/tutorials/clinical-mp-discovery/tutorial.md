@@ -38,7 +38,7 @@ tags: [label-TMT11]
 
 # Abstract
 
-This tutorial can be followed with any user-defined database but would work best if the clinical metaproteomics database generation module was used (see [Database Generation Module tutorial](https://github.com/subinamehta/training-material/blob/main/topics/proteomics/tutorials/clinical-mp-database-generation/tutorial.md)). The MetaNovo tool generates a more manageable database that contains identified proteins. The MetaNovo-generated database merged with Human SwissProt (reviewed only) and contaminants (cRAP) databases to generate a compact database (~21.2k protein sequences) that will be used for peptide identification.
+This tutorial can be followed with any user-defined database but would work best if the clinical metaproteomics database generation module was used (see [Database Generation tutorial](https://github.com/subinamehta/training-material/blob/main/topics/proteomics/tutorials/clinical-mp-database-generation/tutorial.md)). The MetaNovo tool generates a more manageable database that contains identified proteins. The MetaNovo-generated database merged with Human SwissProt (reviewed only) and contaminants (cRAP) databases to generate a compact database (~21.2k protein sequences) that will be used for peptide identification.
 
 
 # Peptide identification
