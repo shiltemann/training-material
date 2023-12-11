@@ -249,7 +249,7 @@ Once generated, the Species UniProt database (~3.38 million sequences) will be m
 # Reducing Database size
 
 ## Sub-step with **MetaNovo**
-Next, the large comprehensive database of ~2.59 million sequences can be reduced using the MetaNovo tool to generate a more manageable database that contains identified proteins. The compact MetaNovo-generated database (~1.9K sequences) will be merged with Human SwissProt (reviewed only) and contaminants (cRAP) databases to generate the reduced database (~21.2k protein sequences) that will be used for peptide identification **(cite Discovery module tutorial)**.
+Next, the large comprehensive database of ~2.59 million sequences can be reduced using the MetaNovo tool to generate a more manageable database that contains identified proteins. The compact MetaNovo-generated database (~1.9K sequences) will be merged with Human SwissProt (reviewed only) and contaminants (cRAP) databases to generate the reduced database (~21.2k protein sequences) that will be used for peptide identification (see [Discovery Module tutorial](https://github.com/subinamehta/training-material/blob/main/topics/proteomics/tutorials/clinical-mp-discovery/tutorial.md)).
 
 > <hands-on-title> Metanovo tool generates a compact database from your comprehensive database. </hands-on-title>
 >
