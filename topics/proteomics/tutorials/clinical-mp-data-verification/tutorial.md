@@ -414,7 +414,7 @@ Using the UniProt IDs from Query Tabular, we will be able to generate a FASTA da
 ## Sub-step with **FASTA Merge Files and Filter Unique Sequences**
 
 ## Generation of Compact Verified Database with UniProt
-Lastly, we will merge the Human UniProt (with isoforms), contaminants (cRAP) and the PepQuery-verified FASTA databases into one Quantitation Database that will be used as input for the Quantitation Module (**add link for Quantitation Module**).
+Lastly, we will merge the Human UniProt (with isoforms), contaminants (cRAP) and the PepQuery-verified FASTA databases into one Quantitation Database that will be used as input for the [Quantification Module](https://github.com/subinamehta/training-material/blob/main/topics/proteomics/tutorials/clinical-mp-quantitation/tutorial.md).
 
 > <hands-on-title> Generating compact verified database </hands-on-title>
 >
