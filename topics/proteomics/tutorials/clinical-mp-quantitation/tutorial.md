@@ -16,9 +16,6 @@ contributions:
     - katherine-d21
     - dechendb
   editing:
-    - subinamehta
-    - katherine-d21
-  funding:
     - pratikdjagtap
     - timothygriffin
 requirements:
