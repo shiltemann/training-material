@@ -145,9 +145,9 @@ The outputs we are most interested in consist of the `MaxQuant Evidence file`, `
 >
 {: .question}
 
-## Sub-step with **Select**
+## Select microbial protein groups from MaxQuant with **Select**
 
-> <hands-on-title> Select microbial protein groups from MaxQuant </hands-on-title>
+> <hands-on-title> Select </hands-on-title>
 >
 > 1. {% tool [Select](Grep1) %} with the following parameters:
 >    - {% icon param-file %} *"Select lines from"*: `proteinGroups` (output of **MaxQuant** {% icon tool %})
@@ -158,9 +158,9 @@ The outputs we are most interested in consist of the `MaxQuant Evidence file`, `
 {: .hands_on}
 
 
-## Sub-step with **Select**
+## Select microbial peptides from MaxQuant with **Select**
 
-> <hands-on-title> Select microbial peptides from MaxQuant </hands-on-title>
+> <hands-on-title> Select </hands-on-title>
 >
 > 1. {% tool [Select](Grep1) %} with the following parameters:
 >    - {% icon param-file %} *"Select lines from"*: `peptides` (output of **MaxQuant** {% icon tool %})
@@ -170,9 +170,9 @@ The outputs we are most interested in consist of the `MaxQuant Evidence file`, `
 {: .hands_on}
 
 
-## Sub-step with **Cut**
+## Select out microbial protein names with **Cut**
 
-> <hands-on-title> Select out microbial protein names </hands-on-title>
+> <hands-on-title> Select </hands-on-title>
 >
 > 1. {% tool [Cut](Cut1) %} with the following parameters:
 >    - *"Cut columns"*: `c1`
@@ -182,9 +182,9 @@ The outputs we are most interested in consist of the `MaxQuant Evidence file`, `
 {: .hands_on}
 
 
-## Sub-step with **Cut**
+## Select out microbial peptide sequences with **Cut**
 
-> <hands-on-title> Select out microbial peptide sequences </hands-on-title>
+> <hands-on-title> Select </hands-on-title>
 >
 > 1. {% tool [Cut](Cut1) %} with the following parameters:
 >    - *"Cut columns"*: `c1`
@@ -193,9 +193,9 @@ The outputs we are most interested in consist of the `MaxQuant Evidence file`, `
 >
 {: .hands_on}
 
-## Sub-step with **Group**
+## Generating a list of quantified proteins with **Group**
 
-> <hands-on-title> Generating list of quantified proteins </hands-on-title>
+> <hands-on-title> Group </hands-on-title>
 >
 > 1. {% tool [Group](Grouping1) %} with the following parameters:
 >    - {% icon param-file %} *"Select data"*: `out_file1` (output of **Cut** {% icon tool %})
@@ -205,9 +205,9 @@ The outputs we are most interested in consist of the `MaxQuant Evidence file`, `
 {: .hands_on}
 
 
-## Sub-step with **Group**
+## Generating a list of quantified peptides with **Group**
 
-> <hands-on-title> Generating list of quantified peptides </hands-on-title>
+> <hands-on-title> Group </hands-on-title>
 >
 > 1. {% tool [Group](Grouping1) %} with the following parameters:
 >    - {% icon param-file %} *"Select data"*: `out_file1` (output of **Cut** {% icon tool %})
@@ -219,4 +219,4 @@ The outputs we are most interested in consist of the `MaxQuant Evidence file`, `
 
 # Conclusion
 
-In summary, the implementation of a quantitation workflow using MaxQuant represents a significant advancement in quantitative proteomic research. This approach enables precise measurement of protein and peptide abundances, enhancing our ability to unravel the complexities of biological systems. By offering detailed insights into quantitative changes across different experimental conditions, this workflow is instrumental in biomarker discovery, comparative analysis, and understanding differential protein expression. Its capacity to generate accurate data supports a wide spectrum of applications, including disease research, drug development, and systems biology investigations. Furthermore, the MaxQuant-based quantitation workflow ensures data quality, enabling reliable and reproducible results. It serves as a vital step for quality control, allowing researchers to confidently draw meaningful conclusions from proteomic experiments.
+In summary, the implementation of a quantitation workflow using MaxQuant represents a significant advancement in quantitative proteomic research. This approach enables precise measurement of protein and peptide abundances, enhancing our ability to unravel the complexities of biological systems. This workflow is instrumental in biomarker discovery, comparative analysis, and understanding differential protein expression by offering detailed insights into quantitative changes across different experimental conditions. Its capacity to generate accurate data supports a wide spectrum of applications, including disease research, drug development, and systems biology investigations. Furthermore, the MaxQuant-based quantitation workflow ensures data quality, enabling reliable and reproducible results. It serves as a vital step for quality control, allowing researchers to draw meaningful conclusions from proteomic experiments confidently.
