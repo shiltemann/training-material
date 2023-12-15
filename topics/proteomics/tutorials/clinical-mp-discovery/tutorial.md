@@ -99,11 +99,11 @@ For this tutorial, two peptide identification programs will be used: SearchGUI/P
 
 Peptides identified from each program will be verified with the PepQuery tool to generate a master list of confident verified microbial peptides.
 
-## Sub-step with **FastaCLI**
+## Appending decoy sequenced to FASTA database with **FastaCLI**
 
 Using the FastaCLI tool, decoy sequences will be appended to the FASTA database. Decoy sequences are protein sequences are not expected to be present in samples. For more information on how to generate and append decoy sequences, see [GTN Protein FASTA Database Handling](https://training.galaxyproject.org/archive/2019-12-01/topics/proteomics/tutorials/database-handling/tutorial.html#creating-a-decoy-database).
 
-> <hands-on-title> Appending decoy sequenced to FASTA database </hands-on-title>
+> <hands-on-title> FastaCLI </hands-on-title>
 >
 > 1. {% tool [FastaCLI](toolshed.g2.bx.psu.edu/repos/galaxyp/peptideshaker/fasta_cli/4.0.41+galaxy1) %} with the following parameters:
 >    - {% icon param-file %} *"Protein Database"*: `output` (Input dataset)
@@ -111,11 +111,11 @@ Using the FastaCLI tool, decoy sequences will be appended to the FASTA database.
 >
 {: .hands_on}
 
-## Sub-step with **msconvert**
+## Converting RAW files to MGF files with **msconvert**
 
 The msconvert tool allows for the conversion of mass spectrometry data files between different formats, such as thermo.raw, mgf, or mzml.
 
-> <hands-on-title> Converting RAW files to MGF files </hands-on-title>
+> <hands-on-title> msconvert </hands-on-title>
 >
 > 1. {% tool [msconvert](toolshed.g2.bx.psu.edu/repos/galaxyp/msconvert/msconvert/3.0.20287.2) %} with the following parameters:
 >    - {% icon param-collection %} *"Input unrefined MS data"*: `output` (Input dataset collection)
@@ -142,7 +142,7 @@ The msconvert tool allows for the conversion of mass spectrometry data files bet
 >
 {: .question}
 
-## Sub-step with **Search GUI**
+## Perform Database searching with **Search GUI**
 SearchGUI is a database-searching tool that comprises different search engines to match sample MS/MS spectra to known peptide sequences. In our analysis, we will use X!Tandem and MS-GF+ as search algorithms within SearchGUI for matching spectra from mass spectrometry data against peptides from the protein sequence database.
 
 The SearchGUI tool will perform a database search based on the parameters we've set and will generate a file (called a SearchGUI archive file) that will serve as the input for the PeptideShaker tool. The SearchGUI archive file contains Peptide-Spectral Matches (PSMs), and PeptideShaker is a post-processing software that will assess the confidence of the data. PeptideShaker also infers the identities of proteins based on the matched peptide sequences, and users are able to visualize these outputs to interpret results.  More information about database searching using SearchGUI and PeptideShaker is accessible at [Metaproteomics tutorial](https://gxy.io/GTN:T00221).
@@ -181,9 +181,9 @@ The SearchGUI tool will perform a database search based on the parameters we've 
 >
 {: .question}
 
-## Sub-step with **Peptide Shaker**
+## Post-processing of SearchGUI output using with **Peptide Shaker**
 
-> <hands-on-title> Post-processing using Peptide Shaker </hands-on-title>
+> <hands-on-title> Peptide Shaker </hands-on-title>
 >
 > 1. {% tool [Peptide Shaker](toolshed.g2.bx.psu.edu/repos/galaxyp/peptideshaker/peptide_shaker/2.0.33+galaxy1) %} with the following parameters:
 >    - {% icon param-file %} *"Compressed SearchGUI results"*: `searchgui_results` (output of **Search GUI** {% icon tool %})
@@ -207,9 +207,9 @@ The SearchGUI tool will perform a database search based on the parameters we've 
 >
 {: .question}
 
-## Sub-step with **Select**
+##  Selecting microbial peptides from SearchGUI/PeptideShaker **Select**
 
-> <hands-on-title> Selecting microbial peptides from SearchGUI/PeptideShaker </hands-on-title>
+> <hands-on-title> Select </hands-on-title>
 >
 > 1. {% tool [Select](Grep1) %} with the following parameters:
 >    - {% icon param-file %} *"Select lines from"*: `output_peptides` (output of **Peptide Shaker** {% icon tool %})
@@ -233,9 +233,9 @@ The SearchGUI tool will perform a database search based on the parameters we've 
 >
 {: .question}
 
-## Sub-step with **Select**
+## Selecting microbial PSMs from SearchGUI/PeptideShaker with **Select**
 
-> <hands-on-title> Selecting microbial PSMs from SearchGUI/PeptideShaker</hands-on-title>
+> <hands-on-title> Select </hands-on-title>
 >
 > 1. {% tool [Select](Grep1) %} with the following parameters:
 >    - {% icon param-file %} *"Select lines from"*: `output_psm` (output of **Peptide Shaker** {% icon tool %})
@@ -247,9 +247,9 @@ The SearchGUI tool will perform a database search based on the parameters we've 
 {: .hands_on}
 
 
-## Sub-step with **Filter**
+## Filtering confident microbial peptides from SGPS  with **Filter**
 
-> <hands-on-title> Filtering confident microbial peptides from SGPS </hands-on-title>
+> <hands-on-title> Filter </hands-on-title>
 >
 > 1. {% tool [Filter](Filter1) %} with the following parameters:
 >    - {% icon param-file %} *"Filter"*: `out_file1` (output of **Select** {% icon tool %})
@@ -273,9 +273,9 @@ The SearchGUI tool will perform a database search based on the parameters we've 
 >
 {: .question}
 
-## Sub-step with **Filter**
+## Filtering confident microbial PSMs from SGPS with **Filter**
 
-> <hands-on-title> Filtering confident microbial PSMs from SGPS </hands-on-title>
+> <hands-on-title> Filter </hands-on-title>
 >
 > 1. {% tool [Filter](Filter1) %} with the following parameters:
 >    - {% icon param-file %} *"Filter"*: `out_file1` (output of **Select** {% icon tool %})
@@ -286,10 +286,10 @@ The SearchGUI tool will perform a database search based on the parameters we've 
 {: .hands_on}
 
 
-## Sub-step with **FASTA Merge Files and Filter Unique Sequences**
+## Merging Human SwissProt and cRAP databases for Query Tabular with **FASTA Merge Files and Filter Unique Sequences**
 We will generate and merge the Human SwissProt Protein Database and contaminants (cRAP) and convert the resulting FASTA file to a tabular file that will be used in the Query Tabular tool to generate distinct microbial peptides from SearchGUI/PeptideShaker.
 
-> <hands-on-title> Merging Human SwissProt and cRAP databases for Query Tabular </hands-on-title>
+> <hands-on-title> FASTA MERGE </hands-on-title>
 >
 > 1. {% tool [FASTA Merge Files and Filter Unique Sequences](toolshed.g2.bx.psu.edu/repos/galaxyp/fasta_merge_files_and_filter_unique_sequences/fasta_merge_files_and_filter_unique_sequences/1.2.0) %} with the following parameters:
 >    - *"Run in batch mode?"*: `Merge individual FASTAs (output collection if input is collection)`
@@ -302,9 +302,9 @@ We will generate and merge the Human SwissProt Protein Database and contaminants
 {: .hands_on}
 
 
-## Sub-step with **FASTA-to-Tabular**
+## Converting FASTA sequences to TAB-delimited file with **FASTA-to-Tabular**
 
-> <hands-on-title> Converting FASTA sequences to TAB-delimited file </hands-on-title>
+> <hands-on-title> FASTA-to-Tabular </hands-on-title>
 >
 > 1. {% tool [FASTA-to-Tabular](toolshed.g2.bx.psu.edu/repos/devteam/fasta_to_tabular/fasta2tab/1.1.0) %} with the following parameters:
 >    - {% icon param-file %} *"Convert these sequences"*: `output` (output of **FASTA Merge Files and Filter Unique Sequences** {% icon tool %})
@@ -313,9 +313,9 @@ We will generate and merge the Human SwissProt Protein Database and contaminants
 {: .hands_on}
 
 
-## Sub-step with **Filter Tabular**
+## Filtering out accession numbers from TAB-delimited file  with **Filter Tabular**
 
-> <hands-on-title> Filtering out accession numbers from TAB-delimited file </hands-on-title>
+> <hands-on-title> Filter tabular </hands-on-title>
 >
 > 1. {% tool [Filter Tabular](toolshed.g2.bx.psu.edu/repos/iuc/filter_tabular/filter_tabular/3.3.0) %} with the following parameters:
 >    - {% icon param-file %} *"Tabular Dataset to filter"*: `output` (output of **FASTA-to-Tabular** {% icon tool %})
@@ -347,9 +347,9 @@ We will generate and merge the Human SwissProt Protein Database and contaminants
 >
 {: .question}
 
-## Sub-step with **Query Tabular**
+## Querying protein accession numbers and peptide sequences of confident microbial PSMs (from SGPS) with **Query Tabular**
 
-> <hands-on-title> Querying protein accession numbers and peptide sequences of confident microbial PSMs (from SGPS) </hands-on-title>
+> <hands-on-title> Query Tabular </hands-on-title>
 >
 > 1. {% tool [Query Tabular](toolshed.g2.bx.psu.edu/repos/iuc/query_tabular/query_tabular/3.3.0) %} with the following parameters:
 >    - In *"Database Table"*:
@@ -410,9 +410,9 @@ ORDER BY psms.ln`
 
 
 
-## Sub-step with **Cut**
+## Cutting out peptide sequences from Query Tabular  with **Cut**
 
-> <hands-on-title> Cutting out peptide sequences from Query Tabular </hands-on-title>
+> <hands-on-title> CUT </hands-on-title>
 >
 > 1. {% tool [Cut](Cut1) %} with the following parameters:
 >    - *"Cut columns"*: `c3`
@@ -422,9 +422,9 @@ ORDER BY psms.ln`
 {: .hands_on}
 
 
-## Sub-step with **Group**
+## Grouping distinct (unique) peptides from SGPS  with **Group**
 
-> <hands-on-title> Grouping distinct (unique) peptides from SGPS </hands-on-title>
+> <hands-on-title> Group </hands-on-title>
 >
 > 1. {% tool [Group](Grouping1) %} with the following parameters:
 >    - {% icon param-file %} *"Select data"*: `out_file1` (output of **Cut** {% icon tool %})
@@ -434,10 +434,10 @@ ORDER BY psms.ln`
 {: .hands_on}
 
 
-## Sub-step with **MaxQuant**
+## Peptide discovery using MaxQuant with **MaxQuant**
 MaxQuant is an MS-based proteomics platform that is capable of processing raw data and provides improved mass precision and high precursor mass accuracy (HPMA), which resulted in increased protein identification and more in-depth proteomic analysis **(tool info)**. Raw MS/MS spectra will be searched against the reduced MetaNovo-generated database (~21.2k sequences). More information about analysis using MaxQuant is available, including [Label-free data analysis](https://gxy.io/GTN:T00218) and [MaxQuant and MSstats for the analysis of TMT data](https://gxy.io/GTN:T00220).
 
-> <hands-on-title> Peptide discovery using MaxQuant </hands-on-title>
+> <hands-on-title> MaxQuant </hands-on-title>
 >
 > 1. {% tool [MaxQuant](toolshed.g2.bx.psu.edu/repos/galaxyp/maxquant/maxquant/2.0.3.0+galaxy0) %} with the following parameters:
 >    - In *"Input Options"*:
@@ -503,9 +503,9 @@ Here's a simple example of what an Experimental Design file might look like:
 >
 {: .question}
 
-## Sub-step with **Select**
+## Selecting microbial peptides from MaxQuant with **Select**
 
-> <hands-on-title> Selecting microbial peptides from MaxQuant </hands-on-title>
+> <hands-on-title> Select </hands-on-title>
 >
 > 1. {% tool [Select](Grep1) %} with the following parameters:
 >    - {% icon param-file %} *"Select lines from"*: `peptides` (output of **MaxQuant** {% icon tool %})
@@ -517,9 +517,9 @@ Here's a simple example of what an Experimental Design file might look like:
 {: .hands_on}
 
 
-## Sub-step with **Cut**
+## Cutting out microbial peptide sequences  with **Cut**
 
-> <hands-on-title> Cutting out microbial peptide sequences </hands-on-title>
+> <hands-on-title> Cut </hands-on-title>
 >
 > 1. {% tool [Cut](Cut1) %} with the following parameters:
 >    - *"Cut columns"*: `c1`
@@ -529,9 +529,9 @@ Here's a simple example of what an Experimental Design file might look like:
 {: .hands_on}
 
 
-## Sub-step with **Remove beginning**
+## Remove header line from MaxQuant peptide output with **Remove beginning**
 
-> <hands-on-title> Remove header line from MaxQuant peptide output </hands-on-title>
+> <hands-on-title> Remove header</hands-on-title>
 >
 > 1. {% tool [Remove beginning](Remove beginning1) %} with the following parameters:
 >    - {% icon param-file %} *"from"*: `out_file1` (output of **Cut** {% icon tool %})
@@ -540,9 +540,9 @@ Here's a simple example of what an Experimental Design file might look like:
 {: .hands_on}
 
 
-## Sub-step with **Group**
+## Grouping distinct (unique) peptide sequences from MaxQuant with **Group**
 
-> <hands-on-title> Grouping distinct (unique) peptide sequences from MaxQuant </hands-on-title>
+> <hands-on-title> Group </hands-on-title>
 >
 > 1. {% tool [Group](Grouping1) %} with the following parameters:
 >    - {% icon param-file %} *"Select data"*: `out_file1` (output of **Remove beginning** {% icon tool %})
@@ -566,9 +566,9 @@ Here's a simple example of what an Experimental Design file might look like:
 
 
 
-## Sub-step with **Concatenate datasets**
+## Concatenate SGPS and MaxQuant peptides into a singular database  with **Concatenate datasets**
 
-> <hands-on-title> Concatenate SGPS and MaxQuant peptides into a singular database </hands-on-title>
+> <hands-on-title> Concatenate </hands-on-title>
 >
 > 1. {% tool [Concatenate datasets](toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cat/0.1.1) %} with the following parameters:
 >    - {% icon param-files %} *"Datasets to concatenate"*: `out_file1` (output of **Group** {% icon tool %}), `out_file1` (output of **Group** {% icon tool %})
@@ -577,9 +577,9 @@ Here's a simple example of what an Experimental Design file might look like:
 {: .hands_on}
 
 
-## Sub-step with **Group**
+## Group the peptides from SGPS and MaxQuant to remove duplicates with **Group**
 
-> <hands-on-title> Group the peptides from SGPS and MaxQuant to remove duplicates </hands-on-title>
+> <hands-on-title> Remove duplicates </hands-on-title>
 >
 > 1. {% tool [Group](Grouping1) %} with the following parameters:
 >    - {% icon param-file %} *"Select data"*: `out_file1` (output of **Concatenate datasets** {% icon tool %})
