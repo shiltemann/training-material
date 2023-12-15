@@ -13,7 +13,6 @@ objectives:
 time_estimation: 3H
 key_points:
 - Data interpretation and visualization of clinical samples.
-contributors:
 contributions:
   authorship:
     - subinamehta
