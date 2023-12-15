@@ -91,8 +91,7 @@ Now that we have identified microbial peptides from SearchGUI/PeptideShaker and 
 
 
 First, we will use the Cut tool to select the peptide and protein columns from the SearchGUI/PeptideShaker and MaxQuant Peptide Reports.
->
->
+
 ## Extracting peptide and protein columns from SGPS using **Cut**
 
 > <hands-on-title> Select out peptides and proteins from SGPS </hands-on-title>
@@ -287,9 +286,10 @@ We will use the Query Tabular tool to search the PepQuery-verified peptides agai
 >                - *"Specify Name for Table"*: `prot`
 >                - *"Specify Column Names (comma-separated list)"*: `pep,prot`
 >    - *"SQL Query to generate tabular output"*: `select pep.mpep, prot.prot
-FROM pep
-INNER JOIN  prot on pep.mpep=prot.pep `
+>    `FROM pep
+>    INNER JOIN  prot on pep.mpep=prot.pep `
 >    - *"include query result column headers"*: `Yes`
+>    `
 >
 >
 {: .hands_on}
