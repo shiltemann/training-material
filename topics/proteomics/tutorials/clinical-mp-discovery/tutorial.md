@@ -28,7 +28,7 @@ requirements:
     topic_name: proteomics
     tutorials:
       - clinical-metaproteomics
-subtopic: multi-omics
+subtopic: clinical-metaproteomics
 tags: [label-TMT11]
 ---
 
