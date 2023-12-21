@@ -473,7 +473,8 @@ MaxQuant is an MS-based proteomics platform that is capable of processing raw da
 > 1. What is the Experimental Design file for MaxQuant?
 > > <solution-title></solution-title>
 > >
-> > 1. In MaxQuant, the **Experimental Design** file is used to specify the experimental conditions, sample groups, and the relationships between different samples in a proteomics experiment. This file is a crucial component of the MaxQuant analysis process because it helps the software correctly organize and analyze the mass spectrometry data. The Experimental Design file typically has a ".txt" extension and is a tab-delimited text file.
+> >
+> > ```1. In MaxQuant, the **Experimental Design** file is used to specify the experimental conditions, sample groups, and the relationships between different samples in a proteomics experiment. This file is a crucial component of the MaxQuant analysis process because it helps the software correctly organize and analyze the mass spectrometry data. The Experimental Design file typically has a ".txt" extension and is a tab-delimited text file.
 
 Here's what you might include in an Experimental Design file for MaxQuant:
 
@@ -494,7 +495,7 @@ Here's a simple example of what an Experimental Design file might look like:
 |Sample2 |     Control   |   2   |         TMT-127|
 |Sample3 |     Treated   |   1     |       TMT-128|
 |Sample4 |     Treated   |   2       |     TMT-129|
-
+```
 > >
 > {: .solution}
 >
