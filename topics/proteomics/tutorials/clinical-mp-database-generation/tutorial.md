@@ -144,9 +144,9 @@ For this tutorial, a literature survey was conducted to obtain 118 taxonomic spe
 >
 > > <solution-title></solution-title>
 > >
->
+> >
 > > 1. Yes, the UniProt XML downloader can also be used for generating a database from Genus, Family, Order, or any other higher taxonomy clade. 
->
+> >
 > {: .solution}
 >
 {: .question}
@@ -217,7 +217,7 @@ For this tutorial, a literature survey was conducted to obtain 118 taxonomic spe
 >
 > > <solution-title></solution-title>
 > >
->
+> >
 > > 1. It is updated every 3 months.
 > >
 > {: .solution}
@@ -260,7 +260,7 @@ Next, the large comprehensive database of ~2.59 million sequences can be reduced
 >        - *"Maximal charge to search for"*: `5`
 >    - In *"Import Filters"*:
 >        - *"The maximal peptide length to consider when importing identification files"*: `50`
->> 2. Rename as "MetaNovo Compact Database".
+> 2. Rename as "MetaNovo Compact Database".
 >
 >
 {: .hands_on}
@@ -271,9 +271,9 @@ Next, the large comprehensive database of ~2.59 million sequences can be reduced
 >
 > > <solution-title></solution-title>
 > >
->
+> >
 > > 1. Reducing the size of the database improves search speed, FDR, and sensitivity. 
->
+> >
 > {: .solution}
 >
 {: .question}
@@ -284,9 +284,9 @@ Next, the large comprehensive database of ~2.59 million sequences can be reduced
 >
 > > <solution-title></solution-title>
 > >
->
+> >
 > > 1. There is no option for 11-plex modifications in Metanovo, hence we use the TMT-10plex. 
->
+> >
 > {: .solution}
 >
 {: .question}
@@ -297,9 +297,9 @@ Next, the large comprehensive database of ~2.59 million sequences can be reduced
 >
 > > <solution-title></solution-title>
 > >
->
-> >3. The most important parameters are the tolerance (MS1 and MS2) and any modifications introduced during the processing of the data.
->
+> >
+> > 3. The most important parameters are the tolerance (MS1 and MS2) and any modifications introduced during the processing of the data.
+> >
 > {: .solution}
 >
 {: .question}
