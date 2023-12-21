@@ -86,7 +86,7 @@ The first workflow for the clinical metaproteomics data analysis is the Database
 >
 >    {% snippet faqs/galaxy/datasets_change_datatype.md datatype="datatypes" %}
 >
-
+>
 > 5. Optional-Add to each database a tag corresponding to the file name.
 > 6. Create a dataset collection of the 4 MGF datasets.
 >    {% snippet faqs/galaxy/datasets_add_tag.md %}
