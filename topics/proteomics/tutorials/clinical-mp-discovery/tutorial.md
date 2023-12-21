@@ -339,7 +339,7 @@ We will generate and merge the Human SwissProt Protein Database and contaminants
 > >
 > > 1. FASTA Output: Typically used to report identified peptide or protein sequences, which are useful for building or updating sequence databases, for downstream sequence analysis, or for re-searching against the sequences.
 > > Tabular Output: Used for presenting various information related to identified peptides or proteins, such as accession numbers, scores, abundance values, and other attributes. Tabular output facilitates data analysis, comparisons, and custom data processing.
-
+> >
 > >
 > {: .solution}
 >
@@ -396,12 +396,12 @@ We will generate and merge the Human SwissProt Protein Database and contaminants
 >                    - {% icon param-repeat %} *"Insert Table Index"*
 >                        - *"Index on Columns"*: `prot`
 >    - *"SQL Query to generate tabular output"*: `SELECT id,Proteins,Sequence
-FROM psms 
-WHERE psms.ln NOT IN
-(SELECT distinct prots.ln
-FROM prots JOIN Uniprot ON prots.prot = Uniprot.prot)
-ORDER BY psms.ln`
->    - *"include query result column headers"*: `Yes`
+> `FROM psms 
+> WHERE psms.ln NOT IN
+> (SELECT distinct prots.ln
+> FROM prots JOIN Uniprot ON prots.prot = Uniprot.prot)
+> ORDER BY psms.ln`
+>    - *"include query result column headers"*: `Yes``
 >
 >
 {: .hands_on}
@@ -471,7 +471,6 @@ MaxQuant is an MS-based proteomics platform that is capable of processing raw da
 > <question-title></question-title>
 >
 > 1. What is the Experimental Design file for MaxQuant?
->
 > > <solution-title></solution-title>
 > >
 > > 1. In MaxQuant, the **Experimental Design** file is used to specify the experimental conditions, sample groups, and the relationships between different samples in a proteomics experiment. This file is a crucial component of the MaxQuant analysis process because it helps the software correctly organize and analyze the mass spectrometry data. The Experimental Design file typically has a ".txt" extension and is a tab-delimited text file.
