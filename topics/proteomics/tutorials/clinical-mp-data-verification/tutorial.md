@@ -86,7 +86,7 @@ Interestingly, the PepQuery tool does not rely on searching peptides against a r
 >
 {: .hands_on}
 
-> # Extraction of Microbial Peptides
+# Extraction of Microbial Peptides
 Now that we have identified microbial peptides from SearchGUI/PeptideShaker and MaxQuant, we need to extract the microbial peptide sequences and group them to obtain a list of distinct microbial peptides. This list of distinct peptides will be used as input for PepQuery2 to verify confident microbial peptides.
 
 
