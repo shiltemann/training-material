@@ -91,7 +91,7 @@ The final workflow in the array of clinical metaproteomics tutorials is the data
 >    - *"Match input peptides by"*: `Match to the full input peptide`
 >    - *"Choose outputs"*: `mostly all tabular outputs`
 >
->
+
 {: .hands_on}
 
 ![Data-Interpretation with Unipept](../../images/clinical-mp/clinical-mp-data-interpretation-figure2.jpg "FIGURE-2")
