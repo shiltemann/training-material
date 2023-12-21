@@ -79,7 +79,7 @@ The final workflow in the array of clinical metaproteomics tutorials is the data
 
 ## Taxonomic analysis with **Unipept**
 > Unipept serves as a vital bioinformatics platform for the analysis of mass spectrometry-based shotgun proteomics data, especially in the study of microbial communities. Its primary utility lies in taxonomic and functional analyses, enabling researchers to identify and quantify microorganisms within diverse environments. The platform facilitates comparative studies across samples, conditions, or time points, shedding light on the dynamic responses of microbial communities to environmental changes. Unipept integrates with public databases like UniProt, ensuring access to comprehensive and updated information for annotations. Being community-driven and open source, Unipept fosters collaboration and transparency, with a user-friendly web interface that accommodates researchers of varying bioinformatics expertise. In essence, Unipept is an invaluable resource, offering tools for the exploration of metaproteomic data and contributing to advancements in our understanding of microbial ecology.
->
+
 > <hands-on-title> Unipept 5.0 </hands-on-title>
 >
 > 
@@ -90,7 +90,6 @@ The final workflow in the array of clinical metaproteomics tutorials is the data
 >        - *"Select column with peptides"*: `c1`
 >    - *"Match input peptides by"*: `Match to the full input peptide`
 >    - *"Choose outputs"*: `mostly all tabular outputs`
->
 >
 {: .hands_on}
 
