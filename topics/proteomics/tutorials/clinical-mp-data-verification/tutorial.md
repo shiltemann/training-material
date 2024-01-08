@@ -10,8 +10,8 @@ objectives:
 - Verification of peptides helps in confirming the presence of the peptides in our samplle
 time_estimation: 3H
 key_points:
-- perform verification
-- extraction of accession numbers for getting protein sequences
+- Perform verification
+- Extraction of accession numbers for getting protein sequences
 contributions:
   authorship:
     - subinamehta
@@ -192,8 +192,8 @@ Interestingly, the PepQuery2 tool does not rely on searching peptides against a 
 >            - {% icon param-collection %} *"Spectrum File"*: `output` (Input dataset collection)
 >        - *"Report Spectrum Scan as"*: `spectrum title in MGF`
 >    - In *"Modifications"*:
->        - *"Fixed modification(s)"*: ``
->        - *"Variable modification(s)"*: ``
+>        - *"Fixed modification(s)"*: `1: Carbamidomethylation of C [57.02146372057]` `13: TMT 11-plex of K [229.16293213472]` `14: TMT 11-plex of peptide N-term [229.16293213472]`
+>        - *"Variable modification(s)"*: `2: Oxidation of M [15.99491461956]`
 >        - *"Use more stringent criterion for unrestricted modification searching"*: `Yes`
 >        - *"Consider amino acid substitution modifications?"*: `Yes`
 >    - In *"Digestion"*:
@@ -356,7 +356,7 @@ Again, we will use the Query Tabular tool to retrieve UniProt IDs (accession num
 >                - *"Specify Column Names (comma-separated list)"*: `pep,prot`
 >    ` *"SQL Query to generate tabular output"*: `SELECT distinct(prot) AS Accession 
 >     from t1`
->     *"include query result column headers"*: `No``
+>     *"include query result column headers"*: `No`
 >
 >
 {: .hands_on}
