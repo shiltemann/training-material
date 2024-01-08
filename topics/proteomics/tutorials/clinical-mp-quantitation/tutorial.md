@@ -101,20 +101,20 @@ The outputs we are most interested in consist of the `MaxQuant Evidence file`, `
 >        - *"Maximum peptide length for unspecific searches"*: `50`
 >    - In *"Protein quantification"*:
 >        - *"Use only unmodified peptides"*: `Yes`
->            - *"Modifications used in protein quantification"*: ``
+>            - *"Modifications used in protein quantification"*: `Oxidation (M)`
 >        - In *"LFQ Options"*:
 >            - *"iBAQ (calculates absolute protein abundances by normalizing to copy number and not protein mass)"*: `No`
 >    - In *"Parameter Group"*:
 >        - {% icon param-repeat %} *"Insert Parameter Group"*
 >            - {% icon param-collection %} *"Infiles"*: `output` (Input dataset collection)
->            - *"fixed modifications"*: ``
->            - *"variable modifications"*: ``
->            - *"enzyme"*: ``
+>            - *"fixed modifications"*: `Carbamidomethyl (C)`
+>            - *"variable modifications"*: `Oxidation (M)`
+>            - *"enzyme"*: `Trypsin/P`
 >            - *"Quantitation Methods"*: `reporter ion MS2`
 >                - *"isobaric labeling"*: `TMT11plex`
 >                - *"Filter by PIF"*: `Yes`
 >    - In *"Output Options"*:
->        - *"Select the desired outputs."*: ``
+>        - *"Select the desired outputs."*: `Protein Groups` `mqpar.xml` `Peptides` `Evidence` `MSMS`
 >
 >
 {: .hands_on}
