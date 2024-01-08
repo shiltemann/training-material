@@ -12,7 +12,7 @@ objectives:
 - Reduced database provides better FDR stats.
 time_estimation: 3H
 key_points:
-- create a customized proteomics database from 16SrRNA results.
+- Create a customized proteomics database from 16SrRNA results.
 contributions:
   authorship:
     - subinamehta
